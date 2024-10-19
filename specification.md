@@ -1,5 +1,5 @@
 **Problem**:  
-This year, UBC switched systems from the SSC to Workday and with this change, the degree navigator tool was removed. Now, current UBC students have trouble organizing their courses and the future courses they wish to take. Specifically they are unsure on which courses they can take and if they want to take a course, what courses they must take as prerequisites to do said course. 
+This year, UBC switched systems from the SSC to Workday and with this change, the degree navigator tool was removed. Now, UBC students are having trouble organizing their current and future courses that they wish to take. Specifically, students are unsure on which courses they can currently take and which prerequisites they would need for other courses. Students need a way to visualize a list of prerequisite courses to be able to plan multiple years ahead in their degree and without the degree navigator there isn't a great way to do this. 
 
 **Solution:**  
 We have envisioned a website that graphically displays a tree of the pre-requisites of a course, and all courses that require it. This allows users to easily see the prerequisite they need to take in order to take a course, and helps them map a path through their University degree. Users can view course details such as
