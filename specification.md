@@ -12,10 +12,10 @@ We have envisioned a website that graphically displays a tree of the pre-requisi
 
 **UI Mockups:**
 
-![Mobile UI][https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/mobile_ui.png?raw=true]
+![Mobile UI](https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/mobile_ui.png?raw=true)
 **Figure 1\.** Mobile UI Mockup
 
-![Desktop UI][https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/desktop_ui.jpg?raw=true]   
+![Desktop UI](https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/desktop_ui.jpg?raw=true)   
 **Figure 2\.** Desktop UI Mockup
 
 The user would start by selecting a course they are interested in, and would then be presented with an interactive graph showing the course they selected at the center, and all of its prerequisites and dependents. It would also show more detailed information about the selected course, such as the prerequisite string from the UBC calendar, and how many hours and credits it is.   
