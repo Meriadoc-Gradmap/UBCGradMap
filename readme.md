@@ -8,7 +8,10 @@ Helping students map their future.
 
 # **Problem Description:**
 
-This year, UBC switched systems from the SSC to Workday and with this change, the degree navigator tool was removed. Now, UBC students are having trouble organizing their current and future courses that they wish to take. Specifically, students are unsure on which courses they can currently take and which prerequisites they would need for other courses. Students need a way to visualize a list of prerequisite courses to be able to plan multiple years ahead in their degree and without the degree navigator there isn't a great way to do this. 
+Recently, a problem faced by UBC students was caused by the transition from the Student Service Centre (SSC) to Workday. A key feature that was lost during this transition was the Degree Navigator tool. This tool provided a structured way for students to track their degree progress and understand how courses fit into their graduation requirements. Workday has an academic progress tool; however, it is missing important information like the ability to view pre-requisite courses easily and the ability to plan courses multiple years in advance.
+
+Many students like to plan their courses several years in advance and without a proper tool, long-term academic planning becomes difficult and error prone.
+
 
 # **Credits** 
   
