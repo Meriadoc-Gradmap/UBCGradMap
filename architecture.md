@@ -114,35 +114,36 @@ NPM
 * **View (MVC 2):** This component views the Database component to receive each course
 
 ```java  
-public class Graph {  
-    public Graph(JSON Object) {  
+public class CourseGraph {
+    public CourseGraph(Set<Course> courses) {
     }
 
-    public String[] GetNames() {  
-        //TODO: Complete implementation  
-        return names;  
+    public Course getCourse(String code) {
+        //TODO: Implement method
+        return course;
     }
 
-    public CourseVertex GetCourse(String) {  
-        //TODO: Complete implementation  
-        return course;  
+    public String[] getNames() {
+        //TODO: Implement method
+        return names;
     }
 
-    public String[] GetCorequisites(String) {  
-        //TODO: Complete implementation  
-        return corequisites;  
+    public Set<String> getPreRequisites(String code) {
+        //TODO: Implement method
+        return preRequisites;
     }
 
-    public String[] GetPrerequisites(String) {  
-        //TODO: Complete implementation  
-        return prerequisites;  
+    public Set<String> getDependants(String code) {
+        //TODO: Implement method
+        return getDependants;
     }
 
-    public String[] GetDependents(String) {  
-        //TODO: Complete implementation  
-        return dependents;  
-    }  
-}  
+    public Set<String> getCoRequisites(String code) {
+        //TODO: Implement method
+        return coRequisites;
+    }
+
+}
 ```
 
 # **Precompute \- Data Collection** 
