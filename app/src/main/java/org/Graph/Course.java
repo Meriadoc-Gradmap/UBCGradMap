@@ -5,19 +5,31 @@ import java.util.HashSet;
 
 public class Course extends Vertex {
 
-  private String courseCode;
-  private String description;
-  private String name;
-  private int credits;
-  private double average;
-  private Hours weeklyHours;
-  private Set<String> preRequisites;
-  private Set<String> dependants;
+    private String courseCode;
+    private String description;
+    private String name;
+    private int credits;
+    private double average;
+    private Hours weeklyHours;
+    private Set<String> preRequisites;
+    private Set<String> dependants;
 
-  public Course(int id) {
-    super(id);
-  }
+    public Course(int id) {
+        super(id);
+    }
 
-  // TODO: create getters and setters for all field
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public Set<String> getPreRequisites() {
+        return preRequisites;
+    }
+
+    public Set<String> getDependants() {
+        return dependants;
+    }
+
+    // TODO: create getters and setters for all field
 
 }
