@@ -4,6 +4,8 @@
 
 ## **MVC 3: Data Collection and Formatting**
 
+![Architecture](https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/Architecture.png?raw=true)
+
 # **Common Libraries:**
 
 [https://github.com/google/gson](https://github.com/google/gson)  
