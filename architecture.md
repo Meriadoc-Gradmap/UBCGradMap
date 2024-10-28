@@ -154,20 +154,20 @@ public class Graph {
 * **View (MVC 3):** The Database acts as a view when it collects and stores all data from the Data Formatter  
 * Stores Literals from the Data Formatter as a JSON
 
-	``` JSON  
-	{  
-“courses”: [  
-{   
-“course_id”: “CPEN 221”,   
-“course_name”: “Software Construction I”,   
-“course_structure”: “[3-2-1*]”,  
-“prerequisites”: [“APSC 160”],   
-“dependencies”: [“CPEN 212”, “CPEN 331” ],  
-“Average_grade”: “75%”   
-}  
-]  
+``` json  
+{  
+"courses": [  
+	{   
+	"course_id": "CPEN 221",   
+	"course_name": "Software Construction I",   
+	"course_structure": "[3-2-1*]",  
+	"prerequisites": ["APSC 160"],   
+	"dependencies": ["CPEN 212", "CPEN 331" ],  
+	"Average_grade": "75%"
 	}  
-	```
+]  
+}  
+```
 
 ## **Data Formatter**
 
