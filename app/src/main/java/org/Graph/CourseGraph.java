@@ -6,22 +6,79 @@ import java.util.Map;
 import java.util.HashMap;
 
 public class CourseGraph {
-  private final Set<Course> courseSet;
-  private final double[][] gradesMatrix;
+    private final Set<Course> courseSet;
+    private final double[][] gradesMatrix;
+    private final String[] names;
 
-  private final Map<String, Integer> codeToId = new HashMap<>();
-  // id's are numbered 0 to n where n is the number of courses
+    private final Map<String, Integer> codeToId = new HashMap<>();
+    // id's are numbered 0 to n where n is the number of courses
 
-  /**
-   * The constructor should take a set of courses, where each course
-   * contains information for its pre reqs and dependants. From those sets
-   * we should be able to build the matrix using the map of course code to id.
-   *
-   */
-  public CourseGraph(Set<Course> courses) {
-    this.courseSet = courses;
-    gradesMatrix = new double[courseSet.size()][courseSet.size()];
-    // TODO: implement the constructor.
+    /**
+     * The constructor should take a set of courses, where each course
+     * contains information for its pre reqs and dependants. From those sets
+     *   we should be able to build the matrix using the map of course code to id.
+     *
+     */
+    public CourseGraph(Set<Course> courses) {
+        this.courseSet = courses;
+        gradesMatrix = new double[courseSet.size()][courseSet.size()];
+        names = new String[courseSet.size()];
 
-  }
+        initCourseVertices();
+        initCourseEdges();
+    }
+
+    private void initCourseVertices() {
+        for (Course course : courseSet) {
+            if (course.id() > courseSet.size() - 1) {
+                throw new IllegalArgumentException("Course id must be from 0 to courses.size() - 1");
+            }
+            codeToId.put(course.getCourseCode(), course.id());
+            names[course.id()] = course.getCourseCode();
+        }
+    }
+
+    private void initCourseEdges() {
+        for (Course course : courseSet) {
+            for (String preReq : course.getPreRequisites()) {
+                gradesMatrix[codeToId.get(preReq)][course.id()] = 1.0;
+            }
+            for (String dependant : course.getDependants()) {
+                gradesMatrix[course.id()][codeToId.get(dependant)] = 1.0;
+            }
+        }
+    }
+
+    public Course getCourse(String code) {
+        return getCourse(codeToId.get(code));
+    }
+
+    private Course getCourse(int id) {
+        for (Course course : courseSet) {
+            if (course.id() == id) {
+                return course;
+            }
+        }
+        throw new IllegalArgumentException("Course with id " + id + " not found");
+    }
+
+    public String[] getNames() {
+        return names.clone();
+    }
+
+    public Set<String> getPreRequisites(String code) {
+        return new HashSet<>(getCourse(code).getPreRequisites());
+    }
+
+    public Set<String> getDependants(String code) {
+        return new HashSet<>(getCourse(code).getDependants());
+    }
+
+    public Set<String> getCoRequisites(String code) {
+        Set<String> dependants = getDependants(code);
+        Set<String> coRequisites = getPreRequisites(code);
+        coRequisites.retainAll(dependants);
+        return new HashSet<>(coRequisites);
+    }
+
 }
