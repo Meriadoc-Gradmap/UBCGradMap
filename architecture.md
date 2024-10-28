@@ -70,7 +70,7 @@ NPM
 * Template:
 
 ```tsx  
-\<Panel information: {description: string, prereqs: string, credits: number, hours: string, grade: number} /\>  
+<Panel information: {description: string, prereqs: string, credits: number, hours: string, grade: number} />  
 ```
 
 * **View:** This is a view that uses *User Interface* as it’s model and *Tree* and *Search Bar* as it’s controllers
