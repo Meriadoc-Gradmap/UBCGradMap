@@ -82,7 +82,7 @@ NPM
 * Template
 
 ```tsx  
-\<Tree selected\_course: string courses: {description: string, prereqs: string, credits: number, hours: string, grade: number, }\[\] change\_selected: void(selected: string) /\>  
+<Tree selected_course: string courses: {description: string, prereqs: string, credits: number, hours: string, grade: number, }[] change_selected: void(selected: string) />  
 ```
 
 * **View:** This displays the prereqs and dependents from the *User Interface*.  
@@ -94,7 +94,7 @@ NPM
 * This component is on the client
 
 ```tsx  
-\<SearchBar selected\_course: string change\_selected: void(selected: string) /\>  
+<SearchBar selected_course: string change_selected: void(selected: string) />  
 ```
 
 * **Controller:** This controls the tree and the panel by changing the selected course
@@ -116,7 +116,7 @@ public class Graph {
     public Graph(JSON Object) {  
     }
 
-    public String\[\] GetNames() {  
+    public String[] GetNames() {  
         //TODO: Complete implementation  
         return names;  
     }
@@ -126,17 +126,17 @@ public class Graph {
         return course;  
     }
 
-    public String\[\] GetCorequisites(String) {  
+    public String[] GetCorequisites(String) {  
         //TODO: Complete implementation  
         return corequisites;  
     }
 
-    public String\[\] GetPrerequisites(String) {  
+    public String[] GetPrerequisites(String) {  
         //TODO: Complete implementation  
         return prerequisites;  
     }
 
-    public String\[\] GetDependents(String) {  
+    public String[] GetDependents(String) {  
         //TODO: Complete implementation  
         return dependents;  
     }  
@@ -154,16 +154,16 @@ public class Graph {
 
 	``` JSON  
 	{  
-“courses”: \[  
+“courses”: [  
 {   
-“course\_id”: “CPEN 221”,   
-“course\_name”: “Software Construction I”,   
-“course\_structure”: “\[3-2-1\*\]”,  
-“prerequisites”: \[“APSC 160”\],   
-“dependencies”: \[“CPEN 212”, “CPEN 331” \],  
-“Average\_grade”: “75%”   
+“course_id”: “CPEN 221”,   
+“course_name”: “Software Construction I”,   
+“course_structure”: “[3-2-1*]”,  
+“prerequisites”: [“APSC 160”],   
+“dependencies”: [“CPEN 212”, “CPEN 331” ],  
+“Average_grade”: “75%”   
 }  
-\]  
+]  
 	}  
 	```
 
@@ -175,7 +175,7 @@ public class Graph {
   ``` java  
   public class Formatter { 	  
     
-  	public Formatter(API\_Data.txt, Courses.txt) {  
+  	public Formatter(API_Data.txt, Courses.txt) {  
   		// Store each text file as a String  
   	}  
     
