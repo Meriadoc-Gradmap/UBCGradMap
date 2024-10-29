@@ -195,7 +195,7 @@ public class CourseGraph {
   
 
 
-  ## **Web Scraper** 
+## **Web Scraper** 
 
 * **Server**  
 * **Model (MVC 3):** Connects to data formatter   
@@ -215,9 +215,7 @@ public class CourseGraph {
   }  
   ```
 
-  ## 
-
-  ## **Github Actions for Failed Text \-\> Github Issue**
+## **Github Actions for Failed Text \-\> Github Issue**
 
 * **Server**  
 * **Controller (MVC 3):** Creates list of failed parse items  
