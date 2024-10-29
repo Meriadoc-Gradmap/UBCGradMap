@@ -10,6 +10,7 @@ plugins {
     id 'application'
     id "org.springframework.boot" version "3.3.5"
     id "io.spring.dependency-management" version "1.1.6"
+    id 'jacoco'
 }
 
 repositories {
@@ -37,12 +38,50 @@ java {
     }
 }
 
-application {
-    // Define the main class for the application.
-    mainClass = 'org.example.App'
-}
 
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+    finalizedBy(jacocoTestReport)
+}
+
+
+jacocoTestReport {
+    dependsOn test // FIXME - I don't think this needs to exist
+
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: [
+                    "**/core/**"
+            ])
+        }))
+    }
+
+    reports {
+        xml.required = false
+        csv.required = false
+        html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
+    }
+
+    finalizedBy(jacocoTestCoverageVerification)
+
+}
+
+jacocoTestCoverageVerification{
+
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: [
+//                    "**/core/**" // atm we don't need to exclude anything I don't think
+            ])
+        }))
+    }
+
+    violationRules {
+        rule {
+            limit {
+                minimum = 0.0 // TODO Raise once tests start being put it
+            }
+        }
+    }
 }
