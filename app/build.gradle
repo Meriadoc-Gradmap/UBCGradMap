@@ -47,7 +47,7 @@ test {
 
 
 jacocoTestReport {
-    dependsOn test // FIXME - I don't think this needs to exist
+    dependsOn test
 
     afterEvaluate {
         classDirectories.setFrom(files(classDirectories.files.collect {
