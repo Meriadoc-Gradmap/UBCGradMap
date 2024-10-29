@@ -39,7 +39,7 @@ java {
 }
 
 
-tasks.named('test') {
+test {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
     finalizedBy(jacocoTestReport)
