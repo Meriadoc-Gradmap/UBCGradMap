@@ -23,9 +23,11 @@ Below is an explanation of the format used to store course data.
         "cdf": false,
         "schedule": {
           "lectures": 3,
+          "alternating1": false,
           "labs": 2,
+          "alternating2": false,
           "tutorials": 2,
-          "alternating": true
+          "alternating3": true
         },
         "others": {
           "average": 87,
@@ -43,12 +45,14 @@ Below is an explanation of the format used to store course data.
         // Corequisites are courses that appear
         // in both prerequisites and postrequisites
         // i.e. Math 101 
-        "cdf": true,
+        "cdf": false,
         "schedule": {
           "lectures": 3,
+          "alternating1": false,
           "labs": 0,
+          "alternating2": false,
           "tutorials": 1,
-          "alternating": false
+          "alternating3": false
         },
         "others": {
           "average": 75,
