@@ -67,11 +67,23 @@ public class CourseGraph {
     }
 
     public Set<String> getPreRequisites(String code) {
-        return new HashSet<>(getCourse(code).getPreRequisites());
+        Set<String> preRequisites = new HashSet<>();
+        for (int i = 0; i < courseSet.size(); i++) {
+            if (gradesMatrix[i][codeToId.get(code)] > 0) {
+                preRequisites.add(names[i]);
+            }
+        }
+        return preRequisites;
     }
 
     public Set<String> getDependants(String code) {
-        return new HashSet<>(getCourse(code).getDependants());
+        Set<String> dependants = new HashSet<>();
+        for (int i = 0; i < courseSet.size(); i++) {
+            if (gradesMatrix[codeToId.get(code)][i] > 0) {
+                dependants.add(names[i]);
+            }
+        }
+        return dependants;
     }
 
     public Set<String> getCoRequisites(String code) {
