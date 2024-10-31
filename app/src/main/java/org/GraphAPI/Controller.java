@@ -9,6 +9,18 @@ import java.util.Arrays;
 @RestController
 @RequestMapping("/api")
 public class Controller {
+    record Others (double average, String professor) {}
+    record courseFormat(String code,
+                        String name,
+                        int[] credits,
+                        String description,
+                        String[] prerequisites,
+                        String[] postrequisites,
+                        String[] corequisites,
+                        boolean cdf,
+                        Hours schedule,
+                        Others others
+                        ) { }
 
     @GetMapping("/test")
     public String getTest() {
@@ -29,6 +41,7 @@ public class Controller {
 
 
         StringBuilder courseJSON = new StringBuilder();
+        //TODO: change this thing lol
         courseJSON.append("{");
         courseJSON.append(String.format("\"code\": \"%s\",", course));
         courseJSON.append(String.format("\"name\": \"%s\",", "Software Construction I"));
