@@ -1,5 +1,5 @@
 package org.Graph;
 
-public record Hours(int lecture, boolean lectureAlternate, int tutorial, boolean tutorialAlternate, int lab,
-    boolean labAlternate) {
+public record Hours(int lectures, boolean alternating1, int labs, boolean alternating2, int tutorials,
+    boolean alternating3) {
 }
