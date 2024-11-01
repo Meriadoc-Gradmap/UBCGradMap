@@ -4,15 +4,14 @@ import com.google.gson.Gson;
 import org.Graph.Hours;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
-
 @RestController
 @RequestMapping("/api")
 public class Controller {
     record Others(double average, String professor) {
     }
 
-    record courseFormat(String code,
+    record CourseFormat(
+            String code,
             String name,
             int[] credits,
             String description,
@@ -71,33 +70,28 @@ public class Controller {
     @GetMapping("/getcourse")
     @ResponseBody
     public String getCourse(@RequestParam String course) {
-
+        if (!isValidCode(course))
+            return "ERROR: Invalid course code";
         int[] credits = { 4, 5 };
         String[] prerequisites = { "APSC-160" };
         String[] postrequisites = { "CPEN-212", "CPEN-322", "CPEN-422" };
         String[] corequisites = {};
 
-        Hours hours = new Hours(3, false, 2, false, 2, true);
+        Hours hoursTemp = new Hours(3, false, 2, false, 2, true);
+        Others othersTemp = new Others(87.0, "Sathish Gopalakrishnan");
         Gson gson = new Gson();
-        String hoursJson = gson.toJson(hours);
+        CourseFormat courseFormat = new CourseFormat("CPEN-221",
+                "Software Construction I",
+                credits,
+                "Software Design blah blah blah",
+                prerequisites,
+                postrequisites,
+                corequisites,
+                false,
+                hoursTemp,
+                othersTemp);
 
-        StringBuilder courseJSON = new StringBuilder();
-        // TODO: change this thing lol
-        courseJSON.append("{");
-        courseJSON.append(String.format("\"code\": \"%s\",", course));
-        courseJSON.append(String.format("\"name\": \"%s\",", "Software Construction I"));
-        courseJSON.append(String.format("\"credits\": %s,", Arrays.toString(credits)));
-        courseJSON.append(String.format("\"prerequisites\": %s,", gson.toJson(prerequisites)));
-        courseJSON.append(String.format("\"postrequisites\": %s,", gson.toJson(postrequisites)));
-        courseJSON.append(String.format("\"corequisites\": %s,", gson.toJson(corequisites)));
-        courseJSON.append(String.format("\"cdf\": %b,", false));
-        courseJSON.append(String.format("\"schedule\": %s,", hoursJson));
-        courseJSON.append("\"others\": {");
-        courseJSON.append(String.format("\"average\": %d,", 87));
-        courseJSON.append(String.format("\"professor\": \"%s\",", "Satish Gopalakrishnan"));
-        courseJSON.append("}");
-        courseJSON.append("}");
-        return courseJSON.toString();
+        return gson.toJson(courseFormat);
     }
 
     /**
@@ -112,6 +106,11 @@ public class Controller {
         return courseCode.toUpperCase().matches("[A-Z]{3,4}?-[0-9]{3}");
     }
 
+    /**
+     * Gets all the course codes contained in the graph of courses.
+     *
+     * @return All the course codes contained in the grpah
+     */
     @GetMapping("/getallcourses")
     @ResponseBody
     public String getAllCourses() {

@@ -31,7 +31,7 @@ Below is an explanation of the format used to store course data.
         },
         "others": {
           "average": 87,
-          "professor": "Satish Gopalakrishnan"
+          "professor": "Sathish Gopalakrishnan"
           // And other stuff
         }
       },
