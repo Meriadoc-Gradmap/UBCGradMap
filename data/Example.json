@@ -1,11 +1,10 @@
-{
-  "courses": [ // all courses stored in one array
+[ // all courses stored in one array
     {
       "code": "CPEN-221",
-      "name": "Software Construction I", 
+      "name": "Software Construction I",
       "credits": [4, 5], // Courses stored in array since some have multiple credit levels
       "description": "Software Design",
-      "prerequisites": ["APSC-160"], 
+      "prerequisites": ["APSC-160"],
       "postrequisites": ["CPEN-212", "CPEN-322", "CPEN-422"],
       "cdf": false,
       "schedule": {
@@ -28,10 +27,10 @@
       "credits": [3],
       "description": "Electricity",
       "prerequisites": ["PHYS-157", "MATH-101"],
-      "postrequisites": ["MATH-101", "MECH-221"], 
+      "postrequisites": ["MATH-101", "MECH-221"],
       // Corequisites are courses that appear
       // in both prerequisites and postrequisites
-      // i.e. Math 101 
+      // i.e. Math 101
       "cdf": false,
       "schedule": {
         "lectures": 3,
@@ -48,5 +47,5 @@
       }
     }
   ]
-}
+
 
