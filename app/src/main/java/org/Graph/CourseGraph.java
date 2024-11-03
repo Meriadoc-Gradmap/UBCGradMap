@@ -11,7 +11,6 @@ public class CourseGraph {
     private final String[] names;
 
     private final Map<String, Integer> codeToId = new HashMap<>();
-    // id's are numbered 0 to n where n is the number of courses
 
     /**
      * The constructor should take a set of courses, where each course
@@ -54,12 +53,11 @@ public class CourseGraph {
     }
 
     private Course getCourse(int id) {
-        for (Course course : courseSet) {
-            if (course.id() == id) {
-                return course;
-            }
-        }
-        throw new IllegalArgumentException("Course with id " + id + " not found");
+        return courseSet.stream().
+                filter(course -> course.id() == id).
+                findFirst().
+                orElseThrow();
+
     }
 
     public String[] getNames() {
