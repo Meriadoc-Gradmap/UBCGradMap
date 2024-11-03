@@ -1,5 +1,8 @@
 package org.Graph;
 
+/**
+ * Vertex class.
+ */
 public class Vertex implements Comparable<Vertex> {
     private final int id;
 
@@ -16,7 +19,9 @@ public class Vertex implements Comparable<Vertex> {
 
     @Override
     public boolean equals(Object o) {
-        // TODO: write this lol
+        if (o instanceof Vertex other) {
+            return (this.id == other.id);
+        }
         return false;
     }
 

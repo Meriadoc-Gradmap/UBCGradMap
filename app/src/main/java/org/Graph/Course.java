@@ -3,19 +3,38 @@ package org.Graph;
 import java.util.Set;
 import java.util.HashSet;
 
+/**
+ * Course class.
+ *
+ * @author Ben Newington
+ */
 public class Course extends Vertex {
 
-    private String courseCode;
-    private String description;
-    private String name;
-    private int credits;
-    private double average;
-    private Hours weeklyHours;
-    private Set<String> preRequisites;
-    private Set<String> dependants;
+    private final String courseCode;
+    private final String description;
+    private final String name;
+    private final int credits;
+    private final double average;
+    private final Hours weeklyHours;
+    private final Set<String> preRequisites;
+    private final Set<String> postRequisites;
 
-    public Course(int id) {
+    /**
+     * Creates a course.
+     * @param id must be positive.
+     */
+    public Course(int id, String courseCode, String description, String name,
+                  int credits, double average, Hours weeklyHoursRecord, Set<String> preRequisites,
+                  Set<String> postRequisites) {
         super(id);
+        this.courseCode = courseCode;
+        this.description = description;
+        this.name = name;
+        this.credits = credits;
+        this.average = average;
+        this.weeklyHours = weeklyHoursRecord.copy();
+        this.preRequisites = new HashSet<>(preRequisites);
+        this.postRequisites = new HashSet<>(postRequisites);
     }
 
     public String getCourseCode() {
@@ -23,13 +42,30 @@ public class Course extends Vertex {
     }
 
     public Set<String> getPreRequisites() {
-        return preRequisites;
+        return new HashSet<>(preRequisites);
     }
 
-    public Set<String> getDependants() {
-        return dependants;
+    public Set<String> getPostRequisites() {
+        return new HashSet<>(postRequisites);
     }
 
-    // TODO: create getters and setters for all field
+    public String getDescription() {
+        return description;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getCredits() {
+        return credits;
+    }
+
+    public double getAverage() {
+        return average;
+    }
+
+    public Hours getWeeklyHours() {
+        return weeklyHours;
+    }
 }
