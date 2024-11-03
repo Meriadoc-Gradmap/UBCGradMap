@@ -10,21 +10,31 @@ import java.util.HashSet;
  */
 public class Course extends Vertex {
 
-    private String courseCode;
-    private String description;
-    private String name;
-    private int credits;
-    private double average;
-    private Hours weeklyHours;
-    private Set<String> preRequisites;
-    private Set<String> dependants;
+    private final String courseCode;
+    private final String description;
+    private final String name;
+    private final int credits;
+    private final double average;
+    private final Hours weeklyHours;
+    private final Set<String> preRequisites;
+    private final Set<String> postRequisites;
 
     /**
      * Creates a course.
      * @param id must be positive.
      */
-    public Course(int id) {
+    public Course(int id, String courseCode, String description, String name,
+                  int credits, double average, Hours weeklyHoursRecord, Set<String> preRequisites,
+                  Set<String> postRequisites) {
         super(id);
+        this.courseCode = courseCode;
+        this.description = description;
+        this.name = name;
+        this.credits = credits;
+        this.average = average;
+        this.weeklyHours = weeklyHoursRecord.copy();
+        this.preRequisites = new HashSet<>(preRequisites);
+        this.postRequisites = new HashSet<>(postRequisites);
     }
 
     public String getCourseCode() {
@@ -35,8 +45,8 @@ public class Course extends Vertex {
         return new HashSet<>(preRequisites);
     }
 
-    public Set<String> getDependants() {
-        return new HashSet<>(dependants);
+    public Set<String> getPostRequisites() {
+        return new HashSet<>(postRequisites);
     }
 
     public String getDescription() {
@@ -57,73 +67,5 @@ public class Course extends Vertex {
 
     public Hours getWeeklyHours() {
         return weeklyHours;
-    }
-
-    /* Setters */
-
-    public boolean setCourseCode(String code) {
-        if (courseCode == null || courseCode.isEmpty()) {
-            this.courseCode = code;
-            return true;
-        }
-        return false;
-    }
-
-    public boolean setPreRequisites(Set<String> requisites) {
-        if (preRequisites == null || preRequisites.isEmpty()) {
-            this.preRequisites = new HashSet<>(requisites);
-            return true;
-        }
-        return false;
-    }
-
-    public boolean setDependants(Set<String> dependantSet) {
-        if (dependants == null || dependants.isEmpty()) {
-            this.dependants = new HashSet<>(dependantSet);
-            return true;
-        }
-        return false;
-    }
-
-    public boolean setDescription(String descriptionString) {
-        if (description == null || description.isEmpty()) {
-            this.description = descriptionString;
-            return true;
-        }
-        return false;
-    }
-
-    public boolean setName(String nameString) {
-        if (name == null || name.isEmpty()) {
-            this.name = nameString;
-            return true;
-        }
-        return false;
-    }
-
-    public boolean setCredits(int creditsInt) {
-        if (credits == 0) {
-            this.credits = creditsInt;
-            return true;
-        }
-        return false;
-    }
-
-    public boolean setAverage(double averageDouble) {
-        if (average == 0) {
-            this.average = averageDouble;
-            return true;
-        }
-        return false;
-    }
-
-    public boolean setWeeklyHours(Hours weeklyHoursRecord) {
-        if (weeklyHours == null) {
-            this.weeklyHours = new Hours(weeklyHoursRecord.lectures(), weeklyHoursRecord.alternating1(),
-                    weeklyHoursRecord.labs(), weeklyHoursRecord.alternating2(),
-                    weeklyHoursRecord.tutorials(), weeklyHoursRecord.alternating3());
-            return true;
-        }
-        return false;
     }
 }

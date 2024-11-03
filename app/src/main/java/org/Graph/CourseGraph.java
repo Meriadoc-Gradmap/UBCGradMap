@@ -42,7 +42,7 @@ public class CourseGraph {
             for (String preReq : course.getPreRequisites()) {
                 gradesMatrix[codeToId.get(preReq)][course.id()] = 1.0;
             }
-            for (String dependant : course.getDependants()) {
+            for (String dependant : course.getPostRequisites()) {
                 gradesMatrix[course.id()][codeToId.get(dependant)] = 1.0;
             }
         }
@@ -74,18 +74,18 @@ public class CourseGraph {
         return preRequisites;
     }
 
-    public Set<String> getDependants(String code) {
-        Set<String> dependants = new HashSet<>();
+    public Set<String> getPostRequisites(String code) {
+        Set<String> postRequisites = new HashSet<>();
         for (int i = 0; i < courseSet.size(); i++) {
             if (gradesMatrix[codeToId.get(code)][i] > 0) {
-                dependants.add(names[i]);
+                postRequisites.add(names[i]);
             }
         }
-        return dependants;
+        return postRequisites;
     }
 
     public Set<String> getCoRequisites(String code) {
-        Set<String> dependants = getDependants(code);
+        Set<String> dependants = getPostRequisites(code);
         Set<String> coRequisites = getPreRequisites(code);
         coRequisites.retainAll(dependants);
         return new HashSet<>(coRequisites);
