@@ -42,7 +42,7 @@ public class CourseGraph {
             for (String preReq : course.getPreRequisites()) {
                 gradesMatrix[codeToId.get(preReq)][course.id()] = 1.0;
             }
-            for (String dependant : course.getDependants()) {
+            for (String dependant : course.getPostRequisites()) {
                 gradesMatrix[course.id()][codeToId.get(dependant)] = 1.0;
             }
         }
