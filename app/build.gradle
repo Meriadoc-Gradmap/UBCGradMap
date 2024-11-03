@@ -32,6 +32,9 @@ dependencies {
 
     // google gson for java json convertion
     implementation 'com.google.code.gson:gson:2.11.0'
+
+    // Jsoup for Web Scraping
+    implementation 'org.jsoup:jsoup:1.18.1'
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
