@@ -29,6 +29,7 @@ dependencies {
 
     // Springboot API
     implementation group: "org.springframework.boot", name: "spring-boot-starter-web", version: "3.3.5"
+    implementation group: "org.springframework.boot", name: "spring-boot-starter-test", version: "3.3.5"
 
     // google gson for java json convertion
     implementation 'com.google.code.gson:gson:2.11.0'
