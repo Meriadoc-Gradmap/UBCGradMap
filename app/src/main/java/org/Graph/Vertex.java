@@ -3,8 +3,8 @@ package org.Graph;
 /**
  * Vertex class.
  */
-public class Vertex implements Comparable<Vertex> {
-    private final int id;
+public class Vertex {
+    private int id;
 
     public Vertex(int id) {
         if (id < 0) {
@@ -17,18 +17,16 @@ public class Vertex implements Comparable<Vertex> {
         return this.id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o instanceof Vertex other) {
             return (this.id == other.id);
         }
         return false;
-    }
-
-    @Override
-    public int compareTo(Vertex o) {
-        // TODO: Implement this heheh
-        return 0;
     }
 
     @Override

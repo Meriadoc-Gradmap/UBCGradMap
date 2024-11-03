@@ -10,43 +10,52 @@ import java.util.HashSet;
  */
 public class Course extends Vertex {
 
-    private final String courseCode;
-    private final String description;
-    private final String name;
-    private final int credits;
-    private final double average;
-    private final Hours weeklyHours;
-    private final Set<String> preRequisites;
-    private final Set<String> postRequisites;
+    private String code = "";
+    private String name = "";
+    private int[] credits = null;
+    private String description = "";
+    private Set<String> prerequisites = null;
+    private Set<String> postrequisites = null;
+    private boolean cdf = false;
+    private Hours schedule = null;
+    private Others others = null;
+    private static int id = 0;
 
     /**
      * Creates a course.
-     * @param id must be positive.
      */
-    public Course(int id, String courseCode, String description, String name,
-                  int credits, double average, Hours weeklyHoursRecord, Set<String> preRequisites,
-                  Set<String> postRequisites) {
+    public Course(String code, String name, int[] credits, String description,
+                  Set<String> prerequisites, Set<String> postrequisites, boolean cdf,
+                  Hours schedule, Others othersRecord) {
         super(id);
-        this.courseCode = courseCode;
+        id++;
+
+        this.code = code;
         this.description = description;
         this.name = name;
         this.credits = credits;
-        this.average = average;
-        this.weeklyHours = weeklyHoursRecord.copy();
-        this.preRequisites = new HashSet<>(preRequisites);
-        this.postRequisites = new HashSet<>(postRequisites);
+        this.schedule = schedule.copy();
+        this.prerequisites = new HashSet<>(prerequisites);
+        this.postrequisites = new HashSet<>(postrequisites);
+        this.others = othersRecord;
+        this.cdf = cdf;
+    }
+
+    public void initId() {
+        super.setId(id);
+        id++;
     }
 
     public String getCourseCode() {
-        return courseCode;
+        return code;
     }
 
     public Set<String> getPreRequisites() {
-        return new HashSet<>(preRequisites);
+        return new HashSet<>(prerequisites);
     }
 
     public Set<String> getPostRequisites() {
-        return new HashSet<>(postRequisites);
+        return new HashSet<>(postrequisites);
     }
 
     public String getDescription() {
@@ -57,15 +66,23 @@ public class Course extends Vertex {
         return name;
     }
 
-    public int getCredits() {
+    public int[] getCredits() {
         return credits;
     }
 
     public double getAverage() {
-        return average;
+        return others.average();
     }
 
     public Hours getWeeklyHours() {
-        return weeklyHours;
+        return schedule.copy();
+    }
+
+    public Others getOthers() {
+        return others.copy();
+    }
+
+    public boolean isCdf() {
+        return cdf;
     }
 }
