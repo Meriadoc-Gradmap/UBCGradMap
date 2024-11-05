@@ -114,7 +114,8 @@ export default function CourseTree(props: CourseTreeProps) {
 
   return <div className="w-full h-screen" ref={ref}>
     <CytoscapeComponent elements={elements} style={{ width: '100%', height: '100%' }}
-      autolock={true} cy={(cy) => { cy.on("tap", "node", nodeClicked); }} />
+      autolock={true} cy={(cy) => { cy.on("tap", "node", nodeClicked); cy.fit(); }}
+      minZoom={0.25} maxZoom={2} wheelSensitivity={0.6} />
   </div>;
 }
 
