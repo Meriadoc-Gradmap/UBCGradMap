@@ -4,6 +4,9 @@ import com.google.gson.Gson;
 import org.Graph.Hours;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.LinkedList;
+import java.util.List;
+
 @RestController
 @RequestMapping("/api")
 public class Controller {
@@ -114,6 +117,10 @@ public class Controller {
     @GetMapping("/getallcourses")
     @ResponseBody
     public String getAllCourses() {
-        return "{\"Error getting courses (Iain has not implemented this method what a loser ong)\"}";
+        List<String> courses = new LinkedList<>();
+        courses.add("CPEN-221");
+        courses.add("FINN-101");
+        Gson gson = new Gson();
+        return gson.toJson(courses);
     }
 }
