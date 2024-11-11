@@ -7,11 +7,12 @@ import com.google.gson.stream.JsonReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.lang.reflect.Type;
+import java.util.HashSet;
 import java.util.List;
 
 public class GraphCreator {
 
-    public GraphCreator() {
+    public static CourseGraph createGraph() {
         Gson gson = new Gson();
         try {
             JsonReader reader = new JsonReader(new FileReader("data/Example.json"));
@@ -20,13 +21,16 @@ public class GraphCreator {
             for (Course course : courses) {
                 course.initId();
             }
+            return new CourseGraph(new HashSet<>(courses));
+
         } catch (FileNotFoundException e) {
             throw new RuntimeException();
         }
     }
 
     public static void main(String[] args) {
-        GraphCreator gc = new GraphCreator();
+        CourseGraph gc = createGraph();
+        System.out.println(gc);
     }
 
 }
