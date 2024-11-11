@@ -41,7 +41,8 @@ public class CourseGraph {
         for (Course course : courseSet) {
             for (String preReq : course.getPreRequisites()) {
                 if (!codeToId.containsKey(preReq)) {
-                    throw new IllegalArgumentException("Pre-requisite must be in graph"); //TODO: should I do this or not throw an error?
+                    throw new IllegalArgumentException("Pre-requisite must be in graph");
+                    //TODO: should I do this or not throw an error?
                 }
                 gradesMatrix[codeToId.get(preReq)][course.id()] = 100 - course.getAverage();
             }
