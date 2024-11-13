@@ -1,7 +1,7 @@
 package org.graphapi;
 
-import org.GraphAPI.Controller;
-import org.GraphAPI.GraphApi;
+import org.graphapi.Controller;
+import org.graphapi.GraphApi;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,18 +17,18 @@ public class ControllerTests {
     private Controller controller;
 
     @Test
-    void contextLoads(){
+    void contextLoads() {
         assertNotNull(controller);
         System.out.println("SERVER RUNNING");
     }
 
     @Test
-    public void isValidTest(){
+    public void isValidTest() {
 
     }
 
     @Test
-    public void getCourseTest(){
+    public void getCourseTest() {
         System.out.println(controller.getCourse("CPEN-221"));
     }
 }

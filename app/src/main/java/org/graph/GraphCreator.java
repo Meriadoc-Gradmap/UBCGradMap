@@ -1,4 +1,4 @@
-package org.Graph;
+package org.graph;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -17,7 +17,8 @@ public class GraphCreator {
         Gson gson = new Gson();
         try {
             JsonReader reader = new JsonReader(new FileReader(fileName));
-            Type listType = new TypeToken<List<Course>>() {}.getType();
+            Type listType = new TypeToken<List<Course>>() {
+            }.getType();
             List<Course> courses = gson.fromJson(reader, listType);
             for (Course course : courses) {
                 course.initId();

@@ -1,4 +1,4 @@
-package org.Graph;
+package org.graph;
 
 import java.util.Set;
 import java.util.HashSet;
@@ -23,19 +23,20 @@ public class Course extends Vertex {
 
     /**
      * Creates a course.
-     * @param code course code "XXXX###"
-     * @param name course name
-     * @param credits credits for each version of the course
-     * @param description description
-     * @param prerequisites list of course codes that are prerequisites
+     * 
+     * @param code           course code "XXXX###"
+     * @param name           course name
+     * @param credits        credits for each version of the course
+     * @param description    description
+     * @param prerequisites  list of course codes that are prerequisites
      * @param postrequisites list of course codes that are dependents
-     * @param cdf if the course is credit d fail
-     * @param schedule record of how many hours per week the course is
-     * @param othersRecord other information
+     * @param cdf            if the course is credit d fail
+     * @param schedule       record of how many hours per week the course is
+     * @param othersRecord   other information
      */
     public Course(String code, String name, int[] credits, String description,
-                  Set<String> prerequisites, Set<String> postrequisites, boolean cdf,
-                  Hours schedule, Others othersRecord) {
+            Set<String> prerequisites, Set<String> postrequisites, boolean cdf,
+            Hours schedule, Others othersRecord) {
         super(id);
         id++;
 
@@ -60,6 +61,7 @@ public class Course extends Vertex {
 
     /**
      * Gets the course code.
+     * 
      * @return course code
      */
     public String getCourseCode() {
@@ -68,6 +70,7 @@ public class Course extends Vertex {
 
     /**
      * Gets the pre-requisites.
+     * 
      * @return a set of pre-requisites
      */
     public Set<String> getPreRequisites() {
@@ -76,6 +79,7 @@ public class Course extends Vertex {
 
     /**
      * Gets the post-requisites.
+     * 
      * @return a set of post-requisites
      */
     public Set<String> getPostRequisites() {
@@ -84,6 +88,7 @@ public class Course extends Vertex {
 
     /**
      * Gets the description.
+     * 
      * @return the description
      */
     public String getDescription() {
@@ -92,6 +97,7 @@ public class Course extends Vertex {
 
     /**
      * Gets the name.
+     * 
      * @return the name
      */
     public String getName() {
@@ -100,6 +106,7 @@ public class Course extends Vertex {
 
     /**
      * Gets the number of credits for each course version.
+     * 
      * @return an array of the number of credits
      */
     public int[] getCredits() {
@@ -108,6 +115,7 @@ public class Course extends Vertex {
 
     /**
      * Gets the average.
+     * 
      * @return the average
      */
     public double getAverage() {
@@ -116,6 +124,7 @@ public class Course extends Vertex {
 
     /**
      * Gets the weekly hours.
+     * 
      * @return the weekly hours
      */
     public Hours getWeeklyHours() {
@@ -124,6 +133,7 @@ public class Course extends Vertex {
 
     /**
      * Gets the other information.
+     * 
      * @return other information
      */
     public Others getOthers() {
@@ -132,7 +142,9 @@ public class Course extends Vertex {
 
     /**
      * Returns <code>true</code> if the course is a credit/d/fail.
-     * @return <code>true</code> if the course is a credit/d/fail, <code>false</code> otherwise
+     * 
+     * @return <code>true</code> if the course is a credit/d/fail,
+     *         <code>false</code> otherwise
      */
     public boolean isCdf() {
         return cdf;

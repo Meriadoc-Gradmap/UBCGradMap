@@ -1,4 +1,4 @@
-package org.Graph;
+package org.graph;
 
 public record Others(double average, String professor) {
 

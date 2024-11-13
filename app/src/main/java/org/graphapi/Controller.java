@@ -1,7 +1,7 @@
-package org.GraphAPI;
+package org.graphapi;
 
 import com.google.gson.Gson;
-import org.Graph.Hours;
+import org.graph.Hours;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.LinkedList;

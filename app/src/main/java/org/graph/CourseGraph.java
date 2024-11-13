@@ -1,4 +1,4 @@
-package org.Graph;
+package org.graph;
 
 import java.util.Set;
 import java.util.HashSet;
@@ -15,7 +15,7 @@ public class CourseGraph {
     /**
      * The constructor should take a set of courses, where each course
      * contains information for its pre reqs and dependants. From those sets
-     *   we should be able to build the matrix using the map of course code to id.
+     * we should be able to build the matrix using the map of course code to id.
      *
      */
     public CourseGraph(Set<Course> courses) {
@@ -57,10 +57,7 @@ public class CourseGraph {
     }
 
     private Course getCourse(int id) {
-        return courseSet.stream().
-                filter(course -> course.id() == id).
-                findFirst().
-                orElseThrow();
+        return courseSet.stream().filter(course -> course.id() == id).findFirst().orElseThrow();
 
     }
 
