@@ -40,17 +40,14 @@ public class CourseGraph {
     private void initCourseEdges() {
         for (Course course : courseSet) {
             for (String preReq : course.getPreRequisites()) {
-                if (!codeToId.containsKey(preReq)) {
-                    throw new IllegalArgumentException("Pre-requisite must be in graph");
-                    //TODO: should I do this or not throw an error?
+                if (codeToId.containsKey(preReq)) {
+                    gradesMatrix[codeToId.get(preReq)][course.id()] = 100 - course.getAverage();
                 }
-                gradesMatrix[codeToId.get(preReq)][course.id()] = 100 - course.getAverage();
             }
             for (String dependant : course.getPostRequisites()) {
                 if (!codeToId.containsKey(dependant)) {
-                    throw new IllegalArgumentException("Post-requisite must be in graph");
+                    gradesMatrix[course.id()][codeToId.get(dependant)] = 100 - getCourse(dependant).getAverage();
                 }
-                gradesMatrix[course.id()][codeToId.get(dependant)] = 100 - getCourse(dependant).getAverage();
             }
         }
     }
