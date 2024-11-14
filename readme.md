@@ -22,5 +22,3 @@ Many students like to plan their courses several years in advance and without a 
 - William Banquier: Developer   
  
 
-### Current Build Passing ?
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/CPEN-221-2024/project-meriadoc/gradle.yml)
