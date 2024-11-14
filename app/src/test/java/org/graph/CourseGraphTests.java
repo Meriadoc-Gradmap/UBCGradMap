@@ -80,7 +80,8 @@ public class CourseGraphTests {
                 aPost,
                 false,
                 aHours,
-                aOther);
+                aOther,
+                0);
         b = new Course(
                 "b",
                 "course b",
@@ -90,7 +91,8 @@ public class CourseGraphTests {
                 bPost,
                 false,
                 bHours,
-                bOther);
+                bOther,
+                1);
         c = new Course(
                 "c",
                 "course c",
@@ -100,7 +102,8 @@ public class CourseGraphTests {
                 cPost,
                 false,
                 cHours,
-                cOther);
+                cOther,
+                2);
 
         courseSet = new HashSet<>();
         courseSet.add(a);
