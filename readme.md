@@ -22,3 +22,5 @@ Many students like to plan their courses several years in advance and without a 
 - William Banquier: Developer   
  
 
+### Current Build Passing ?
+![Java](https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/.github/workflows/gradle.yml/badge.svg)
