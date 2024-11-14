@@ -6,7 +6,18 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.LinkedList;
 import java.util.List;
-
+/**
+ * @author Iain Griesdale
+ *         Provides api methods to interface with the backend graph of courses.
+ *         These methods include
+ *
+ *         <ul>
+ *         <li>{@code getTest} is a basic method to test that the api is online and can be accessed </li>
+ *         <li>{@code getCourse} gets all required information for a specified course in json format</li>
+ *         <li>{@code getAllCourses} gets a list of all the courses in json format</li>>
+ *         </ul>
+ *
+ */
 @RestController
 @RequestMapping("/api")
 public class Controller {
