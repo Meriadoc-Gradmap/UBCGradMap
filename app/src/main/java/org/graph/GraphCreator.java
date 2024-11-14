@@ -32,7 +32,7 @@ public class GraphCreator {
 
     public static void main(String[] args) {
         CourseGraph gc = createGraph("data/Example.json");
-        System.out.println(Arrays.toString(gc.getNames()));
+        System.out.println(Arrays.toString(gc.getCodes()));
     }
 
 }

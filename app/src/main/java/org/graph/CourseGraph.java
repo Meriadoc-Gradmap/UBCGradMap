@@ -61,7 +61,7 @@ public class CourseGraph {
 
     }
 
-    public String[] getNames() {
+    public String[] getCodes() {
         return courseCodes.clone();
     }
 

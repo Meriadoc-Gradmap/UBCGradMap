@@ -1,6 +1,5 @@
 package org.graph;
 
-import org.checkerframework.checker.units.qual.C;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -131,11 +130,11 @@ public class CourseGraphTests {
     }
 
     @Test
-    public void getNames(){
+    public void getCodes(){
         CourseGraph cg = new CourseGraph(courseSet);
         // these are the codes, not the names fyi
         String[] expectedNames = new String[] {"a","b","c"};
-        String[] actualNames = cg.getNames();
+        String[] actualNames = cg.getCodes();
 
         assertEquals(new HashSet<>(List.of(expectedNames)), new HashSet<>(List.of(actualNames)));
     }
