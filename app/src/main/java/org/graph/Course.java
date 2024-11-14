@@ -20,6 +20,7 @@ public class Course extends Vertex {
     private final Hours schedule;
     private final Others others;
     private static int id = 0;
+    private boolean hasId;
 
     /**
      * Creates a course.
@@ -39,6 +40,7 @@ public class Course extends Vertex {
             Hours schedule, Others othersRecord) {
         super(id);
         id++;
+        hasId = true;
 
         this.code = code;
         this.description = description;
@@ -55,8 +57,11 @@ public class Course extends Vertex {
      * Sets the id to the previous course's id plus one.
      */
     public void initId() {
-        super.setId(id);
-        id++;
+        if (!hasId) {
+            super.setId(id);
+            id++;
+            hasId = true;
+        }
     }
 
     /**
@@ -110,7 +115,7 @@ public class Course extends Vertex {
      * @return an array of the number of credits
      */
     public int[] getCredits() {
-        return credits;
+        return credits.clone();
     }
 
     /**
