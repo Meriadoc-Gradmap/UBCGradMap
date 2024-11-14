@@ -3,7 +3,9 @@ package org.DataCollection;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -16,47 +18,80 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonParser;
 
+import me.tongfei.progressbar.*;
+
 public class WebScraper {
 
     record Course(
             String Title,
             String Description) {
     }
-
-    record Grade(
-            String Title,
-            Double Grade) {
-    }
     
     public static void main(String[] args) {
         
-        List<Course> courseList = getAllCourses();
+        Map<String, Double> courseList = getAllGrades();
 
-        for (Course c : courseList) {
-            System.out.println("Title: " + c.Title());
-            System.out.println("Description: " + c.Description());
-            System.out.println();
+        for (String key : courseList.keySet()) {
+            System.out.println(key);
+            System.out.println(courseList.get(key));
         }
 
     }
 
     public static List<Course> getAllCourses() {
+        System.out.print("\033[H\033[2J");  
+        System.out.flush();  
         List<Course> courseList = new ArrayList<>();
         List<String> departmentList = getDepartments();
         System.out.println("Fetching all Courses");
+        long startTime = System.currentTimeMillis();
 
-        for (String s : departmentList) {
+        ProgressBarBuilder pbb = ProgressBar.builder()
+                        .setStyle(ProgressBarStyle.builder()
+                        .colorCode((byte) 33)  // the ANSI color code
+                        .leftBracket("[")
+                        .rightBracket("]")
+                        .block('=')
+                        .rightSideFractionSymbol('>')
+                        .build()
+                        );
 
-            System.out.println("Beginning to fetch: " + s.substring(s.lastIndexOf("/") + 1));
-            long time1 = System.currentTimeMillis();
-            
+        for (String s : ProgressBar.wrap(departmentList, pbb)) {
             courseList.addAll(getCoursesByDepartment(s));
-
-            long time2 = System.currentTimeMillis();
-            System.out.println("Finished fetching: " + s.substring(s.lastIndexOf("/") + 1, s.lastIndexOf("v")));
-            System.out.println("Elapsed time: " + (time2 - time1) + "ms \n");
         }
+
+        System.out.println("Full Elapsed time: " + (System.currentTimeMillis() - startTime) + "ms \n");
+
         return courseList;
+    }
+
+    public static Map<String, Double> getAllGrades() {
+        System.out.print("\033[H\033[2J");  
+        System.out.flush();  
+        Map<String, Double> gradeMap = new HashMap<>();
+        List<String> departmentList = getDepartments();
+        System.out.println("Fetching all Grades");
+        long startTime = System.currentTimeMillis();
+
+        ProgressBarBuilder pbb = ProgressBar.builder()
+                        .setStyle(ProgressBarStyle.builder()
+                        .colorCode((byte) 33)  // the ANSI color code
+                        .leftBracket("[")
+                        .rightBracket("]")
+                        .block('=')
+                        .rightSideFractionSymbol('>')
+                        .build()
+                        );
+
+        for (String s : ProgressBar.wrap(departmentList, pbb)) {
+            String code = s.substring(s.lastIndexOf("/") + 1, s.length() - 1);
+            code = code.toUpperCase();
+            gradeMap.putAll(getGradesByDepartment(code));
+        }
+
+        System.out.println("Full Elapsed time: " + (System.currentTimeMillis() - startTime) + "ms \n");
+
+        return gradeMap;
     }
 
     /**
@@ -145,30 +180,29 @@ public class WebScraper {
     }
 
     /**
-     * Retrieves a list of courses and their average grades from the UBCgrades API, given
+     * Retrieves a Mapof courses and their average grades from the UBCgrades API, given
      * a department code. The department code must be valid (i.e. UBC Vancouver has a 
-     * department with this code). Otherwise, the method will return an empty list. If a
+     * department with this code). Otherwise, the method will return an empty map. If a
      * course does not have grade data, its average grade will be -1.0. (No legitimate course
      * should ever have a negative average). Since this method fetches data from a 3rd party
      * source, there are no guarantees about the accuracy of the data fetched.
      * 
      * @param department the department code of the courses to retrieve grades from
-     * @return a list of courses, each containing the course title and average grade
+     * @return a Map of Strings of Course codes mapped to their average grades
      * @throws RuntimeException if there is an error connecting to the URL or parsing the data
      */
-    public static List<Grade> getGradesByDepartment(String department) {
+    public static Map<String, Double> getGradesByDepartment(String department) {
         String data;
         JsonArray gradeArray;
         String title;
         Double grade;
-        List<Grade> departmentList = new ArrayList<>();;
+        Map<String, Double> departmentMap = new HashMap<>();;
 
         try { 
             data = Jsoup.connect("https://ubcgrades.com/api/v3/course-statistics/UBCV/" + department).
                 ignoreContentType(true).execute().body();
         } catch (IOException e) { 
-            throw new RuntimeException
-                ("There was an issue connecting to the UBCgrades API. Check your internet connection and that the department code is correct"); 
+            return departmentMap;
         }
 
         try {
@@ -185,12 +219,9 @@ public class WebScraper {
             } else {
                 grade = Math.round(jObj.get("average").getAsDouble() * 100.0) / 100.0;
             }
-            departmentList.add(new Grade(title, grade));
-            System.out.println(title);
-            System.out.println(grade);
-            System.out.println("");
+            departmentMap.put(title, grade);
         }
 
-        return departmentList;
+        return departmentMap;
     }
 }

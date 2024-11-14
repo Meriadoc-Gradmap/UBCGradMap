@@ -36,6 +36,8 @@ dependencies {
 
     // Jsoup for Web Scraping
     implementation 'org.jsoup:jsoup:1.18.1'
+
+    implementation 'me.tongfei:progressbar:0.10.1'
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
