@@ -21,7 +21,6 @@ import me.tongfei.progressbar.ProgressBar;
 import me.tongfei.progressbar.ProgressBarBuilder;
 import me.tongfei.progressbar.ProgressBarStyle;
 
-
 public class DataFormatter {
 
     public static final int INDEX_VAL0 = 0;
@@ -31,31 +30,27 @@ public class DataFormatter {
     public static final int INDEX_VAL4 = 4;
     public static final int INDEX_VAL5 = 5;
     public static final int INDEX_VAL6 = 6;
-    public static final int INDEX_VAL7 = 7;
-    public static final int INDEX_VAL8 = 8;
-    public static final int INDEX_VAL9 = 9;
-    public static final int INDEX_VAL10 = 10;
+
     private static final int COLOR_VALUE = 33;
 
     public static void main(String[] args) {
         System.out.print("\033[H\033[2J");  
         System.out.flush();  
         
-        createJsonNoCache();
+        createJsonFromCache("courses.txt", "grades.csv");
     }
 
     record FullCourse(
         String code,
         String name,
         double[] credits,
-        String decription,
+        String description,
         String[] prerequisites,
         String[] corequisites,
         boolean cdf,
         Schedule schedule,
-        Others other
+        Others others
     ) {
-
     }
 
     record Schedule(
@@ -66,23 +61,18 @@ public class DataFormatter {
         int tutorials,
         boolean alternating3
     ) {
-
     }
 
     record Others(
         double grade
     ) {
-
     }
 
     public static void createJson(List<Course> courseList, Map<String, Double> gradeMap) {
         Pattern titlePattern = Pattern.compile("([A-Za-z]+).+(\\d\\d\\d).+\\((\\d+\\.*\\d*)-?(\\d+\\.*\\d*)?\\)(.+)");
-        Pattern schedulePattern = Pattern.compile("\\[(\\d)(\\*?)-(\\d)(\\*?)-(\\d)(\\*?)\\]");
         Pattern preReqPattern = Pattern.compile("(?:Pre-?requisites?:\\s*([A-Za-z]+? \\d++[^.]*)?)");
         Pattern coReqPattern = Pattern.compile("(?:Co-?requisites?:\\s*([A-Za-z]+? \\d++[^.]*)?)");
-
         List<FullCourse> masterList = new ArrayList<>();
-
         ProgressBarBuilder pbb = ProgressBar.builder().
                         setStyle(ProgressBarStyle.builder().
                         colorCode((byte) COLOR_VALUE).
@@ -99,100 +89,48 @@ public class DataFormatter {
             double creditsHIGH = -1;
             String name = "";
             String description = "";
-            int lectures = -1;
-            boolean alternating1 = false;
-            int labs = -1;
-            boolean alternating2 = false;
-            int tutorials = -1;
-            boolean alternating3 = false;
-            String prerequisites = "";
-            String corequisites = "";
             boolean cdf = false;
             double grade = -1;
 
             Matcher titleMatcher = titlePattern.matcher(c.Title());
             if (titleMatcher.find()) {
-                code = titleMatcher.group(1) + "-" + titleMatcher.group(2);
-                creditsLOW = Double.parseDouble(titleMatcher.group(INDEX_VAL3));
+                code = titleMatcher.group(1) + "-" + titleMatcher.group(INDEX_VAL2); // Find course code
+                creditsLOW = Double.parseDouble(titleMatcher.group(INDEX_VAL3)); // Find credits/lowerbound
                 if (titleMatcher.group(INDEX_VAL4) != null) {
-                    creditsHIGH = Double.parseDouble(titleMatcher.group(INDEX_VAL4));
+                    creditsHIGH = Double.parseDouble(titleMatcher.group(INDEX_VAL4)); // Find upperbound if it exists
                 }
-                name = titleMatcher.group(INDEX_VAL5).trim();
+                name = titleMatcher.group(INDEX_VAL5).trim(); // Find course name
             }
 
             String desc = c.Description();
 
-            description = desc.split("Pre-?requisites?:|Co-?requisites?:|\\[")[0];
-
-            Matcher scheduleMatcher = schedulePattern.matcher(desc);
-
-            if (scheduleMatcher.find()) {
-                lectures = Integer.parseInt(scheduleMatcher.group(1));
-                alternating1 = scheduleMatcher.group(2) != null && scheduleMatcher.group(2).contains("*");
-                labs = Integer.parseInt(scheduleMatcher.group(3));
-                alternating2 = scheduleMatcher.group(4) != null && scheduleMatcher.group(4).contains("*");
-                tutorials = Integer.parseInt(scheduleMatcher.group(5));
-                alternating3 = scheduleMatcher.group(6) != null && scheduleMatcher.group(6).contains("*");
-            }
-
-            Matcher preReqMatcher = preReqPattern.matcher(desc);
-
-            if (preReqMatcher.find() && preReqMatcher.group(1) != null) {
-                prerequisites = preReqMatcher.group(1).replaceAll("([A-Za-z]+) (\\d+)", "$1-$2");
-                prerequisites = prerequisites.replaceAll("(,) ([A-Za-z]+)", ",$2");
-                prerequisites = prerequisites.replaceAll("[^A-Z0-9-]", " ").trim();
-                prerequisites = prerequisites.replaceAll("\\s+", ",");
-                prerequisites = prerequisites.replaceAll(" ", "").trim();
-            } 
-
-            Matcher coReqMatcher = coReqPattern.matcher(desc);
-
-            if (coReqMatcher.find() && coReqMatcher.group(1) != null) {
-                corequisites = coReqMatcher.group(1).replaceAll("([A-Za-z]+) (\\d+)", "$1-$2");
-                corequisites = corequisites.replaceAll("(,) ([A-Za-z]+)", ",$2");
-                corequisites = corequisites.replaceAll("[^A-Z0-9-, ]", " ").trim();
-                corequisites = corequisites.replaceAll("\\s+", ",");
-                corequisites = corequisites.replaceAll(" ", "").trim();
-            } 
+            description = desc.split("Pre-?requisites?:|Co-?requisites?:|\\[")[0]; // Find description
             
-            if (desc.contains("This course is not eligible for Credit/D/Fail grading.")) {
-                cdf = false;
-            } 
-
-            if (gradeMap.containsKey(code)) {
-                grade = gradeMap.get(code);
-            }
-
-            Schedule schedule = new Schedule(lectures, alternating1, labs, alternating2, tutorials, alternating3);
-            Others others = new Others(grade);
-
             double[] credits;
-            if (creditsHIGH != -1) {
+            if (creditsHIGH != -1) { // Find credits Array
                 credits = new double[(int) (creditsHIGH - creditsLOW + 2)];
-
-                for (int i = 0; i < (int) (creditsHIGH - creditsLOW + 2); i++) {
+                for (int i = 0; i < credits.length; i++) {
                     credits[i] = creditsLOW + i;
                 }
             } else {
                 credits = new double[1];
                 credits[0] = creditsLOW;
             }
-            
-            String[] prerequisiteArray; 
 
-            if (prerequisites != null) {
-                prerequisiteArray = prerequisites.split(",");
-            } else {
-                prerequisiteArray = new String[0];
+            String[] prerequisiteArray = createCourseList(preReqPattern, desc);
+            String[] corequisiteArray = createCourseList(coReqPattern, desc);
+
+            if (desc.contains("This course is not eligible for Credit/D/Fail grading.")) {
+                cdf = false;
+            } 
+
+            Schedule schedule = createSchedule(desc);
+
+            if (gradeMap.containsKey(code)) {
+                grade = gradeMap.get(code);
             }
 
-            String[] corequisiteArray; 
-
-            if (corequisites != null) {
-                corequisiteArray = corequisites.split(",");
-            } else {
-                corequisiteArray = new String[0];
-            }
+            Others others = new Others(grade);
 
             FullCourse fullCourse = new FullCourse(
                 code, name, credits, description, prerequisiteArray, corequisiteArray, cdf, schedule, others);
@@ -209,6 +147,48 @@ public class DataFormatter {
         } catch (IOException e) {
             throw new RuntimeException("Failed to write Json file");
         }
+    }
+
+    private static Schedule createSchedule(String desc) {
+        Pattern schedulePattern = Pattern.compile("\\[(\\d)(\\*?)-(\\d)(\\*?)-(\\d)(\\*?)\\]");
+        Matcher scheduleMatcher = schedulePattern.matcher(desc);
+        int lectures = -1;
+        boolean alternating1 = false;
+        int labs = -1;
+        boolean alternating2 = false;
+        int tutorials = -1;
+        boolean alternating3 = false;
+
+        if (scheduleMatcher.find()) {
+            lectures = Integer.parseInt(scheduleMatcher.group(INDEX_VAL1));
+            alternating1 = scheduleMatcher.group(INDEX_VAL2) != null && scheduleMatcher.group(INDEX_VAL2).contains("*");
+            labs = Integer.parseInt(scheduleMatcher.group(INDEX_VAL3));
+            alternating2 = scheduleMatcher.group(INDEX_VAL4) != null && scheduleMatcher.group(INDEX_VAL4).contains("*");
+            tutorials = Integer.parseInt(scheduleMatcher.group(INDEX_VAL5));
+            alternating3 = scheduleMatcher.group(INDEX_VAL6) != null && scheduleMatcher.group(INDEX_VAL6).contains("*");
+        }
+
+        return new Schedule(lectures, alternating1, labs, alternating2, tutorials, alternating3);
+    }
+
+    private static String[] createCourseList(Pattern coursePattern, String desc) {
+        Matcher matcher = coursePattern.matcher(desc);
+        String courses = "";
+        String[] courseArray; 
+
+        if (matcher.find() && matcher.group(1) != null) {
+            courses = matcher.group(1).replaceAll("([A-Za-z]+) (\\d+)", "$1-$2");
+            courses = courses.replaceAll("(,) ([A-Za-z]+)", ",$2");
+            courses = courses.replaceAll("[^A-Z0-9-]", " ").trim();
+            courses = courses.replaceAll("\\s+", ",");
+            courses = courses.replaceAll(" ", "").trim();
+        } 
+        if (courses != null) {
+            courseArray = courses.split(",");
+        } else {
+            courseArray = new String[0];
+        }
+        return courseArray;
     }
 
     public static void createJsonFromCache(String courseFileName, String gradeFileName) {
@@ -248,9 +228,9 @@ public class DataFormatter {
             FileWriter fwrite = new FileWriter(file);
             BufferedWriter writer = new BufferedWriter(fwrite);
             for (Course c : courseList) {
-                writer.write("Title: " + c.Title());
+                writer.write(c.Title());
                 writer.newLine();
-                writer.write("Description: " + c.Description());
+                writer.write(c.Description());
                 writer.newLine();
             }
             writer.close();
@@ -279,6 +259,16 @@ public class DataFormatter {
         }
     }
 
+    /**
+     * Reads a text file and returns a List of <code>Course</code> objects.
+     * The text file should contain Titles and Descriptions of courses as
+     * Strings, each on a new line with courses and their corresponding
+     * descriptions on alternating lines.
+     *
+     * @param file the file to read
+     * @return a list of <code>Course</code> objects
+     * @throws RuntimeException if there is an error reading the file
+     */
     public static List<Course> readCourses(File file) {
 
         List<Course> courseList = new ArrayList<>();
@@ -287,11 +277,9 @@ public class DataFormatter {
             String line;
 
             while ((line = reader.readLine()) != null) {
-                if (line.startsWith("Title: ")) {
-                    String title = line.substring(7); // Remove "Title: " prefix
-                    String description = reader.readLine().substring(13); // Remove "Description: " prefix
-                    courseList.add(new Course(title, description));
-                }
+                String title = line;
+                String desc = reader.readLine();
+                courseList.add(new Course(title, desc));
             }
             reader.close();
 
@@ -302,12 +290,22 @@ public class DataFormatter {
         return courseList;
     }
 
+    /**
+     * Reads a CSV file and returns a map of the course codes to their corresponding grade.
+     * The CSV file should have a header row with the columns labeled "Course" and "Grade".
+     * Each subsequent row should have the course code and the grade for that course. Course
+     * values must be Strings and Grade values must be doubles.
+     * 
+     * @param file the CSV file to read
+     * @return a map of course codes to grades
+     * @throws RuntimeException if there is an error reading the file
+     */
     public static Map<String, Double> readGrades(File file) {
 
         Map<String, Double> gradeMap = new HashMap<>();
         try {
             BufferedReader reader = new BufferedReader(new FileReader(file));
-            String line = reader.readLine();
+            String line = reader.readLine(); // Gets rid of first line
 
             while ((line = reader.readLine()) != null) {
                 String[] temp = line.split(",");
