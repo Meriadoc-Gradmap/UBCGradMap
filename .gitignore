@@ -33,4 +33,10 @@ dist-ssr
 *.sln
 *.sw?
 
+# Ignore Vim output files
+*~
+*.swp
+*.swo
+
+
 app/bin/
