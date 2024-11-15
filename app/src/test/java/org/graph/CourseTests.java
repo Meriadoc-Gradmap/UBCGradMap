@@ -24,7 +24,7 @@ public class CourseTests {
         Course c = new Course(
                 "code",
                 "name",
-                new int[]{0},
+                new double[]{0},
                 "desc",
                 prereqs,
                 postreqs,
@@ -158,7 +158,7 @@ public class CourseTests {
         Course a = new Course(
                 "code",
                 "name",
-                new int[]{0},
+                new double[]{0},
                 "desc",
                 prereqs,
                 postreqs,
@@ -182,7 +182,7 @@ public class CourseTests {
         postreqs.add("post1");
         postreqs.add("post2");
 
-        int[] credits = new int[] {0};
+        double[] credits = new double[] {0};
 
         Hours h = new Hours(1, false, 1, false, 1, false);
         Others o = new Others(12, "dr. prof");
@@ -201,7 +201,7 @@ public class CourseTests {
         );
 
         // credits
-        int[] creditCopy = a.getCredits();
+        double[] creditCopy = a.getCredits();
         creditCopy[0] = 100;
         assertNotEquals(creditCopy[0], a.getCredits()[0]);
         assertEquals(credits[0], a.getCredits()[0]);

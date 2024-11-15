@@ -12,7 +12,7 @@ public class Course extends Vertex {
 
     private final String code;
     private final String name;
-    private final int[] credits;
+    private final double[] credits;
     private final String description;
     private final Set<String> prerequisites;
     private final Set<String> postrequisites;
@@ -36,7 +36,7 @@ public class Course extends Vertex {
      * @param othersRecord   other information
      * @param id             must be greater than 0
      */
-    public Course(String code, String name, int[] credits, String description,
+    public Course(String code, String name, double[] credits, String description,
             Set<String> prerequisites, Set<String> postrequisites, boolean cdf,
             Hours schedule, Others othersRecord, int id) {
         super(id);
@@ -114,7 +114,7 @@ public class Course extends Vertex {
      * 
      * @return an array of the number of credits
      */
-    public int[] getCredits() {
+    public double[] getCredits() {
         return credits.clone();
     }
 
