@@ -15,12 +15,12 @@ public class Course extends Vertex {
     private final double[] credits;
     private final String description;
     private final Set<String> prerequisites;
-    private final Set<String> postrequisites;
     private final boolean cdf;
     private final Hours schedule;
     private final Others others;
     private static int id = 0;
     private boolean hasId;
+    private final Set<String> corequisites;
 
     /**
      * Creates a course.
@@ -30,14 +30,14 @@ public class Course extends Vertex {
      * @param credits        credits for each version of the course
      * @param description    description
      * @param prerequisites  list of course codes that are prerequisites
-     * @param postrequisites list of course codes that are dependents
+     * @param corequisites   list of course codes that are corequisites
      * @param cdf            if the course is credit d fail
      * @param schedule       record of how many hours per week the course is
      * @param othersRecord   other information
      * @param id             must be greater than 0
      */
     public Course(String code, String name, double[] credits, String description,
-            Set<String> prerequisites, Set<String> postrequisites, boolean cdf,
+            Set<String> prerequisites, Set<String> corequisites, boolean cdf,
             Hours schedule, Others othersRecord, int id) {
         super(id);
         hasId = true;
@@ -48,7 +48,7 @@ public class Course extends Vertex {
         this.credits = credits.clone();
         this.schedule = schedule.copy();
         this.prerequisites = new HashSet<>(prerequisites);
-        this.postrequisites = new HashSet<>(postrequisites);
+        this.corequisites = new HashSet<>(corequisites);
         this.others = othersRecord.copy();
         this.cdf = cdf;
     }
@@ -83,12 +83,11 @@ public class Course extends Vertex {
     }
 
     /**
-     * Gets the post-requisites.
-     * 
-     * @return a set of post-requisites
+     * Gets the co-requisites.
+     * @return a set of co-requisites.
      */
-    public Set<String> getPostRequisites() {
-        return new HashSet<>(postrequisites);
+    public Set<String> getCorequisites() {
+        return new HashSet<>(corequisites);
     }
 
     /**

@@ -44,11 +44,6 @@ public class CourseGraph {
                     gradesMatrix[codeToId.get(preReq)][course.id()] = 101 - course.getAverage();
                 }
             }
-            for (String dependant : course.getPostRequisites()) {
-                if (!codeToId.containsKey(dependant)) {
-                    gradesMatrix[course.id()][codeToId.get(dependant)] = 101 - getCourse(dependant).getAverage();
-                }
-            }
         }
     }
 
@@ -86,10 +81,7 @@ public class CourseGraph {
     }
 
     public Set<String> getCoRequisites(String code) {
-        Set<String> dependants = getPostRequisites(code);
-        Set<String> coRequisites = getPreRequisites(code);
-        coRequisites.retainAll(dependants);
-        return new HashSet<>(coRequisites);
+        return new HashSet<>(getCourse(code).getCorequisites());
     }
 
 }

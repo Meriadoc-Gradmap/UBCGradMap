@@ -17,9 +17,9 @@ public class CourseGraphTests {
     double[] ccred;
 
     Set<String> aPreq;
-    Set<String> aPost;
+    Set<String> aCo;
     Set<String> bPreq;
-    Set<String> bPost;
+    Set<String> bCo;
     Set<String> cPreq;
     Set<String> cPost;
 
@@ -50,14 +50,10 @@ public class CourseGraphTests {
 
         aPreq = new HashSet<>();
         bPreq = new HashSet<>();
-        aPost = new HashSet<>();
-        bPost = new HashSet<>();
-        aPost.add("c");
-        bPost.add("c");
-        aPreq.add("b");
-        aPost.add("b");
-        bPreq.add("a");
-        bPost.add("a");
+        aCo = new HashSet<>();
+        bCo = new HashSet<>();
+        aCo.add("b");
+        bCo.add("a");
 
         cPreq = new HashSet<>();
         cPreq.add("a"); cPreq.add("b");
@@ -77,7 +73,7 @@ public class CourseGraphTests {
                 acred,
                 "desc a",
                 aPreq,
-                aPost,
+                aCo,
                 false,
                 aHours,
                 aOther,
@@ -88,7 +84,7 @@ public class CourseGraphTests {
                 bcred,
                 "desc b",
                 bPreq,
-                bPost,
+                bCo,
                 false,
                 bHours,
                 bOther,
@@ -109,18 +105,6 @@ public class CourseGraphTests {
         courseSet.add(a);
         courseSet.add(b);
         courseSet.add(c);
-    }
-
-    @Test
-    public void invalidCourseGraph(){//TODO: Test is an infinite loop now
-        // will it notice if id < 0 or if id > graph size
-//        while (a.id() != -42) // not the meaning of life
-//            a.initId();
-//        assertThrows(IllegalArgumentException.class, () -> new CourseGraph(courseSet));
-//
-//        while (a.id() != 42)
-//            a.initId();
-//        assertThrows(IllegalArgumentException.class, () -> new CourseGraph(courseSet));
     }
 
     @Test
@@ -148,9 +132,7 @@ public class CourseGraphTests {
         assertEquals(aPreq, cg.getPreRequisites("a"));
         assertEquals(bPreq, cg.getPreRequisites("b"));
         assertEquals(cPreq, cg.getPreRequisites("c"));
-
-        assertEquals(aPost, cg.getPostRequisites("a"));
-        assertEquals(bPost, cg.getPostRequisites("b"));
+        
         assertEquals(cPost, cg.getPostRequisites("c"));
     }
 

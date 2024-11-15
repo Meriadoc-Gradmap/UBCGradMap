@@ -31,7 +31,8 @@ public class GraphCreator {
     }
 
     public static void main(String[] args) {
-        CourseGraph gc = createGraph("data/Example.json");
+        CourseGraph gc = createGraph("app/src/main/java/org/DataCollection/DataCache/nocache.json");
+        System.out.println(gc.getCoRequisites("CPEN-221"));
         System.out.println(Arrays.toString(gc.getCodes()));
     }
 

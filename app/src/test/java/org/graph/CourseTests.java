@@ -17,9 +17,9 @@ public class CourseTests {
         prereqs.add("pre1");
         prereqs.add("pre2");
 
-        Set<String> postreqs = new HashSet<>();
-        postreqs.add("post1");
-        postreqs.add("post2");
+        Set<String> coreqs = new HashSet<>();
+        coreqs.add("co1");
+        coreqs.add("co2");
 
         Course c = new Course(
                 "code",
@@ -27,7 +27,7 @@ public class CourseTests {
                 new double[]{0},
                 "desc",
                 prereqs,
-                postreqs,
+                coreqs,
                 false,
                 new Hours(1, false, 1, false, 1, false),
                 new Others(12, "dr. prof"),
@@ -43,105 +43,14 @@ public class CourseTests {
         assertEquals(prereqs, c.getPreRequisites());
         assertNotSame(prereqs, c.getPreRequisites());
         // make sure it is a separate object
-        assertEquals(postreqs, c.getPostRequisites());
-        assertNotSame(postreqs, c.getPostRequisites());
+        assertEquals(coreqs, c.getCorequisites());
+        assertNotSame(coreqs, c.getCorequisites());
 
         assertFalse(c.isCdf());
         assertEquals(new Hours(1, false, 1, false, 1, false), c.getWeeklyHours());
         assertEquals(new Others(12, "dr. prof"), c.getOthers());
 
         assertEquals(12, c.getAverage());
-    }
-
-    @Test
-    public void overflowid(){//TODO: infinite loop
-
-//        Set<String> prereqs = new HashSet<>();
-//        prereqs.add("pre1");
-//        prereqs.add("pre2");
-//
-//        Set<String> postreqs = new HashSet<>();
-//        postreqs.add("post1");
-//        postreqs.add("post2");
-//
-//        Course c = new Course(
-//                "code",
-//                "name",
-//                new int[]{0},
-//                "desc",
-//                prereqs,
-//                postreqs,
-//                false,
-//                new Hours(1, false, 1, false, 1, false),
-//                new Others(12, "dr. prof")
-//        );
-//
-//        while (c.id() != Integer.MAX_VALUE)
-//        {c.initId();}
-//
-//        // we are making the id negative which is not allowed in the vertex class
-//        assertThrows(IllegalArgumentException.class, c::initId);
-//        System.out.println(c.id()); // it is integer.min_valid fyi
-//
-//        // we are making a class with an negative id this should fail as well
-//        assertThrows(IllegalArgumentException.class , ()->
-//                new Course(
-//                        "code",
-//                        "name",
-//                        new int[]{0},
-//                        "desc",
-//                        prereqs,
-//                        postreqs,
-//                        false,
-//                        new Hours(1, false, 1, false, 1, false),
-//                        new Others(12, "dr. prof")
-//                ));
-    }
-
-    @Test
-    public void fakeEquals(){
-//        Set<String> prereqs = new HashSet<>();
-//        prereqs.add("pre1");
-//        prereqs.add("pre2");
-//
-//        Set<String> postreqs = new HashSet<>();
-//        postreqs.add("post1");
-//        postreqs.add("post2");
-//
-//        Course a = new Course(
-//                "code",
-//                "name",
-//                new int[]{0},
-//                "desc",
-//                prereqs,
-//                postreqs,
-//                false,
-//                new Hours(1, false, 1, false, 1, false),
-//                new Others(12, "dr. prof")
-//        );
-//        Course b = new Course(
-//                "NOT THE SAME COURSE",
-//                "name",
-//                new int[]{0},
-//                "desc",
-//                prereqs,
-//                postreqs,
-//                false,
-//                new Hours(1, false, 1, false, 1, false),
-//                new Others(12, "dr. prof")
-//        );
-//
-//        // @BenUBC let me know how we want this to not happen
-//        // either a) don't allow there to be negative ids
-//        // or b) remove initID
-//        // or c) change the equality test to be not just id == id
-//        // TODO
-//        while (a.id() != 10)
-//            a.initId();
-//        while (b.id() != 10)
-//            b.initId();
-//
-//        assertFalse(a.equals(b));
     }
 
     @Test
@@ -178,9 +87,9 @@ public class CourseTests {
         prereqs.add("pre1");
         prereqs.add("pre2");
 
-        Set<String> postreqs = new HashSet<>();
-        postreqs.add("post1");
-        postreqs.add("post2");
+        Set<String> coreqs = new HashSet<>();
+        coreqs.add("post1");
+        coreqs.add("post2");
 
         double[] credits = new double[] {0};
 
@@ -193,7 +102,7 @@ public class CourseTests {
                 credits,
                 "desc",
                 prereqs,
-                postreqs,
+                coreqs,
                 false,
                 h,
                 o,
@@ -217,14 +126,14 @@ public class CourseTests {
         prereqs.add("EVIL");
         assertNotEquals(prereqs, a.getPreRequisites());
 
-        // post req
-        Set<String> copiedPostreqs = a.getPostRequisites();
-        copiedPostreqs.add("EVIL VALUD");
-        assertNotEquals(copiedPostreqs, a.getPostRequisites());
-        assertEquals(postreqs, a.getPostRequisites());
+        // co req
+        Set<String> copiedCoReq = a.getCorequisites();
+        copiedCoReq.add("EVIL VALUD");
+        assertNotEquals(copiedCoReq, a.getCorequisites());
+        assertEquals(coreqs, a.getCorequisites());
 
-        postreqs.add("EVIL");
-        assertNotEquals(postreqs, a.getPostRequisites());
+        coreqs.add("EVIL");
+        assertNotEquals(coreqs, a.getCorequisites());
 
         // weekly hours
         assertEquals(h, a.getWeeklyHours());
