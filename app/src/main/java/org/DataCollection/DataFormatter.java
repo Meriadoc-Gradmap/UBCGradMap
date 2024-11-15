@@ -37,7 +37,6 @@ public class DataFormatter {
     public static final int INDEX_VAL10 = 10;
     private static final int COLOR_VALUE = 33;
 
-
     public static void main(String[] args) {
         System.out.print("\033[H\033[2J");  
         System.out.flush();  
@@ -178,7 +177,6 @@ public class DataFormatter {
                 credits = new double[1];
                 credits[0] = creditsLOW;
             }
-            
             
             String[] prerequisiteArray; 
 

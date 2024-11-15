@@ -114,8 +114,6 @@ public class WebScraper {
             throw new RuntimeException("There was an issue connecting to the UBC Calendar website."); 
         }
 
-        Elements urlElement = doc.getElementsByAttributeValue("property", "og:url");
-
         Elements departmentElements = doc.getElementsByTag("li");
 
         List<String> urlList = departmentElements.stream().
