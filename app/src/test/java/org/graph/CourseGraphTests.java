@@ -132,7 +132,7 @@ public class CourseGraphTests {
         assertEquals(aPreq, cg.getPreRequisites("a"));
         assertEquals(bPreq, cg.getPreRequisites("b"));
         assertEquals(cPreq, cg.getPreRequisites("c"));
-        
+
         assertEquals(cPost, cg.getPostRequisites("c"));
     }
 

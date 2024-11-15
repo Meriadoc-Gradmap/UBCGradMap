@@ -1,9 +1,6 @@
 package org.graph;
 
-import java.util.Set;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.HashMap;
+import java.util.*;
 
 public class CourseGraph {
     private final Set<Course> courseSet;
@@ -60,6 +57,19 @@ public class CourseGraph {
         return courseCodes.clone();
     }
 
+    public Set<String> getAllPreRequisites(String code) {
+        Queue<String> queue = new PriorityQueue<>();
+        Set<String> preRequisites = new HashSet<>();
+        queue.add(code);
+        while (!queue.isEmpty()) {
+            Set<String> preReq = getPreRequisites(queue.poll());
+            preRequisites.addAll(preReq);
+            queue.addAll(preReq);
+        }
+
+        return preRequisites;
+    }
+
     public Set<String> getPreRequisites(String code) {
         Set<String> preRequisites = new HashSet<>();
         for (int i = 0; i < courseSet.size(); i++) {
@@ -68,6 +78,19 @@ public class CourseGraph {
             }
         }
         return preRequisites;
+    }
+
+    public Set<String> getAllPostRequisites(String code) {
+        Queue<String> queue = new PriorityQueue<>();
+        Set<String> postRequisites = new HashSet<>();
+        queue.add(code);
+        while (!queue.isEmpty()) {
+            Set<String> preReq = getPostRequisites(queue.poll());
+            postRequisites.addAll(preReq);
+            queue.addAll(preReq);
+        }
+
+        return postRequisites;
     }
 
     public Set<String> getPostRequisites(String code) {
