@@ -18,7 +18,7 @@ Below is an explanation of the format used to store course data.
     "credits": [4, 5], // Courses stored in array since some have multiple credit levels
     "description": "Software Design",
     "prerequisites": ["APSC-160"], 
-    "postrequisites": ["CPEN-212", "CPEN-322", "CPEN-422"],
+    "corequisites": ["CPEN-212", "CPEN-322", "CPEN-422"],
     "cdf": false,
     "schedule": {
       "lectures": 3,
@@ -40,7 +40,7 @@ Below is an explanation of the format used to store course data.
     "credits": [3],
     "description": "Electricity",
     "prerequisites": ["PHYS-157", "MATH-101"],
-    "postrequisites": ["MATH-101", "MECH-221"], 
+    "corequisites": ["MATH-101", "MECH-221"], 
     // Corequisites are courses that appear
     // in both prerequisites and postrequisites
     // i.e. Math 101 

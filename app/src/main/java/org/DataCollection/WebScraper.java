@@ -22,6 +22,10 @@ import me.tongfei.progressbar.*;
 
 public class WebScraper {
 
+    private static final double ROUND_VALUE = 100.0;
+    private static final int COLOR_VALUE = 33;
+
+
     record Course(
             String Title,
             String Description) {
@@ -46,14 +50,14 @@ public class WebScraper {
         System.out.println("Fetching all Courses");
         long startTime = System.currentTimeMillis();
 
-        ProgressBarBuilder pbb = ProgressBar.builder()
-                        .setStyle(ProgressBarStyle.builder()
-                        .colorCode((byte) 33)  // the ANSI color code
-                        .leftBracket("[")
-                        .rightBracket("]")
-                        .block('=')
-                        .rightSideFractionSymbol('>')
-                        .build()
+        ProgressBarBuilder pbb = ProgressBar.builder().
+                        setStyle(ProgressBarStyle.builder().
+                        colorCode((byte) COLOR_VALUE).
+                        leftBracket("[").
+                        rightBracket("]").
+                        block('=').
+                        rightSideFractionSymbol('>').
+                        build()
                         );
 
         for (String s : ProgressBar.wrap(departmentList, pbb)) {
@@ -73,14 +77,14 @@ public class WebScraper {
         System.out.println("Fetching all Grades");
         long startTime = System.currentTimeMillis();
 
-        ProgressBarBuilder pbb = ProgressBar.builder()
-                        .setStyle(ProgressBarStyle.builder()
-                        .colorCode((byte) 33)  // the ANSI color code
-                        .leftBracket("[")
-                        .rightBracket("]")
-                        .block('=')
-                        .rightSideFractionSymbol('>')
-                        .build()
+        ProgressBarBuilder pbb = ProgressBar.builder().
+                        setStyle(ProgressBarStyle.builder().
+                        colorCode((byte) COLOR_VALUE).
+                        leftBracket("[").
+                        rightBracket("]").
+                        block('=').
+                        rightSideFractionSymbol('>').
+                        build()
                         );
 
         for (String s : ProgressBar.wrap(departmentList, pbb)) {
@@ -107,8 +111,10 @@ public class WebScraper {
         try { 
             doc = Jsoup.connect("https://vancouver.calendar.ubc.ca/course-descriptions/courses-subject").get(); 
         } catch (IOException e) { 
-            throw new RuntimeException("There was an issue connecting to the UBC Calendar website. Check your internet connection"); 
+            throw new RuntimeException("There was an issue connecting to the UBC Calendar website."); 
         }
+
+        Elements urlElement = doc.getElementsByAttributeValue("property", "og:url");
 
         Elements departmentElements = doc.getElementsByTag("li");
 
@@ -146,9 +152,10 @@ public class WebScraper {
         try { 
             doc = Jsoup.connect(url).get(); 
         } catch (IOException e) { 
-            throw new RuntimeException
-            ("There was an issue connecting to the UBC Calendar Website. Check your internet connection and that the provided URL is correct"); 
+            throw new RuntimeException("There was an issue connecting to the UBC Calendar Website."); 
         }
+
+        
 
         departmentElements = doc.getElementsByTag("li");
         courseList = departmentElements.stream().
@@ -196,7 +203,7 @@ public class WebScraper {
         JsonArray gradeArray;
         String title;
         Double grade;
-        Map<String, Double> departmentMap = new HashMap<>();;
+        Map<String, Double> departmentMap = new HashMap<>();
 
         try { 
             data = Jsoup.connect("https://ubcgrades.com/api/v3/course-statistics/UBCV/" + department).
@@ -207,17 +214,17 @@ public class WebScraper {
 
         try {
             gradeArray = JsonParser.parseString(data).getAsJsonArray();
-        } catch (JsonParseException e){
+        } catch (JsonParseException e) {
             throw new RuntimeException("There was an issue parsing the data from the UBCgrades API");
         }
         
         for (JsonElement j : gradeArray) {
             JsonObject jObj = j.getAsJsonObject();
-            title = jObj.get("subject").getAsString() + "-" + jObj.get("course").getAsString();;
+            title = jObj.get("subject").getAsString() + "-" + jObj.get("course").getAsString();
             if (jObj.get("average").getAsString().equals("")) {
                 grade = -1.0;
             } else {
-                grade = Math.round(jObj.get("average").getAsDouble() * 100.0) / 100.0;
+                grade = Math.round(jObj.get("average").getAsDouble() * ROUND_VALUE) / ROUND_VALUE;
             }
             departmentMap.put(title, grade);
         }
