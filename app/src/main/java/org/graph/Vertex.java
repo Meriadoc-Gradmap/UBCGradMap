@@ -17,7 +17,10 @@ public class Vertex {
         return this.id;
     }
 
-    public void setId(int id) {
+    protected void setId(int id) {
+        if (id < 0) {
+            throw new IllegalArgumentException("Vertex id cannot be less than 0");
+        }
         this.id = id;
     }
 

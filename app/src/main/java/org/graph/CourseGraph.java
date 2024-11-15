@@ -8,7 +8,7 @@ import java.util.HashMap;
 public class CourseGraph {
     private final Set<Course> courseSet;
     private final double[][] gradesMatrix;
-    private final String[] names;
+    private final String[] courseCodes;
 
     private final Map<String, Integer> codeToId = new HashMap<>();
 
@@ -21,7 +21,7 @@ public class CourseGraph {
     public CourseGraph(Set<Course> courses) {
         this.courseSet = courses;
         gradesMatrix = new double[courseSet.size()][courseSet.size()];
-        names = new String[courseSet.size()];
+        courseCodes = new String[courseSet.size()];
 
         initCourseVertices();
         initCourseEdges();
@@ -33,7 +33,7 @@ public class CourseGraph {
                 throw new IllegalArgumentException("Course id must be from 0 to courses.size() - 1");
             }
             codeToId.put(course.getCourseCode(), course.id());
-            names[course.id()] = course.getCourseCode();
+            courseCodes[course.id()] = course.getCourseCode();
         }
     }
 
@@ -41,12 +41,12 @@ public class CourseGraph {
         for (Course course : courseSet) {
             for (String preReq : course.getPreRequisites()) {
                 if (codeToId.containsKey(preReq)) {
-                    gradesMatrix[codeToId.get(preReq)][course.id()] = 100 - course.getAverage();
+                    gradesMatrix[codeToId.get(preReq)][course.id()] = 101 - course.getAverage();
                 }
             }
             for (String dependant : course.getPostRequisites()) {
                 if (!codeToId.containsKey(dependant)) {
-                    gradesMatrix[course.id()][codeToId.get(dependant)] = 100 - getCourse(dependant).getAverage();
+                    gradesMatrix[course.id()][codeToId.get(dependant)] = 101 - getCourse(dependant).getAverage();
                 }
             }
         }
@@ -61,15 +61,15 @@ public class CourseGraph {
 
     }
 
-    public String[] getNames() {
-        return names.clone();
+    public String[] getCodes() {
+        return courseCodes.clone();
     }
 
     public Set<String> getPreRequisites(String code) {
         Set<String> preRequisites = new HashSet<>();
         for (int i = 0; i < courseSet.size(); i++) {
             if (gradesMatrix[i][codeToId.get(code)] > 0) {
-                preRequisites.add(names[i]);
+                preRequisites.add(courseCodes[i]);
             }
         }
         return preRequisites;
@@ -79,7 +79,7 @@ public class CourseGraph {
         Set<String> postRequisites = new HashSet<>();
         for (int i = 0; i < courseSet.size(); i++) {
             if (gradesMatrix[codeToId.get(code)][i] > 0) {
-                postRequisites.add(names[i]);
+                postRequisites.add(courseCodes[i]);
             }
         }
         return postRequisites;

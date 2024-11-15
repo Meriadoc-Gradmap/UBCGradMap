@@ -20,6 +20,7 @@ public class Course extends Vertex {
     private final Hours schedule;
     private final Others others;
     private static int id = 0;
+    private boolean hasId;
 
     /**
      * Creates a course.
@@ -33,21 +34,22 @@ public class Course extends Vertex {
      * @param cdf            if the course is credit d fail
      * @param schedule       record of how many hours per week the course is
      * @param othersRecord   other information
+     * @param id             must be greater than 0
      */
     public Course(String code, String name, int[] credits, String description,
             Set<String> prerequisites, Set<String> postrequisites, boolean cdf,
-            Hours schedule, Others othersRecord) {
+            Hours schedule, Others othersRecord, int id) {
         super(id);
-        id++;
+        hasId = true;
 
         this.code = code;
         this.description = description;
         this.name = name;
-        this.credits = credits;
+        this.credits = credits.clone();
         this.schedule = schedule.copy();
         this.prerequisites = new HashSet<>(prerequisites);
         this.postrequisites = new HashSet<>(postrequisites);
-        this.others = othersRecord;
+        this.others = othersRecord.copy();
         this.cdf = cdf;
     }
 
@@ -55,8 +57,11 @@ public class Course extends Vertex {
      * Sets the id to the previous course's id plus one.
      */
     public void initId() {
-        super.setId(id);
-        id++;
+        if (!hasId) {
+            super.setId(id);
+            id++;
+            hasId = true;
+        }
     }
 
     /**
@@ -110,7 +115,7 @@ public class Course extends Vertex {
      * @return an array of the number of credits
      */
     public int[] getCredits() {
-        return credits;
+        return credits.clone();
     }
 
     /**
