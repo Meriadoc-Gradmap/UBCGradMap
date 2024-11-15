@@ -27,7 +27,7 @@ public class Controller {
     record CourseFormat(
             String code,
             String name,
-            int[] credits,
+            double[] credits,
             String description,
             String[] prerequisites,
             String[] postrequisites,
@@ -54,7 +54,7 @@ public class Controller {
      * {
      *   "code": "CPEN-221",
      *   "name": "Course name",
-     *   "credits": [4, 5],
+     *   "credits": [4,5, 5.0],
      *   "description": "Course description",
      *   "prerequisites": ["APSC-160"],
      *   "postrequisites": ["CPEN-212", "CPEN-322", "CPEN-422"],
@@ -86,7 +86,7 @@ public class Controller {
     public String getCourse(@RequestParam String course) {
         if (!isValidCode(course))
             return "ERROR: Invalid course code";
-        int[] credits = { 4, 5 };
+        double[] credits = { 4.5, 5 };
         String[] prerequisites = { "APSC-160" };
         String[] postrequisites = { "CPEN-212", "CPEN-322", "CPEN-422" };
         String[] corequisites = {};

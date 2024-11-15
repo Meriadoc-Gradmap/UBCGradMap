@@ -12,9 +12,9 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CourseGraphTests {
 
-    int[] acred;
-    int[] bcred;
-    int[] ccred;
+    double[] acred;
+    double[] bcred;
+    double[] ccred;
 
     Set<String> aPreq;
     Set<String> aPost;
@@ -44,9 +44,9 @@ public class CourseGraphTests {
         // together you can do c
         // a + b = c :-)
 
-        acred = new int[] {1,2};
-        bcred = new int[] {3};
-        ccred = new int[] {112}; // yep it's a lot of credits
+        acred = new double[] {1,2};
+        bcred = new double[] {3};
+        ccred = new double[] {112}; // yep it's a lot of credits
 
         aPreq = new HashSet<>();
         bPreq = new HashSet<>();
