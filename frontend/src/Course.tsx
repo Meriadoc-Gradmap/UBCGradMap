@@ -22,3 +22,8 @@ export interface Schedule {
   tutorials: number,
   alternating3: boolean
 }
+
+export interface Position {
+  x: number,
+  y: number
+}

@@ -1,87 +1,140 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { Course } from './Course';
+import { Course, Position } from './Course';
 import cytoscape from "cytoscape";
 
 export interface CourseTreeProps {
   // Oh boy here we go
-  currentCourse: Course,
-  courses: Map<string, Course>,
-  onClick: (course: Course) => void,
+  coursePath: Course[];
+  onClick: (course: string) => void,
 }
 
 const COREQ_SPACING = 100;
 const ROW_SPACING = 100;
 
-function makeElements(props: CourseTreeProps, cx: number, cy: number) {
+/**
+  * Goals:
+  * For the most part, be deterministic
+  * Except, never move a node
+  */
+function makeElements(props: CourseTreeProps, oldCoursePos: Map<String, Position>) {
+  
+  if (props.coursePath.length < 1) {
+    console.error("No course selected");
+    return {elements: [], oldCoursePos: oldCoursePos};
+  }
+
   let elements: {
     data: { id: string, label: string } | { source: string, target: string, label: string }, position?: { x: number, y: number }
   }[] = [];
 
   let coursePos: Map<string, { x: number, y: number }> = new Map<string, { x: number, y: number }>();
 
-  // Create the current course
-  elements.push({
-    data: { id: props.currentCourse.code, label: props.currentCourse.code },
-    position: { x: cx, y: cy }
-  });
-  coursePos.set(props.currentCourse.code, { x: cx, y: cy });
+  let currentCourse = props.coursePath[props.coursePath.length - 1];
+  let cx = 0, cy = 0;
 
-  let addCourse = (course: Course | undefined, parent: string | undefined, pos: { x: number, y: number }) => {
+  if (oldCoursePos.has(currentCourse.code)) {
+    // Center it around the current position then
+    cx = (oldCoursePos.get(currentCourse.code) ?? {x: 0, y:0}).x ;
+    cy = (oldCoursePos.get(currentCourse.code) ?? {x: 0, y:0}).y ;
+  }
+  else {
+    oldCoursePos.set(currentCourse.code, {x: cx, y: cy});
+  }
+
+  let isCollision = (pos: Position) => {
+    for (let course of props.coursePath) {
+      if (oldCoursePos.has(course.code)) {
+        let oldPos = oldCoursePos.get(course.code) ?? {x: 0, y: 0};
+        if (oldPos.x == pos.x && oldPos.y == pos.y) {
+          return true;
+        }
+      }
+    }
+
+    return false;
+  }
+
+  let getPosition = (sampleCourse: string, samplePos: Position) => {
+    if (sampleCourse == currentCourse.code) {
+      return {changed: false, realPos: {x: cx, y: cx}};
+    }
+
+    for (let course of props.coursePath) {
+      if (course.code != sampleCourse) {
+        continue;
+      }
+      if (oldCoursePos.has(course.code)) {
+        let oldPos = oldCoursePos.get(course.code) ?? {x: 0, y: 0};
+
+        return {changed: true, realPos: oldPos};
+      }
+    }
+
+    return {changed: false, realPos: samplePos};
+  }
+
+  let addCourse = (course: string | undefined, parent: string | undefined, pos: { x: number, y: number }) => {
     if (course == null) {
       return;
     }
 
-    if (!coursePos.has(course.code)) {
+    if (!coursePos.has(course)) {
       // Add the element
       elements.push({
-        data: { id: course.code, label: course.code },
+        data: { id: course, label: course},
         position: pos,
       })
+
+      coursePos.set(course, pos);
     }
 
     // Add the edge
-    if (parent != null) {
-      elements.push({ data: { source: course.code, target: parent, label: "" } });
+    if (parent != undefined) {
+      elements.push({ data: { source: course, target: parent, label: "" } });
     }
   };
 
-  let startPos = cx - COREQ_SPACING * (Math.floor(props.currentCourse.corequisites.length / 2))
+  let addRow = (courses: string[], y: number) => {
+    let startPos = cx - COREQ_SPACING * (Math.ceil(courses.length / 2))
 
-  for (let course of props.currentCourse.corequisites) {
-    if (props.courses.has(course)) {
-      addCourse(props.courses.get(course), props.currentCourse.code, { x: startPos, y: cy });
+    for (let course of courses) {
+      // Calculate position
+      let pos = {x:startPos, y:y};
+      while (isCollision(pos)) {
+        startPos += COREQ_SPACING;
+        pos = {x:startPos, y:y};
+      }
 
-      startPos += COREQ_SPACING;
-      if (startPos == cx) {
+      let {changed, realPos} = getPosition(course, pos);
+      addCourse(course, currentCourse.code, realPos);
+
+      if (!changed) {
         startPos += COREQ_SPACING;
       }
     }
   }
 
-  startPos = cx - COREQ_SPACING * (Math.floor(props.currentCourse.corequisites.length / 2))
+  // Add the rest of the path
+  let lastElement = undefined;
+  for (let course of props.coursePath) {
+    if (oldCoursePos.has(course.code)) {
+      let oldPos = oldCoursePos.get(course.code) ?? {x: 0, y: 0};
+      addCourse(course.code, lastElement, oldPos);
 
-  for (let course of props.currentCourse.prerequisites) {
-    if (props.courses.has(course)) {
-      addCourse(props.courses.get(course), props.currentCourse.code, { x: startPos, y: cy - ROW_SPACING });
-      startPos += COREQ_SPACING;
+      lastElement = course.code;
+    }
+    else {
+      console.error("This should never happen");
     }
   }
 
-  startPos = cx - COREQ_SPACING * (Math.floor(props.currentCourse.corequisites.length / 2))
+  // Add everything else
+  addRow(currentCourse.corequisites, cy);
+  addRow(currentCourse.prerequisites, cy - ROW_SPACING);
+  addRow(currentCourse.postrequisites, cy + ROW_SPACING);
 
-  for (let course of props.currentCourse.postrequisites) {
-    if (props.courses.has(course)) {
-      addCourse(props.courses.get(course), props.currentCourse.code, { x: startPos, y: cy + ROW_SPACING });
-      startPos += COREQ_SPACING;
-    }
-  }
 
-  // Deal with the rest
-  for (let course of props.courses.values()) {
-    // TODO: later
-  }
-
-  return elements;
+  return {elements: elements, oldCoursePos: coursePos};
 }
 
 
@@ -89,21 +142,18 @@ export default function CourseTree2(props: CourseTreeProps) {
   const containerRef = useRef(null);
   const cyRef = useRef<null | cytoscape.Core>(null);
 
-  let [centre, setCentre] = useState({ x: 0, y: 0 });
+  let [oldCoursePos, setOldCoursePos] = useState(new Map<String, Position>());
 
   let nodeClicked = (event: any) => {
     let node = event.target;
 
-    let course = props.courses.get(node.id());
-    setCentre(node.position());
-    if (course != null) {
-      props.onClick(course);
-    }
+    props.onClick(node.id());
   };
 
   useEffect(() => {
     if (containerRef.current !== null) {
-      const elements = makeElements(props, centre.x, centre.y);
+      let {elements, oldCoursePos: _oldCoursePos} = makeElements(props, oldCoursePos);
+      setOldCoursePos(_oldCoursePos);
 
       if (cyRef.current == null) {
         cyRef.current = cytoscape({
@@ -143,11 +193,7 @@ export default function CourseTree2(props: CourseTreeProps) {
         }
       }
     }
-
-    // Maybe cy.remove all previous elements and cy.add all new ones?
-    // We can return a destructor from useEffect that can do the destroying
-    // The clicked element needs to stay in the same place
-  });
+  }, [props]);
 
   return <div className="w-full h-screen" ref={containerRef} />
 }
