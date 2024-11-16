@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import CourseTree, { CourseTreeProps } from './Tree'
+import CourseTree2 from './CourseTree2'
 
 function App() {
 
@@ -117,7 +118,7 @@ function App() {
 
   return (
     <>
-      <CourseTree currentCourse={currentCourse} courses={ps.courses} onClick={setCurrentCourse}></CourseTree>
+      <CourseTree2 currentCourse={currentCourse} courses={ps.courses} onClick={setCurrentCourse}></CourseTree2>
     </>
   )
 }
