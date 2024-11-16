@@ -122,7 +122,13 @@ function App() {
     let courseObj = ps.courses.get(course);
     console.log("Clicked: " + course);
     if (courseObj !== undefined) {
-      setCoursePath((cp) => cp.concat([courseObj]));
+      setCoursePath((cp) => {
+        let loc = cp.indexOf(courseObj);
+        if (loc !== -1) {
+          return cp.splice(0, loc+1);
+        }
+        return cp.concat([courseObj]);
+      });
     }
   }
 

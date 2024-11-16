@@ -8,8 +8,12 @@ export interface CourseTreeProps {
   onClick: (course: string) => void,
 }
 
-const COREQ_SPACING = 100;
-const ROW_SPACING = 100;
+const COREQ_SPACING = 75;
+const ROW_SPACING = 125;
+
+enum EDGE_TYPE {
+  PREREQ, COREQ, POSTREQ, NONE, PATH
+}
 
 /**
   * Goals:
@@ -24,7 +28,7 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<String, Position
   }
 
   let elements: {
-    data: { id: string, label: string } | { source: string, target: string, label: string }, position?: { x: number, y: number }
+    data: { id: string, label: string } | { source: string, target: string, label: string }, position?: { x: number, y: number }, style?: {'line-color':string, 'target-arrow-color':string}
   }[] = [];
 
   let coursePos: Map<string, { x: number, y: number }> = new Map<string, { x: number, y: number }>();
@@ -73,7 +77,7 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<String, Position
     return {changed: false, realPos: samplePos};
   }
 
-  let addCourse = (course: string | undefined, parent: string | undefined, pos: { x: number, y: number }) => {
+  let addCourse = (course: string | undefined, parent: string | undefined, pos: { x: number, y: number }, edge_type: EDGE_TYPE) => {
     if (course == null) {
       return;
     }
@@ -90,11 +94,19 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<String, Position
 
     // Add the edge
     if (parent != undefined) {
-      elements.push({ data: { source: course, target: parent, label: "" } });
+      if (edge_type == EDGE_TYPE.PREREQ || edge_type == EDGE_TYPE.COREQ) {
+        elements.push({ data: { source: course, target: parent, label: "" } });
+      }
+      if (edge_type == EDGE_TYPE.POSTREQ || edge_type == EDGE_TYPE.COREQ) {
+        elements.push({ data: { source: parent, target: course, label: "" } });
+      }
+      if (edge_type == EDGE_TYPE.PATH) {
+        elements.push({ data: { source: parent, target: course, label: "" } , style: {"line-color": "red", "target-arrow-color": "red"} });
+      }
     }
   };
 
-  let addRow = (courses: string[], y: number) => {
+  let addRow = (courses: string[], y: number, edge_type: EDGE_TYPE) => {
     let startPos = cx - COREQ_SPACING * (Math.ceil(courses.length / 2))
 
     for (let course of courses) {
@@ -106,7 +118,7 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<String, Position
       }
 
       let {changed, realPos} = getPosition(course, pos);
-      addCourse(course, currentCourse.code, realPos);
+      addCourse(course, currentCourse.code, realPos, edge_type);
 
       if (!changed) {
         startPos += COREQ_SPACING;
@@ -119,7 +131,8 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<String, Position
   for (let course of props.coursePath) {
     if (oldCoursePos.has(course.code)) {
       let oldPos = oldCoursePos.get(course.code) ?? {x: 0, y: 0};
-      addCourse(course.code, lastElement, oldPos);
+      // TODO: Set edge-type properly
+      addCourse(course.code, lastElement, oldPos, EDGE_TYPE.PATH);
 
       lastElement = course.code;
     }
@@ -129,9 +142,9 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<String, Position
   }
 
   // Add everything else
-  addRow(currentCourse.corequisites, cy);
-  addRow(currentCourse.prerequisites, cy - ROW_SPACING);
-  addRow(currentCourse.postrequisites, cy + ROW_SPACING);
+  addRow(currentCourse.corequisites, cy, EDGE_TYPE.COREQ);
+  addRow(currentCourse.prerequisites, cy - ROW_SPACING, EDGE_TYPE.PREREQ);
+  addRow(currentCourse.postrequisites, cy + ROW_SPACING, EDGE_TYPE.POSTREQ);
 
 
   return {elements: elements, oldCoursePos: coursePos};
@@ -164,6 +177,16 @@ export default function CourseTree2(props: CourseTreeProps) {
               selector: 'node',
               style: {
                 'label': 'data(id)'
+              }
+            },
+            {
+              selector: 'edge',
+              style: {
+                'width': 3,
+                'line-color': '#ccc',
+                'target-arrow-color': '#ccc',
+                'target-arrow-shape': 'triangle',
+                'curve-style': 'bezier'
               }
             }
           ],
