@@ -25,16 +25,16 @@ public class Course extends Vertex {
     /**
      * Creates a course.
      * 
-     * @param code           course code "XXXX###"
-     * @param name           course name
-     * @param credits        credits for each version of the course
-     * @param description    description
-     * @param prerequisites  list of course codes that are prerequisites
-     * @param corequisites   list of course codes that are corequisites
-     * @param cdf            if the course is credit d fail
-     * @param schedule       record of how many hours per week the course is
-     * @param othersRecord   other information
-     * @param id             must be greater than 0
+     * @param code          course code "XXXX###"
+     * @param name          course name
+     * @param credits       credits for each version of the course
+     * @param description   description
+     * @param prerequisites list of course codes that are prerequisites
+     * @param corequisites  list of course codes that are corequisites
+     * @param cdf           if the course is credit d fail
+     * @param schedule      record of how many hours per week the course is
+     * @param othersRecord  other information
+     * @param id            must be greater than 0
      */
     public Course(String code, String name, double[] credits, String description,
             Set<String> prerequisites, Set<String> corequisites, boolean cdf,
@@ -84,6 +84,7 @@ public class Course extends Vertex {
 
     /**
      * Gets the co-requisites.
+     * 
      * @return a set of co-requisites.
      */
     public Set<String> getCorequisites() {
@@ -123,7 +124,7 @@ public class Course extends Vertex {
      * @return the average
      */
     public double getAverage() {
-        return others.average();
+        return others.grade();
     }
 
     /**
@@ -141,7 +142,7 @@ public class Course extends Vertex {
      * @return other information
      */
     public Others getOthers() {
-        return others.copy();
+        return others;
     }
 
     /**

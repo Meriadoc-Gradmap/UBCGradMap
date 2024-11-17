@@ -9,9 +9,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CourseTests {
 
-
     @Test
-    public void createValidCourse(){
+    public void createValidCourse() {
 
         Set<String> prereqs = new HashSet<>();
         prereqs.add("pre1");
@@ -24,15 +23,14 @@ public class CourseTests {
         Course c = new Course(
                 "code",
                 "name",
-                new double[]{0},
+                new double[] { 0 },
                 "desc",
                 prereqs,
                 coreqs,
                 false,
                 new Hours(1, false, 1, false, 1, false),
-                new Others(12, "dr. prof"),
-                0
-        );
+                new Others(12),
+                0);
 
         assertEquals("code", c.getCourseCode());
         assertEquals("name", c.getName());
@@ -48,13 +46,13 @@ public class CourseTests {
 
         assertFalse(c.isCdf());
         assertEquals(new Hours(1, false, 1, false, 1, false), c.getWeeklyHours());
-        assertEquals(new Others(12, "dr. prof"), c.getOthers());
+        assertEquals(new Others(12), c.getOthers());
 
         assertEquals(12, c.getAverage());
     }
 
     @Test
-    public void equalsTest(){
+    public void equalsTest() {
 
         Set<String> prereqs = new HashSet<>();
         prereqs.add("pre1");
@@ -67,21 +65,20 @@ public class CourseTests {
         Course a = new Course(
                 "code",
                 "name",
-                new double[]{0},
+                new double[] { 0 },
                 "desc",
                 prereqs,
                 postreqs,
                 false,
                 new Hours(1, false, 1, false, 1, false),
-                new Others(12, "dr. prof"),
-                0
-        );
+                new Others(12),
+                0);
 
         assertEquals(a, a);
     }
 
     @Test
-    public void immutabilityTests(){
+    public void immutabilityTests() {
 
         Set<String> prereqs = new HashSet<>();
         prereqs.add("pre1");
@@ -91,10 +88,10 @@ public class CourseTests {
         coreqs.add("post1");
         coreqs.add("post2");
 
-        double[] credits = new double[] {0};
+        double[] credits = new double[] { 0 };
 
         Hours h = new Hours(1, false, 1, false, 1, false);
-        Others o = new Others(12, "dr. prof");
+        Others o = new Others(12);
 
         Course a = new Course(
                 "code",
@@ -106,8 +103,7 @@ public class CourseTests {
                 false,
                 h,
                 o,
-                0
-        );
+                0);
 
         // credits
         double[] creditCopy = a.getCredits();
@@ -137,16 +133,15 @@ public class CourseTests {
 
         // weekly hours
         assertEquals(h, a.getWeeklyHours());
-        Hours alsoH =  new Hours(1, false, 1, false, 1, false);
+        Hours alsoH = new Hours(1, false, 1, false, 1, false);
         assertEquals(alsoH, h);
         assertEquals(alsoH, a.getWeeklyHours());
 
         // other
         assertEquals(o, a.getOthers());
-        Others alsoO = new Others(12, "dr. prof");
+        Others alsoO = new Others(12);
         assertEquals(alsoO, o);
         assertEquals(alsoO, a.getOthers());
     }
-
 
 }
