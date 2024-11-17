@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import CourseTree, { CourseTreeProps } from './Tree'
 import CourseTree2 from './CourseTree2'
+import { Course } from './Course'
+import Search from './Search'
 
 function App() {
 
@@ -103,7 +105,7 @@ function App() {
     ])
   };
 
-  let [currentCourse, setCurrentCourse] = useState(ps.courses.get("CPEN-211") ?? {
+  let [coursePath, setCoursePath] = useState([ps.courses.get("CPEN-211") ?? {
     code: "CPEN-211",
     name: "Soft constuction",
     description: "pretty cool",
@@ -114,11 +116,31 @@ function App() {
     cdf: false,
     schedule: { lectures: 3, alternating1: false, labs: 2, alternating2: false, tutorials: 4, alternating3: true },
     others: { average: 1, professor: "Sathish the goat" }
-  });
+  }]);
+
+
+  let graphNodeClicked = (course: string) => {
+    let courseObj = ps.courses.get(course);
+    console.log("Clicked: " + course);
+    if (courseObj !== undefined) {
+      setCoursePath((cp) => {
+        let loc = cp.indexOf(courseObj);
+        if (loc !== -1) {
+          return cp.splice(0, loc+1);
+        }
+        return cp.concat([courseObj]);
+      });
+    }
+  }
 
   return (
     <>
-      <CourseTree2 currentCourse={currentCourse} courses={ps.courses} onClick={setCurrentCourse}></CourseTree2>
+      <div className="w-screen h-screen">
+        <CourseTree2 coursePath={coursePath} onClick={graphNodeClicked}></CourseTree2>
+      </div>
+      <div className="lg:hidden fixed top-0 left-0 right-0 m-5 bg-white shadow-md rounded p-3">
+        <Search entered={(course)=>{console.log(course);}} />
+      </div>
     </>
   )
 }

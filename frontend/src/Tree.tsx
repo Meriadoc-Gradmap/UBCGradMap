@@ -7,7 +7,6 @@ export interface CourseTreeProps {
   currentCourse: Course,
   courses: Map<string, Course>,
   onClick: (course: Course) => void,
-
 }
 
 const COREQ_SPACING = 100;
