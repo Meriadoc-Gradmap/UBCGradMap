@@ -106,13 +106,6 @@ public class Controller {
         String code = course.toUpperCase();
         Course courseNode = courseGraph.getCourse(code);
 
-        double[] credits = { 4.5, 5 };
-        // String[] prerequisites = { "APSC-160" };
-        String[] prerequisites = courseGraph.getPreRequisites(code).toArray(String[]::new);
-        String[] postrequisites = { "CPEN-212", "CPEN-322", "CPEN-422" };
-        String[] corequisites = {};
-
-        Hours hoursTemp = new Hours(3, false, 2, false, 2, true);
         Gson gson = new Gson();
         CourseFormat courseFormat = new CourseFormat(code,
                 courseNode.getName(),
@@ -148,9 +141,7 @@ public class Controller {
     @GetMapping("/getallcourses")
     @ResponseBody
     public String getAllCourses() {
-        List<String> courses = new LinkedList<>();
-        courses.add("CPEN-221");
-        courses.add("FINN-101");
+        String[] courses = courseGraph.getCodes();
         Gson gson = new Gson();
         return gson.toJson(courses);
     }
