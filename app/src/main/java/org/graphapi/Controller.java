@@ -11,9 +11,6 @@ import org.graph.Others;
 import org.graph.Hours;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.LinkedList;
-import java.util.List;
-
 /**
  * @author Iain Griesdale
  *         Provides api methods to interface with the backend graph of courses.
@@ -104,21 +101,24 @@ public class Controller {
         if (!isValidCode(course))
             return "ERROR: Invalid course code";
         String code = course.toUpperCase();
-        Course courseNode = courseGraph.getCourse(code);
+        try {
+            Course courseNode = courseGraph.getCourse(code);
+            Gson gson = new Gson();
+            CourseFormat courseFormat = new CourseFormat(code,
+                    courseNode.getName(),
+                    courseNode.getCredits(),
+                    courseNode.getDescription(),
+                    courseGraph.getPreRequisites(code).toArray(String[]::new),
+                    courseGraph.getPostRequisites(code).toArray(String[]::new),
+                    courseGraph.getCoRequisites(code).toArray(String[]::new),
+                    courseNode.isCdf(),
+                    courseNode.getWeeklyHours(),
+                    courseNode.getOthers());
 
-        Gson gson = new Gson();
-        CourseFormat courseFormat = new CourseFormat(code,
-                courseNode.getName(),
-                courseNode.getCredits(),
-                courseNode.getDescription(),
-                courseGraph.getPreRequisites(code).toArray(String[]::new),
-                courseGraph.getPostRequisites(code).toArray(String[]::new),
-                courseGraph.getCoRequisites(code).toArray(String[]::new),
-                courseNode.isCdf(),
-                courseNode.getWeeklyHours(),
-                courseNode.getOthers());
-
-        return gson.toJson(courseFormat);
+            return gson.toJson(courseFormat);
+        } catch (Exception e) {
+            return "ERROR: No course found";
+        }
     }
 
     /**
