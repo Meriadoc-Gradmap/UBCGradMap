@@ -38,15 +38,15 @@ public class CourseGraphTests {
     Set<Course> courseSet;
 
     @BeforeEach
-    public void beforeEach(){
+    public void beforeEach() {
         // create three courses that link together
         // a and b are coreqs
         // together you can do c
         // a + b = c :-)
 
-        acred = new double[] {1,2};
-        bcred = new double[] {3};
-        ccred = new double[] {112}; // yep it's a lot of credits
+        acred = new double[] { 1, 2 };
+        bcred = new double[] { 3 };
+        ccred = new double[] { 112 }; // yep it's a lot of credits
 
         aPreq = new HashSet<>();
         bPreq = new HashSet<>();
@@ -56,16 +56,17 @@ public class CourseGraphTests {
         bCo.add("a");
 
         cPreq = new HashSet<>();
-        cPreq.add("a"); cPreq.add("b");
+        cPreq.add("a");
+        cPreq.add("b");
         cPost = new HashSet<>();
 
-        aHours = new Hours(1,false, 1,false,1,false);
-        bHours = new Hours(1,false, 1,false,1,false);
-        cHours = new Hours(1,false, 1,false,1,false);
+        aHours = new Hours(1, false, 1, false, 1, false);
+        bHours = new Hours(1, false, 1, false, 1, false);
+        cHours = new Hours(1, false, 1, false, 1, false);
 
-        aOther = new Others(0,"Dr. Prof");
-        bOther = new Others(50,"Dr. Prof");
-        cOther = new Others(10,"Dr. Prof");
+        aOther = new Others(0);
+        bOther = new Others(50);
+        cOther = new Others(10);
 
         a = new Course(
                 "a",
@@ -108,7 +109,7 @@ public class CourseGraphTests {
     }
 
     @Test
-    public void testCoReqs(){
+    public void testCoReqs() {
         CourseGraph cg = new CourseGraph(courseSet);
         Set<String> coreqsofA = new HashSet<>();
         coreqsofA.add("b");
@@ -117,17 +118,17 @@ public class CourseGraphTests {
     }
 
     @Test
-    public void getCodes(){
+    public void getCodes() {
         CourseGraph cg = new CourseGraph(courseSet);
         // these are the codes, not the names fyi
-        String[] expectedNames = new String[] {"a","b","c"};
+        String[] expectedNames = new String[] { "a", "b", "c" };
         String[] actualNames = cg.getCodes();
 
         assertEquals(new HashSet<>(List.of(expectedNames)), new HashSet<>(List.of(actualNames)));
     }
 
     @Test
-    public void testGettingPreAndPost(){
+    public void testGettingPreAndPost() {
         CourseGraph cg = new CourseGraph(courseSet);
         assertEquals(aPreq, cg.getPreRequisites("a"));
         assertEquals(bPreq, cg.getPreRequisites("b"));
@@ -137,7 +138,7 @@ public class CourseGraphTests {
     }
 
     @Test
-    public void getCourseTest(){
+    public void getCourseTest() {
         CourseGraph cg = new CourseGraph(courseSet);
         assertEquals(a, cg.getCourse("a"));
         assertEquals(b, cg.getCourse("b"));

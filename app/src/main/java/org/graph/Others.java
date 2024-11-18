@@ -1,8 +1,8 @@
 package org.graph;
 
-public record Others(double average, String professor) {
+public record Others(double grade) {
 
     public Others copy() {
-        return new Others(this.average(), this.professor());
+        return new Others(this.grade());
     }
 }

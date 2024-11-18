@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ControllerTests {
 
 
-    private final String cpen221 = "{\"code\":\"CPEN-221\",\"name\":\"Software Construction I\",\"credits\":[4.5,5.0],\"description\":\"Software Design blah blah blah\",\"prerequisites\":[\"APSC-160\"],\"postrequisites\":[\"CPEN-212\",\"CPEN-322\",\"CPEN-422\"],\"corequisites\":[],\"cdf\":false,\"schedule\":{\"lectures\":3,\"alternating1\":false,\"labs\":2,\"alternating2\":false,\"tutorials\":2,\"alternating3\":true},\"others\":{\"average\":87.0,\"professor\":\"Sathish Gopalakrishnan\"}}";
+    private final String cpen221 = "{\\\"code\\\":\\\"CPEN-221\\\",\\\"name\\\":\\\"Software Construction I\\\",\\\"credits\\\":[4.5,5.0],\\\"description\\\":\\\"Software Design blah blah blah\\\",\\\"prerequisites\\\":[\\\"APSC-160\\\"],\\\"postrequisites\\\":[\\\"CPEN-212\\\",\\\"CPEN-322\\\",\\\"CPEN-422\\\"],\\\"corequisites\\\":[],\\\"cdf\\\":false,\\\"schedule\\\":{\\\"lectures\\\":3,\\\"alternating1\\\":false,\\\"labs\\\":2,\\\"alternating2\\\":false,\\\"tutorials\\\":2,\\\"alternating3\\\":true},\\\"others\\\":{\\\"average\\\":87.0,\\\"professor\\\":\\\"Sathish Gopalakrishnan\\\"}}";
 
     @Autowired
     private Controller controller;

@@ -1,28 +1,35 @@
 package org.graphapi;
 
 import com.google.gson.Gson;
+
+import jakarta.annotation.PostConstruct;
+
+import org.graph.CourseGraph;
+import org.graph.Course;
+import org.graph.GraphCreator;
+import org.graph.Others;
 import org.graph.Hours;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.LinkedList;
-import java.util.List;
 /**
  * @author Iain Griesdale
  *         Provides api methods to interface with the backend graph of courses.
  *         These methods include
  *
  *         <ul>
- *         <li>{@code getTest} is a basic method to test that the api is online and can be accessed </li>
- *         <li>{@code getCourse} gets all required information for a specified course in json format</li>
- *         <li>{@code getAllCourses} gets a list of all the courses in json format</li>>
+ *         <li>{@code getTest} is a basic method to test that the api is online
+ *         and can be accessed</li>
+ *         <li>{@code getCourse} gets all required information for a specified
+ *         course in json format</li>
+ *         <li>{@code getAllCourses} gets a list of all the courses in json
+ *         format</li>>
  *         </ul>
  *
  */
 @RestController
 @RequestMapping("/api")
 public class Controller {
-    record Others(double average, String professor) {
-    }
+    private CourseGraph courseGraph;
 
     record CourseFormat(
             String code,
@@ -35,6 +42,13 @@ public class Controller {
             boolean cdf,
             Hours schedule,
             Others others) {
+    }
+
+    @PostConstruct
+    public void initializeGraph() {
+        CourseGraph courseGraph = GraphCreator
+                .createGraph("app/src/main/java/org/DataCollection/DataCache/nocache.json");
+        this.courseGraph = courseGraph;
     }
 
     /**
@@ -86,26 +100,25 @@ public class Controller {
     public String getCourse(@RequestParam String course) {
         if (!isValidCode(course))
             return "ERROR: Invalid course code";
-        double[] credits = { 4.5, 5 };
-        String[] prerequisites = { "APSC-160" };
-        String[] postrequisites = { "CPEN-212", "CPEN-322", "CPEN-422" };
-        String[] corequisites = {};
+        String code = course.toUpperCase();
+        try {
+            Course courseNode = courseGraph.getCourse(code);
+            Gson gson = new Gson();
+            CourseFormat courseFormat = new CourseFormat(code,
+                    courseNode.getName(),
+                    courseNode.getCredits(),
+                    courseNode.getDescription(),
+                    courseGraph.getPreRequisites(code).toArray(String[]::new),
+                    courseGraph.getPostRequisites(code).toArray(String[]::new),
+                    courseGraph.getCoRequisites(code).toArray(String[]::new),
+                    courseNode.isCdf(),
+                    courseNode.getWeeklyHours(),
+                    courseNode.getOthers());
 
-        Hours hoursTemp = new Hours(3, false, 2, false, 2, true);
-        Others othersTemp = new Others(87.0, "Sathish Gopalakrishnan");
-        Gson gson = new Gson();
-        CourseFormat courseFormat = new CourseFormat("CPEN-221",
-                "Software Construction I",
-                credits,
-                "Software Design blah blah blah",
-                prerequisites,
-                postrequisites,
-                corequisites,
-                false,
-                hoursTemp,
-                othersTemp);
-
-        return gson.toJson(courseFormat);
+            return gson.toJson(courseFormat);
+        } catch (Exception e) {
+            return "ERROR: No course found";
+        }
     }
 
     /**
@@ -128,9 +141,7 @@ public class Controller {
     @GetMapping("/getallcourses")
     @ResponseBody
     public String getAllCourses() {
-        List<String> courses = new LinkedList<>();
-        courses.add("CPEN-221");
-        courses.add("FINN-101");
+        String[] courses = courseGraph.getCodes();
         Gson gson = new Gson();
         return gson.toJson(courses);
     }
