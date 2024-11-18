@@ -144,7 +144,7 @@ public class DataFormatter {
         Gson gson = new Gson();
         gson.toJson(masterList);
         try {
-            File file = new File("app/src/main/java/org/DataCollection/DataCache", "nocache.json");
+            File file = new File("data", "COURSE_INFO.json");
             FileWriter writer = new FileWriter(file);
             gson.toJson(masterList, writer);
             writer.close();
