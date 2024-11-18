@@ -15,6 +15,9 @@ enum EDGE_TYPE {
   PREREQ, COREQ, POSTREQ, NONE, PATH
 }
 
+const NODE_COLOUR = "#40B4E5";
+const DELECTED_COLOUR = "#002145";
+
 /**
   * Goals:
   * For the most part, be deterministic
@@ -28,7 +31,7 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<String, Position
   }
 
   let elements: {
-    data: { id: string, label: string } | { source: string, target: string, label: string }, position?: { x: number, y: number }, style?: {'line-color':string, 'target-arrow-color':string}
+    data: { id: string, label: string } | { source: string, target: string, label: string }, position?: { x: number, y: number }, style?: {'line-color':string, 'target-arrow-color':string} | {'background-color':string}
   }[] = [];
 
   let coursePos: Map<string, { x: number, y: number }> = new Map<string, { x: number, y: number }>();
@@ -77,7 +80,7 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<String, Position
     return {changed: false, realPos: samplePos};
   }
 
-  let addCourse = (course: string | undefined, parent: string | undefined, pos: { x: number, y: number }, edge_type: EDGE_TYPE) => {
+  let addCourse = (course: string | undefined, parent: string | undefined, pos: { x: number, y: number }, edge_type: EDGE_TYPE, color: string = NODE_COLOUR) => {
     if (course == null) {
       return;
     }
@@ -87,6 +90,9 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<String, Position
       elements.push({
         data: { id: course, label: course},
         position: pos,
+        style: {
+          'background-color': color
+        }
       })
 
       coursePos.set(course, pos);
@@ -105,6 +111,8 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<String, Position
       }
     }
   };
+
+
 
   let addRow = (courses: string[], y: number, edge_type: EDGE_TYPE) => {
     let startPos = cx - COREQ_SPACING * (Math.ceil(courses.length / 2))
@@ -131,10 +139,27 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<String, Position
   for (let course of props.coursePath) {
     if (oldCoursePos.has(course.code)) {
       let oldPos = oldCoursePos.get(course.code) ?? {x: 0, y: 0};
-      // TODO: Set edge-type properly
-      addCourse(course.code, lastElement, oldPos, EDGE_TYPE.PATH);
+      let edgeType = EDGE_TYPE.NONE;
+      if (lastElement == undefined) {
+        edgeType = EDGE_TYPE.NONE
+      }
+      else if (lastElement.prerequisites.indexOf(course.code) != -1) {
+        edgeType = EDGE_TYPE.PREREQ;
+      }
+      else if (lastElement.postrequisites.indexOf(course.code) != -1) {
+        edgeType = EDGE_TYPE.POSTREQ;
+      }
+      else if (lastElement.corequisites.indexOf(course.code) != -1) {
+        edgeType = EDGE_TYPE.COREQ;
+      }
 
-      lastElement = course.code;
+      let x = undefined;
+      if (lastElement != undefined) {
+        x = lastElement.code;
+      }
+      addCourse(course.code, x, oldPos, edgeType, DELECTED_COLOUR);
+
+      lastElement = course;
     }
     else {
       console.error("This should never happen");
