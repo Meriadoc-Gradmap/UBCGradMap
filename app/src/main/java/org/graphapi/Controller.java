@@ -108,9 +108,9 @@ public class Controller {
                     courseNode.getName(),
                     courseNode.getCredits(),
                     courseNode.getDescription(),
-                    courseGraph.getPreRequisites(code).toArray(String[]::new),
+                    courseNode.getPreRequisites().toArray(String[]::new),
                     courseGraph.getPostRequisites(code).toArray(String[]::new),
-                    courseGraph.getCoRequisites(code).toArray(String[]::new),
+                    courseNode.getCorequisites().toArray(String[]::new),
                     courseNode.isCdf(),
                     courseNode.getWeeklyHours(),
                     courseNode.getOthers());
