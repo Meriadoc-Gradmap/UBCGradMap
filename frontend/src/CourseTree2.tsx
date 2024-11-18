@@ -8,7 +8,7 @@ export interface CourseTreeProps {
   onClick: (course: string) => void,
 }
 
-const COREQ_SPACING = 75;
+const COREQ_SPACING = 100;
 const ROW_SPACING = 125;
 
 enum EDGE_TYPE {
@@ -23,10 +23,10 @@ const DELECTED_COLOUR = "#002145";
   * For the most part, be deterministic
   * Except, never move a node
   */
-function makeElements(props: CourseTreeProps, oldCoursePos: Map<String, Position>) {
+function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position>) {
   
   if (props.coursePath.length < 1) {
-    console.error("No course selected");
+    console.log("No course selected");
     return {elements: [], oldCoursePos: oldCoursePos};
   }
 
@@ -118,6 +118,12 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<String, Position
     let startPos = cx - COREQ_SPACING * (Math.ceil(courses.length / 2))
 
     for (let course of courses) {
+      // Bugs in the rest of the stack sometimes give me shit data
+      // So just ignore it
+      if (course == "") {
+        continue;
+      }
+
       // Calculate position
       let pos = {x:startPos, y:y};
       while (isCollision(pos)) {
@@ -180,7 +186,7 @@ export default function CourseTree2(props: CourseTreeProps) {
   const containerRef = useRef(null);
   const cyRef = useRef<null | cytoscape.Core>(null);
 
-  let [oldCoursePos, setOldCoursePos] = useState(new Map<String, Position>());
+  let [oldCoursePos, setOldCoursePos] = useState(new Map<string, Position>());
 
   let nodeClicked = (event: any) => {
     let node = event.target;
@@ -190,7 +196,11 @@ export default function CourseTree2(props: CourseTreeProps) {
 
   useEffect(() => {
     if (containerRef.current !== null) {
-      let {elements, oldCoursePos: _oldCoursePos} = makeElements(props, oldCoursePos);
+      let newOldCoursePos = new Map<string, Position>();
+      if (props.coursePath.length > 1) {
+        newOldCoursePos = oldCoursePos;
+      }
+      let {elements, oldCoursePos: _oldCoursePos} = makeElements(props, newOldCoursePos);
       setOldCoursePos(_oldCoursePos);
 
       if (cyRef.current == null) {
@@ -227,6 +237,10 @@ export default function CourseTree2(props: CourseTreeProps) {
       else {
         for (let el of elements) {
           cyRef.current.add(el);
+        }
+
+        if (props.coursePath.length <= 1) {
+          cyRef.current.fit();
         }
       }
 

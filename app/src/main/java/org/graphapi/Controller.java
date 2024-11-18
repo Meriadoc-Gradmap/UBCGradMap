@@ -95,6 +95,7 @@ public class Controller {
      * @throws IllegalArgumentException if the course format is incorrect or
      *                                  if the course cannot be found.
      */
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/getcourse")
     @ResponseBody
     public String getCourse(@RequestParam String course) {
@@ -138,6 +139,7 @@ public class Controller {
      *
      * @return All the course codes contained in the grpah
      */
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/getallcourses")
     @ResponseBody
     public String getAllCourses() {
