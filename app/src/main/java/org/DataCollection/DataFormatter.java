@@ -7,8 +7,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.io.File;
@@ -32,6 +34,8 @@ public class DataFormatter {
     public static final int INDEX_VAL6 = 6;
 
     private static final int COLOR_VALUE = 33;
+
+    private static final int LENGTH_THRESHOLD = 6;
 
     public static void main(String[] args) {
         System.out.print("\033[H\033[2J");  
@@ -70,8 +74,8 @@ public class DataFormatter {
 
     public static void createJson(List<Course> courseList, Map<String, Double> gradeMap) {
         Pattern titlePattern = Pattern.compile("([A-Za-z]+).+(\\d\\d\\d).+\\((\\d+\\.*\\d*)-?(\\d+\\.*\\d*)?\\)(.+)");
-        Pattern preReqPattern = Pattern.compile("(?:Pre-?requisites?:\\s*([A-Za-z]+? \\d++[^.]*)?)");
-        Pattern coReqPattern = Pattern.compile("(?:Co-?requisites?:\\s*([A-Za-z]+? \\d++[^.]*)?)");
+        Pattern preReqPattern = Pattern.compile("(?:Pre-?requisites?:(.*?(?=[A-Z]{2}))?([A-Z]+? \\d++[^.]*))");
+        Pattern coReqPattern = Pattern.compile("(?:Co-?requisites?:(.*?(?=[A-Z]{2}))?([A-Z]+? \\d++[^.]*))");
         List<FullCourse> masterList = new ArrayList<>();
         ProgressBarBuilder pbb = ProgressBar.builder().
                         setStyle(ProgressBarStyle.builder().
@@ -173,22 +177,29 @@ public class DataFormatter {
 
     private static String[] createCourseList(Pattern coursePattern, String desc) {
         Matcher matcher = coursePattern.matcher(desc);
-        String courses = "";
+        String courses = null;
         String[] courseArray; 
 
         if (matcher.find() && matcher.group(1) != null) {
-            courses = matcher.group(1).replaceAll("([A-Za-z]+) (\\d+)", "$1-$2");
-            courses = courses.replaceAll("(,) ([A-Za-z]+)", ",$2");
-            courses = courses.replaceAll("[^A-Z0-9-]", " ").trim();
-            courses = courses.replaceAll("\\s+", ",");
-            courses = courses.replaceAll(" ", "").trim();
+            courses = matcher.group(2).replaceAll("([A-Z]+) (\\d+)", "$1-$2");
+            courses = courses.replaceAll(" ", ",");
+            courses = courses.replaceAll("[^A-Z\\d,-]", "");
+            courses = courses.replaceAll(",+", ",").trim();
         } 
         if (courses != null) {
             courseArray = courses.split(",");
         } else {
             courseArray = new String[0];
         }
-        return courseArray;
+
+        Set<String> validCourses = new HashSet<>();
+        for (String course : courseArray) {
+            if (course.length() >= LENGTH_THRESHOLD) {
+                validCourses.add(course);
+            }
+        }
+
+        return validCourses.toArray(new String[0]);
     }
 
     public static void createJsonFromCache(String courseFileName, String gradeFileName) {
