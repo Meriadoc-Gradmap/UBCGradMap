@@ -71,13 +71,7 @@ public class CourseGraph {
     }
 
     public Set<String> getPreRequisites(String code) {
-        Set<String> preRequisites = new HashSet<>();
-        for (int i = 0; i < courseSet.size(); i++) {
-            if (gradesMatrix[i][codeToId.get(code)] > 0) {
-                preRequisites.add(courseCodes[i]);
-            }
-        }
-        return preRequisites;
+        return getCourse(code).getPreRequisites();
     }
 
     public Set<String> getAllPostRequisites(String code) {
@@ -104,7 +98,7 @@ public class CourseGraph {
     }
 
     public Set<String> getCoRequisites(String code) {
-        return new HashSet<>(getCourse(code).getCorequisites());
+        return getCourse(code).getCorequisites();
     }
 
 }
