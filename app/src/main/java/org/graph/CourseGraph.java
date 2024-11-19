@@ -7,6 +7,8 @@ public class CourseGraph {
     private final double[][] gradesMatrix;
     private final String[] courseCodes;
 
+    private static final int EDGE_AVERAGE_LENGTH = 101;
+
     private final Map<String, Integer> codeToId = new HashMap<>();
 
     /**
@@ -38,7 +40,7 @@ public class CourseGraph {
         for (Course course : courseSet) {
             for (String preReq : course.getPreRequisites()) {
                 if (codeToId.containsKey(preReq)) {
-                    gradesMatrix[codeToId.get(preReq)][course.id()] = 101 - course.getAverage();
+                    gradesMatrix[codeToId.get(preReq)][course.id()] = EDGE_AVERAGE_LENGTH - course.getAverage();
                 }
             }
         }
@@ -47,9 +49,8 @@ public class CourseGraph {
     public Course getCourse(String code) {
         if (codeToId.containsKey(code)) {
             return getCourse(codeToId.get(code));
-        }
-        else {
-            return null;
+        } else {
+            throw new IllegalArgumentException("Cannot find course");
         }
     }
 
@@ -78,8 +79,7 @@ public class CourseGraph {
     public Set<String> getPreRequisites(String code) {
         if (codeToId.containsKey(code)) {
             return getCourse(code).getPreRequisites();
-        }
-        else {
+        } else {
             return new HashSet<>();
         }
     }

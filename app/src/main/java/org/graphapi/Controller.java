@@ -46,8 +46,7 @@ public class Controller {
 
     @PostConstruct
     public void initializeGraph() {
-        this.courseGraph = GraphCreator
-                .createGraph("data/COURSE_INFO.json");
+        this.courseGraph = GraphCreator.createGraph("data/COURSE_INFO.json");
     }
 
     /**
@@ -123,7 +122,7 @@ public class Controller {
                     courseNode.getOthers());
 
             return gson.toJson(courseFormat);
-        } catch (Exception e) {
+        } catch (IllegalArgumentException e) {
             return "ERROR: No course found";
         }
     }
@@ -137,7 +136,7 @@ public class Controller {
      * @retun true if it is valid, false otherwise
      */
     private boolean isValidCode(String courseCode) {
-        return courseCode.toUpperCase().matches("[A-Z]{3,4}?-[0-9]{3}");
+        return courseCode.toUpperCase().matches("[A-Z]{2,4}?-[0-9]{3}");
     }
 
     /**
@@ -148,7 +147,7 @@ public class Controller {
      * @retun true if it is a high school course
      */
     private boolean isHighSchoolCourse(String courseCode) {
-        return courseCode.toUpperCase().matches("[A-Z]{4}-1[0-9]{1}");
+        return courseCode.toUpperCase().matches("[A-Z]{4}-1[0-9]");
     }
 
     /**
