@@ -89,12 +89,15 @@ public class Controller {
      * 
      * @param course is the code of the course to get.
      * @return the json formatted course information. Can return three
-     * error messages as follows
-     * <ul>
-     *     <li>"ERROR: High school course" if the course is a high school pre requisite</li>
-     *     <li>"ERROR: Invalid course code" if the course code is not a valid course format</li>
-     *     <li>"ERROR: No course found" if the course is not in the graph/database</li>
-     * </ul>
+     *         error messages as follows
+     *         <ul>
+     *         <li>"ERROR: High school course" if the course is a high school pre
+     *         requisite</li>
+     *         <li>"ERROR: Invalid course code" if the course code is not a valid
+     *         course format</li>
+     *         <li>"ERROR: No course found" if the course is not in the
+     *         graph/database</li>
+     *         </ul>
      */
     @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/getcourse")
@@ -102,9 +105,9 @@ public class Controller {
     public String getCourse(@RequestParam String course) {
         if (!isValidCode(course)) {
             if (isHighSchoolCourse(course)) {
-                return "ERROR: High school course";
+                return "\"ERROR: High school course\"";
             }
-            return "ERROR: Invalid course code";
+            return "\"ERROR: Invalid course code\"";
         }
         String code = course.toUpperCase();
         try {
@@ -123,7 +126,7 @@ public class Controller {
 
             return gson.toJson(courseFormat);
         } catch (IllegalArgumentException e) {
-            return "ERROR: No course found";
+            return "\"ERROR: No course found\"";
         }
     }
 
