@@ -89,17 +89,24 @@ public class Controller {
      * </pre>
      * 
      * @param course is the code of the course to get.
-     * @return the json formatted course information
-     *
-     * @throws IllegalArgumentException if the course format is incorrect or
-     *                                  if the course cannot be found.
+     * @return the json formatted course information. Can return three
+     * error messages as follows
+     * <ul>
+     *     <li>"ERROR: High school course" if the course is a high school pre requisite</li>
+     *     <li>"ERROR: Invalid course code" if the course code is not a valid course format</li>
+     *     <li>"ERROR: No course found" if the course is not in the graph/database</li>
+     * </ul>
      */
     @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/getcourse")
     @ResponseBody
     public String getCourse(@RequestParam String course) {
-        if (!isValidCode(course))
+        if (!isValidCode(course)) {
+            if (isHighSchoolCourse(course)) {
+                return "ERROR: High school course";
+            }
             return "ERROR: Invalid course code";
+        }
         String code = course.toUpperCase();
         try {
             Course courseNode = courseGraph.getCourse(code);
@@ -131,6 +138,17 @@ public class Controller {
      */
     private boolean isValidCode(String courseCode) {
         return courseCode.toUpperCase().matches("[A-Z]{3,4}?-[0-9]{3}");
+    }
+
+    /**
+     * Checks if a given course code is a High School Course. A high school
+     * course has 4 letters followed by a dash and then and 1 and a number.
+     *
+     * @param courseCode is the course code to check
+     * @retun true if it is a high school course
+     */
+    private boolean isHighSchoolCourse(String courseCode) {
+        return courseCode.toUpperCase().matches("[A-Z]{4}-1[0-9]{1}");
     }
 
     /**
