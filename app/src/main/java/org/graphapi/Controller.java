@@ -46,9 +46,8 @@ public class Controller {
 
     @PostConstruct
     public void initializeGraph() {
-        CourseGraph courseGraph = GraphCreator
-                .createGraph("app/src/main/java/org/DataCollection/DataCache/nocache.json");
-        this.courseGraph = courseGraph;
+        this.courseGraph = GraphCreator
+                .createGraph("data/COURSE_INFO.json");
     }
 
     /**

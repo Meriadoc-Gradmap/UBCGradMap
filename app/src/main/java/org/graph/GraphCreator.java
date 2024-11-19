@@ -12,7 +12,6 @@ import java.util.HashSet;
 import java.util.List;
 
 public class GraphCreator {
-
     public static CourseGraph createGraph(String fileName) {
         Gson gson = new Gson();
         try {
@@ -31,9 +30,9 @@ public class GraphCreator {
     }
 
     public static void main(String[] args) {
-        CourseGraph gc = createGraph("app/src/main/java/org/DataCollection/DataCache/nocache.json");
-        System.out.println(gc.getAllPreRequisites("CPEN-331"));
-        System.out.println(Arrays.toString(gc.getCodes()));
+        CourseGraph gc = createGraph("data/COURSE_INFO.json");
+        System.out.println(gc.getAllPreRequisites("CPEN-320"));
+        System.out.println("h");
     }
 
 }

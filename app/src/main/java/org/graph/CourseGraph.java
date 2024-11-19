@@ -45,7 +45,12 @@ public class CourseGraph {
     }
 
     public Course getCourse(String code) {
-        return getCourse(codeToId.get(code));
+        if (codeToId.containsKey(code)) {
+            return getCourse(codeToId.get(code));
+        }
+        else {
+            return null;
+        }
     }
 
     private Course getCourse(int id) {
@@ -71,7 +76,12 @@ public class CourseGraph {
     }
 
     public Set<String> getPreRequisites(String code) {
-        return getCourse(code).getPreRequisites();
+        if (codeToId.containsKey(code)) {
+            return getCourse(code).getPreRequisites();
+        }
+        else {
+            return new HashSet<>();
+        }
     }
 
     public Set<String> getAllPostRequisites(String code) {
