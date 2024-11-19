@@ -46,7 +46,7 @@ public class Controller {
 
     @PostConstruct
     public void initializeGraph() {
-        this.courseGraph = GraphCreator.createGraph("data/COURSE_INFO.json");
+        this.courseGraph = GraphCreator.createGraph("../data/COURSE_INFO.json");
     }
 
     /**
