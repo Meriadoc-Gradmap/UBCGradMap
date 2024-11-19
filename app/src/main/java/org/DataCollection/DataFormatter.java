@@ -46,6 +46,8 @@ public class DataFormatter {
     private static final int LENGTH_THRESHOLD = 6;
 
     public static void main(String[] args) { 
+        System.out.print("\033[H\033[2J");  
+        System.out.flush();  
         createJsonFromCache("courses", "grades");
     }
 
@@ -182,7 +184,7 @@ public class DataFormatter {
      * @return a Schedule object
      */
     private static Schedule createSchedule(String desc) {
-        Pattern schedulePattern = Pattern.compile("\\[(\\d)(\\*?)-(\\d)(\\*?)-(\\d)(\\*?)\\]");
+        Pattern schedulePattern = Pattern.compile("\\[(\\d)?(\\*?)-?(\\d)?(\\*?)-?(\\d)?(\\*?)\\]");
         Matcher scheduleMatcher = schedulePattern.matcher(desc);
         int lectures = -1;
         boolean alternating1 = false;
@@ -192,11 +194,17 @@ public class DataFormatter {
         boolean alternating3 = false;
 
         if (scheduleMatcher.find()) {
-            lectures = Integer.parseInt(scheduleMatcher.group(INDEX_VAL1));
+            if (scheduleMatcher.group(INDEX_VAL1) != null) {
+                lectures = Integer.parseInt(scheduleMatcher.group(INDEX_VAL1));
+            }
             alternating1 = scheduleMatcher.group(INDEX_VAL2) != null && scheduleMatcher.group(INDEX_VAL2).contains("*");
-            labs = Integer.parseInt(scheduleMatcher.group(INDEX_VAL3));
+            if (scheduleMatcher.group(INDEX_VAL3) != null) {
+                labs = Integer.parseInt(scheduleMatcher.group(INDEX_VAL3));
+            }
             alternating2 = scheduleMatcher.group(INDEX_VAL4) != null && scheduleMatcher.group(INDEX_VAL4).contains("*");
-            tutorials = Integer.parseInt(scheduleMatcher.group(INDEX_VAL5));
+            if (scheduleMatcher.group(INDEX_VAL5) != null) {
+                tutorials = Integer.parseInt(scheduleMatcher.group(INDEX_VAL5));
+            }
             alternating3 = scheduleMatcher.group(INDEX_VAL6) != null && scheduleMatcher.group(INDEX_VAL6).contains("*");
         }
 
