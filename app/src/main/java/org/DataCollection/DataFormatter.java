@@ -37,10 +37,7 @@ public class DataFormatter {
 
     private static final int LENGTH_THRESHOLD = 6;
 
-    public static void main(String[] args) {
-        System.out.print("\033[H\033[2J");  
-        System.out.flush();  
-        
+    public static void main(String[] args) { 
         createJsonFromCache("courses", "grades");
     }
 
@@ -67,6 +64,9 @@ public class DataFormatter {
     ) {
     }
 
+    /**
+     * Others is declared as its own record in case we choose to add other info
+     */
     record Others(
         double grade
     ) {
@@ -74,9 +74,14 @@ public class DataFormatter {
 
     /**
      * Creates a JSON file containing all the information from the given list of courses and map of grades.
-     * The JSON file is stored in the "data" directory with the name "COURSE_INFO.json"
+     * The JSON file is stored in the "data" directory with the name "COURSE_INFO.json". Read the file
+     * "JSON Format.md" for information on the output. The JSON will be written to 
+     * <code>CPEN 221\GradMap\project-meriadoc-gradmap\data</code>
+     * and the file will be named <code>COURSE_INFO.json</code>.
+     * 
      * @param courseList a list of Course objects
      * @param gradeMap a map of course codes to grades
+     * @throws RuntimeException if there is an issue writing to the JSON
      */
     public static void createJson(List<Course> courseList, Map<String, Double> gradeMap) {
         Pattern titlePattern = Pattern.compile("([A-Za-z]+).+(\\d\\d\\d).+\\((\\d+\\.*\\d*)-?(\\d+\\.*\\d*)?\\)(.+)");
@@ -117,10 +122,9 @@ public class DataFormatter {
             
             double[] credits;
             if (creditsHIGH != -1) { // Find credits Array
-                credits = new double[(int) (creditsHIGH - creditsLOW + 1)];
-                for (int i = 0; i < credits.length; i++) {
-                    credits[i] = creditsLOW + i;
-                }
+                credits = new double[2];
+                credits[0] = creditsLOW;
+                credits[1] = creditsHIGH;
             } else {
                 credits = new double[1];
                 credits[0] = creditsLOW;
@@ -237,7 +241,7 @@ public class DataFormatter {
 
     /**
      * Creates a JSON file from the given cached course and grade data. Input file names
-     * should not contain their file type. The JSON will be  written to 
+     * should not contain their file type. The JSON will be written to 
      * <code>CPEN 221\GradMap\project-meriadoc-gradmap\data</code>
      * and the file will be named <code>COURSE_INFO.json</code>.
      * 
@@ -245,8 +249,8 @@ public class DataFormatter {
      * @param gradeFileName The name of the cache file containing all the grades.
      */
     public static void createJsonFromCache(String courseFileName, String gradeFileName) {
-        File courseFile = new File("app/src/main/java/org/DataCollection/DataCache", courseFileName);
-        File gradeFile = new File("app/src/main/java/org/DataCollection/DataCache", gradeFileName);
+        File courseFile = new File("app/src/main/java/org/DataCollection/DataCache", courseFileName + ".txt");
+        File gradeFile = new File("app/src/main/java/org/DataCollection/DataCache", gradeFileName + ".csv");
 
         if (!courseFile.exists() || !gradeFile.exists()) {
             throw new RuntimeException("\nThe specified caches do not exist");
