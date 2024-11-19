@@ -41,7 +41,7 @@ public class DataFormatter {
         System.out.print("\033[H\033[2J");  
         System.out.flush();  
         
-        createJsonFromCache("courses.txt", "grades.csv");
+        createJsonFromCache("courses", "grades");
     }
 
     record FullCourse(
@@ -72,6 +72,12 @@ public class DataFormatter {
     ) {
     }
 
+    /**
+     * Creates a JSON file containing all the information from the given list of courses and map of grades.
+     * The JSON file is stored in the "data" directory with the name "COURSE_INFO.json"
+     * @param courseList a list of Course objects
+     * @param gradeMap a map of course codes to grades
+     */
     public static void createJson(List<Course> courseList, Map<String, Double> gradeMap) {
         Pattern titlePattern = Pattern.compile("([A-Za-z]+).+(\\d\\d\\d).+\\((\\d+\\.*\\d*)-?(\\d+\\.*\\d*)?\\)(.+)");
         Pattern preReqPattern = Pattern.compile("(?:Pre-?requisites?:(.*?(?=[A-Z]{2}))?([A-Z]+? \\d++[^.]*))");
@@ -107,12 +113,11 @@ public class DataFormatter {
             }
 
             String desc = c.Description();
-
             description = desc.split("Pre-?requisites?:|Co-?requisites?:|\\[")[0]; // Find description
             
             double[] credits;
             if (creditsHIGH != -1) { // Find credits Array
-                credits = new double[(int) (creditsHIGH - creditsLOW + 2)];
+                credits = new double[(int) (creditsHIGH - creditsLOW + 1)];
                 for (int i = 0; i < credits.length; i++) {
                     credits[i] = creditsLOW + i;
                 }
@@ -153,6 +158,17 @@ public class DataFormatter {
         }
     }
 
+    /**
+     * Creates a Schedule object based on the course description passed in.
+     * The description is expected to contain a pattern of the form:
+     * [1-1-1*] where lectures, labs, and tutorials are integers, and
+     * alternating1, alternating2, and alternating3 are either empty or "*".
+     * If the description does not contain schedule information, values of
+     * the array will be -1 or false.
+     * 
+     * @param desc the course description to parse
+     * @return a Schedule object
+     */
     private static Schedule createSchedule(String desc) {
         Pattern schedulePattern = Pattern.compile("\\[(\\d)(\\*?)-(\\d)(\\*?)-(\\d)(\\*?)\\]");
         Matcher scheduleMatcher = schedulePattern.matcher(desc);
@@ -175,6 +191,21 @@ public class DataFormatter {
         return new Schedule(lectures, alternating1, labs, alternating2, tutorials, alternating3);
     }
 
+    /**
+     * Given a pattern and a description, returns an array of courses that exist in the description
+     * The courses are formatted as "CPEN-221" and the array is filtered to only include courses that
+     * have a length above a certain threshold to avoid false positives. This threshold is based on
+     * the minimum length of UBC course codes, which is 6. Users should take note that due to UBC
+     * Calendar's non standard course descriptions, this method cannot guarantee 100% success and false
+     * positves may be present in outputs (For example, a string such as "NUMBER-001" could be falsely
+     * interpreted as a course code). Users should take note to check all outputs. If there are no courses
+     * in the provided description or the provided pattern is incorrect, the method returns an empty
+     * String Array.
+     * 
+     * @param coursePattern the pattern to match against the description
+     * @param desc the description to match against
+     * @return an array of courses that exist in the description
+     */
     private static String[] createCourseList(Pattern coursePattern, String desc) {
         Matcher matcher = coursePattern.matcher(desc);
         String courses = null;
@@ -185,7 +216,9 @@ public class DataFormatter {
             courses = courses.replaceAll(" ", ",");
             courses = courses.replaceAll("[^A-Z\\d,-]", "");
             courses = courses.replaceAll(",+", ",").trim();
-        } 
+        } else {
+            return new String[0];
+        }
         if (courses != null) {
             courseArray = courses.split(",");
         } else {
@@ -202,6 +235,15 @@ public class DataFormatter {
         return validCourses.toArray(new String[0]);
     }
 
+    /**
+     * Creates a JSON file from the given cached course and grade data. Input file names
+     * should not contain their file type. The JSON will be  written to 
+     * <code>CPEN 221\GradMap\project-meriadoc-gradmap\data</code>
+     * and the file will be named <code>COURSE_INFO.json</code>.
+     * 
+     * @param courseFileName The name of the cache file containing all the courses.
+     * @param gradeFileName The name of the cache file containing all the grades.
+     */
     public static void createJsonFromCache(String courseFileName, String gradeFileName) {
         File courseFile = new File("app/src/main/java/org/DataCollection/DataCache", courseFileName);
         File gradeFile = new File("app/src/main/java/org/DataCollection/DataCache", gradeFileName);
@@ -216,6 +258,16 @@ public class DataFormatter {
         createJson(courseList, gradeMap);
     }
 
+    /**
+     * Fetches all courses and their corresponding grades using the WebScraper, 
+     * caches all retrieved data andcreates a JSON representation of this data.
+     * Input file names should not contain their file type.The JSON will be written
+     * to <code>CPEN 221\GradMap\project-meriadoc-gradmap\data</code>
+     * and the file will be named <code>COURSE_INFO.json</code>.
+     * 
+     * @param courseFileName The name of the cache file containing all the courses.
+     * @param gradeFileName The name of the cache file containing all the grades.
+     */
     public static void createJsonAndCache(String courseFileName, String gradeFileName) {
         List<Course> courseList = WebScraper.getAllCourses();
         Map<String, Double> gradeMap = WebScraper.getAllGrades();
@@ -226,6 +278,12 @@ public class DataFormatter {
         createJson(courseList, gradeMap);
     }
 
+    /**
+     * Fetches all courses and their corresponding grades using the WebScraper,
+     * and creates a JSON representation of this data without caching it locally.
+     * The JSON will be written to <code>CPEN 221\GradMap\project-meriadoc-gradmap\data</code>
+     * and the file will be named <code>COURSE_INFO.json</code>.
+     */
     public static void createJsonNoCache() {
         List<Course> courseList = WebScraper.getAllCourses();
         Map<String, Double> gradeMap = WebScraper.getAllGrades();
@@ -233,6 +291,17 @@ public class DataFormatter {
         createJson(courseList, gradeMap);
     }
 
+    /**
+     * Writes a given List of courses to a txt file in the DataCache directory.
+     * The List should contain <code>Course</code> Records. Courses will be stored
+     * with Course titles and corresponding descriptions on alternating lines
+     * All caches will be written to the relative path: 
+     * <code>app/src/main/java/org/DataCollection/DataCache</code>
+     *
+     * @param outputFileName the name of the output file
+     * @param gradeMap the map of grades to be cached
+     * @throws RuntimeException if there is an error writing to the file
+     */
     public static void cacheCourses(String outputFileName, List<Course> courseList) {
         File file = new File("app/src/main/java/org/DataCollection/DataCache", outputFileName + ".txt");
         try {
@@ -247,10 +316,20 @@ public class DataFormatter {
             writer.close();
             fwrite.close();
         } catch (IOException e) {
-            System.out.println("There was an error writing to the file");
+            throw new RuntimeException("There was an error writing to the file");
         }
     }
 
+    /**
+     * Writes a given Map of grades to a csv file in the DataCache directory.
+     * The map should contain the course code as the key and the average grade
+     * as the value. All caches will be written to the relative path:
+     * <code>app/src/main/java/org/DataCollection/DataCache</code>
+     *
+     * @param outputFileName the name of the output file
+     * @param gradeMap the map of grades to be cached
+     * @throws RuntimeException if there is an error writing to the file
+     */
     public static void cacheGrades(String outputFileName, Map<String, Double> gradeMap) {
         File file = new File("app/src/main/java/org/DataCollection/DataCache", outputFileName + ".csv");
         try {
@@ -266,7 +345,7 @@ public class DataFormatter {
             writer.close();
             fwrite.close();
         } catch (IOException e) {
-            System.out.println("There was an error writing to the file");
+            throw new RuntimeException("There was an error writing to the file");
         }
     }
 

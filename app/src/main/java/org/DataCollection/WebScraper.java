@@ -30,18 +30,16 @@ public class WebScraper {
             String Title,
             String Description) {
     }
-    
-    public static void main(String[] args) {
-        
-        Map<String, Double> courseList = getAllGrades();
 
-        for (String key : courseList.keySet()) {
-            System.out.println(key);
-            System.out.println(courseList.get(key));
-        }
-
-    }
-
+    /**
+     * Fetches all courses from the UBC calendar. 
+     * This function scrapes the UBC calendar website, and returns a list of all courses
+     * with their corresponding descriptions. Notably, users of this method should 
+     * ensure they have a steady internet connection. If the server end of UBC Calendar
+     * encounters technical difficulties, this method can make no guarantee of its output.
+     * 
+     * @return A list of all courses, with their corresponding descriptions
+     */
     public static List<Course> getAllCourses() {
         System.out.print("\033[H\033[2J");  
         System.out.flush();  
@@ -69,6 +67,15 @@ public class WebScraper {
         return courseList;
     }
 
+    /**
+     * Fetches all grades from UBC Grades. 
+     * This function scrapes the UBC Grades website, and returns a list of all courses
+     * with their corresponding descriptions. Notably, users of this method should 
+     * ensure they have a steady internet connection. If the server end of UBC Grades
+     * encounters technical difficulties, this method can make no guarantee of its output.
+     * 
+     * @return A list of all courses, with their corresponding descriptions
+     */
     public static Map<String, Double> getAllGrades() {
         System.out.print("\033[H\033[2J");  
         System.out.flush();  
