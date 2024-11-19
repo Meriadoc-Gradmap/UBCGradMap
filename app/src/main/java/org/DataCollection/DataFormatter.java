@@ -23,6 +23,14 @@ import me.tongfei.progressbar.ProgressBar;
 import me.tongfei.progressbar.ProgressBarBuilder;
 import me.tongfei.progressbar.ProgressBarStyle;
 
+
+/**
+ * DataFormatter contains methods used for the creation and 
+ * storage of Formatted Course JSONs and caches containing
+ * Course and grade information.
+ * 
+ * @author Tian Chen
+ */
 public class DataFormatter {
 
     public static final int INDEX_VAL0 = 0;
