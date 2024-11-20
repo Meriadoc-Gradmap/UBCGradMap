@@ -15,7 +15,7 @@ enum EDGE_TYPE {
   PREREQ, COREQ, POSTREQ, NONE, PATH
 }
 
-const NODE_COLOUR = "#40B4E5";
+const NODE_COLOUR = "#5FB4D5";
 const DELECTED_COLOUR = "#002145";
 
 /**
