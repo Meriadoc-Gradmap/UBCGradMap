@@ -162,6 +162,17 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
       let x = undefined;
       if (lastElement != undefined) {
         x = lastElement.code;
+        if (course.code == currentCourse.code) {
+          if (course.prerequisites.indexOf(lastElement.code) != -1) {
+            edgeType = EDGE_TYPE.NONE;
+          }
+          else if (course.postrequisites.indexOf(lastElement.code) != -1) {
+            edgeType = EDGE_TYPE.NONE;
+          }
+          else if (course.corequisites.indexOf(lastElement.code) != -1) {
+            edgeType = EDGE_TYPE.NONE;
+          }
+        }
       }
       addCourse(course.code, x, oldPos, edgeType, DELECTED_COLOUR);
 
