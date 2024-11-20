@@ -1,0 +1,9 @@
+* {
+  font-family: 'Open Sans';
+}
+
+.rounded-box {
+  border-width: 3px;
+  border-color: #5FB4D5;
+
+}
