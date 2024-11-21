@@ -2,16 +2,24 @@
   font-family: 'Open Sans', 'Roboto';
 }
 
-.rounded-box {
+.rounded-box-gradient {
   border-width: 3px;
   border-color: #5FB4D5;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(45deg, #7ed5f7, #5FB4D5) border-box;
+  border-radius: 0.8em;
+  border: solid transparent;
+}
 
+.search-shadow {
+  box-shadow: 4px 4px 8px lightgrey;
 }
 
 .main-logo {
   width: 14em;
 }
 
-.ubc-blue {
+.course-title {
   color: #053569;
+  font-weight: 600;
 }
