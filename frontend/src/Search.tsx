@@ -90,7 +90,7 @@ export default function Search(props: {entered: (a: string)=>void}) {
 
   // {/*onBlur={()=>{setFocus(false)}} onFocus={()=>{setFocus(true)}}*/}
   return (
-    <div className="fixed top-0 left-0 right-0 m-5 bg-white shadow-md rounded p-3 lg:w-1/4"
+    <div className="fixed top-10 lg:top-0 left-0 right-0 m-5 bg-white shadow-md rounded p-3 lg:w-1/4"
         onFocus={() => {setFocus(true)}} onBlur={() => {setTimeout(() => {setFocus(false)}, 100)}}>
       <div className="w-full flex flex-col" >
         <div className="w-full flex flex-row">

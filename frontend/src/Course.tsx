@@ -9,7 +9,7 @@ export interface Course {
   cdf: boolean,
   schedule: Schedule,
   others: {
-    average: number,
+    grade: number,
     professor: string
   }
 }

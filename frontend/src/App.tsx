@@ -6,6 +6,9 @@ import CourseTree, { CourseTreeProps } from './Tree'
 import CourseTree2 from './CourseTree2'
 import { API_ENDPOINT, Course } from './Course'
 import Search from './Search'
+import { useParams } from 'react-router-dom'
+import Panel from './Panel'
+import Logo from './Logo'
 
 function courseIndexOf(courses: Course[], course: Course): number {
   let index = 0;
@@ -84,8 +87,28 @@ function App() {
   let [coursePath, setCoursePath] = useState<Course[]>([]);
 
   // Initlally load CPEN 221
+  // const params = useParams();
+  //
+  // let updateParams = async () => {
+  //   if (params.path !== undefined) {
+  //     let path: string[] = params.path.split(":");
+  //     let courses: Course[] = [];
+  //     for (let c of path) {
+  //       let v = await fetchCourse(c);
+  //       if (v != undefined && v != null) {
+  //         courses.push(v);
+  //       }
+  //     }
+  //
+  //     setCoursePath(courses);
+  //   }
+  // };
+
   useEffect(() => {
-    loadCourse("CPEN-221");
+    if (coursePath.length == 0) {
+      loadCourse("CPEN-221");
+    }
+    // setTimeout(updateParams, 100);
   }, []);
 
   let graphNodeClicked = async (course: string) => {
@@ -107,7 +130,9 @@ function App() {
       <div className="w-screen h-screen">
         <CourseTree2 coursePath={coursePath} onClick={graphNodeClicked}></CourseTree2>
       </div>
+      <Panel currentCourse={coursePath.length > 0 ? coursePath[coursePath.length-1] : undefined} />
       <Search entered={(course)=>{loadCourse(course)}} />
+      <Logo />
     </>
   )
 }
