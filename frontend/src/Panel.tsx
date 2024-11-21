@@ -1,4 +1,4 @@
-import { Course } from "./Course";
+import { Course, GRADE_TO_COLOUR } from "./Course";
 
 export default function Panel(props: { currentCourse: Course | undefined }) {
 
@@ -17,7 +17,7 @@ export default function Panel(props: { currentCourse: Course | undefined }) {
           " Labs: " + props.currentCourse.schedule.labs + "h" : ""} &nbsp;
         {props.currentCourse.schedule.tutorials != -1 ?
           " Tutorials: " + props.currentCourse.schedule.tutorials + "h" : ""}
-        {props.currentCourse.others.grade != -1 ? <><br />Average: {props.currentCourse.others.grade}%</> : ""}
+        {props.currentCourse.others.grade != -1 ? <><br />Average: <span style={{"color": GRADE_TO_COLOUR(props.currentCourse.others.grade)}}>{props.currentCourse.others.grade}%</span></> : ""}
         {props.currentCourse.cdf ? "" : (<><br /> <span className="italic">This course is ineligible for Credit/D/Fail</span></>)}
       </p>
       <p className="">{props.currentCourse.description}</p>

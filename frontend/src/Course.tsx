@@ -1,3 +1,5 @@
+import convert from "color-convert";
+
 export interface Course {
   code: string,
   name: string,
@@ -29,3 +31,8 @@ export interface Position {
 }
 
 export const API_ENDPOINT = "http://localhost:8080"
+
+export let GRADE_TO_COLOUR = (grade: number) => {
+  let hue = (Math.max(60, Math.min(grade, 90)) - 60)*(1/30) * 120; 
+  return "#" + convert.hsv.hex([hue, 95, 80]);
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { Course, Position } from './Course';
+import { Course, GRADE_TO_COLOUR, Position } from './Course';
 import cytoscape from "cytoscape";
 import convert from "color-convert";
 
@@ -93,13 +93,9 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
       if (color !== DELECTED_COLOUR) {
         // Get the colour based on grade
         let courseInfo = props.courseCache.get(course);
-        console.log("Got here");
         if (courseInfo !== undefined) {
-          console.log("Got here too");
           if (courseInfo.others.grade !== -1) {
-            let hue = (Math.max(50, courseInfo.others.grade) - 50)*(2/100) * 120; 
-            real_color = "#" + convert.hsv.hex([hue, 100, 50]);
-            console.log(real_color);
+            real_color = GRADE_TO_COLOUR(courseInfo.others.grade);
           }
         }
       }
