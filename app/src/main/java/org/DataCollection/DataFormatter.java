@@ -48,8 +48,8 @@ public class DataFormatter {
     public static void main(String[] args) { 
         System.out.print("\033[H\033[2J");  
         System.out.flush();  
-        // createJsonFromCache("courses", "grades");
-        createJsonNoCache();
+        createJsonFromCache("courses", "grades");
+        // createJsonNoCache();
     }
 
     record FullCourse(
@@ -129,7 +129,7 @@ public class DataFormatter {
             }
 
             String desc = c.Description();
-            description = desc.split("Pre-?requisites?:|Co-?requisites?:|\\[")[0]; // Find description
+            description = desc;
             
             double[] credits;
             if (creditsHIGH != -1) { // Find credits Array
