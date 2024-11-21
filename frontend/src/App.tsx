@@ -6,6 +6,9 @@ import CourseTree, { CourseTreeProps } from './Tree'
 import CourseTree2 from './CourseTree2'
 import { API_ENDPOINT, Course } from './Course'
 import Search from './Search'
+import { useParams } from 'react-router-dom'
+import Panel from './Panel'
+import Logo from './Logo'
 
 function courseIndexOf(courses: Course[], course: Course): number {
   let index = 0;
@@ -40,9 +43,11 @@ function App() {
       let course: string | Course = await data.json();
 
       if (!(typeof course === 'string')) {
-        let newCourseCache = new Map(courseCache);
-        newCourseCache.set(code, course as Course);
-        setCourseCache(newCourseCache);
+        setCourseCache((old) => {
+          let ncc = new Map(old);
+          ncc.set(code, course as Course);
+          return ncc;
+        });
         return course;
       }
       else {
@@ -57,15 +62,14 @@ function App() {
     return null;
   }
 
-  let loadCourse = async (code: string) => {
+  let superFetchCourse = async (code: string) => {
+
     let course = await fetchCourse(code);
 
     if (course == null || course == undefined) {
       alert("Error: Could not load course");
-      return;
+      return null;
     }
-
-    setCoursePath([course]);
 
     // Start lazy-loading all the courses the user could click on soon
     for (let c of course.prerequisites) {
@@ -79,17 +83,30 @@ function App() {
     for (let c of course.postrequisites) {
       fetchCourse(c);
     }
+
+    return course;
+  }
+
+  let loadCourse = async (code: string) => {
+
+    let course = await superFetchCourse(code);
+
+    if (course !== null) {
+      setCoursePath([course]);
+    }
+
   }
 
   let [coursePath, setCoursePath] = useState<Course[]>([]);
 
-  // Initlally load CPEN 221
   useEffect(() => {
-    loadCourse("CPEN-221");
+    if (coursePath.length == 0) {
+      loadCourse("CPEN-221");
+    }
   }, []);
 
   let graphNodeClicked = async (course: string) => {
-    let courseObj = await fetchCourse(course);
+    let courseObj = await superFetchCourse(course);
     console.log("Clicked: " + course);
     if (courseObj !== null && courseObj !== undefined) {
       setCoursePath((cp) => {
@@ -105,9 +122,11 @@ function App() {
   return (
     <>
       <div className="w-screen h-screen">
-        <CourseTree2 coursePath={coursePath} onClick={graphNodeClicked}></CourseTree2>
+        <CourseTree2 courseCache={courseCache} coursePath={coursePath} onClick={graphNodeClicked}></CourseTree2>
       </div>
+      <Panel currentCourse={coursePath.length > 0 ? coursePath[coursePath.length-1] : undefined} />
       <Search entered={(course)=>{loadCourse(course)}} />
+      <Logo />
     </>
   )
 }

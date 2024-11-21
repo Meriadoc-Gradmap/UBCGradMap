@@ -11,14 +11,17 @@
   },
   "dependencies": {
     "@types/cytoscape": "^3.21.8",
+    "color-convert": "^2.0.1",
     "cytoscape": "^3.30.3",
     "fuse.js": "^7.0.0",
     "react": "^18.3.1",
     "react-cytoscapejs": "^2.0.0",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
+    "@types/color-convert": "^2.0.4",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.3",

@@ -1,11 +1,13 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { Course, Position } from './Course';
+import { Course, GRADE_TO_COLOUR, Position } from './Course';
 import cytoscape from "cytoscape";
+import convert from "color-convert";
 
 export interface CourseTreeProps {
   // Oh boy here we go
   coursePath: Course[];
   onClick: (course: string) => void,
+  courseCache: Map<string, Course>
 }
 
 const COREQ_SPACING = 100;
@@ -15,7 +17,8 @@ enum EDGE_TYPE {
   PREREQ, COREQ, POSTREQ, NONE, PATH
 }
 
-const NODE_COLOUR = "#5FB4D5";
+// const NODE_COLOUR = "#5FB4D5";
+const NODE_COLOUR = "#aaaaaa";
 const DELECTED_COLOUR = "#002145";
 
 /**
@@ -86,12 +89,23 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
     }
 
     if (!coursePos.has(course)) {
+      let real_color = color;
+      if (color !== DELECTED_COLOUR) {
+        // Get the colour based on grade
+        let courseInfo = props.courseCache.get(course);
+        if (courseInfo !== undefined) {
+          if (courseInfo.others.grade !== -1) {
+            real_color = GRADE_TO_COLOUR(courseInfo.others.grade);
+          }
+        }
+      }
+
       // Add the element
       elements.push({
         data: { id: course, label: course},
         position: pos,
         style: {
-          'background-color': color
+          'background-color': real_color
         }
       })
 
