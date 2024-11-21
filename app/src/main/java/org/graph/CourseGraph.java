@@ -2,6 +2,11 @@ package org.graph;
 
 import java.util.*;
 
+/**
+ * Graph of courses.
+ *
+ * @author Ben Newington
+ */
 public class CourseGraph {
     private final Set<Course> courseSet;
     private final double[][] gradesMatrix;
@@ -12,10 +17,9 @@ public class CourseGraph {
     private final Map<String, Integer> codeToId = new HashMap<>();
 
     /**
-     * The constructor should take a set of courses, where each course
-     * contains information for its pre reqs and dependants. From those sets
-     * we should be able to build the matrix using the map of course code to id.
-     *
+     * Takes a set of courses to be inside the graph.
+     * @param courses must contain all ids from {@code 0-courseSet.size()}
+     * @throws IllegalArgumentException if {@code courses} are invalid
      */
     public CourseGraph(Set<Course> courses) {
         this.courseSet = courses;
@@ -26,6 +30,10 @@ public class CourseGraph {
         initCourseEdges();
     }
 
+    /**
+     * Adds the vertices to the graph.
+     * @throws IllegalArgumentException if {@code courses} are invalid
+     */
     private void initCourseVertices() {
         for (Course course : courseSet) {
             if (course.id() > courseSet.size() - 1) {
@@ -36,6 +44,9 @@ public class CourseGraph {
         }
     }
 
+    /**
+     * Adds the edges to the graph with the length set to {@code 101-average} for the ability to add pathfinding later.
+     */
     private void initCourseEdges() {
         for (Course course : courseSet) {
             for (String preReq : course.getPreRequisites()) {
@@ -46,6 +57,12 @@ public class CourseGraph {
         }
     }
 
+    /**
+     * Finds the course with the given course code.
+     * @param code the course code of the course to search for
+     * @return the course with {@code code} in the graph
+     * @throws IllegalArgumentException if {@code code} is not in graph
+     */
     public Course getCourse(String code) {
         if (codeToId.containsKey(code)) {
             return getCourse(codeToId.get(code));
@@ -54,15 +71,30 @@ public class CourseGraph {
         }
     }
 
+    /**
+     * Finds the course with the given course id.
+     * @param id the course id for the course to search for
+     * @return the course with {@code id} in the graph
+     * @throws IllegalArgumentException if {@code code} is not in graph
+     */
     private Course getCourse(int id) {
         return courseSet.stream().filter(course -> course.id() == id).findFirst().orElseThrow();
 
     }
 
+    /**
+     * Returns a copy of all the codes in the graph.
+     * @return a copy of every course code in the graph
+     */
     public String[] getCodes() {
         return courseCodes.clone();
     }
 
+    /**
+     * Finds every pre req for a given course.
+     * @param code the course code
+     * @return A set of every pre req for a given course code. If the code doesn't exist, returns an empty set.
+     */
     public Set<String> getAllPreRequisites(String code) {
         Queue<String> queue = new PriorityQueue<>();
         Set<String> preRequisites = new HashSet<>();
@@ -76,6 +108,11 @@ public class CourseGraph {
         return preRequisites;
     }
 
+    /**
+     * Finds the immediate pre reqs for a given course.
+     * @param code the course code
+     * @return A set of immediate pre reqs for a given course code. If the code doesn't exist, returns an empty set.
+     */
     public Set<String> getPreRequisites(String code) {
         if (codeToId.containsKey(code)) {
             return getCourse(code).getPreRequisites();
@@ -84,6 +121,11 @@ public class CourseGraph {
         }
     }
 
+    /**
+     * Finds every post req for a given course.
+     * @param code the course code
+     * @return A set of every post req for a given course code. If the code doesn't exist, returns an empty set.
+     */
     public Set<String> getAllPostRequisites(String code) {
         Queue<String> queue = new PriorityQueue<>();
         Set<String> postRequisites = new HashSet<>();
@@ -97,6 +139,11 @@ public class CourseGraph {
         return postRequisites;
     }
 
+    /**
+     * Finds the immediate post reqs for a given course.
+     * @param code the course code
+     * @return A set of immediate post reqs for a given course code. If the code doesn't exist, returns an empty set.
+     */
     public Set<String> getPostRequisites(String code) {
         Set<String> postRequisites = new HashSet<>();
         for (int i = 0; i < courseSet.size(); i++) {
@@ -107,6 +154,12 @@ public class CourseGraph {
         return postRequisites;
     }
 
+    /**
+     * Finds the immediate co reqs for a given course.
+     * @param code the course code
+     * @return A set of immediate co reqs for a given course code.
+     * @throws IllegalArgumentException if {@code code} doesn't exist
+     */
     public Set<String> getCoRequisites(String code) {
         return getCourse(code).getCorequisites();
     }

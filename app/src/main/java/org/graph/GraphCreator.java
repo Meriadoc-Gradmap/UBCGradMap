@@ -7,11 +7,22 @@ import com.google.gson.stream.JsonReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.lang.reflect.Type;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
+/**
+ * Creates a course graph, given a json file.
+ *
+ * @author Ben Newington.
+ */
 public class GraphCreator {
+
+    /**
+     * Creates a graph with a given json file.
+     * @param fileName the path of the json file. Must contain courses formatted for the course class.
+     * @return a graph of the courses in the json file.
+     * @throws IllegalArgumentException if the file did not open correctly.
+     */
     public static CourseGraph createGraph(String fileName) {
         Gson gson = new Gson();
         try {
@@ -25,14 +36,7 @@ public class GraphCreator {
             return new CourseGraph(new HashSet<>(courses));
 
         } catch (FileNotFoundException e) {
-            throw new RuntimeException();
+            throw new IllegalArgumentException();
         }
     }
-
-    public static void main(String[] args) {
-        CourseGraph gc = createGraph("data/COURSE_INFO.json");
-        System.out.println(gc.getAllPreRequisites("CPEN-320"));
-        System.out.println("h");
-    }
-
 }

@@ -46,10 +46,10 @@ public class Course extends Vertex {
         this.description = description;
         this.name = name;
         this.credits = credits.clone();
-        this.schedule = schedule.copy();
+        this.schedule = schedule;
         this.prerequisites = new HashSet<>(prerequisites);
         this.corequisites = new HashSet<>(corequisites);
-        this.others = othersRecord.copy();
+        this.others = othersRecord;
         this.cdf = cdf;
     }
 
@@ -133,7 +133,7 @@ public class Course extends Vertex {
      * @return the weekly hours
      */
     public Hours getWeeklyHours() {
-        return schedule.copy();
+        return schedule;
     }
 
     /**
