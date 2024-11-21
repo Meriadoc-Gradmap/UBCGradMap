@@ -29,7 +29,7 @@ Below is an explanation of the format used to store course data.
       "alternating3": true
     },
     "others": {
-      "average": 87,
+      "grade": 87,
       "professor": "Sathish Gopalakrishnan"
       // And other stuff
     }
@@ -54,7 +54,7 @@ Below is an explanation of the format used to store course data.
       "alternating3": false
     },
     "others": {
-      "average": 75,
+      "grade": 75,
       "professor": "Marina Litinskaya"
       // And other stuff
     }
