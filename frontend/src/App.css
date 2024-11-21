@@ -1,9 +1,17 @@
 * {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', 'Roboto';
 }
 
 .rounded-box {
   border-width: 3px;
   border-color: #5FB4D5;
 
+}
+
+.main-logo {
+  width: 14em;
+}
+
+.ubc-blue {
+  color: #053569;
 }
