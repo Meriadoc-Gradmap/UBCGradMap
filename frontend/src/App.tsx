@@ -43,9 +43,11 @@ function App() {
       let course: string | Course = await data.json();
 
       if (!(typeof course === 'string')) {
-        let newCourseCache = new Map(courseCache);
-        newCourseCache.set(code, course as Course);
-        setCourseCache(newCourseCache);
+        setCourseCache((old) => {
+          let ncc = new Map(old);
+          ncc.set(code, course as Course);
+          return ncc;
+        });
         return course;
       }
       else {
@@ -60,15 +62,14 @@ function App() {
     return null;
   }
 
-  let loadCourse = async (code: string) => {
+  let superFetchCourse = async (code: string) => {
+
     let course = await fetchCourse(code);
 
     if (course == null || course == undefined) {
       alert("Error: Could not load course");
-      return;
+      return null;
     }
-
-    setCoursePath([course]);
 
     // Start lazy-loading all the courses the user could click on soon
     for (let c of course.prerequisites) {
@@ -82,37 +83,30 @@ function App() {
     for (let c of course.postrequisites) {
       fetchCourse(c);
     }
+
+    return course;
+  }
+
+  let loadCourse = async (code: string) => {
+
+    let course = await superFetchCourse(code);
+
+    if (course !== null) {
+      setCoursePath([course]);
+    }
+
   }
 
   let [coursePath, setCoursePath] = useState<Course[]>([]);
-
-  // Initlally load CPEN 221
-  // const params = useParams();
-  //
-  // let updateParams = async () => {
-  //   if (params.path !== undefined) {
-  //     let path: string[] = params.path.split(":");
-  //     let courses: Course[] = [];
-  //     for (let c of path) {
-  //       let v = await fetchCourse(c);
-  //       if (v != undefined && v != null) {
-  //         courses.push(v);
-  //       }
-  //     }
-  //
-  //     setCoursePath(courses);
-  //   }
-  // };
 
   useEffect(() => {
     if (coursePath.length == 0) {
       loadCourse("CPEN-221");
     }
-    // setTimeout(updateParams, 100);
   }, []);
 
   let graphNodeClicked = async (course: string) => {
-    let courseObj = await fetchCourse(course);
+    let courseObj = await superFetchCourse(course);
     console.log("Clicked: " + course);
     if (courseObj !== null && courseObj !== undefined) {
       setCoursePath((cp) => {
@@ -128,7 +122,7 @@ function App() {
   return (
     <>
       <div className="w-screen h-screen">
-        <CourseTree2 coursePath={coursePath} onClick={graphNodeClicked}></CourseTree2>
+        <CourseTree2 courseCache={courseCache} coursePath={coursePath} onClick={graphNodeClicked}></CourseTree2>
       </div>
       <Panel currentCourse={coursePath.length > 0 ? coursePath[coursePath.length-1] : undefined} />
       <Search entered={(course)=>{loadCourse(course)}} />
