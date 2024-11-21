@@ -1,4 +1,4 @@
-![alt text](https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/b1c4c353704b3dae7d48f50644cb73a28c1bfdfc/images/full_logo.svg)
+![alt text](https://github.com/CPEN-221-2024/project-meriadoc-gradmap/images/full_logo.svg)
 
 # **Team Name:**
 
