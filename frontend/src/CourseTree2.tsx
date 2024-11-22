@@ -272,8 +272,8 @@ export default function CourseTree2(props: CourseTreeProps) {
       return () => {
         for (let el of elements) {
           if (cyRef.current !== null) {
-            if (Object.hasOwn(el.data, "id")) {
-              var j = cyRef.current.$("#" + el.data.id);
+            if ((el.data as {id: string, label: string}).id !== undefined) {
+              var j = cyRef.current.$("#" + (el.data as {id: string, label: string}).id);
               cyRef.current.remove(j);
             }
           }

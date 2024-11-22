@@ -43,7 +43,7 @@ export default function Search(props: { entered: (a: string) => void }) {
     }
   }, [text]);
 
-  let keyPressed = (key: string, shiftKey: boolean, e: KeyboardEvent) => {
+  let keyPressed = (key: string, shiftKey: boolean, e: any) => {
     if (key == "Enter") {
       // Enter pressed
       if (searchResults.length > 0 && selected == "") {

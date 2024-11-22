@@ -21,6 +21,7 @@ node_modules
 dist
 dist-ssr
 *.local
+frontent/dist
 
 # Editor directories and files
 .vscode/*
