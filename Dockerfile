@@ -12,22 +12,17 @@ RUN unzip -d /opt/gradle /tmp/gradle-*.zip
 ENV GRADLE_HOME=/opt/gradle/gradle-8.11.1
 ENV PATH=$PATH:$GRADLE_HOME/bin 
 
-# WORKDIR /gradmap/frontend
 
-# COPY frontend/package*.json ./
+RUN apt-get install -y nodejs npm
 
-# RUN npm install
+WORKDIR /gradmap/frontend
 
-# COPY frontend/ .
+COPY frontend/package*.json ./
 
-# ENV PORT=5173
+RUN npm install
 
-# EXPOSE 5173
-
-# run the npm server
-# WORKDIR /gradmap/frontend
-# CMD ["npm", "run", "dev"]
-
+ENV PORT=5173
+EXPOSE 5173 8080
 
 
 WORKDIR /gradmap
@@ -36,9 +31,6 @@ COPY . .
 
 WORKDIR /gradmap/app
 RUN gradle clean build
-# ENTRYPOINT [ "java", "-jar", "./app/build/libs/app.jar" ]
-ENTRYPOINT ["gradle", "run"]
 
-
-EXPOSE 8080
-
+WORKDIR /gradmap 
+CMD ["./runner.sh"]
