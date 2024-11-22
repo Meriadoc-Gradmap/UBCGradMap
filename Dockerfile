@@ -4,7 +4,7 @@ FROM ubuntu:24.04
 
 # RUN apt-get update && apt-get install -y nodejs npm
 RUN apt-get update
-RUN apt-get install -y openjdk-17-jdk
+RUN apt-get install -y openjdk-17-jdk-headless
 RUN apt-get install -y wget unzip
 RUN wget https://services.gradle.org/distributions/gradle-8.11.1-bin.zip -P /tmp
 RUN unzip -d /opt/gradle /tmp/gradle-*.zip
@@ -33,4 +33,6 @@ WORKDIR /gradmap/app
 RUN gradle clean build
 
 WORKDIR /gradmap 
+
+RUN chmod +x ./runner.sh
 CMD ["./runner.sh"]
