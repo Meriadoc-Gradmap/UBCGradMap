@@ -47,9 +47,10 @@ public class DataFormatter {
 
     public static void main(String[] args) { 
         System.out.print("\033[H\033[2J");  
-        System.out.flush();  
+        System.out.flush();
         createJsonFromCache("courses", "grades");
         // createJsonNoCache();
+
     }
 
     record FullCourse(
@@ -114,8 +115,7 @@ public class DataFormatter {
             double creditsLOW = -1;
             double creditsHIGH = -1;
             String name = "";
-            String description = "";
-            boolean cdf = false;
+            boolean cdf = true;
             double grade = -1;
 
             Matcher titleMatcher = titlePattern.matcher(c.Title());
@@ -129,7 +129,9 @@ public class DataFormatter {
             }
 
             String desc = c.Description();
-            description = desc;
+            String description = desc.replaceAll("\\[[^\\[\\]]*]", ""); // Remove hours
+            description = description.replaceAll("([A-Z][^.!?]*\\.)$", ""); // Remove cdf
+
             
             double[] credits;
             if (creditsHIGH != -1) { // Find credits Array
