@@ -19,7 +19,8 @@ public class GraphCreator {
 
     /**
      * Creates a graph with a given json file.
-     * @param fileName the path of the json file. Must contain courses formatted for the course class.
+     * @param fileName the path of the json file. 
+     * Must contain courses formatted for the course class.
      * @return a graph of the courses in the json file.
      * @throws IllegalArgumentException if the file did not open correctly.
      */

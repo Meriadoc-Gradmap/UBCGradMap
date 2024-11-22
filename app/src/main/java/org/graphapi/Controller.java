@@ -9,7 +9,14 @@ import org.graph.Course;
 import org.graph.GraphCreator;
 import org.graph.Others;
 import org.graph.Hours;
-import org.springframework.web.bind.annotation.*;
+
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @author Iain Griesdale
@@ -44,6 +51,13 @@ public class Controller {
             Others others) {
     }
 
+    /**
+     * Initializes the graph when the application context is created.
+     * The graph is created from a predefined file location that gets updated
+     * by the webscraper.
+     * 
+     * @see jakarta.annotation.PostConstruct
+     */
     @PostConstruct
     public void initializeGraph() {
         this.courseGraph = GraphCreator.createGraph("../data/COURSE_INFO.json");

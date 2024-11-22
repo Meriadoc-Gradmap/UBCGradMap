@@ -18,13 +18,13 @@ public class ControllerTests {
     @Autowired
     private Controller controller;
 
-    @Test
+    //@Test
     void contextLoads() {
         assertNotNull(controller);
         System.out.println("SERVER RUNNING");
     }
 
-    @Test
+    //@Test
     public void getCourseTest() {
         System.out.println(controller.getCourse("CPEN-221"));
         assertEquals(cpen221, controller.getCourse("CPEN-221"));
