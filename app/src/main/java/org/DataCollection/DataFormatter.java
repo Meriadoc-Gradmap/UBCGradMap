@@ -129,10 +129,9 @@ public class DataFormatter {
             }
 
             String desc = c.Description();
-            String description = desc.replaceAll("\\[[^\\[\\]]*]", ""); // Remove hours
-            description = description.replaceAll("([A-Z][^.!?]*\\.)$", ""); // Remove cdf
+            String description = getDescription(desc);
 
-            
+
             double[] credits;
             if (creditsHIGH != -1) { // Find credits Array
                 credits = new double[2];
@@ -173,6 +172,17 @@ public class DataFormatter {
         } catch (IOException e) {
             throw new RuntimeException("Failed to write Json file");
         }
+    }
+
+    private static String getDescription(String desc) {
+        String description = desc.replaceAll("\\[[^\\[\\]]*]", ""); // Remove hours
+        description = description.replaceAll("This course is (not )?eligible for Credit/D/Fail grading\\.",
+                ""); // Remove cdf
+        description = description.replaceAll(
+                "(?i)(?:Consult|See|Please) [A-Za-z\\s]+ [^�]*�[^ ]*", "");
+        description = description.replaceAll(
+                " {3}", " ");
+        return description;
     }
 
     /**
