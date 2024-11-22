@@ -1,7 +1,6 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Course, GRADE_TO_COLOUR, Position } from './Course';
 import cytoscape from "cytoscape";
-import convert from "color-convert";
 
 export interface CourseTreeProps {
   // Oh boy here we go
@@ -27,14 +26,14 @@ const DELECTED_COLOUR = "#002145";
   * Except, never move a node
   */
 function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position>) {
-  
+
   if (props.coursePath.length < 1) {
     console.log("No course selected");
-    return {elements: [], oldCoursePos: oldCoursePos};
+    return { elements: [], oldCoursePos: oldCoursePos };
   }
 
   let elements: {
-    data: { id: string, label: string } | { source: string, target: string, label: string }, position?: { x: number, y: number }, style?: {'line-color':string, 'target-arrow-color':string} | {'background-color':string}
+    data: { id: string, label: string } | { source: string, target: string, label: string }, position?: { x: number, y: number }, style?: { 'line-color': string, 'target-arrow-color': string } | { 'background-color': string, 'font-family': string }
   }[] = [];
 
   let coursePos: Map<string, { x: number, y: number }> = new Map<string, { x: number, y: number }>();
@@ -44,17 +43,17 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
 
   if (oldCoursePos.has(currentCourse.code)) {
     // Center it around the current position then
-    cx = (oldCoursePos.get(currentCourse.code) ?? {x: 0, y:0}).x ;
-    cy = (oldCoursePos.get(currentCourse.code) ?? {x: 0, y:0}).y ;
+    cx = (oldCoursePos.get(currentCourse.code) ?? { x: 0, y: 0 }).x;
+    cy = (oldCoursePos.get(currentCourse.code) ?? { x: 0, y: 0 }).y;
   }
   else {
-    oldCoursePos.set(currentCourse.code, {x: cx, y: cy});
+    oldCoursePos.set(currentCourse.code, { x: cx, y: cy });
   }
 
   let isCollision = (pos: Position) => {
     for (let course of props.coursePath) {
       if (oldCoursePos.has(course.code)) {
-        let oldPos = oldCoursePos.get(course.code) ?? {x: 0, y: 0};
+        let oldPos = oldCoursePos.get(course.code) ?? { x: 0, y: 0 };
         if (oldPos.x == pos.x && oldPos.y == pos.y) {
           return true;
         }
@@ -66,7 +65,7 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
 
   let getPosition = (sampleCourse: string, samplePos: Position) => {
     if (sampleCourse == currentCourse.code) {
-      return {changed: false, realPos: {x: cx, y: cx}};
+      return { changed: false, realPos: { x: cx, y: cx } };
     }
 
     for (let course of props.coursePath) {
@@ -74,13 +73,13 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
         continue;
       }
       if (oldCoursePos.has(course.code)) {
-        let oldPos = oldCoursePos.get(course.code) ?? {x: 0, y: 0};
+        let oldPos = oldCoursePos.get(course.code) ?? { x: 0, y: 0 };
 
-        return {changed: true, realPos: oldPos};
+        return { changed: true, realPos: oldPos };
       }
     }
 
-    return {changed: false, realPos: samplePos};
+    return { changed: false, realPos: samplePos };
   }
 
   let addCourse = (course: string | undefined, parent: string | undefined, pos: { x: number, y: number }, edge_type: EDGE_TYPE, color: string = NODE_COLOUR) => {
@@ -102,10 +101,11 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
 
       // Add the element
       elements.push({
-        data: { id: course, label: course},
+        data: { id: course, label: course.replace('-', ' ') },
         position: pos,
         style: {
-          'background-color': real_color
+          'background-color': real_color,
+          'font-family': 'Open Sans'
         }
       })
 
@@ -121,7 +121,7 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
         elements.push({ data: { source: parent, target: course, label: "" } });
       }
       if (edge_type == EDGE_TYPE.PATH) {
-        elements.push({ data: { source: parent, target: course, label: "" } , style: {"line-color": "red", "target-arrow-color": "red"} });
+        elements.push({ data: { source: parent, target: course, label: "" }, style: { "line-color": "red", "target-arrow-color": "red" } });
       }
     }
   };
@@ -139,13 +139,13 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
       }
 
       // Calculate position
-      let pos = {x:startPos, y:y};
+      let pos = { x: startPos, y: y };
       while (isCollision(pos)) {
         startPos += COREQ_SPACING;
-        pos = {x:startPos, y:y};
+        pos = { x: startPos, y: y };
       }
 
-      let {changed, realPos} = getPosition(course, pos);
+      let { changed, realPos } = getPosition(course, pos);
       addCourse(course, currentCourse.code, realPos, edge_type);
 
       if (!changed) {
@@ -158,7 +158,7 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
   let lastElement = undefined;
   for (let course of props.coursePath) {
     if (oldCoursePos.has(course.code)) {
-      let oldPos = oldCoursePos.get(course.code) ?? {x: 0, y: 0};
+      let oldPos = oldCoursePos.get(course.code) ?? { x: 0, y: 0 };
       let edgeType = EDGE_TYPE.NONE;
       if (lastElement == undefined) {
         edgeType = EDGE_TYPE.NONE
@@ -203,7 +203,7 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
   addRow(currentCourse.postrequisites, cy + ROW_SPACING, EDGE_TYPE.POSTREQ);
 
 
-  return {elements: elements, oldCoursePos: coursePos};
+  return { elements: elements, oldCoursePos: coursePos };
 }
 
 
@@ -225,7 +225,7 @@ export default function CourseTree2(props: CourseTreeProps) {
       if (props.coursePath.length > 1) {
         newOldCoursePos = oldCoursePos;
       }
-      let {elements, oldCoursePos: _oldCoursePos} = makeElements(props, newOldCoursePos);
+      let { elements, oldCoursePos: _oldCoursePos } = makeElements(props, newOldCoursePos);
       setOldCoursePos(_oldCoursePos);
 
       if (cyRef.current == null) {
@@ -236,7 +236,7 @@ export default function CourseTree2(props: CourseTreeProps) {
             {
               selector: 'node',
               style: {
-                'label': 'data(id)'
+                'label': 'data(label)'
               }
             },
             {

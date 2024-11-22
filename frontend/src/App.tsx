@@ -1,12 +1,8 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import CourseTree, { CourseTreeProps } from './Tree'
 import CourseTree2 from './CourseTree2'
 import { API_ENDPOINT, Course } from './Course'
 import Search from './Search'
-import { useParams } from 'react-router-dom'
 import Panel from './Panel'
 import Logo from './Logo'
 
@@ -18,7 +14,7 @@ function courseIndexOf(courses: Course[], course: Course): number {
       console.log("FOund idx");
       return index;
     }
-    index ++;
+    index++;
   }
 
   return -1;
@@ -37,8 +33,8 @@ function App() {
     if (courseCache.has(code)) {
       return courseCache.get(code);
     }
-    
-    let data = await fetch(API_ENDPOINT+"/api/getcourse?course=" + code);
+
+    let data = await fetch(API_ENDPOINT + "/api/getcourse?course=" + code);
     if (data.ok) {
       let course: string | Course = await data.json();
 
@@ -112,7 +108,7 @@ function App() {
       setCoursePath((cp) => {
         let loc = courseIndexOf(cp, courseObj);
         if (loc !== -1) {
-          return cp.slice(0, loc+1);
+          return cp.slice(0, loc + 1);
         }
         return cp.concat([courseObj]);
       });
@@ -124,8 +120,8 @@ function App() {
       <div className="w-screen h-screen">
         <CourseTree2 courseCache={courseCache} coursePath={coursePath} onClick={graphNodeClicked}></CourseTree2>
       </div>
-      <Panel currentCourse={coursePath.length > 0 ? coursePath[coursePath.length-1] : undefined} />
-      <Search entered={(course)=>{loadCourse(course)}} />
+      <Panel currentCourse={coursePath.length > 0 ? coursePath[coursePath.length - 1] : undefined} />
+      <Search entered={(course) => { loadCourse(course) }} />
       <Logo />
     </>
   )
