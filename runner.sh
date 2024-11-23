@@ -1,5 +1,5 @@
 #!/bin/bash
-gradle clean run &
+./gradlew clean run &
 
 # Start the server
 cd frontend

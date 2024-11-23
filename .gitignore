@@ -44,3 +44,7 @@ app/bin/
 /app/.settings/
 /.github/
 /.settings/
+
+
+# Ignore keys lmao
+*.pem
