@@ -29,12 +29,24 @@ Many students like to plan their courses several years in advance and without a 
 
 ## **🐳Running the Dockerfile**
 
+### Install Docker
+If you don't already have docker installed, you can follow one of these guides.
+- https://docs.docker.com/get-started/get-docker/ Docker desktop avaiable for all operating systems
+- https://docs.docker.com/engine/install/ Docker engine for linux
+
+### Ensure Docker is installed
+Type this into your powershell or command line and you should get a list of containers. For a fresh install this will be empty.
+```shell
+docker ps
+```
+
 ### Clone this repository in your desired location
 ```shell
 git clone https://github.com/CPEN-221-2024/project-meriadoc-gradmap
 ```
 
 ### Build the Docker image
+This command goes into your powershell (on Windows) or terminal opened at the root directory of the cloned repository.
 ```shell
 docker-compose up
 ```
