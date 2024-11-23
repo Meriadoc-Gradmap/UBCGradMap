@@ -98,3 +98,14 @@ jacocoTestCoverageVerification{
 application {
     mainClass = 'org.graphapi.GraphApi'
 }
+
+tasks.register('runScraperNoCache', JavaExec) {
+//    group = "Execution"
+//    classpath = sourceSets.main.runtimeClasspath
+//    main = 'org.datacollection.DataFormatter'
+//    args ""
+    mainClass = 'org.datacollection.DataFormatter'
+    classpath = sourceSets.main.runtimeClasspath
+
+    systemProperties System.getProperties()
+}

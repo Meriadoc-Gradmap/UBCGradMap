@@ -1,7 +1,5 @@
 #!/bin/bash
-
-# Start the gradle daemon
-gradle run &
+gradle clean run &
 
 # Start the server
 cd frontend

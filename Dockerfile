@@ -6,12 +6,11 @@ FROM ubuntu:24.04
 RUN apt-get update
 RUN apt-get install -y openjdk-17-jdk-headless
 RUN apt-get install -y wget unzip
-RUN wget https://services.gradle.org/distributions/gradle-8.11.1-bin.zip -P /tmp
-RUN unzip -d /opt/gradle /tmp/gradle-*.zip
+# RUN wget https://services.gradle.org/distributions/gradle-8.11.1-bin.zip -P /tmp
+# RUN unzip -d /opt/gradle /tmp/gradle-*.zip
 
-ENV GRADLE_HOME=/opt/gradle/gradle-8.11.1
-ENV PATH=$PATH:$GRADLE_HOME/bin 
-
+# ENV GRADLE_HOME=/opt/gradle/gradle-8.11.1
+# ENV PATH=$PATH:$GRADLE_HOME/bin 
 
 RUN apt-get install -y nodejs npm
 
@@ -24,15 +23,11 @@ RUN npm install
 ENV PORT=5173
 EXPOSE 5173 8080
 
-
 WORKDIR /gradmap
 
-COPY . . 
+COPY . .
 
-WORKDIR /gradmap/app
-RUN gradle clean build
-
-WORKDIR /gradmap 
+RUN ./gradlew clean
 
 RUN chmod +x ./runner.sh
 CMD ["./runner.sh"]

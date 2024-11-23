@@ -1,11 +1,8 @@
 version: '3.8'
 services:
-  web:
-    build: ./frontend
-    ports:
-      - 5173:5173
-  api:
+  gradmap:
     build: ./
     ports:
       - 8080:8080
+      - 5173:5173
 
