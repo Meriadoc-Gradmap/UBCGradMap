@@ -9,5 +9,5 @@ npm run dev
 
 # Wait for any process to exit
 wait -n
-
+ 
 exit $?
