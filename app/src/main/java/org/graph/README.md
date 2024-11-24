@@ -1,6 +1,6 @@
-## Course Graph
+## graph
 
-This folder contains the files for a course graph and its creation.
+This folder contains the files for a course graph and its creation. All files are authored by Ben Newington.
 
 ### Vertex.java
 
