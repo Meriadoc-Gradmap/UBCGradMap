@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * @author Iain Griesdale
  *         Provides api methods to interface with the backend graph of courses.
  *         These methods include
  *
@@ -30,7 +29,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
  *         course in json format</li>
  *         <li>{@code getAllCourses} gets a list of all the courses in json
  *         format</li>>
+ *         <li>{@code initializeGraph} initializes the graph from the 
+*          {@code GraphCreator}. Runs on startup of the Spring Bean because of
+ *         the {@code PostConstruct} annotation.</li>>
  *         </ul>
+ *
+ *          @author Iain Griesdale
  *
  */
 @RestController

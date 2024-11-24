@@ -24,6 +24,8 @@ import org.util.JacocoGeneratedExclude;
 
 public class WebScraper {
 
+    private WebScraper() {};
+
     private static final double ROUND_VALUE = 100.0;
     private static final int COLOR_VALUE = 33;
 

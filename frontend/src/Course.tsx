@@ -41,6 +41,6 @@ if (DEVELOPMENT.endsWith("yes")) {
 }
 
 export let GRADE_TO_COLOUR = (grade: number) => {
-  let hue = (Math.max(60, Math.min(grade, 90)) - 60)*(1/30) * 120; 
-  return "#" + convert.hsv.hex([hue, 95, 80]);
+  let hue = (Math.max(63, Math.min(grade, 90)) - 63) * (1 / 30) * 120;
+  return "#" + convert.hsv.hex([hue, 55, 85]);
 }

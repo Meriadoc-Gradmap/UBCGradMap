@@ -136,13 +136,4 @@ public class SuperInvalidCoursesTest {
         assertThrows(IllegalArgumentException.class, () -> cg = new CourseGraph(courseSet));
     }
 
-    @After
-    public void tearDown(){
-        // for some reason there is a glitch within
-        // mockito https://github.com/mockito/mockito/issues/1131
-        this.a = null;
-        this.b = null;
-        this.c = null;
-
-    }
 }

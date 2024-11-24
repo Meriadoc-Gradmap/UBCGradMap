@@ -2,6 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import { API_ENDPOINT } from "./Course";
 import Fuse from "fuse.js";
 
+/**
+ * A floating search bar that allows the user to search for courses
+ * with functional autocompletion.
+ *
+ * @param props.entered A funtion that gets called when a course is selected
+ */
 export default function Search(props: { entered: (a: string) => void }) {
 
   const [text, setText] = useState("");
@@ -14,6 +20,7 @@ export default function Search(props: { entered: (a: string) => void }) {
   const fuseRef = useRef<Fuse<string> | null>(null);
   const [searchResults, setSearchResults] = useState<{ name: string, code: string }[]>([]);
 
+  // Load all of the courses for the autocompletion
   useEffect(() => {
     fetch(API_ENDPOINT + "api/getallcourses").then(async (response) => {
       if (!response.ok) {
@@ -22,7 +29,7 @@ export default function Search(props: { entered: (a: string) => void }) {
       }
       const json = await response.json();
 
-      // TODO: Perhaps we should do some validation here...
+      // Convert the courses to human-readable format
       let output = json.map((a: string) => { return a.replace("-", " ") });
       setCourses(output);
 
@@ -30,12 +37,15 @@ export default function Search(props: { entered: (a: string) => void }) {
   }, []);
 
   useEffect(() => {
+    // When we get our course list build a Fuse object for searching
     fuseRef.current = new Fuse<string>(courses, { includeScore: false });
   }, [courses]);
 
 
+  // Always bock when text changes
   useEffect(() => {
     if (fuseRef.current !== null) {
+      // Search again
       let results = fuseRef.current.search(text);
       setSearchResults(results.map((res) => {
         return { name: res.item, code: res.item.replace(" ", "-") }
@@ -47,17 +57,21 @@ export default function Search(props: { entered: (a: string) => void }) {
     if (key == "Enter") {
       // Enter pressed
       if (searchResults.length > 0 && selected == "") {
+        // If nothing's selected take the first search result
         let sel = searchResults[0];
         props.entered(sel.code);
         setText(sel.name);
         setFocus(false);
+        setSelected("");
       }
       else if (searchResults.length > 0) {
+        // Take the selected item
         let idx = searchResults.map((i) => i.code).indexOf(selected);
         let sel = searchResults[idx];
         props.entered(sel.code);
         setText(sel.name);
         setFocus(false);
+        setSelected("");
       }
     }
     else if (key == "ArrowDown" || (key == "Tab" && !shiftKey)) {
@@ -71,6 +85,7 @@ export default function Search(props: { entered: (a: string) => void }) {
         setSelected(searchResults[idx].code);
       }
 
+      // This makes the tab key work
       e.preventDefault();
     }
     else if (key == "ArrowUp" || (key == "Tab" && shiftKey)) {
@@ -84,19 +99,26 @@ export default function Search(props: { entered: (a: string) => void }) {
         setSelected(searchResults[idx].code);
       }
 
+      // This makes the tab key work
       e.preventDefault();
     }
   }
 
-  // {/*onBlur={()=>{setFocus(false)}} onFocus={()=>{setFocus(true)}}*/}
   return (
     <div className="fixed top-16 lg:top-0 left-0 right-0 m-5 bg-white shadow-lg rounded-xl p-3 lg:w-1/4 rounded-box-gradient"
-      onFocus={() => { setFocus(true) }} onBlur={() => { setTimeout(() => { setFocus(false) }, 100) }}>
+      onFocus={() => { setFocus(true) }} onBlur={() => { 
+        // Javascript is stupid so we have to wait a bit
+        // So it doesn't remove the popup before the use can click on it
+        setTimeout(() => { setFocus(false) }, 100)
+      }}>
       <div className="w-full flex flex-col" >
         <div className="w-full flex flex-row">
           <input className="appearance-none bg-transparent border-gray-60 border-b-2 flex flex-grow text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
-            onChange={(e) => { setText(e.target.value) }} value={text}
-            placeholder="CPEN 211"
+            onChange={(e) => {
+              setText(e.target.value);
+              setFocus(true);
+            }} value={text}
+            placeholder="Enter a course..."
             onKeyDown={(e) => { keyPressed(e.key, e.shiftKey, e) }}
           />
           <button className="lg:hidden flex flex-shrink py-2">
