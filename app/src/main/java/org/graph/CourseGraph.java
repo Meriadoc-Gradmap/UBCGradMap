@@ -38,7 +38,10 @@ public class CourseGraph {
      */
     private void initCourseVertices() {
         for (Course course : courseSet) {
-            if (course.id() > courseSet.size() - 1  || course.id() < 0) {
+            if (course.id() > courseSet.size() - 1) {
+                throw new IllegalArgumentException("Course id must be from 0 to courses.size() - 1");
+            }
+            if (course.id() < 0) {
                 throw new IllegalArgumentException("Course id must be from 0 to courses.size() - 1");
             }
             codeToId.put(course.getCourseCode(), course.id());

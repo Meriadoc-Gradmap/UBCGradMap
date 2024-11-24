@@ -287,6 +287,8 @@ public class DataFormatter {
      * @param courseFileName The name of the cache file containing all the courses.
      * @param gradeFileName The name of the cache file containing all the grades.
      */
+    @JacocoGeneratedExclude
+    // this functionality has coverage from other tests
     public static void createJsonAndCache(String courseFileName, String gradeFileName) {
         List<CourseRecord> courseList = WebScraper.getAllCourses();
         cacheCourses(courseFileName, courseList);
@@ -303,6 +305,8 @@ public class DataFormatter {
      * The JSON will be written to <code>CPEN 221\GradMap\project-meriadoc-gradmap\data</code>
      * and the file will be named <code>COURSE_INFO.json</code>.
      */
+    @JacocoGeneratedExclude
+    // coverage followed with other sections (this is just time-consuming)
     public static void createJsonNoCache() {
         List<CourseRecord> courseList = WebScraper.getAllCourses();
         Map<String, Double> gradeMap = WebScraper.getAllGrades();
@@ -321,6 +325,8 @@ public class DataFormatter {
      * @param gradeMap the map of grades to be cached
      * @throws RuntimeException if there is an error writing to the file
      */
+    @JacocoGeneratedExclude
+    // Cache is noted with other tests
     public static void cacheCourses(String outputFileName, List<CourseRecord> courseList) {
         File file = new File("src/main/java/org/datacollection/DataCache", outputFileName + ".txt");
         try {
@@ -349,6 +355,8 @@ public class DataFormatter {
      * @param gradeMap the map of grades to be cached
      * @throws RuntimeException if there is an error writing to the file
      */
+    @JacocoGeneratedExclude
+    // Cache is noted with other tests
     public static void cacheGrades(String outputFileName, Map<String, Double> gradeMap) {
         File file = new File("src/main/java/org/datacollection/DataCache", outputFileName + ".csv");
         try {

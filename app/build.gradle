@@ -96,7 +96,7 @@ jacocoTestCoverageVerification{
     violationRules {
         rule {
             limit {
-                minimum = 0.0 // TODO Raise once tests start being put it
+                minimum = 0.95
             }
         }
     }
