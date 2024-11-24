@@ -1,1 +1,5 @@
-./gradlew clean run &;nginx;wait -n; exit $?
+#!/usr/bin/bash
+./gradlew clean run &
+nginx
+wait -n
+exit $?
