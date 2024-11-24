@@ -5,7 +5,7 @@
 
 ## **🗺️Mission Statement**
 
-Helping students map their future.
+Helping students map their future!
 
 ## **❓Problem Description**
 
@@ -66,9 +66,12 @@ This command goes into your powershell (on Windows) or terminal opened at the ro
 ```shell
 docker-compose up
 ```
+![alt text](https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/Terminal.png)
 This step can take a while, possibly 10 min or longer on slow internet or machines so get your cup of tea ☕.
 
 ### Access the local site
+Once you see this, the local site is up.
+![alt text](https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/website_up.png)
 Go to http://localhost:5173 to see GradMap!
 
 ### Optional: Run the data scraper
