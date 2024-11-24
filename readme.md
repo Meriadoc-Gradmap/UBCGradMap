@@ -80,3 +80,12 @@ docker-compose up --build
 ```
 For example, if you were to pull new changes from the GitHub repository, you would have to rebuild the container. If you come across any issues open a GitHub issue and we will apply a fix that you can pull and rebuild from.
 
+## **💣Running the Jacoco Test Report**
+To see a report of the Jacoco testing, you can simply navigate to root of the directory and run the following:
+```shell
+./gradlew test
+# or it also runs with build
+./gradlew build
+```
+Then in the terminal you should see the printed test results. To see more in-depth results after running test or build, you can nagivate to `build/jacocoHtml/index.html`.
+
