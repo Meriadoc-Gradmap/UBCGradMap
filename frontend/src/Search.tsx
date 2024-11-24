@@ -15,7 +15,7 @@ export default function Search(props: { entered: (a: string) => void }) {
   const [searchResults, setSearchResults] = useState<{ name: string, code: string }[]>([]);
 
   useEffect(() => {
-    fetch(API_ENDPOINT + "/api/getallcourses").then(async (response) => {
+    fetch(API_ENDPOINT + "api/getallcourses").then(async (response) => {
       if (!response.ok) {
         console.error("Cannot access API!");
         return;

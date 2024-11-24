@@ -4,8 +4,7 @@
 gradle run &
 
 # Start the server
-cd frontend
-npm run dev
+nginx
 
 # Wait for any process to exit
 wait -n

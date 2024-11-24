@@ -34,7 +34,7 @@ function App() {
       return courseCache.get(code);
     }
 
-    let data = await fetch(API_ENDPOINT + "/api/getcourse?course=" + code);
+    let data = await fetch(API_ENDPOINT + "api/getcourse?course=" + code);
     if (data.ok) {
       let course: string | Course = await data.json();
 
