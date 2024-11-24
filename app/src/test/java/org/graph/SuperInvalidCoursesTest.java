@@ -1,10 +1,12 @@
 package org.graph;
 
+import org.junit.After;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.springframework.test.annotation.DirtiesContext;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,6 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
 
+@DirtiesContext
 public class SuperInvalidCoursesTest {
 
     double[] acred;
@@ -127,5 +130,15 @@ public class SuperInvalidCoursesTest {
         assertEquals(208, b.id());
         assertEquals(0, c.id());
         assertThrows(IllegalArgumentException.class, () -> cg = new CourseGraph(courseSet));
+    }
+
+    @After
+    public void tearDown(){
+        // for some reason there is a glitch within
+        // mockito https://github.com/mockito/mockito/issues/1131
+        this.a = null;
+        this.b = null;
+        this.c = null;
+
     }
 }

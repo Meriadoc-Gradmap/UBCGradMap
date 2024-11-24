@@ -154,4 +154,11 @@ public class Course extends Vertex {
     public boolean isCdf() {
         return cdf;
     }
+
+    /**
+     * Sets Static ID Field to 0
+     */
+    public static void resetID(){
+        id = 0;
+    }
 }

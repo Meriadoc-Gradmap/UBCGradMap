@@ -26,6 +26,8 @@ public class CourseGraph {
         gradesMatrix = new double[courseSet.size()][courseSet.size()];
         courseCodes = new String[courseSet.size()];
 
+        Course.resetID(); // added as if you do not do this the code does not function if
+                          // you run two CourseGraph
         initCourseVertices();
         initCourseEdges();
     }
@@ -36,7 +38,7 @@ public class CourseGraph {
      */
     private void initCourseVertices() {
         for (Course course : courseSet) {
-            if (course.id() > courseSet.size() - 1 || course.id() < 0) {
+            if (course.id() > courseSet.size() - 1  || course.id() < 0) {
                 throw new IllegalArgumentException("Course id must be from 0 to courses.size() - 1");
             }
             codeToId.put(course.getCourseCode(), course.id());

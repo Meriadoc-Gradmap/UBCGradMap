@@ -1,9 +1,8 @@
 package org.graph;
 
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
+import org.springframework.test.annotation.DirtiesContext;
 
-import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -15,7 +14,7 @@ public class GraphCreatorTest {
     @Test
     public void createGraphFromTestJson(){
         // this test should just make a graph with CPEN-211 and CPEN-212
-       CourseGraph cg = GraphCreator.createGraph("src/test/java/org/graph/testjson.json");
+       CourseGraph cg = GraphCreator.createGraph("src/test/java/org/files/testjson.json");
        assertTrue(cg.getCourse("CPEN-211") != null);
        assertTrue(cg.getCourse("CPEN-212") != null);
        Course cpen211 = cg.getCourse("CPEN-211");

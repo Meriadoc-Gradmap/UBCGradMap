@@ -70,7 +70,7 @@ public class Controller {
      */
     @GetMapping("/test")
     public String getTest() {
-        return "Finn smells teehee~";
+        return "200";
     }
 
     /**
