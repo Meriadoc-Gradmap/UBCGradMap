@@ -51,6 +51,7 @@ export default function Search(props: { entered: (a: string) => void }) {
         props.entered(sel.code);
         setText(sel.name);
         setFocus(false);
+        setSelected("");
       }
       else if (searchResults.length > 0) {
         let idx = searchResults.map((i) => i.code).indexOf(selected);
@@ -58,6 +59,7 @@ export default function Search(props: { entered: (a: string) => void }) {
         props.entered(sel.code);
         setText(sel.name);
         setFocus(false);
+        setSelected("");
       }
     }
     else if (key == "ArrowDown" || (key == "Tab" && !shiftKey)) {
@@ -95,7 +97,10 @@ export default function Search(props: { entered: (a: string) => void }) {
       <div className="w-full flex flex-col" >
         <div className="w-full flex flex-row">
           <input className="appearance-none bg-transparent border-gray-60 border-b-2 flex flex-grow text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
-            onChange={(e) => { setText(e.target.value) }} value={text}
+            onChange={(e) => {
+              setText(e.target.value);
+              setFocus(true);
+            }} value={text}
             placeholder="CPEN 211"
             onKeyDown={(e) => { keyPressed(e.key, e.shiftKey, e) }}
           />
