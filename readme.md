@@ -61,7 +61,7 @@ git clone https://github.com/CPEN-221-2024/project-meriadoc-gradmap
 
 ### Build the Docker image
 This command goes into your powershell (on Windows) or terminal opened at the root directory of the cloned repository.
-> If you need more details for this step, open the folder that you installed with git, you should see a bunch of folders and files including a Dockerfile file. Then you can right-click in this directory and find the open terminal button. That's where you should be able to put the command below. ![alt text](https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/Open in Terminal.png)
+> If you need more details for this step, open the folder that you installed with git, you should see a bunch of folders and files including a Dockerfile file. Then you can right-click in this directory and find the open terminal button. That's where you should be able to put the command below. ![alt text](https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/Open\ in\ Terminal.png)
 ```shell
 docker-compose up
 ```
