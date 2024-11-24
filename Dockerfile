@@ -5,7 +5,7 @@ FROM ubuntu:24.04
 # RUN apt-get update && apt-get install -y nodejs npm
 RUN apt-get update
 RUN apt-get install -y openjdk-17-jdk-headless
-RUN apt-get install -y wget unzip
+RUN apt-get install -y wget unzip dos2unix
 # RUN wget https://services.gradle.org/distributions/gradle-8.11.1-bin.zip -P /tmp
 # RUN unzip -d /opt/gradle /tmp/gradle-*.zip
 
@@ -60,5 +60,6 @@ RUN ./gradlew clean
 
 RUN chmod +x ./runner.sh
 RUN sed -i "s/^M$//" ./runner.sh
+RUN dos2unix runner.sh
 CMD ["./runner.sh"]
 # CMD nginx
