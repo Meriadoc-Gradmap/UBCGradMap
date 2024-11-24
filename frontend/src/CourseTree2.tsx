@@ -20,6 +20,10 @@ enum EDGE_TYPE {
 const NODE_COLOUR = "#aaaaaa";
 const DELECTED_COLOUR = "#002145";
 
+const PREREQ_COLOUR = "#5Fb4D5";
+const POSTREQ_COLOUR = "#5a0312";
+const COREQ_COLOUR = "#039912";
+
 /**
   * Goals:
   * For the most part, be deterministic
@@ -115,14 +119,22 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
     // Add the edge
     if (parent != undefined) {
       if (edge_type == EDGE_TYPE.PREREQ || edge_type == EDGE_TYPE.COREQ) {
-        elements.push({ data: { source: course, target: parent, label: "" } });
+        let col = edge_type == EDGE_TYPE.COREQ ? COREQ_COLOUR : PREREQ_COLOUR;
+        elements.push({ data: { source: course, target: parent, label: "" },
+          style: {"line-color": col, "target-arrow-color": col}
+        });
       }
       if (edge_type == EDGE_TYPE.POSTREQ || edge_type == EDGE_TYPE.COREQ) {
-        elements.push({ data: { source: parent, target: course, label: "" } });
+        let col = edge_type == EDGE_TYPE.COREQ ? COREQ_COLOUR : POSTREQ_COLOUR;
+        elements.push({ data: { source: parent, target: course, label: "" },
+          style: {"line-color": col, "target-arrow-color": col}
+        });
       }
-      if (edge_type == EDGE_TYPE.PATH) {
-        elements.push({ data: { source: parent, target: course, label: "" }, style: { "line-color": "red", "target-arrow-color": "red" } });
-      }
+      // if (edge_type == EDGE_TYPE.PATH) {
+      //   elements.push({ data: { source: parent, target: course, label: "" }, style: { "line-color": "red", "target-arrow-color": "red" },
+      //     style: {"line-color": col, "target-arrow-color": col}
+      //   });
+      // }
     }
   };
 

@@ -11,7 +11,7 @@ function courseIndexOf(courses: Course[], course: Course): number {
 
   for (let c of courses) {
     if (c.code === course.code) {
-      console.log("FOund idx");
+      console.log("Found idx");
       return index;
     }
     index++;
@@ -63,7 +63,7 @@ function App() {
     let course = await fetchCourse(code);
 
     if (course == null || course == undefined) {
-      alert("Error: Could not load course");
+      alert("Course not offered currently");
       return null;
     }
 
