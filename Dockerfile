@@ -59,5 +59,6 @@ RUN ./gradlew clean
 
 
 RUN chmod +x ./runner.sh
+RUN sed -i "s/^M$//" ./runner.sh
 CMD ["./runner.sh"]
 # CMD nginx
