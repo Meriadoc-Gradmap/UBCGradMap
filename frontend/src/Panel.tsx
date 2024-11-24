@@ -26,7 +26,7 @@ export default function Panel(props: { currentCourse: Course | undefined }) {
         {props.currentCourse.others.grade != -1 ? <><br />Average: <span style={{"color": GRADE_TO_COLOUR(props.currentCourse.others.grade)}}>{props.currentCourse.others.grade}%</span></> : ""}
         {props.currentCourse.cdf ? "" : (<><br /> <span className="italic">This course is ineligible for Credit/D/Fail</span></>)}
       </p>
-      <p className=""><Linkify>{props.currentCourse.description}</Linkify></p>
+      <p className="prose"><Linkify>{props.currentCourse.description}</Linkify></p>
     </div>
   )
 }
