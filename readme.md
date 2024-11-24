@@ -1,11 +1,10 @@
-![alt text](https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/full_logo.svg)
+<p align="center"> <img src="https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/full_logo.svg" alt="drawing" width="900"/> </p>
 
 # **🎓Team Name: GradMap**
 
-
 ## **🗺️Mission Statement**
 
-Helping students map their future.
+Helping students map their future!
 
 ## **❓Problem Description**
 
@@ -62,12 +61,17 @@ git clone https://github.com/CPEN-221-2024/project-meriadoc-gradmap
 ### Build the Docker image
 This command goes into your powershell (on Windows) or terminal opened at the root directory of the cloned repository.
 > If you need more details for this step, open the folder that you installed with git, you should see a bunch of folders and files including a Dockerfile file. Then you can right-click in this directory and find the open terminal button. That's where you should be able to put the command below.
+>
+> <p align="center"> <img src="https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/open_in_terminal.png" alt="drawing" width="600"/> </p>
 ```shell
 docker-compose up
 ```
+<p align="center"> <img src="https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/Terminal.png" alt="drawing" width="600"/> </p>
 This step can take a while, possibly 10 min or longer on slow internet or machines so get your cup of tea ☕.
 
 ### Access the local site
+Once you see this, the local site is up.
+<p align="center"> <img src="https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/website_up.png" alt="drawing" width="600"/> </p>
 Go to http://localhost:5173 to see GradMap!
 
 ### Optional: Run the data scraper
