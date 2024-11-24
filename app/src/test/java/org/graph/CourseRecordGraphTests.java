@@ -58,7 +58,6 @@ public class CourseRecordGraphTests {
         cPreq = new HashSet<>();
         cPreq.add("a");
         cPreq.add("b");
-        cPost = new HashSet<>();
 
         aHours = new Hours(1, false, 1, false, 1, false);
         bHours = new Hours(1, false, 1, false, 1, false);
@@ -96,7 +95,7 @@ public class CourseRecordGraphTests {
                 ccred,
                 "desc c",
                 cPreq,
-                cPost,
+                new HashSet<>(),
                 false,
                 cHours,
                 cOther,
@@ -106,6 +105,7 @@ public class CourseRecordGraphTests {
         courseSet.add(a);
         courseSet.add(b);
         courseSet.add(c);
+
     }
 
     @Test
@@ -134,7 +134,15 @@ public class CourseRecordGraphTests {
         assertEquals(bPreq, cg.getPreRequisites("b"));
         assertEquals(cPreq, cg.getPreRequisites("c"));
 
-        assertEquals(cPost, cg.getPostRequisites("c"));
+        Set<String> apost = new HashSet<>();
+        Set<String> bpost = new HashSet<>();
+        bpost.add("c");
+        apost.add("c");
+        Set<String> cpost = new HashSet<>();
+
+        assertEquals(apost, cg.getPostRequisites("a"));
+        assertEquals(bpost, cg.getPostRequisites("b"));
+        assertEquals(cpost, cg.getPostRequisites("c"));
     }
 
     @Test
@@ -144,4 +152,27 @@ public class CourseRecordGraphTests {
         assertEquals(b, cg.getCourse("b"));
         assertEquals(c, cg.getCourse("c"));
     }
+
+    @Test void getAllPreqs() {
+        CourseGraph cg = new CourseGraph(courseSet);
+        assertEquals(aPreq, cg.getAllPreRequisites("a"));
+        assertEquals(bPreq, cg.getAllPreRequisites("b"));
+        assertEquals(cPreq, cg.getAllPreRequisites("c"));
+    }
+
+    @Test void getAllPostr() {
+        CourseGraph cg = new CourseGraph(courseSet);
+        assertEquals(new HashSet<>(), cg.getAllPostRequisites("c"));
+    }
+    @Test void illegalRequests() {
+        CourseGraph cg = new CourseGraph(courseSet);
+        assertThrows(IllegalArgumentException.class, () -> cg.getCourse("FAKE_COURSE"));
+        assertThrows(IllegalArgumentException.class, () -> cg.getCoRequisites("FAKE_COURSE"));
+
+        // in the spec for the two methods if the course is invalid it should
+        // return an empty set
+        assertEquals(new HashSet<>(), cg.getPreRequisites("FAKE_COURSE"));
+        assertEquals(new HashSet<>(), cg.getPostRequisites("FAKE_COURSE"));
+    }
+
 }

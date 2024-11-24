@@ -1,0 +1,53 @@
+[
+  {
+    "code": "CPEN-211",
+    "name": "Computing Systems I",
+    "credits": [
+      5.0
+    ],
+    "description": "Boolean algebra; combinational and sequential circuits; organization and operation of microcomputers, memory addressing modes, representation of information, instruction sets, machine and assembly language programming, systems programs, I/O structures, I/O interfacing and I/O programming, introduction to digital system design using microcomputers. Credit will be granted for only one of CPEN 211, CPEN 312, EECE 256, EECE 259 or EECE 355.  Prerequisite: APSC 160. ",
+    "prerequisites": [
+      "APSC-160"
+    ],
+    "corequisites": [],
+    "cdf": false,
+    "schedule": {
+      "lectures": 4,
+      "alternating1": false,
+      "labs": 2,
+      "alternating2": false,
+      "tutorials": 2,
+      "alternating3": true
+    },
+    "others": {
+      "grade": 70.76
+    }
+  },
+  {
+    "code": "CPEN-212",
+    "name": "Computing Systems II",
+    "credits": [
+      4.0
+    ],
+    "description": "Abstractions at the hardware-software interface and their low-level implementation. Procedure invocation, dynamic dispatch, and related exploits; library linkage, virtual memory, heap management, garbage collection, and caches; interrupts, signals, and processes; threads, locks, and cache coherence; files, devices, and network topology.  Prerequisite: CPEN 211 and one of CPEN 221, CPEN 223, CPSC 259. ",
+    "prerequisites": [
+      "CPEN-221",
+      "CPEN-211",
+      "CPEN-223",
+      "CPSC-259"
+    ],
+    "corequisites": [],
+    "cdf": false,
+    "schedule": {
+      "lectures": 3,
+      "alternating1": false,
+      "labs": 2,
+      "alternating2": false,
+      "tutorials": 0,
+      "alternating3": false
+    },
+    "others": {
+      "grade": 67.47
+    }
+  }
+]

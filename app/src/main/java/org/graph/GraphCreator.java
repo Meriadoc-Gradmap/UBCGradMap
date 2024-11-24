@@ -18,6 +18,12 @@ import java.util.List;
 public class GraphCreator {
 
     /**
+     * Private constructor as this is
+     * a utility class
+     */
+    private GraphCreator() {};
+
+    /**
      * Creates a graph with a given json file.
      * @param fileName the path of the json file. 
      * Must contain courses formatted for the course class.

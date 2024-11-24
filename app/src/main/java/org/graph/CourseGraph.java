@@ -146,11 +146,14 @@ public class CourseGraph {
      */
     public Set<String> getPostRequisites(String code) {
         Set<String> postRequisites = new HashSet<>();
-        for (int i = 0; i < courseSet.size(); i++) {
-            if (gradesMatrix[codeToId.get(code)][i] > 0) {
-                postRequisites.add(courseCodes[i]);
+        if (codeToId.containsKey(code)) {
+            for (int i = 0; i < courseSet.size(); i++) {
+                if (gradesMatrix[codeToId.get(code)][i] > 0) {
+                    postRequisites.add(courseCodes[i]);
+                }
             }
         }
+
         return postRequisites;
     }
 
