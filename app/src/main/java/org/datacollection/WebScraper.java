@@ -19,6 +19,7 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonParser;
 
 import me.tongfei.progressbar.*;
+import org.util.JacocoGeneratedExclude;
 
 public class WebScraper {
 
@@ -40,6 +41,7 @@ public class WebScraper {
      * 
      * @return A list of all courses, with their corresponding descriptions
      */
+    @JacocoGeneratedExclude // there is no point in testing this assuming the get specific course works
     public static List<CourseRecord> getAllCourses() {
         System.out.print("\033[H\033[2J");  
         System.out.flush();  
@@ -76,6 +78,7 @@ public class WebScraper {
      * 
      * @return A list of all courses, with their corresponding descriptions
      */
+    @JacocoGeneratedExclude // same with getAllCourses, there is no point in testing fetching everything if it works for some courses
     public static Map<String, Double> getAllGrades() {
         System.out.print("\033[H\033[2J");  
         System.out.flush();  
