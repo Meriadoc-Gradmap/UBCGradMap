@@ -20,9 +20,9 @@ enum EDGE_TYPE {
 const NODE_COLOUR = "#aaaaaa";
 const DELECTED_COLOUR = "#002145";
 
-const PREREQ_COLOUR = "#5Fb4D5";
-const POSTREQ_COLOUR = "#5a0312";
-const COREQ_COLOUR = "#039912";
+const PREREQ_COLOUR = "#ccc";
+const POSTREQ_COLOUR = "#ccc";
+const COREQ_COLOUR = "#ccc";
 
 /**
   * Goals:
@@ -109,7 +109,7 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
         position: pos,
         style: {
           'background-color': real_color,
-          'font-family': "'Roboto', 'Arial'"
+          'font-family': "'Roboto', 'Arial', 'sans-serif'"
         }
       })
 
@@ -120,14 +120,16 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
     if (parent != undefined) {
       if (edge_type == EDGE_TYPE.PREREQ || edge_type == EDGE_TYPE.COREQ) {
         let col = edge_type == EDGE_TYPE.COREQ ? COREQ_COLOUR : PREREQ_COLOUR;
-        elements.push({ data: { source: course, target: parent, label: "" },
-          style: {"line-color": col, "target-arrow-color": col}
+        elements.push({
+          data: { source: course, target: parent, label: "" },
+          style: { "line-color": col, "target-arrow-color": col }
         });
       }
       if (edge_type == EDGE_TYPE.POSTREQ || edge_type == EDGE_TYPE.COREQ) {
         let col = edge_type == EDGE_TYPE.COREQ ? COREQ_COLOUR : POSTREQ_COLOUR;
-        elements.push({ data: { source: parent, target: course, label: "" },
-          style: {"line-color": col, "target-arrow-color": col}
+        elements.push({
+          data: { source: parent, target: course, label: "" },
+          style: { "line-color": col, "target-arrow-color": col }
         });
       }
       // if (edge_type == EDGE_TYPE.PATH) {
@@ -284,8 +286,8 @@ export default function CourseTree2(props: CourseTreeProps) {
       return () => {
         for (let el of elements) {
           if (cyRef.current !== null) {
-            if ((el.data as {id: string, label: string}).id !== undefined) {
-              var j = cyRef.current.$("#" + (el.data as {id: string, label: string}).id);
+            if ((el.data as { id: string, label: string }).id !== undefined) {
+              var j = cyRef.current.$("#" + (el.data as { id: string, label: string }).id);
               cyRef.current.remove(j);
             }
           }
