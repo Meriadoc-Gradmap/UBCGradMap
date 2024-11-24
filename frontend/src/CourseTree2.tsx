@@ -105,7 +105,7 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
         position: pos,
         style: {
           'background-color': real_color,
-          'font-family': 'Open Sans'
+          'font-family': "'Roboto', 'Arial'"
         }
       })
 

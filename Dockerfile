@@ -52,8 +52,11 @@ RUN cp nginx.conf /etc/nginx/sites-available/server.conf
 RUN ln -s /etc/nginx/sites-available/server.conf /etc/nginx/sites-enabled/
 RUN unlink /etc/nginx/sites-enabled/default
 
+RUN alias scrape="./gradlew runScraperNoCache"
+
 WORKDIR /gradmap 
 RUN ./gradlew clean
+
 
 RUN chmod +x ./runner.sh
 CMD ["./runner.sh"]
