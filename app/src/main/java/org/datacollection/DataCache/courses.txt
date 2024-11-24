@@ -23,7 +23,7 @@ Pre-colonial, colonial, and contemporary, emphasizing South Africa. Credit will 
 AFST_V 313 (3) Africa from Imperialism to Independence
 The history of Africa in the 19th and 20th Centuries: the growth of Islam and Christianity, the impact of European colonialism, the development of nationalism, and the variety of different political and social outcomes after independence. Credit will be granted for only one of AFST 313 or HIST 313. Equivalency: HIST 313
 AFST_V 350 (3-6) Topics in African Studies
-Topics will vary from year to year. Consult the program website (https://africanstudies.arts.ubc.ca) for further details.
+Topics will vary from year to year. Consult the program website (https://africanstudies.arts.ubc.ca) for further details. 
 AFST_V 351 (3-6) Perspectives in African Studies: Literary and Theoretical Approaches
 Major issues and theoretical approaches.
 AFST_V 352 (3-6) Perspectives in African Studies: A Social Science Approach
@@ -1127,7 +1127,7 @@ Pre-Aztec monumental and portable arts of the Olmec, Zapotec, Teotihuacan and Cl
 ARTH_V 371 (3) Arts of the Aztec period in Mexico.
 Symbolic meanings and political agendas of Aztec architecture, sculpture and manuscript illustration investigated using Spanish accounts.
 ARTH_V 372 (3) Maya Public Ritual Arts
-Architecture, sculpture, costume, and visual productions associated with Maya public ritual, including the ancient ball game and modern cofradía dances.
+Architecture, sculpture, costume, and visual productions associated with Maya public ritual, including the ancient ball game and modern cofrad�a dances.
 ARTH_V 373 (3) Maya Arts of Everyday Life
 Social context and meaning of the Maya's elaborate architecture, sculpture, mural paintings, jewelry, ceramics, figurines, and textiles, ancient and modern, of residences from humble to palatial.
 ARTH_V 376 (3) Arts of the Northwest Coast Peoples: The North
@@ -1627,7 +1627,7 @@ Women's voices and issues in the Korean literary tradition, from earliest times 
 ASIA_V 448 (3) Narrative and Performance in South Asia
 Key theoretical issues in the production and enactment of folk narratives in traditional and modern South Asian cultures. Intended for advanced undergraduates in Asian folklore studies. Credit will be granted for only one of ASIA 448 or ASIA 547. Recommended pre-requisite: ASIA 369.
 ASIA_V 450 (3-12) Special Topics in Buddhist Studies
-For upcoming offerings, including course descriptions, please see section information in the UBC course schedule at https://courses.students.ubc.ca/cs/main.
+For upcoming offerings, including course descriptions, please see section information in the UBC course schedule at https://courses.students.ubc.ca/cs/main. 
 ASIA_V 451 (3) Modern Chinese Authors in Translation
 Study of one influential modern Chinese author, such as Lu Xun, Shen Congwen, Eileen Chang, Yu Hua, Mo Yan, or Wang Anyi. Restricted to fourth-year Asian Studies majors. This course is not eligible for Credit/D/Fail grading.
 ASIA_V 452 (3) Literature of the Korean Diaspora
@@ -1659,7 +1659,7 @@ A survey of Christian proselytizing drives in South, Southeast, and East Asia, f
 ASIA_V 468 (3) Approaches to the Study of Asian Religions
 The Western genealogy and problematics of religion, issues in its application to non-Western cultures and traditions, and the practical study of Asian religions, in Asia and its diasporas. Restricted to fourth-year Asian Studies majors. Recommended pre-requisites: one of ASIA 376, ASIA 381, ASIA 382, ASIA 383, ASIA 387. This course is not eligible for Credit/D/Fail grading.
 ASIA_V 470 (3) Comparative Conceptions of the Self
-Ways in which the self has been portrayed in eastern and western religious traditions. Thinkers to be considered include Aristotle, Mencius, Freud, Xunzi (Hsün-tzu), Nietzsche, and Zhuangzi (Chuang-tzu). Credit will be granted for only one of ASIA 470 or PHIL 470. Equivalency: PHIL 470
+Ways in which the self has been portrayed in eastern and western religious traditions. Thinkers to be considered include Aristotle, Mencius, Freud, Xunzi (Hs�n-tzu), Nietzsche, and Zhuangzi (Chuang-tzu). Credit will be granted for only one of ASIA 470 or PHIL 470. Equivalency: PHIL 470
 ASIA_V 474 (3) From the Chronicle to the Archive: Cultures of History in South Asia
 Examines how South Asian pasts have been memorialized in writing, from medieval chronicles to the development of history as a modern academic discipline in the nineteenth century. Credit cannot be granted for both ASIA 474 and ASIA 574.
 ASIA_V 475 (3) Documenting Punjabi Canada
@@ -1919,7 +1919,7 @@ This course is not eligible for Credit/D/Fail grading.
 AUDI_V 400 (3) Introduction to Speech-Language Pathology and Audiology
 Frameworks from linguistics, psychology, and speech and hearing sciences as applied to communication disorders, clinical populations and practices. [3-0] Prerequisite: One of LING 100, PSYC 100.
 AUDI_V 402 (3) Neuroanatomy for Audiology and Speech-Language Pathology
-[3-0] Prerequisite: As indicated on the website at www.audiospeech.ubc.ca or by permission of the instructor.
+[3-0] Prerequisite: As indicated on the website at http://www.audiospeech.ubc.ca or by permission of the instructor. 
 AUDI_V 403 (1.5) Introduction to Neurolinguistics
 
 AUDI_V 513 (1-2) Acoustic and Articulatory Phonetics
@@ -2199,9 +2199,9 @@ Principles of storage and transmission of genetic variation; origin and evolutio
 BIOL_V 140 (2) Laboratory Investigations in Life Science
 Guided experimental investigations of biological questions. [1-2-0] Prerequisite: One of BIOL 11, BIOL 12, BIOL 111.
 BIOL_V 153 (8) Human Biology: Anatomy and Physiology
-The principles of biology with particular reference to the human body (anatomy and physiology). Laboratories include selected experiments on organ physiology and general anatomy. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-3-0; 3-3-0] Prerequisite: One of CHEM 12, CHEM 100, CHEM 110, CHEM 111 and one of BIOL 11, BIOL 12, BIOL 111. This course is not eligible for Credit/D/Fail grading.
+The principles of biology with particular reference to the human body (anatomy and physiology). Laboratories include selected experiments on organ physiology and general anatomy. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-3-0; 3-3-0] Prerequisite: One of CHEM 12, CHEM 100, CHEM 110, CHEM 111 and one of BIOL 11, BIOL 12, BIOL 111. This course is not eligible for Credit/D/Fail grading.
 BIOL_V 155 (6) Human Biology: Physiology and Introductory Anatomy
-The principles of biology with particular reference to the human body (anatomy and physiology). (physiology and introductory anatomy). Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0; 3-0-0] Prerequisite: One of CHEM 12, CHEM 100, CHEM 110, CHEM 111 and one of BIOL 11, BIOL 12, BIOL 111.
+The principles of biology with particular reference to the human body (anatomy and physiology). (physiology and introductory anatomy). Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0; 3-0-0] Prerequisite: One of CHEM 12, CHEM 100, CHEM 110, CHEM 111 and one of BIOL 11, BIOL 12, BIOL 111. 
 BIOL_V 180 (2) Thinking Like a Life Scientist
 Science as a process, the skills of scientists, and the exploration of a current biological challenge with a practicing UBC scientist. [2-0-1] Prerequisite: One of BIOL 11, BIOL 12, BIOL 111.
 BIOL_V 200 (3) Fundamentals of Cell Biology
@@ -2219,27 +2219,27 @@ Diversity, ecology, cell biology and evolutionary origins of multicellular eukar
 BIOL_V 210 (4) Vascular Plants
 A comparative study of pteridophytes, gymnosperms and angiosperms, integrating form, function and ecology. [3-3-0] Prerequisite: One of BIOL 121, SCIE 001. or 8 transfer credits of first-year biology. Equivalency: APBI 210
 BIOL_V 230 (3) Fundamentals of Ecology
-Dynamics of plant and animal populations, structure of ecological communities and functioning of ecosystems. Interpretation of research results and application to environmental issues. Labs meet once a month. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [3-3*-0] Prerequisite: One of BIOL 121, SCIE 001 or 8 transfer credits of first-year BIOL.
+Dynamics of plant and animal populations, structure of ecological communities and functioning of ecosystems. Interpretation of research results and application to environmental issues. Labs meet once a month. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [3-3*-0] Prerequisite: One of BIOL 121, SCIE 001 or 8 transfer credits of first-year BIOL. 
 BIOL_V 233 (3) Genetics for Life
 How genetic differences determine individual characteristics, and how they are inherited, analyzed, and modified. Emphasis on genetic diversity, human ancestry, personal genomics, and cancer genetics. [3-0-2] Prerequisite: Either (a) all of BIOL 112, BIOL 121 or (b) SCIE 001; or (c) a corequisite of one of CHEM 203 or CHEM 223 and one of BIOL 112 or BIOL 121.
 BIOL_V 234 (3) Fundamentals of Genetics
-Genotype and phenotype, mechanisms of inheritance, genetic analysis. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [3-0-2] Prerequisite: Either (a) all of BIOL 112, BIOL 121 or (b) SCIE 001; (c) a corequisite of one of CHEM 203 or CHEM 223 and one of BIOL 112 or BIOL 121; or (d) 8 transfer credits of first-year BIOL.
+Genotype and phenotype, mechanisms of inheritance, genetic analysis. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [3-0-2] Prerequisite: Either (a) all of BIOL 112, BIOL 121 or (b) SCIE 001; (c) a corequisite of one of CHEM 203 or CHEM 223 and one of BIOL 112 or BIOL 121; or (d) 8 transfer credits of first-year BIOL. 
 BIOL_V 260 (3) Fundamentals of Physiology
 Principles of cellular and organismal physiology illustrated with examples from unicellular organisms, plants and animals, focusing on transport processes, water balance, nutrient acquisition and communication. [3-0-0] Prerequisite: Either (a) all of BIOL 112, BIOL 121 or (b) SCIE 001. or (c) 8 transfer credits of 1st year BIOL and 6 credits of 1st year chemistry.
 BIOL_V 300 (3) Fundamentals of Biostatistics
-Statistical procedures for biological research; estimation, hypothesis testing, goodness of fit, analysis of variance and regression; use of computers for statistical analysis. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-2-0] Prerequisite: One of BIOL 121, SCIE 001. Corequisite: One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001.
+Statistical procedures for biological research; estimation, hypothesis testing, goodness of fit, analysis of variance and regression; use of computers for statistical analysis. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-2-0] Prerequisite: One of BIOL 121, SCIE 001. Corequisite: One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001. 
 BIOL_V 301 (3) Biomathematics
-Introduction to uses of mathematics in the biological sciences; experimental design and modelling of biological processes. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. Recommended co-requisites: one of BIOL 300, STAT 200. [3-0-2]
+Introduction to uses of mathematics in the biological sciences; experimental design and modelling of biological processes. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. Recommended co-requisites: one of BIOL 300, STAT 200. [3-0-2] 
 BIOL_V 302 (3) Biodiversity, Human & Planetary Health
 Effects of biodiversity on human health, from human microbiome to ecosystem. Strategies for protecting, restoring and managing for biodiversity, human and planetary health. [3-0-1] Prerequisite: One of BIOL 111, BIOL 121, GEOS 207, SCIE 001 and third-year class standing.
 BIOL_V 303 (3) Green Planet: Biology and History of Plants that Changed Civilizations
 Biological, cultural, and societal significance of staple crops selected as foods, medicines or raw materials by different societies, and their pivotal role in the rise and fall of past and present civilizations. [3-0-1] Prerequisite: A minimum of 3rd year standing.
 BIOL_V 306 (3) Advanced Ecology
-Ecology of populations, communities and ecosystems. Tests of ecological theory with experiments and application to environmental issues. Labs meet once a month. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [3-3*-0] Prerequisite: BIOL 230.
+Ecology of populations, communities and ecosystems. Tests of ecological theory with experiments and application to environmental issues. Labs meet once a month. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [3-3*-0] Prerequisite: BIOL 230. 
 BIOL_V 310 (3) Introduction to Animal Behaviour
 Animal behavior from an ecological and evolutionary perspective; the methods used to study behaviour and test its adaptive significance. [3-0-2] Prerequisite: BIOL 121. Third-year standing is required.
 BIOL_V 311 (3) Experimental Methods in Animal Behaviour
-Designing, conducting, and analyzing studies of animal behaviour, with an emphasis on field-based methods. Students conduct capstone research projects. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [1-4-0] Prerequisite: One of BIOL 300, STAT 200. Corequisite: BIOL 310.
+Designing, conducting, and analyzing studies of animal behaviour, with an emphasis on field-based methods. Students conduct capstone research projects. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [1-4-0] Prerequisite: One of BIOL 300, STAT 200. Corequisite: BIOL 310. 
 BIOL_V 314 (3) Elements of Biodiversity
 The units of biodiversity, from genes to ecosystems, how they are structured in space, and their importance to human well-being and ecosystem health. [3-0-0] Prerequisite: One of APBI 260, BIOL 230, FRST 201, GEOB 207, GEOS 207. Equivalency: CONS 314
 BIOL_V 317 (4) Weed Science
@@ -2297,7 +2297,7 @@ Contemporary research in the Botany and Zoology Departments; history and methodo
 BIOL_V 348 (3) Biology of Cannabis
 Biological aspects of cannabis, including structure and function, photosynthesis, plant growth, specialized metabolites, neuroscience and the human endocannabinoid system, and applications for human use in medicine, consumer products and textiles. [3-0-0] Prerequisite: A minimum of 3rd year standing.
 BIOL_V 350 (3) Darwinian Medicine
-Using the Darwinian theory of natural selection to explore explanations of infectious diseases, allergies, cancer, mental illness, and other human diseases. Please consult the Faculty of Science Credit Exclusion Lists: www.vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-sc… [2-0-2] Prerequisite: Third-year standing. Equivalency: ISCI 350
+Using the Darwinian theory of natural selection to explore explanations of infectious diseases, allergies, cancer, mental illness, and other human diseases. Please consult the Faculty of Science Credit Exclusion Lists: http://www.vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [2-0-2] Prerequisite: Third-year standing. Equivalency: ISCI 350 
 BIOL_V 351 (4) Plant Physiology I
 Mechanisms and regulation of functional processes contributing to the assimilation, transport and utilization of water, mineral nutrients and carbon by plants. Restricted to Majors and Honours students in Biology. [3-3-0] Prerequisite: Either (a) BIOL 121 and one of CHEM 123, CHEM 130; or (b) SCIE 001. CHEM 233 is recommended. Equivalency: APBI351, FRST311
 BIOL_V 352 (3) Plant Physiology II: Plant Development
@@ -2313,9 +2313,9 @@ Cardiovascular, respiratory, and osmoregulatory physiology. Preference will be g
 BIOL_V 370 (3) Principles of Muscle Physiology and Energetics
 Introduction to the structure and function of the muscular system, metabolism and energetics from a comparative perspective across vertebrates and invertebrates. [3-0-0] Prerequisite: BIOL 260 and one of BIOL 200, BIOL 201, BIOC 202, BIOC 203.
 BIOL_V 371 (3) Principles of Neurobiology I
-Introduction to the structure and function of the nervous system, excitable membranes, and synaptic signaling using representative vertebrate and invertebrate species. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: BIOL 200 and one of BIOL 260, NSCI 200, PSYC 270, PSYC 271, PSYC 304, CAPS 301.
+Introduction to the structure and function of the nervous system, excitable membranes, and synaptic signaling using representative vertebrate and invertebrate species. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: BIOL 200 and one of BIOL 260, NSCI 200, PSYC 270, PSYC 271, PSYC 304, CAPS 301. 
 BIOL_V 372 (3) Principles of Neurobiology II
-Examination of the neural systems underlying sensation, action, and complex behaviours using representative vertebrate and invertebrate species. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: BIOL 371.
+Examination of the neural systems underlying sensation, action, and complex behaviours using representative vertebrate and invertebrate species. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: BIOL 371. 
 BIOL_V 398 (3) Co-operative Work Placement I
 Work experience in an industrial setting, taken during Winter Session (Term 2) of third year. Restricted to students admitted to the Co-operative Education Program in Biology. This course is not eligible for Credit/D/Fail grading.
 BIOL_V 399 (3) Co-operative Work Placement II
@@ -2345,7 +2345,7 @@ The role of physical, ecological, and evolutionary processes in determining the 
 BIOL_V 415 (3) Evolutionary Processes in Plants
 Experimental and comparative analysis of evolutionary processes, speciation, and phylogenetic patterns in plants. [2-0-0] Prerequisite: BIOL 336.
 BIOL_V 416 (3) Principles of Conservation Biology
-Ecological basis of conserving biological diversity and ecosystem services; application of ecological theory to global and local conservation problems in the context of economic, legal, political, and social perspectives. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [2-0-2] Prerequisite: One of BIOL 230, FRST 201.
+Ecological basis of conserving biological diversity and ecosystem services; application of ecological theory to global and local conservation problems in the context of economic, legal, political, and social perspectives. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [2-0-2] Prerequisite: One of BIOL 230, FRST 201. 
 BIOL_V 417 (3) Phylogenetic Biology
 Biodiversity from an evolutionary perspective. The evolutionary (phylogenetic) tree of genetic descent that links all organisms: its reconstruction, interpretation, and implications for fields from ecology to molecular biology. [2-0-2] Prerequisite: BIOL 200 and one of BIOL 233, BIOL 234. BIOL 336 is recommended
 BIOL_V 418 (3) Evolutionary Ecology
@@ -2355,7 +2355,7 @@ An interdisciplinary conservation course with a solutions-oriented approach to m
 BIOL_V 421 (3) Plant-Microbe Interactions
 Biology and physiology of selected plant-microbe relationships. Impacts of plant-microbe relationships on society. [3-0-2] Prerequisite: BIOL 200 and one of BIOC 202, BIOC 203, BIOL 201, BIOL 233, BIOL 234, BIOL 260. Equivalency: APBI 426
 BIOL_V 423 (3) Plant Stress Ecophysiology
-Molecular mechanisms of plant responses to extreme environments. Consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [3-0-0] Prerequisite: BIOL 351. BIOL 406 or 407 are recommended.
+Molecular mechanisms of plant responses to extreme environments. Consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [3-0-0] Prerequisite: BIOL 351. BIOL 406 or 407 are recommended. 
 BIOL_V 424 (3) Tropical Ecology and Conservation
 Ecology, function, history and conservation of tropical systems. Focus on ecological and evolutionary principles using tropical landscapes as a geographic template. Assessment of factors that make tropical systems vulnerable to degradation. Research project development using analysis of tropical ecology literature. [2-0-2] Prerequisite: BIOL 121 and one of BIOL 230, FRST 201, GEOS 207, GEOB 207.
 BIOL_V 425 (3) Biomechanics
@@ -2373,9 +2373,9 @@ Ultrastructure, biogenesis, and evolution of eukaryotic cells and cell organelle
 BIOL_V 432 (3) Research Strategies and Techniques in Cell Biology
 Major physiological mechanisms that define eukaryotic cells, explored through student visits to UBC research laboratories and discussion of recent scientific literature, with emphasis on the techniques and strategies that enable researchers to test hypotheses and advance new concepts. [3-0-0] Prerequisite: BIOL 200 and one of BIOL 233, BIOL 234. And fourth-year standing.
 BIOL_V 433 (3) Plant Genetics
-Emphasis on molecular aspects. Systems and techniques for genetic analysis in plants; isolation and regulation of plant genes; genetic dissection of plant-specific processes; transposable elements; gene transfer in plants; cytoplasmic inheritance; genetic engineering. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: BIOL 335
+Emphasis on molecular aspects. Systems and techniques for genetic analysis in plants; isolation and regulation of plant genes; genetic dissection of plant-specific processes; transposable elements; gene transfer in plants; cytoplasmic inheritance; genetic engineering. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: BIOL 335 
 BIOL_V 434 (3) Population Genetics
-Theoretical and experimental aspects of population and quantitative genetics. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-2] Prerequisite: BIOL 336 and either (a) BIOL 200 and one of BIOL 233, BIOL 234; or (b) FRST 302.
+Theoretical and experimental aspects of population and quantitative genetics. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-2] Prerequisite: BIOL 336 and either (a) BIOL 200 and one of BIOL 233, BIOL 234; or (b) FRST 302. 
 BIOL_V 436 (3) Integrated Functional Genomics
 Global transcript, protein, and metabolite profiling technologies and their integration; applications focus on plant functions and plant interactions with pathogens and pests. [3-0-0] Prerequisite: One of BIOL 335, BIOL 338. Equivalency: FNH 436
 BIOL_V 437 (3) Laboratory in Animal Cell Molecular Biology
@@ -2383,7 +2383,7 @@ The use of recombinant DNA techniques to explore problems in animal developmenta
 BIOL_V 438 (3) Zoological Physics
 Animal systems viewed from a physicist's perspective. Topics include sensory systems, energy budgets, locomotion, internal flows, physical advantages of grouping. [3-0-0] Prerequisite: One of PHYS 101, PHYS 106, PHYS 107, PHYS 117, PHYS 131, PHYS 157, SCIE 001. BIOL 325 is recommended. Equivalency: PHYS 438
 BIOL_V 439 (3) Advanced Microscopy Techniques
-Microscopy techniques used in biological research. Principles, applications and hands-on training of optical and electron microscopy. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [2-4-0] Prerequisite: BIOL 200. Corequisite: One of BIOL 448, BIOL 449. and Fourth year standing. This course is not eligible for Credit/D/Fail grading.
+Microscopy techniques used in biological research. Principles, applications and hands-on training of optical and electron microscopy. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [2-4-0] Prerequisite: BIOL 200. Corequisite: One of BIOL 448, BIOL 449. and Fourth year standing. This course is not eligible for Credit/D/Fail grading.
 BIOL_V 440 (3) Plant Genomics
 Concepts, principles, applications, and recent discoveries in genome structure, genetics, and comparative genomics in plants with a focus on economically important plants. [3-0-0] Corequisite: One of BIOL 335, BIOL 338. Equivalency: APBI 440
 BIOL_V 441 (3) Advanced Topics in Cell Biology
@@ -2439,9 +2439,9 @@ Work experience in an industrial research setting, taken during the Winter Sessi
 BIOL_V 501 (3) Quantitative Methods in Ecology and Evolution
 Prerequisite: BIOL 300 or equivalent and graduate student standing. This course is not eligible for Credit/D/Fail grading.
 BIOL_V 503 (3) Microbial Ecology
-Theoretical and applied ecology of microbes. Focus on microbial symbionts of animals, plants and seaweeds. Critical analysis of microbial ecological literature and computational analysis of ecological data. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [2-3-0] This course is not eligible for Credit/D/Fail grading.
+Theoretical and applied ecology of microbes. Focus on microbial symbionts of animals, plants and seaweeds. Critical analysis of microbial ecological literature and computational analysis of ecological data. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [2-3-0] This course is not eligible for Credit/D/Fail grading.
 BIOL_V 509 (3) Population and Quantitative Genetics
-Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… This course is not eligible for Credit/D/Fail grading.
+Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists This course is not eligible for Credit/D/Fail grading.
 BIOL_V 510 (3) Applied Population Genetics
 Equivalency: FRST510 This course is not eligible for Credit/D/Fail grading.
 BIOL_V 525 (2-6) Topics in Systematics and Evolution
@@ -2449,17 +2449,17 @@ This course is not eligible for Credit/D/Fail grading.
 BIOL_V 530 (3) The Biology of the Cell
 This course is not eligible for Credit/D/Fail grading.
 BIOL_V 533 (3) Plant Genetics
-Emphasis on molecular aspects. Systems and techniques for genetic analysis in plants; isolation and regulation of plant genes; genetic dissection of plant-specific processes; transposable elements; gene transfer in plants; cytoplasmic inheritance; genetic engineering. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: BIOL 335. This course is not eligible for Credit/D/Fail grading.
+Emphasis on molecular aspects. Systems and techniques for genetic analysis in plants; isolation and regulation of plant genes; genetic dissection of plant-specific processes; transposable elements; gene transfer in plants; cytoplasmic inheritance; genetic engineering. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: BIOL 335. This course is not eligible for Credit/D/Fail grading.
 BIOL_V 535 (3) Teaching and Learning in the Life Sciences
 This course is not eligible for Credit/D/Fail grading.
 BIOL_V 537 (3) Topics in Biotechnology
 Research reviews, class discussions, and presentations about current research in the diverse areas of biotechnology. Topics include the research interests of members of the UBC Biotechnology Laboratory. [1.5-0] This course is not eligible for Credit/D/Fail grading.
 BIOL_V 539 (3) Advanced Microscopy Techniques
-Microscopy techniques used in biological research. Principles, applications and hands-on training of optical and electron microscopy. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [2-4-0] This course is not eligible for Credit/D/Fail grading.
+Microscopy techniques used in biological research. Principles, applications and hands-on training of optical and electron microscopy. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [2-4-0] This course is not eligible for Credit/D/Fail grading.
 BIOL_V 548 (1-6) Advanced Topics in Biology
 The credit value for this course will be determined in consultation with the student prior to the registration. This course is not eligible for Credit/D/Fail grading.
 BIOL_V 560 (3) Theory of Adaptive Dynamics and Evolutionary Games
-Consult the credit exclusion list within the Faculty of Science section of the Academic Calendar: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. Credit will be granted for only one of BIOL 560 or BIOL 401. [3-0-0] Prerequisite: An introductory course in the mathematical treatment of population biology as well as a course in integral calculus. This course is not eligible for Credit/D/Fail grading.
+Consult the credit exclusion list within the Faculty of Science section of the Academic Calendar: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. Credit will be granted for only one of BIOL 560 or BIOL 401. [3-0-0] Prerequisite: An introductory course in the mathematical treatment of population biology as well as a course in integral calculus. This course is not eligible for Credit/D/Fail grading.
 BMEG_V 101 (3) Introduction to Biomedical Engineering
 Foundational material spanning the four streams of the BMEG undergraduate program. Topics include: sensors and instrumentation; biosignals; physiological modeling; biomechanics; biomaterials; cellular engineering; regenerative medicine; and engineering design in these contexts. [3-0-2*] Prerequisite: APSC 100. Corequisite: BMEG 102.
 BMEG_V 102 (2) Biomedical Engineering Lab
@@ -3265,7 +3265,7 @@ The principles of physiological regulation of respiratory, renal, gastrointestin
 CAPS_V 210 (3) Human Health Literacy
 An on-line course teaching students to research and understand relevant health diagnoses. Not for students with Biology 12, Anatomy and Physiology 12, or enrolled in the Faculties of Science, Land and Food Systems, Pharmaceutical Sciences, Applied Science or School of Kinesiology. [3-0-0]
 CAPS_V 301 (6) Human Physiology
-Organ systems function with particular reference to mammalian and human physiology. See credit exclusion list: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. Credit will only be granted for one of CAPS 301 or CAPS 205. Credit will only be granted for one of CAPS 301 or CAPS 206. [3-0-0;3-0-0] Prerequisite: Either (a) SCIE 001 or (b) all of BIOL 112, BIOL 121 and one of MATH 101, MATH 103, MATH 105, MATH 121 and one of PHYS 100, PHYS 101, PHYS 107, PHYS 117, PHYS 131 and one of CHEM 203, CHEM 233, CHEM 260.
+Organ systems function with particular reference to mammalian and human physiology. See credit exclusion list: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. Credit will only be granted for one of CAPS 301 or CAPS 205. Credit will only be granted for one of CAPS 301 or CAPS 206. [3-0-0;3-0-0] Prerequisite: Either (a) SCIE 001 or (b) all of BIOL 112, BIOL 121 and one of MATH 101, MATH 103, MATH 105, MATH 121 and one of PHYS 100, PHYS 101, PHYS 107, PHYS 117, PHYS 131 and one of CHEM 203, CHEM 233, CHEM 260. 
 CAPS_V 302 (3) Human Physiology Laboratory
 Physiological techniques and principles. Must be taken in conjunction with CAPS 301. Enrolment limited. Available only to students in the Faculty of Pharmaceutical Sciences. [0-3]
 CAPS_V 303 (3) Laboratory in Human Physiology
@@ -6513,11 +6513,11 @@ Cutting edge problems in earth, ocean, atmospheric and planetary sciences. Topic
 EOSC_V 213 (3) Computational Methods in Geological Engineering
 Combining basic physical principles with their mathematical description and generating computational models that describe them. Introduction to basic building blocks in modelling, simulation and parameter estimation. [3-1-0] Prerequisite: One of MATH 200, MATH 253 and one of MATH 152, MATH 221, MATH 223 and one of APSC 160, CPSC 103, CPSC 110, EOSC 211.
 EOSC_V 220 (3) Introductory Mineralogy
-Introduction to crystallography, physical and chemical properties of minerals. Recognition and identification of common minerals. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [2-3-0] Prerequisite: One of CHEM 110, CHEM 111, CHEM 120, CHEM 121, CHEM 141, SCIE 001.
+Introduction to crystallography, physical and chemical properties of minerals. Recognition and identification of common minerals. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [2-3-0] Prerequisite: One of CHEM 110, CHEM 111, CHEM 120, CHEM 121, CHEM 141, SCIE 001. 
 EOSC_V 221 (3) Introductory Petrology
 Optical mineralogy and the classification and genesis of igneous, metamorphic and sedimentary rocks. [2-3-0] Prerequisite: [EOSC220]
 EOSC_V 222 (3) Geological Time and Stratigraphy
-Measuring geological time and understanding Earth history using stratigraphic principles, paleontology and radioactive decay. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [2-2-0] Prerequisite: Second-year standing in Science. One of EOSC 1**, EOSC 210, GEOB 103 is recommended.
+Measuring geological time and understanding Earth history using stratigraphic principles, paleontology and radioactive decay. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [2-2-0] Prerequisite: Second-year standing in Science. One of EOSC 1**, EOSC 210, GEOB 103 is recommended. 
 EOSC_V 223 (3) Field Techniques
 Introduction to the techniques of geological mapping and the interpretation of field data. Includes three one-day field trips on weekends plus a seven-day field school after Spring examinations. A fee is to be paid by January 31. [2-2-0] Corequisite: EOSC 221.
 EOSC_V 240 (3) Site Investigation
@@ -6529,13 +6529,13 @@ Characteristics, types, plate tectonics, faults, earth stresses and strains, sei
 EOSC_V 270 (3) Marine Ecosystems
 Introduction to diversity of marine habitats and ecosystems; hydrothermal vent, intertidal, coral reef, estuarine, deep sea, and polar ecosystems; impacts of ecosystem change; evolution of ocean plankton; invasive species; climate change; pollution. [3-0-0] Prerequisite: One of SCIE 001, CHEM 110, CHEM 111, CHEM 120, CHEM 121, CHEM 141, CHEM 154.
 EOSC_V 310 (3) The Earth and the Solar System
-The Earth as a planet: its composition, internal dynamics, and surface evolution. Rotation, magnetic field, plate tectonics, earthquakes, volcanoes. The ocean, atmosphere, and biosphere as components of a varying geo-environment. Not for credit for students in specializations administered by the Department of Earth, Ocean, and Atmospheric Sciences. (https://www.eoas.ubc.ca/undergrad/degrees). No background in science or mathematics is required. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/facultiescolleges-and-schools/faculty… [3-0-0] Prerequisite: Class standing 2.
+The Earth as a planet: its composition, internal dynamics, and surface evolution. Rotation, magnetic field, plate tectonics, earthquakes, volcanoes. The ocean, atmosphere, and biosphere as components of a varying geo-environment. Not for credit for students in specializations administered by the Department of Earth, Ocean, and Atmospheric Sciences. (https://www.eoas.ubc.ca/undergrad/degrees). No background in science or mathematics is required. Please consult the Faculty of Science Credit Exclusion List: <a href="https://vancouver.calendar.ubc.ca/facultiescolleges-and-schools/faculty-science/bachelorscience/credit-exclusion-lists">https://vancouver.calendar.ubc.ca/facultiescolleges-and-schools/faculty�
 EOSC_V 311 (3) The Earth and its Resources
-An introduction to the Earth with emphasis on its industrial and aesthetic resources. Rocks, minerals, gold, diamonds, sediments, fossils, oil and gas, canyons, and volcanoes and the processes that create them. Not for credit for students in specializations administered by the Department of Earth, Ocean, and Atmospheric Sciences. (https://www.eoas.ubc.ca/undergrad/degrees). No background in science or mathematics is required. [3-0-0] Prerequisite: Class standing 2.
+An introduction to the Earth with emphasis on its industrial and aesthetic resources. Rocks, minerals, gold, diamonds, sediments, fossils, oil and gas, canyons, and volcanoes and the processes that create them. Not for credit for students in specializations administered by the Department of Earth, Ocean, and Atmospheric Sciences. (https://www.eoas.ubc.ca/undergrad/degrees). No background in science or mathematics is required. [3-0-0] Prerequisite: Class standing 2. 
 EOSC_V 314 (3) The Ocean Environment
-An introduction to the oceans and the processes that have shaped them, their composition and movement, waves, tides, beaches, interactions with the atmosphere and human exploitation of the non-living resources. Not for credit for students in specializations administered by the Department of Earth, Ocean, and Atmospheric Sciences. (https://www.eoas.ubc.ca/undergrad/degrees). No background in science or mathematics is required. [3-0-0] Prerequisite: Class standing 2.
+An introduction to the oceans and the processes that have shaped them, their composition and movement, waves, tides, beaches, interactions with the atmosphere and human exploitation of the non-living resources. Not for credit for students in specializations administered by the Department of Earth, Ocean, and Atmospheric Sciences. (https://www.eoas.ubc.ca/undergrad/degrees). No background in science or mathematics is required. [3-0-0] Prerequisite: Class standing 2. 
 EOSC_V 315 (3) The Ocean Ecosystem
-An introduction to life in the oceans, its variety and evolution; primary producers and their links to the environment, zooplankton, marine communities, living marine resources and their role in today's world. Not for credit for students in specializations administered by the Department of Earth, Ocean, and Atmospheric Sciences. (https://www.eoas.ubc.ca/undergrad/degrees). No background in science or mathematics is required. [3-0-0] Prerequisite: Class standing 2.
+An introduction to life in the oceans, its variety and evolution; primary producers and their links to the environment, zooplankton, marine communities, living marine resources and their role in today's world. Not for credit for students in specializations administered by the Department of Earth, Ocean, and Atmospheric Sciences. (https://www.eoas.ubc.ca/undergrad/degrees). No background in science or mathematics is required. [3-0-0] Prerequisite: Class standing 2. 
 EOSC_V 320 (3) Sedimentology
 Origin, diagenesis and geochemistry of sediments and sedimentary rocks. [2-2-0] Prerequisite: EOSC 221 and one of EOSC 210, EOSC 222.
 EOSC_V 321 (3) Igneous Petrology
@@ -6547,7 +6547,7 @@ Analysis and interpretation of natural deformation. [2-3-0] Prerequisite: All of
 EOSC_V 325 (3) Principles of Physical Hydrogeology
 Theories of storage and movement of water within groundwater systems; Groundwater-surface water interaction; Role of groundwater systems in watershed management and regulating the environmental impacts of global change; Groundwater sustainability; Impacts of climate & land use changes on groundwater resources [3-0-1] Prerequisite: (a) 3rd year standing in Science, Land and Food Systems, or Forestry; and (b) One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001. This course is not eligible for Credit/D/Fail grading.
 EOSC_V 326 (3) Earth and Life Through Time
-The fossil record of adaptation and extinction emphasizing the interaction of biological and geological processes. Not for credit in Geological Sciences and Geophysics specializations. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [3-0-0] Prerequisite: Biology 100-level and third-year standing in Science.
+The fossil record of adaptation and extinction emphasizing the interaction of biological and geological processes. Not for credit in Geological Sciences and Geophysics specializations. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [3-0-0] Prerequisite: Biology 100-level and third-year standing in Science. 
 EOSC_V 327 (3) Geochemical Thermodynamics
 Application of chemical thermodynamics to problem solving in the earth sciences. Geochemical tools are developed for: low-T aqueous geochemistry, high-T, high-P processes in the lithosphere, ore-deposit formation, and for prediction of geochemical reaction rates in all environments. [2-2-0] Prerequisite: EOSC220 Corequisite: CHEM 205.
 EOSC_V 328 (3) Field Geology
@@ -6555,7 +6555,7 @@ Recording and processing geological data in the field. Held within the three wee
 EOSC_V 329 (3) Quantitative Groundwater Hydrology
 Introduction to theory of groundwater flow; flow nets; regional groundwater resource evaluation; well hydraulics; role of groundwater in geologic processes, case studies. [2-3*-3*] Prerequisite: One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001.
 EOSC_V 330 (3) Principles of Geomorphology
-Landform development; morphological and historical analysis of landforms; applications in engineering and resource development. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [3-2-0] Prerequisite: One of GEOB 103, EOSC 110, EOSC 210.
+Landform development; morphological and historical analysis of landforms; applications in engineering and resource development. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [3-2-0] Prerequisite: One of GEOB 103, EOSC 110, EOSC 210. 
 EOSC_V 331 (3) Introduction to Mineral Deposits
 Introduction to economic geology and models related to mineral exploration. Study includes typical deposit types and their plate tectonic setting. [2-3-0] Prerequisite: EOSC 221.
 EOSC_V 332 (3) Tectonic Evolution of North America
@@ -6695,11 +6695,11 @@ Hydraulic head measurements, water-quality sampling, pump and slug testing, infi
 EOSC_V 533 (3) Groundwater Modelling in Practice
 Models of steady-state and transient groundwater flow in the saturated and unsaturated zones; applications to regional groundwater flow, groundwater recharge, subsurface contributions to streamflow, aquifer evaluation; model calibration. Case histories. This course is not eligible for Credit/D/Fail grading.
 EOSC_V 534 (3) Geological Engineering: Soils and Weak Rocks
-Consult the credit exclusion list in the Faculty of Science section of the Calendar. https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… This course is not eligible for Credit/D/Fail grading.
+Consult the credit exclusion list in the Faculty of Science section of the Calendar. https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists This course is not eligible for Credit/D/Fail grading.
 EOSC_V 535 (3) Transport Processes in Porous Media
 Transport of mass and heat in groundwater flow systems; modelling techniques including an introduction to the finite-element method; modelling of groundwater contamination. This course is not eligible for Credit/D/Fail grading.
 EOSC_V 536 (3) Geotechnical Modelling in Practice
-Application of geomechanics and engineering design tools in complex geological environments. Influence and treatment of geological uncertainty; use of field data, geotechnical monitoring and numerical analyses for tunnelling, mining and rock slope engineering projects. Case histories. See credit exclusion list www.vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-sc… This course is not eligible for Credit/D/Fail grading.
+Application of geomechanics and engineering design tools in complex geological environments. Influence and treatment of geological uncertainty; use of field data, geotechnical monitoring and numerical analyses for tunnelling, mining and rock slope engineering projects. Case histories. See credit exclusion list http://www.vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists This course is not eligible for Credit/D/Fail grading.
 EOSC_V 538 (3) Diamond Exploration
 This course is not eligible for Credit/D/Fail grading.
 EOSC_V 539 (3) Geochemistry of Hydrothermal Ore Deposits
@@ -6873,7 +6873,7 @@ Microeconomic theory of resource allocation with emphasis on the applications of
 ECON_V 390 (3) Introduction to Economic Research
 Selected topics in economic research. Application of research methods to economic data. Credit will be granted for only one of ECON 390, ECON 490, ECON 494, ECON 495, or ECON 499. Prerequisite: One of ECON 101, ECON 310 and one of ECON 102, ECON 311 and one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184. This course is not eligible for Credit/D/Fail grading.
 ECON_V 392 (3-9) Topics in Economics
-Topics will vary from year to year. Consult the program website (https://economics.ubc.ca/courses/?subject=econ) for more information. Prerequisite: One of ECON 101, ECON 310 and one of ECON 102, ECON 311.
+Topics will vary from year to year. Consult the program website (https://economics.ubc.ca/courses/?subject=econ) for more information. Prerequisite: One of ECON 101, ECON 310 and one of ECON 102, ECON 311. 
 ECON_V 398 (3) Introduction to Causal Methods
 Theory and practice of the analytical application of economics. Causality, empirical analysis, and the application of theoretical models through engagement in applied work. Prerequisite: Either (a) one of ECON 101, ECON 310 and one of ECON 102, ECON 311 and one of STAT 200, STAT 241, STAT 251, COMM 291, FRST 231; or (b) one of ECON 226, ECON 325, ECON 326, ECON 327.
 ECON_V 406 (3) Topics in Microeconomics
@@ -7255,7 +7255,7 @@ The nature of scientific study and essentials of survey, experimental and other 
 EPSE_V 482 (3) Introduction to Statistics for Research in Education
 Basic concepts and principles of descriptive and inferential statistics. Designed for students proceeding to graduate work involving quantitative methodology. [3-0] Prerequisite: Proficiency in modern high school algebra. Equivalency: STAT 200, 203, BIOL 300, COMM 191, ECON 325, 327, FRST 231, GEOG 374, KIN 371, POLI 380, PSYC 218, 27, 366, SOCI 328
 EPSE_V 483 (3) Reading and Interpreting Research in Education
-Introductory research methods course for students who wish to be critical readers rather than producers of educational research. Develops skills for locating, understanding, interpreting and critiquing educational empirical research. May not be used as a prerequisite to EPSE 592 or EPSE 596. [3-0] Prerequisite: Please consult the Faculty of Science Credit Exclusion Lists https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… before registering.
+Introductory research methods course for students who wish to be critical readers rather than producers of educational research. Develops skills for locating, understanding, interpreting and critiquing educational empirical research. May not be used as a prerequisite to EPSE 592 or EPSE 596. [3-0] Prerequisite: Please consult the Faculty of Science Credit Exclusion Lists https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists before registering. 
 EPSE_V 484 (3) Nonparametric and Related Statistics
 Distribution-free statistical techniques for analysis of ranked data, and analysis of discrete observations. [3-0] Prerequisite: EPSE 482.
 EPSE_V 501 (3) Seminar in Human Development, Learning and Culture
@@ -8161,7 +8161,7 @@ World literature in English focusing on decolonization and anti-colonial thought
 ENGL_V 375 (3-6) Global South Connections
 Literary and cultural networks relating to societies in the Global South; may address areas such as colonization, decolonization, nationalism, social movements, forced and voluntary migrations of peoples, cultural hybridity, translation, and globalization. Consult department website for current year's offerings. For ENGL courses at the 200- or 300- level, prior completion of at least one 100- level ENGL course is recommended.
 ENGL_V 376 (3-6) Special Topics - Place, Power, Poetics and Narrative Discourse
-Topics will vary from year to year. Consult the program website (https://english.ubc.ca/courses/) for further details.
+Topics will vary from year to year. Consult the program website (https://english.ubc.ca/courses/) for further details. 
 ENGL_V 377 (3-6) World Literature and Social Movements
 Transnational and world literature and art practices that reflect on the conceptual, linguistic and visual aspects of social movements, addressing histories of colonialism, transnational feminist literature and art practices, histories of protest and cultures of resistance. For ENGL courses at the 200- or 300- level, prior completion of at least one 100- level ENGL course is recommended.
 ENGL_V 378 (3-6) Contemporary Literature
@@ -8199,11 +8199,11 @@ Novels and short stories organized by thematic approach, cultural movements, cri
 ENGL_V 398 (3-6) Community-Facing Applications of Language and Literary Studies
 Principles and practice of adapting the disciplinary work of language and/or literary studies to the needs of community partners. For ENGL courses at the 200- or 300- level, prior completion of at least one 100- level ENGL course is recommended.
 ENGL_V 489 (3) Language Majors Seminar
-Required of all Language Majors. Restricted to fourth-year English Honours and Majors in Language and Language and Literature. See department website (www.english.ubc.ca) for seminar topics. This course is not eligible for Credit/D/Fail grading.
+Required of all Language Majors. Restricted to fourth-year English Honours and Majors in Language and Language and Literature. See department website (http://www.english.ubc.ca) for seminar topics. This course is not eligible for Credit/D/Fail grading.
 ENGL_V 490 (3) Literature Majors Seminar
-Required of all Literature Majors. Restricted to fourth-year English Majors in Literature and Language and Literature. See Department website (www.english.ubc.ca) for seminar topics. This course is not eligible for Credit/D/Fail grading.
+Required of all Literature Majors. Restricted to fourth-year English Majors in Literature and Language and Literature. See Department website (http://www.english.ubc.ca) for seminar topics. This course is not eligible for Credit/D/Fail grading.
 ENGL_V 491 (3-12) Senior Honours Seminar
-Required of all Honours Students. Restricted to English Honours students in third-year or higher. See Department website (www.english.ubc.ca) for seminar topics. This course is not eligible for Credit/D/Fail grading.
+Required of all Honours Students. Restricted to English Honours students in third-year or higher. See Department website (http://www.english.ubc.ca) for seminar topics. This course is not eligible for Credit/D/Fail grading.
 ENGL_V 496 (3-6) Directed Readings in English Literature
 For Honours students only. This course is not eligible for Credit/D/Fail grading.
 ENGL_V 499 (3) Honours Essay
@@ -8665,7 +8665,7 @@ Topic and community/location of instruction will vary from year to year. Applied
 FNIS_V 400 (6) Practicum/Advanced Research Seminar
 Applied research/community oriented project designed and implemented in collaboration with student, faculty and Aboriginal community organization. Emphasis on examining ethical issues and developing culturally respectful and academically rigorous forms of research. Credit will be granted for only one of FNIS 400 or FNSP 400. Restricted to Majors in First Nations and Indigenous Studies. Prerequisite: Either (a) all of FNIS 310, FNIS 320 or (b) all of FNSP 310, FNSP 320. Students must pass FNIS 320 or FNSP 320 with a B- or higher or request program approval. Equivalency: FNSP 400. This course is not eligible for Credit/D/Fail grading.
 FNIS_V 401 (3-6) Special Topics
-Topics will vary from year to year. Consult the departmental website: http://fnsp.arts.ubc.ca. Restricted to Undergraduate Students. Prerequisite: One of FNIS 100, FNSP 200, FNIS 210, FNSP 210, FNIS 220, FNSP 220.
+Topics will vary from year to year. Consult the departmental website: http://fnsp.arts.ubc.ca. Restricted to Undergraduate Students. Prerequisite: One of FNIS 100, FNSP 200, FNIS 210, FNSP 210, FNIS 220, FNSP 220. 
 FNIS_V 433 (3-6) Directed Study
 Restricted to Undergraduate Students.
 FNIS_V 451 (3) Indigenous Feminisms
@@ -9039,7 +9039,7 @@ The functional biology of trees and other forest plants in their environment, wi
 FRST_V 211 (3) Forest Classification and Silvics
 Forest classification and the application of silvics in forest management, including world forest classification systems, the Biogeoclimactic Ecosystem Classification system, and ecosystem diagnosis in the field. [3-2-0] Prerequisite: One of FRST 201, NRES 201.
 FRST_V 231 (3) Introduction to Biometrics
-Basic theories of probability and statistics. Sampling distribution, methods of estimation and hypothesis testing; goodness of fit and tests for independence; analysis of variance, regression and correlation. Consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [3-2-0] Corequisite: One of MATH 100, MATH 180, MATH 184, MATH 190.
+Basic theories of probability and statistics. Sampling distribution, methods of estimation and hypothesis testing; goodness of fit and tests for independence; analysis of variance, regression and correlation. Consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [3-2-0] Corequisite: One of MATH 100, MATH 180, MATH 184, MATH 190. 
 FRST_V 232 (3) Computer Applications in Forestry
 Techniques involved in solving forestry problems with microcomputers using word processing, spreadsheet, procedural language, and database management tools. [3-2]
 FRST_V 239 (3) Tree and Stand Level Measurements
@@ -9405,7 +9405,7 @@ Study of major past and contemporary film productions from around the Francophon
 FREN_V 430 (3) Quebec Literature and Culture
 Study of representative aspects of Quebec literature and culture through the study of literary texts, films, and artistic productions in their historical context. Prerequisite: Either (a) all of FREN 311, FREN 321 or (b) all of FREN 328, FREN 329 and one of FREN 225, FREN 402.
 FREN_V 431 (3) Indigenous Literatures of Francophone Canada
-Study of the literature and cinema of First Nations, Inuit and Métis creators working in French and in Francophone spaces in Canada. Recommendation: One of FREN 321, FREN 328, FREN 329 and one of FREN 225, FREN 402.
+Study of the literature and cinema of First Nations, Inuit and M�tis creators working in French and in Francophone spaces in Canada. Recommendation: One of FREN 321, FREN 328, FREN 329 and one of FREN 225, FREN 402.
 FREN_V 440 (3) Francophonie: History and Current Debates
 Historical origins, cultural and linguistic paradoxes of Francophonie. Prerequisite: Either (a) all of FREN 311, FREN 321 or (b) all of FREN 328, FREN 329 and one of FREN 225, FREN 402.
 FREN_V 441 (3) Francophone Literatures and Cultures of North America
@@ -9611,9 +9611,9 @@ This course is not eligible for Credit/D/Fail grading.
 GSAT_V 699 (0) Doctoral Dissertation
 This course is not eligible for Credit/D/Fail grading.
 GEOS_V 102 (3) Our Changing Environment: Climate and Ecosystems
-Energy and water in the Earth-Atmosphere system, global climates and climate change, ecosystem properties and processes, human impacts. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [3-2*-0]
+Energy and water in the Earth-Atmosphere system, global climates and climate change, ecosystem properties and processes, human impacts. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [3-2*-0] 
 GEOS_V 103 (3) Our Changing Environment: Water and Landscapes
-Physical processes acting at the Earth's surface; water cycle; landforms; human impacts. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [3-2*-0]
+Physical processes acting at the Earth's surface; water cycle; landforms; human impacts. Please consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [3-2*-0] 
 GEOS_V 200 (3) Atmospheric Environments
 Physical principles underlying weather and climates. Thermal, moisture and wind climates from the scale of plants and animals to the globe. Daily weather systems and climate change. Credit will be granted for only one of GEOS (or GEOB) 200, GEOS (or GEOB) 204, or APBI 244. Recommended pre-requisites: one of GEOS 102, GEOB 102, or second-year standing in science. [3-2*-0] Equivalency: APBI244
 GEOS_V 204 (3) Introduction to Biometeorology
@@ -9775,7 +9775,7 @@ Forms of economic development; changing location of economic activities and func
 GEOG_V 371 (3) Research Strategies in Geography
 Formulating a research problem and selecting an appropriate research strategy. Research strategies range from social scientific survey methods to ethnography. Priority enrolment for honours and major students in Geography. This course is not eligible for Credit/D/Fail grading.
 GEOG_V 374 (3) Statistics in Geography
-Introduction to statistical techniques and their application to geographical problems. Priority enrolment for honours and major students in Geography. Consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult….
+Introduction to statistical techniques and their application to geographical problems. Priority enrolment for honours and major students in Geography. Consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. 
 GEOG_V 379 (3-6) Field Course in Human Geography
 As announced by the department a year in advance.
 GEOG_V 380 (3) Geography of Asia
@@ -9915,81 +9915,81 @@ Understanding geo-spatial data structures, databases and developing, maintaining
 GEM_V 540 (3) Linear Regression Models and Introduction to Spatial Statistics
 [3-2-0] This course is not eligible for Credit/D/Fail grading.
 GERN_V 101 (3) Learning German 1
-Introduction to the language for beginners. Ability to identify unique features and communicate in everyday situations. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 100 or GERN 101. Equivalency: GERM100
+Introduction to the language for beginners. Ability to identify unique features and communicate in everyday situations. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 100 or GERN 101. Equivalency: GERM100 
 GERN_V 102 (3) Learning German 2
-Continuation of GERN 101. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 110 or GERN 102. Equivalency: GERM110
+Continuation of GERN 101. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 110 or GERN 102. Equivalency: GERM110 
 GERN_V 201 (3) Learning German 3
-Continuation of GERN 102. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 200 or GERN 201. Equivalency: GERM200
+Continuation of GERN 102. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 200 or GERN 201. Equivalency: GERM200 
 GERN_V 202 (3) Learning German 4
-Continuation of GERN 201. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 210 or GERN 202. Equivalency: GERM210
+Continuation of GERN 201. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 210 or GERN 202. Equivalency: GERM210 
 GERN_V 301 (3) Learning German 5
-Continuation of GERN 202. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 300 or GERN 301. Equivalency: GERM300
+Continuation of GERN 202. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 300 or GERN 301. Equivalency: GERM300 
 GERN_V 302 (3) Learning German 6
-Continuation of GERN 301. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 310 or GERN 302. Equivalency: GERM310
+Continuation of GERN 301. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 310 or GERN 302. Equivalency: GERM310 
 GERN_V 303 (3) German Conversation
 Emphasis on the study of oral communication skills and strategies. Fluency in many situations, communicative competence in important areas of cultural life, ability to participate in discussions of current as well as controversial issues to express ideas clearly in spoken word. Credit will be granted for only one of GERM 313 or GERN 303. Prerequisite: One of GERM 210, GERN 202. or equivalent. Equivalency: GERM313
 GERN_V 304 (3) German for Reading Knowledge I
-Reading skills in German leading to a second year reading knowledge in just one term. Students are expected to work largely independently. Course meant for students with no or very little German (i.e. no more than GERN 101). Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 433 or GERN 304. Equivalency: GERM433
+Reading skills in German leading to a second year reading knowledge in just one term. Students are expected to work largely independently. Course meant for students with no or very little German (i.e. no more than GERN 101). Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 433 or GERN 304. Equivalency: GERM433 
 GERN_V 309 (3) German in the Workplace
-Grammatical patterns in application to workplace conditions and requirements with Germanophone business. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 314 or GERN 309. Prerequisite: One of GERM 210, GERN 202. or equivalent. Equivalency: GERM314
+Grammatical patterns in application to workplace conditions and requirements with Germanophone business. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 314 or GERN 309. Prerequisite: One of GERM 210, GERN 202. or equivalent. Equivalency: GERM314 
 GERN_V 315 (3) The Magic of Translation
-Tools and concepts to create original translations across English and German. Includes theory, methodology, and practice. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 325 or GERN 315. Prerequisite: One of GERM 210, GERN 202. or equivalent. Equivalency: GERM325
+Tools and concepts to create original translations across English and German. Includes theory, methodology, and practice. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 325 or GERN 315. Prerequisite: One of GERM 210, GERN 202. or equivalent. Equivalency: GERM325 
 GERN_V 344 (3) Discipline and Liberation: Studies in the 19th Century
-Nineteenth-century Germanophone literature against the larger background of the political and social developments of the period. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 380 or GERN 344. Equivalency: GERM380
+Nineteenth-century Germanophone literature against the larger background of the political and social developments of the period. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 380 or GERN 344. Equivalency: GERM380 
 GERN_V 347 (3) Progress and Disaster: Studies in the 20th and 21st Centuries
-Selected literary works from German-speaking societies against the larger background of the political and social developments of the period. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 390 or GERN 347. Equivalency: GERM390
+Selected literary works from German-speaking societies against the larger background of the political and social developments of the period. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 390 or GERN 347. Equivalency: GERM390 
 GERN_V 401 (3) German through Critical Contemporary Topics
-Discussion and analysis of current issues in a German-speaking seminar format. Spoken and written German communication about critical, societal topics fostering advanced competence. Continuation of GERN 302. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 400 or GERN 401. Equivalency: GERM400
+Discussion and analysis of current issues in a German-speaking seminar format. Spoken and written German communication about critical, societal topics fostering advanced competence. Continuation of GERN 302. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 400 or GERN 401. Equivalency: GERM400 
 GERN_V 404 (3) German for Reading Knowledge II (Languages for special purposes)
-Multimedia teaching of reading skills in German for special purposes. Students are expected to work largely independently. Focuses on specific topics of the student's choice in the humanities, the natural sciences, economics/business and music and enhances skills in technical reading. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 434 or GERN 404. Prerequisite: One of GERM 433, GERN 304. or equivalent. Equivalency: GERM434
+Multimedia teaching of reading skills in German for special purposes. Students are expected to work largely independently. Focuses on specific topics of the student's choice in the humanities, the natural sciences, economics/business and music and enhances skills in technical reading. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 434 or GERN 404. Prerequisite: One of GERM 433, GERN 304. or equivalent. Equivalency: GERM434 
 GMST_V 121 (3) Fairy Tales and Popular Culture
-Explore folk and fairy tales from the German-speaking tradition and their adaptations. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 121 or GMST 121. Equivalency: GERM121
+Explore folk and fairy tales from the German-speaking tradition and their adaptations. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 121 or GMST 121. Equivalency: GERM121 
 GMST_V 229 (3) Exile, Flight and Migration
-Transnational narratives about exile, migration and integration in the German-speaking countries. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 206 or GMST 229. Equivalency: GERM206
+Transnational narratives about exile, migration and integration in the German-speaking countries. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 206 or GMST 229. Equivalency: GERM206 
 GMST_V 274 (3) The Frankfurt School
 Foundations of critical theory, and key media and cultural studies concepts developed by the members of the Frankfurt Institute of Social Research (1923 -), their collaborators and followers. Credit will be granted for only one of GERM 207 or GMST 274. Equivalency: GERM207
 GMST_V 311 (3) German Linguistics
 Basic theories and methodologies of modern German linguistics. Credit will be granted for only one of GERM 318 or GMST 311. Equivalency: GERM318
 GMST_V 325 (3) The Culture of Nazism
-Literature, film and ideology in the Third Reich. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 305 or GMST 325. Equivalency: GERM305
+Literature, film and ideology in the Third Reich. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 305 or GMST 325. Equivalency: GERM305 
 GMST_V 335 (3) German Cinema
-Screening, discussion, and critical analysis of influential cinema from German-speaking societies from the silent era to the 21st century. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 304 or GMST 335. Equivalency: GERM304
+Screening, discussion, and critical analysis of influential cinema from German-speaking societies from the silent era to the 21st century. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 304 or GMST 335. Equivalency: GERM304 
 GMST_V 341 (3) Germanophone Literature before 1900
-Reading and discussion of selected works from German-speaking societies from the Middle Ages to 1900. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 303 or GMST 341. Equivalency: GERM303
+Reading and discussion of selected works from German-speaking societies from the Middle Ages to 1900. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 303 or GMST 341. Equivalency: GERM303 
 GMST_V 342 (3) Heaven and Earth: Germanophone Culture and Literature before 1700
-Germanophone literature of the Middle Ages, Renaissance, and Baroque against the larger background of the political and social developments of the period. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 360 or GMST 342. Equivalency: GERM360
+Germanophone literature of the Middle Ages, Renaissance, and Baroque against the larger background of the political and social developments of the period. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 360 or GMST 342. Equivalency: GERM360 
 GMST_V 343 (3) Reason and Revolution: Studies in the 18th Century
-Eighteenth-century Germanophone literature against the larger background of the political and social developments of the period. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 370 or GMST 343. Equivalency: GERM370
+Eighteenth-century Germanophone literature against the larger background of the political and social developments of the period. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 370 or GMST 343. Equivalency: GERM370 
 GMST_V 346 (3) Germanophone Literature 1900-1945
-Reading and discussion of selected works against the background of literary, social, and political developments in twentieth-century German-speaking societies. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 301 or GMST 346. Equivalency: GERM301
+Reading and discussion of selected works against the background of literary, social, and political developments in twentieth-century German-speaking societies. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 301 or GMST 346. Equivalency: GERM301 
 GMST_V 347 (3) Germanophone Literature after 1945
-Reading and discussion of selected literary works from German-speaking societies. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 302 or GMST 347. Equivalency: GERM302
+Reading and discussion of selected literary works from German-speaking societies. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 302 or GMST 347. Equivalency: GERM302 
 GMST_V 371 (3) Marx, Nietzsche and Freud in Cultural Context
 Explore the impact of the writings of Karl Marx, Friedrich Nietzsche and Sigmund Freud on the cultures of the Germanspeaking world and draw connections to contemporary debates about identity, family, gender, class, social justice and the philosophy of history.
 GMST_V 415 (3) German Literary Translation
-Theory, methodology and practice of translating literary texts between English and German. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 425 or GMST 415. Prerequisite: One of GERM 325, GERN 315. Equivalency: GERM425
+Theory, methodology and practice of translating literary texts between English and German. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 425 or GMST 415. Prerequisite: One of GERM 325, GERN 315. Equivalency: GERM425 
 GMST_V 420 (3-6) Studies in Modern German-speaking Culture
-Topics of special interest, varying from year to year. Find out more at https://cenes.ubc.ca/courses/. A maximum of 6 credits will be granted for GERM 403 or GMST 420. Equivalency: GERM403
+Topics of special interest, varying from year to year. Find out more at https://cenes.ubc.ca/courses/. A maximum of 6 credits will be granted for GERM 403 or GMST 420. Equivalency: GERM403 
 GMST_V 424 (3) Selected Issues in German-speaking Culture
-In depth study of one topic from German-speaking cultural history, varying from year to year. Find out which topic/s will be explored in the current or coming year at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 408 or GMST 424. Equivalency: GERM408
+In depth study of one topic from German-speaking cultural history, varying from year to year. Find out which topic/s will be explored in the current or coming year at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 408 or GMST 424. Equivalency: GERM408 
 GMST_V 427 (3) Major Controversies in German-speaking Culture
-Selected debates and controversies in the German-speaking societies. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 411 or GMST 427. Equivalency: GERM411
+Selected debates and controversies in the German-speaking societies. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 411 or GMST 427. Equivalency: GERM411 
 GMST_V 433 (3) Germanophone Representations of the Holocaust
-The Holocaust in German literature and film. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 426 or GMST 433. Prerequisite: Restricted to students with Second Year Standing or above. Equivalency: GERM426
+The Holocaust in German literature and film. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 426 or GMST 433. Prerequisite: Restricted to students with Second Year Standing or above. Equivalency: GERM426 
 GMST_V 436 (3) Special Topics in Germanophone Cinema
-Themes, traditions, and techniques specific to cinema from German-speaking societies. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 409 or GMST 436. Equivalency: GERM409
+Themes, traditions, and techniques specific to cinema from German-speaking societies. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 409 or GMST 436. Equivalency: GERM409 
 GMST_V 440 (3-6) Selected topics in Germanophone Literature
-Topics of special interest, varying from year to year. Find out which topic/s will be explored in the current or coming year at https://cenes.ubc.ca/courses/. A maximum of 6 credits will be granted for GERM 406 or GMST 440. Equivalency: GERM406
+Topics of special interest, varying from year to year. Find out which topic/s will be explored in the current or coming year at https://cenes.ubc.ca/courses/. A maximum of 6 credits will be granted for GERM 406 or GMST 440. Equivalency: GERM406 
 GMST_V 445 (3) Words and Music in Germanophone Literature
-Individual works and genres in which words and music together form a whole. Possible topics include the Lutheran Hymn, the Volkslied, the Romantic Lied and Brecht songs, operas by Mozart, Wagner and Strauss, and music and the musician as a subject in literature. No musical training is necessary. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 402 or GMST 445. Equivalency: GERM402
+Individual works and genres in which words and music together form a whole. Possible topics include the Lutheran Hymn, the Volkslied, the Romantic Lied and Brecht songs, operas by Mozart, Wagner and Strauss, and music and the musician as a subject in literature. No musical training is necessary. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 402 or GMST 445. Equivalency: GERM402 
 GMST_V 448 (3) Religion and Germanophone Literature
-Religion and literature in German-speaking cultural history. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 404 or GMST 448. Equivalency: GERM404
+Religion and literature in German-speaking cultural history. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 404 or GMST 448. Equivalency: GERM404 
 GMST_V 475 (3) German Media Studies
-Major themes and methods in German media studies. Find out which themes will be explored in the current or coming year at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 412 or GMST 475. Equivalency: GERM412
+Major themes and methods in German media studies. Find out which themes will be explored in the current or coming year at https://cenes.ubc.ca/courses/. Credit will be granted for only one of GERM 412 or GMST 475. Equivalency: GERM412 
 GMST_V 490 (3-6) Honours Seminar
 Credit will be granted for only one of GERM 439 or GMST 490. Equivalency: GERM439
 GMST_V 492 (6) Honours Research Capstone
-Conception and execution of research study with the goal of publication, peer-review, and application to graduate study in relevant field. Find out more at https://cenes.ubc.ca/courses/. Credit be granted for only one of GERM 449 or GMST 492. Equivalency: GERM449
+Conception and execution of research study with the goal of publication, peer-review, and application to graduate study in relevant field. Find out more at https://cenes.ubc.ca/courses/. Credit be granted for only one of GERM 449 or GMST 492. Equivalency: GERM449 
 GMST_V 500 (3-6) German Studies Research Methods
 A maximum of 6 credits will be granted for GERM 500 or GMST 500. Equivalency: GERM 500 This course is not eligible for Credit/D/Fail grading.
 GMST_V 501 (3-6) Literary Theories
@@ -10494,7 +10494,7 @@ HIST_V 435 (3) Gender and Sexuality in the Modern U. S.
 Gender roles and gender relations from the Gilded Age to the present day. Topics include political movements such as suffrage and feminism; labour and recreation; marriage, family, and children's socialization; sexuality; and popular culture.
 HIST_V 436 (6) European Social History
 A study of the changes in economic activity, social structure, family life, religious attitudes, and popular behaviour which accompanied the transformation of Europe from a pre-industrial to an industrial society.
-HIST_V 439 (3) Politics and Culture in Fin-de-Siècle Europe (1890-1914)
+HIST_V 439 (3) Politics and Culture in Fin-de-Si�cle Europe (1890-1914)
 Explores relationships between politics, culture, and social change in Europe. Topics include the changing role of intellectuals: literary aestheticism, painting, design and the city, origins of psychology.
 HIST_V 440 (3) History of Global Health
 The emergence of global health since 1800. Medical and social response to infectious diseases and epidemics, the ethical foundations of global health, and the relationship among health, colonialism, international collaboration, and the developing world.
@@ -10865,7 +10865,7 @@ Exploration of human and animal interactions: integrating evolutionary and econo
 ISCI_V 345 (3) Integrative Bioinformatics
 Storage and processing of information in biological systems. Computational methods for recovering and interpreting stored genetic information. Priority to students in the Integrated Sciences Program. [2-0-2] Prerequisite: Third-year standing in the Faculty of Science.
 ISCI_V 350 (3) Darwinian Medicine
-Using the Darwinian theory of natural selection to explore explanations of infectious diseases, allergies, cancer, mental illness, and other human diseases. Priority to students in the Integrated Sciences Program. Please consult the Faculty of Science Credit Exclusion Lists: www.vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-sc… [2-0-2] Prerequisite: Third-year standing in the Faculty of Science. Equivalency: BIOL 350
+Using the Darwinian theory of natural selection to explore explanations of infectious diseases, allergies, cancer, mental illness, and other human diseases. Priority to students in the Integrated Sciences Program. Please consult the Faculty of Science Credit Exclusion Lists: http://www.vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [2-0-2] Prerequisite: Third-year standing in the Faculty of Science. Equivalency: BIOL 350 
 ISCI_V 351 (3) Why the Big Brain? The Evolution of Human Cognition
 Evolutionary causes, consequences and constraints of human cognition; enhanced encephalization and mentalizing capabilities throughout the Primate Order, and the emergence of cognitive faculties that define the human species. [3-0-0] Prerequisite: Third-year or higher standing in the Faculty of Science.
 ISCI_V 360 (3) Systems Approaches to Regional Sustainability
@@ -10913,7 +10913,7 @@ Interdisciplinary course that covers a wide range of topics regarding not only t
 INDS_V 501 (0) Instructional Skills Workshop
 Introduction to concepts and practice in higher education instruction; emphasis on lesson planning, student participation and instructional aides; includes video-taped practice teacher/peer feedback 28 classroom hours. This course is not eligible for Credit/D/Fail grading.
 INDS_V 502 (1-6) Interdisciplinary Studies: Thematic Seminars
-Seminars, lectures, and discussions of topics involving several faculties. Contact the Interdisciplinary Studies Program for specific topics (www.isgp.ubc.ca). This course is not eligible for Credit/D/Fail grading.
+Seminars, lectures, and discussions of topics involving several faculties. Contact the Interdisciplinary Studies Program for specific topics (http://www.isgp.ubc.ca). This course is not eligible for Credit/D/Fail grading.
 INDS_V 530 (3-6) Directed Studies
 A series of directed readings related to student's area of interdisciplinary studies. This advanced course may be taken upon approval of the Program head. The credit value for this course will be determined in consultation with the student prior to the registration. This course is not eligible for Credit/D/Fail grading.
 INDS_V 549 (6-12) Master's Thesis
@@ -11145,23 +11145,23 @@ This course is not eligible for Credit/D/Fail grading.
 JRNL_V 555 (3-6) International Reporting
 Restricted to students in Master of Journalism program. This course is not eligible for Credit/D/Fail grading.
 KIN_V 110 (3) Human Anatomy
-Structure of the neural, muscular, and skeletal systems of the human body. Special emphasis on movement analysis and the physiological effects of exercise. Please consult the School of Kinesiology Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-2]
+Structure of the neural, muscular, and skeletal systems of the human body. Special emphasis on movement analysis and the physiological effects of exercise. Please consult the School of Kinesiology Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-2] 
 KIN_V 120 (3) Health and Exercise Management
 Role of physical activity in the maintenance of a healthy life. Application of basic physical fitness and exercise methods, exercise techniques and fitness appraisal. [2-2]
 KIN_V 131 (3) Systems Physiology I
-Structure and function of the skeletal system, muscular system, integumentary system, neuro-hormonal control, and endocrinology. Emphasis will be to develop an understanding of the integrative nature of the systems discussed. Please consult the School of Kinesiology Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-2]
+Structure and function of the skeletal system, muscular system, integumentary system, neuro-hormonal control, and endocrinology. Emphasis will be to develop an understanding of the integrative nature of the systems discussed. Please consult the School of Kinesiology Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-2] 
 KIN_V 132 (3) Systems Physiology II
-Structure and function of the cardiovascular system, respiratory system, urinary system, digestive system, and immune system. Emphasis will be to develop an understanding of the integrative nature of the systems discussed. Please consult the School of Kinesiology Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/school…. [3-2]
+Structure and function of the cardiovascular system, respiratory system, urinary system, digestive system, and immune system. Emphasis will be to develop an understanding of the integrative nature of the systems discussed. Please consult the School of Kinesiology Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/school-kinesiology/bachelor-kinesiology/credit-exclusion-lists. [3-2] 
 KIN_V 140 (3) Lifespan Motor Development
 A lifespan approach to motor development that examines underlying factors affecting physical growth, physical activity behaviour, and human motor performance, while highlighting contemporary issues and trends in society. [3-0] This course is not eligible for Credit/D/Fail grading.
 KIN_V 150 (3) Sport and Exercise Psychology
-Psychological theories and research related to sport and exercise behaviour. Please consult the School of Kinesiology Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/school…. [3-0-0] This course is not eligible for Credit/D/Fail grading.
+Psychological theories and research related to sport and exercise behaviour. Please consult the School of Kinesiology Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/school-kinesiology/bachelor-kinesiology/credit-exclusion-lists. [3-0-0] This course is not eligible for Credit/D/Fail grading.
 KIN_V 160 (3) Leisure and Sport in Society
 Introduction to the political, economic and social basis of leisure and sport; concepts, theories and problems. [3-0] This course is not eligible for Credit/D/Fail grading.
 KIN_V 205 (3) Research Methods in Kinesiology
-Critical evaluation of research studies and methods with emphasis on the physical activity context. Please consult the School of Kinesiology Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: Second-year standing.
+Critical evaluation of research studies and methods with emphasis on the physical activity context. Please consult the School of Kinesiology Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: Second-year standing. 
 KIN_V 206 (3) Introduction to Statistics in Kinesiology
-Basic concepts and principles of descriptive and inferential statistics, and distribution-free statistical techniques. Please consult the School of Kinesiology Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: Second-year standing.
+Basic concepts and principles of descriptive and inferential statistics, and distribution-free statistical techniques. Please consult the School of Kinesiology Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: Second-year standing. 
 KIN_V 211 (3) Human Motor Behaviour I
 Processes underlying human movement and learning motor skills and factors influencing acquisition, performance, and movement control. [3-0-0] Prerequisite: All of KIN 110, KIN 131. This course is not eligible for Credit/D/Fail grading.
 KIN_V 216 (3) Biomechanics I
@@ -11799,9 +11799,9 @@ Focuses on human rights movements; state violence and impunity; reform of crimin
 LAST_V 303 (3) Indigenous Latin America
 Historical and contemporary cultures, struggles, and experiences of Indigenous peoples in what is now Latin America. Different cultural areas or regions may be selected to illustrate the course's principal themes.
 LAST_V 315 (3-6) Topics in Latin American Studies
-Topics will vary from year to year. Consult the program website (https://las.arts.ubc.ca/all-courses/) for further details.//
+Topics will vary from year to year. Consult the program website (https://las.arts.ubc.ca/all-courses/) for further details.// 
 LAST_V 415 (3-6) Seminar in Latin American Studies
-Topics will vary from year to year. Consult the program website (https://las.arts.ubc.ca/all-courses/) for further details./ Prerequisite: One of LAST 100, LAST 201, LAST 205, LAST 301, LAST 303, LAST 315.
+Topics will vary from year to year. Consult the program website (https://las.arts.ubc.ca/all-courses/) for further details./ Prerequisite: One of LAST 100, LAST 201, LAST 205, LAST 301, LAST 303, LAST 315. 
 LAW_V 200 (3) Indigenous Settler Legal Relations
 Critical examination of the history and legacy of colonial legal orders in Canada. This course is compulsory for students who commence their Juris Doctor degree in September 2020 or later. This course is not eligible for Credit/D/Fail grading.
 LAW_V 201 (6) Canadian Constitutional Law
@@ -12805,75 +12805,75 @@ For M.A.Sc. Degree. Research studies in materials engineering. Honours/Pass/Fail
 MTRL_V 699 (0) Doctoral Dissertation
 This course is not eligible for Credit/D/Fail grading.
 MATH_V 100 (3) Differential Calculus with Applications
-Derivatives of elementary functions. Applications and modelling: graphing, optimization. Consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: A score of 80% or higher in BC Pre-calculus 12. High school calculus is strongly recommended.
+Derivatives of elementary functions. Applications and modelling: graphing, optimization. Consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: A score of 80% or higher in BC Pre-calculus 12. High school calculus is strongly recommended. 
 MATH_V 101 (3) Integral Calculus with Applications
-The definite integral, integration techniques, applications, modelling, infinite series. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: One of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184.
+The definite integral, integration techniques, applications, modelling, infinite series. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: One of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184. 
 MATH_V 102 (3) Differential Calculus with Applications to Life Sciences
-Functions, derivatives, optimization, growth and decay, discrete probability. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: High-school calculus and a score of 80% or higher in BC Principles of Mathematics 12 or Pre-calculus 12.
+Functions, derivatives, optimization, growth and decay, discrete probability. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: High-school calculus and a score of 80% or higher in BC Principles of Mathematics 12 or Pre-calculus 12. 
 MATH_V 103 (3) Integral Calculus with Applications to Life Sciences
-Antiderivatives and definite integrals, infinite series, applications to probability and dynamical systems. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: One of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184.
+Antiderivatives and definite integrals, infinite series, applications to probability and dynamical systems. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: One of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184. 
 MATH_V 104 (3) Differential Calculus with Applications to Commerce and Social Sciences
-Derivatives and rates of change, exponential and trigonometric functions, Newton's method, Taylor polynomials, maxima and minima, and graphing. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [3-0-0] Prerequisite: High-school calculus and a score of 80% or higher in BC Principles of Mathematics 12 or Pre-calculus 12.
+Derivatives and rates of change, exponential and trigonometric functions, Newton's method, Taylor polynomials, maxima and minima, and graphing. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [3-0-0] Prerequisite: High-school calculus and a score of 80% or higher in BC Principles of Mathematics 12 or Pre-calculus 12. 
 MATH_V 105 (3) Integral Calculus with Applications to Commerce and Social Sciences
-Antiderivatives, the definite integral, techniques of integration, infinite series, partial derivatives, maxima and minima with constraints, discrete and continuous random variables. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [3-0-0] Prerequisite: One of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184.
+Antiderivatives, the definite integral, techniques of integration, infinite series, partial derivatives, maxima and minima with constraints, discrete and continuous random variables. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [3-0-0] Prerequisite: One of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184. 
 MATH_V 110 (6) Differential Calculus
 Topics as for MATH 100, but including relevant topics from algebra, geometry, functions, trigonometry, logarithms, and exponentials. [3-0-1.5; 3-0-1.5] Prerequisite: A grade of 65% or higher in BC Principles of Mathematics 12 or Pre-calculus 12.
 MATH_V 120 (4) Honours Differential Calculus
-Limits, derivatives, Mean Value Theorem and applications, elementary functions, optimization, Taylor series, approximation. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [4-0-0] Prerequisite: High-school calculus and one of (a) a score of 95% or higher in BC Principles of Mathematics 12 or Pre-calculus 12; or (b) permission from the Mathematics Department Head.
+Limits, derivatives, Mean Value Theorem and applications, elementary functions, optimization, Taylor series, approximation. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [4-0-0] Prerequisite: High-school calculus and one of (a) a score of 95% or higher in BC Principles of Mathematics 12 or Pre-calculus 12; or (b) permission from the Mathematics Department Head. 
 MATH_V 121 (4) Honours Integral Calculus
-Definite integrals and the Fundamental Theorem of Calculus, techniques and applications of integration, infinite series. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [4-0-0] Prerequisite: Either(a) MATH 120 or (b) one of MATH 100, MATH 102, MATH 104, MATH 180, MATH 184. Prerequisite grade requirement: 80% in MATH184,MATH180,MATH104,MATH102,MATH100. 68% in MATH120. or (c) a score of 5 in AP Calculus AB.
+Definite integrals and the Fundamental Theorem of Calculus, techniques and applications of integration, infinite series. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [4-0-0] Prerequisite: Either(a) MATH 120 or (b) one of MATH 100, MATH 102, MATH 104, MATH 180, MATH 184. Prerequisite grade requirement: 80% in MATH184,MATH180,MATH104,MATH102,MATH100. 68% in MATH120. or (c) a score of 5 in AP Calculus AB. 
 MATH_V 152 (3) Linear Systems
-2D and 3D geometry, vectors and matrices, eigenvalues and vibration, physical applications. Laboratories demonstrate computer solutions of large systems. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-1*-0] Corequisite: MATH 101.
+2D and 3D geometry, vectors and matrices, eigenvalues and vibration, physical applications. Laboratories demonstrate computer solutions of large systems. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-1*-0] Corequisite: MATH 101. 
 MATH_V 180 (4) Differential Calculus with Applications
-Topics as for Math 100; intended for students with no previous knowledge of Calculus. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. Not for credit for students with AP Calculus AB, AP Calculus BC, or a passing score on the UBC-SFU-UVIC-UNBC Calculus Challenge Examination. [3-0-1.5] Prerequisite: A grade of 80% or higher in BC Principles of Mathematics 12 or Pre-calculus 12.
+Topics as for Math 100; intended for students with no previous knowledge of Calculus. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. Not for credit for students with AP Calculus AB, AP Calculus BC, or a passing score on the UBC-SFU-UVIC-UNBC Calculus Challenge Examination. [3-0-1.5] Prerequisite: A grade of 80% or higher in BC Principles of Mathematics 12 or Pre-calculus 12. 
 MATH_V 184 (4) Differential Calculus for Social Science and Commerce
-Topics as for Math 104; intended for students with no previous knowledge of Calculus. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. Not for credit for students with AP Calculus AB, AP Calculus BC, or a passing score on the UBC-SFU-UVIC-UNBC Calculus Challenge Examination. [3-0-1.5] Prerequisite: A grade of 80% or higher in BC Principles of Mathematics 12 or Pre-calculus 12.
+Topics as for Math 104; intended for students with no previous knowledge of Calculus. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. Not for credit for students with AP Calculus AB, AP Calculus BC, or a passing score on the UBC-SFU-UVIC-UNBC Calculus Challenge Examination. [3-0-1.5] Prerequisite: A grade of 80% or higher in BC Principles of Mathematics 12 or Pre-calculus 12. 
 MATH_V 190 (4) Calculus Survey
 Functions, derivatives, integrals, curve sketching growth functions, volume calculations. Only for credit in the Faculty of Forestry. Students with credit for MATH 100, 102, 104, 120, 180, or 184 cannot in the same term or later terms obtain credit for MATH 190. [3-0-2] Prerequisite: Principles of Mathematics 12 or Pre-calculus 12 and registration in the B.S.F. or B.Sc.N. programs.
 MATH_V 200 (3) Calculus III
-Analytic geometry in 2 and 3 dimensions, partial and directional derivatives, chain rule, maxima and minima, second derivative test, Lagrange multipliers, multiple integrals with applications. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [3-0-0] Prerequisite: One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001.
+Analytic geometry in 2 and 3 dimensions, partial and directional derivatives, chain rule, maxima and minima, second derivative test, Lagrange multipliers, multiple integrals with applications. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [3-0-0] Prerequisite: One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001. 
 MATH_V 210 (3) Introduction to Mathematical Computing
 Introduction to mathematical software and numerical methods. Numbers, arrays, functions, vectorization and iteration. Sequences and series, root finding, numerical integration, numerical methods for differential equations, systems of linear equations, mathematical graphics. [3-0-0] Prerequisite: One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001. Corequisite: One of MATH 215, MATH 255, MATH 256, MATH 258 and one of MATH 152, MATH 221, MATH 223.
 MATH_V 215 (3) Elementary Differential Equations I
-First-order equations; linear equations; linear systems; Laplace transforms; numerical methods; trajectory analysis of plane nonlinear systems. Applications of these topics will be emphasized. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [3-0-0] Prerequisite: One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001 and one of MATH 152, MATH 221, MATH 223. Corequisite: One of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254.
+First-order equations; linear equations; linear systems; Laplace transforms; numerical methods; trajectory analysis of plane nonlinear systems. Applications of these topics will be emphasized. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [3-0-0] Prerequisite: One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001 and one of MATH 152, MATH 221, MATH 223. Corequisite: One of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254. 
 MATH_V 217 (4) Multivariable and Vector Calculus
-Partial differentiation, extreme values, multiple integration, vector fields, line and surface integrals, the divergence theorem, Green's and Stokes' theorems. Intended for students in Honours Physics and Engineering Physics. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [4-0-0] Prerequisite: A score of 68% or higher in one of PHYS 102, PHYS 108, PHYS 118, PHYS 153, PHYS 158, SCIE 001 and a score of 68% or higher in one of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001. Corequisite: One of MATH 152, MATH 221, MATH 223.
+Partial differentiation, extreme values, multiple integration, vector fields, line and surface integrals, the divergence theorem, Green's and Stokes' theorems. Intended for students in Honours Physics and Engineering Physics. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [4-0-0] Prerequisite: A score of 68% or higher in one of PHYS 102, PHYS 108, PHYS 118, PHYS 153, PHYS 158, SCIE 001 and a score of 68% or higher in one of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001. Corequisite: One of MATH 152, MATH 221, MATH 223. 
 MATH_V 220 (3) Mathematical Proof
 Sets and functions; induction; cardinality; properties of the real numbers; sequences, series, and limits. Logic, structure, style, and clarity of proofs emphasized throughout. [3-0-0] Prerequisite: Either (a) a score of 64% or higher in one of MATH 101, MATH 103, MATH 105, SCIE 001 or (b) one of MATH 121, MATH 200, MATH 217, MATH 226, MATH 253, MATH 254.
 MATH_V 221 (3) Matrix Algebra
-Systems of linear equations, operations on matrices, determinants, eigenvalues and eigenvectors, diagonalization of symmetric matrices. This course is intended for first and second year students. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: Either (a) one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184, SCIE 001 or (b) advanced credit for MATH 100.
+Systems of linear equations, operations on matrices, determinants, eigenvalues and eigenvectors, diagonalization of symmetric matrices. This course is intended for first and second year students. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: Either (a) one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184, SCIE 001 or (b) advanced credit for MATH 100. 
 MATH_V 223 (3) Honours Linear Algebra
 Matrices, eigenvectors, diagonalization, orthogonality, linear systems, applications. This course is intended for first and second-year students. Students who obtain credit for MATH 223 cannot in the same or later terms obtain credit for MATH 152 or MATH 221. [3-0-0] Prerequisite: Either (a) one of MATH 120, MATH 121, SCIE 001 or (b) a score of 80% or higher in one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 180, MATH 184 or (c) a score of 68% or higher in one of MATH 101, MATH 103, MATH 105, MATH 152, MATH 221.
 MATH_V 226 (3) Advanced Calculus I
-Functions of several variables: limits, continuity, differentiability; implicit functions; Taylor's theorem; extrema; Lagrange multipliers; multiple integration, Fubini's theorem; improper integrals. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: Either (a) a score of 68% or higher in MATH 121 or (b) a score of 80% or higher in one of MATH 101, MATH 103, MATH 105, SCIE 001. Corequisite: One of MATH 152, MATH 221, MATH 223.
+Functions of several variables: limits, continuity, differentiability; implicit functions; Taylor's theorem; extrema; Lagrange multipliers; multiple integration, Fubini's theorem; improper integrals. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: Either (a) a score of 68% or higher in MATH 121 or (b) a score of 80% or higher in one of MATH 101, MATH 103, MATH 105, SCIE 001. Corequisite: One of MATH 152, MATH 221, MATH 223. 
 MATH_V 227 (3) Advanced Calculus II
-Parametrization of curves and surfaces; line and surface integrals; theorems of Green, Gauss, Stokes; applications to physics and/or introduction to differential forms. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: MATH 226. Prerequisite grade requirement: 68% in MATH226.
+Parametrization of curves and surfaces; line and surface integrals; theorems of Green, Gauss, Stokes; applications to physics and/or introduction to differential forms. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: MATH 226. Prerequisite grade requirement: 68% in MATH226. 
 MATH_V 230 (3) Marvels of Mathematics
 A variety of topics in mathematics, showcasing its beauty and utility. Intended for a general audience of students whose degrees have no mathematics requirements, but who may be curious about practical and recreational mathematics. Not for credit in the Faculty of Science. Students who obtain UBC credit for any other mathematics course cannot in the same or later years obtain credit for MATH 230. [3-0-0]
 MATH_V 253 (3) Multivariable Calculus
-Partial and directional derivatives; maxima and minima; Lagrange multipliers and second derivative test; multiple integrals and applications. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001.
+Partial and directional derivatives; maxima and minima; Lagrange multipliers and second derivative test; multiple integrals and applications. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001. 
 MATH_V 254 (3) Multivariable and Vector Calculus for Mechanical Engineering
 Partial differentiation, extreme values, multiple integration, vector fields, line and surface integrals, the divergence and Stokes' theorems; applications to fluid mechanics: buoyancy, hydrostatic force, pipe flow, drag; applications to thermodynamics: work, entropy, heat transfer; numerical methods. Emphasis on mechanical engineering applications. [3-0-1*] Prerequisite: MATH 101 and one of MATH 152, MATH 221, MATH 223. Corequisite: All of MECH 222, MECH 225.
 MATH_V 255 (3) Ordinary Differential Equations
-Review of linear systems; nonlinear equations and applications; phase plane analysis; Laplace transforms; numerical methods. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001 and one of MATH 152, MATH 221, MATH 223. Corequisite: One of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254.
+Review of linear systems; nonlinear equations and applications; phase plane analysis; Laplace transforms; numerical methods. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001 and one of MATH 152, MATH 221, MATH 223. Corequisite: One of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254. 
 MATH_V 256 (3) Differential Equations
-Linear ordinary differential equations, Laplace transforms, Fourier series and separation of variables for linear partial differential equations. Consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [3-0-0] Prerequisite: One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001 and one of MATH 152, MATH 221, MATH 223. Corequisite: One of MATH 200, MATH 217, MATH 226, MATH 253, MATH 263.
+Linear ordinary differential equations, Laplace transforms, Fourier series and separation of variables for linear partial differential equations. Consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [3-0-0] Prerequisite: One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001 and one of MATH 152, MATH 221, MATH 223. Corequisite: One of MATH 200, MATH 217, MATH 226, MATH 253, MATH 263. 
 MATH_V 257 (3) Partial Differential Equations
-Introduction to partial differential equations; Fourier series; the heat, wave and potential equations; boundary-value problems; numerical methods. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: One of MATH 215, MATH 255, MATH 256, MATH 258.
+Introduction to partial differential equations; Fourier series; the heat, wave and potential equations; boundary-value problems; numerical methods. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: One of MATH 215, MATH 255, MATH 256, MATH 258. 
 MATH_V 258 (3) Differential Equations for Mechanical Engineering
 First-order equations; linear equations; linear systems; Laplace transforms; trajectory analysis of plane nonlinear systems; translational and rotational vibrations; applications to RLC circuit analysis; numerical and graphical methods. Emphasis on mechanical engineering applications. [3-0-1*] Prerequisite: MATH 101 and one of MATH 152, MATH 221, MATH 223. Corequisite: All of MECH 221, MECH 224.
 MATH_V 264 (1) Vector Calculus for Electrical Engineering
 Divergence, gradient, curl, theorems of Gauss and Stokes. Applications to Electrostatics and Magnetostatics. MATH 264 content is strongly coupled to BMEG 220 and ELEC 211 with topics and student evaluations weighted accordingly. Prerequisite: One of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254. Corequisite: One of BMEG 220, ELEC 211. This course is not eligible for Credit/D/Fail grading.
 MATH_V 300 (3) Introduction to Complex Variables
-Functions of a complex variable, Cauchy-Riemann equations, elementary functions, Cauchy's theorem and contour integration, Laurent series, poles and residues. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Corequisite: One of MATH 217, MATH 227, MATH 254, MATH 317.
+Functions of a complex variable, Cauchy-Riemann equations, elementary functions, Cauchy's theorem and contour integration, Laurent series, poles and residues. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Corequisite: One of MATH 217, MATH 227, MATH 254, MATH 317. 
 MATH_V 301 (3) Applied Analysis
 Integrals involving multi-valued functions, conformal mapping and applications, analytic continuation, Laplace and Fourier transforms. [3-0-0] Prerequisite: One of MATH 300, MATH 305. Corequisite: One of MATH 256, MATH 257, MATH 316, MATH 358, MECH 358, PHYS 312.
 MATH_V 302 (3) Introduction to Probability
-Basic notions of probability, random variables, expectation and conditional expectation, limit theorems. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: One of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254. Equivalency: STAT302
+Basic notions of probability, random variables, expectation and conditional expectation, limit theorems. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: One of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254. Equivalency: STAT302 
 MATH_V 303 (3) Introduction to Stochastic Processes
-Discrete-time Markov chains, Poisson processes, continuous time Markov chains, renewal theory. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: One of MATH 302, STAT 302.
+Discrete-time Markov chains, Poisson processes, continuous time Markov chains, renewal theory. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: One of MATH 302, STAT 302. 
 MATH_V 305 (3) Applied Complex Analysis
-Functions of a complex variable, Cauchy-Riemann equations, contour integration, Laurent series, residues, integrals of multi-valued functions, Fourier transforms. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: One of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254. Corequisite: One of MATH 256, MATH 257, MATH 316, MATH 358, MECH 358, PHYS 312.
+Functions of a complex variable, Cauchy-Riemann equations, contour integration, Laurent series, residues, integrals of multi-valued functions, Fourier transforms. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: One of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254. Corequisite: One of MATH 256, MATH 257, MATH 316, MATH 358, MECH 358, PHYS 312. 
 MATH_V 307 (3) Applied Linear Algebra
 Applications of linear algebra to problems in science and engineering; use of computer algebra systems for solving problems in linear algebra. [3-0-0] Prerequisite: One of MATH 152, MATH 221, MATH 223 and one of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254.
 MATH_V 308 (3) Euclidean Geometry
@@ -12881,19 +12881,19 @@ Classical plane geometry, solid geometry, spherical trigonometry, polyhedra, lin
 MATH_V 309 (3) Topics in Geometry
 Topics chosen by the instructor. These may include conic sections, projective configuration, convexity, non-Euclidean geometries, fractal geometry, combinatorial problems of points in the plane. [3-0-0] Prerequisite: Either (a) one of MATH 152, MATH 221 and one of MATH 220, MATH 226, CPSC 121; or (b) MATH 223.
 MATH_V 310 (3) Abstract Linear Algebra
-Linear spaces, duality, linear mappings, matrices, determinant and trace, spectral theory, Euclidean structure. Consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: One of MATH 152, MATH 221 and one of MATH 220, MATH 226, CPSC 121.
+Linear spaces, duality, linear mappings, matrices, determinant and trace, spectral theory, Euclidean structure. Consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: One of MATH 152, MATH 221 and one of MATH 220, MATH 226, CPSC 121. 
 MATH_V 312 (3) Introduction to Number Theory
-Euclidean algorithm, congruences, Fermat's theorem, applications. Some diophantine equations. Distribution of the prime numbers. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… Prerequisite: One of MATH 220, MATH 223, MATH 226, CPSC 121. and 9 additional credits of mathematics courses.
+Euclidean algorithm, congruences, Fermat's theorem, applications. Some diophantine equations. Distribution of the prime numbers. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists Prerequisite: One of MATH 220, MATH 223, MATH 226, CPSC 121. and 9 additional credits of mathematics courses. 
 MATH_V 313 (3) Topics in Number Theory
-Topics chosen by the instructor. These might include: division algorithms, group theory, continued fractions, primality testing, factoring. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [3-0-0] Prerequisite: MATH 312.
+Topics chosen by the instructor. These might include: division algorithms, group theory, continued fractions, primality testing, factoring. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [3-0-0] Prerequisite: MATH 312. 
 MATH_V 316 (3) Elementary Differential Equations II
-Power series methods (ordinary and regular singular points, Bessel's equation); boundary value problems and separation of variables (Fourier series and other orthogonal series), applications to the vibrating string, heat flow, potentials. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: One of MATH 215, MATH 255, MATH 256, MATH 258.
+Power series methods (ordinary and regular singular points, Bessel's equation); boundary value problems and separation of variables (Fourier series and other orthogonal series), applications to the vibrating string, heat flow, potentials. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: One of MATH 215, MATH 255, MATH 256, MATH 258. 
 MATH_V 317 (3) Calculus IV
-Parametrizations, inverse and implicit functions, integrals with respect to length and area; grad, div, and curl, theorems of Green, Gauss, and Stokes. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: One of MATH 200, MATH 226, MATH 253. One of MATH 152, MATH 221, MATH 223 is recommended.
+Parametrizations, inverse and implicit functions, integrals with respect to length and area; grad, div, and curl, theorems of Green, Gauss, and Stokes. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: One of MATH 200, MATH 226, MATH 253. One of MATH 152, MATH 221, MATH 223 is recommended. 
 MATH_V 318 (3) Probability with Physical Applications
-Random variables, discrete and continuous distributions. Random walk, Markov chains, Monte Carlo methods. Characteristic functions, limit laws. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: One of MATH 152, MATH 221, MATH 223. Corequisite: One of MATH 256, MATH 257, MATH 316, MATH 358, MECH 358, PHYS 312.
+Random variables, discrete and continuous distributions. Random walk, Markov chains, Monte Carlo methods. Characteristic functions, limit laws. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: One of MATH 152, MATH 221, MATH 223. Corequisite: One of MATH 256, MATH 257, MATH 316, MATH 358, MECH 358, PHYS 312. 
 MATH_V 319 (3) Introduction to Real Analysis
-Ideas and methods of real analysis and their application. Countability and topology of the reals; convergence, continuity and differentiability of functions; metric spaces. Please consult the Faculty of Science credit exclusion list: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: Either (a) a score of 68% or higher in MATH 220 or (b) a score of 55% or higher in one of MATH 223, MATH 226.
+Ideas and methods of real analysis and their application. Countability and topology of the reals; convergence, continuity and differentiability of functions; metric spaces. Please consult the Faculty of Science credit exclusion list: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: Either (a) a score of 68% or higher in MATH 220 or (b) a score of 55% or higher in one of MATH 223, MATH 226. 
 MATH_V 320 (3) Real Variables I
 The real number system; real Euclidean n-space; open, closed, compact, and connected sets; Bolzano-Weierstrass theorem; sequences and series. Continuity and uniform continuity. Differentiability and mean-value theorems. [3-0-0] Prerequisite: Either (a) a score of 68% or higher in MATH 226 or (b) one of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254 and a score of 80% or higher in MATH 220.
 MATH_V 321 (3) Real Variables II
@@ -12903,7 +12903,7 @@ Groups, cosets, homomorphisms, group actions, p-groups, Sylow theorems, composit
 MATH_V 323 (3) Introduction to Rings and Modules
 Rings, ideals, unique factorization, Euclidean rings, fields, polynomial rings, modules; structure theory of modules over a principal ideal domain. [3-0-0] Prerequisite: MATH 322.
 MATH_V 335 (4) Introduction to Mathematics
-Intensive course with required tutorial. Combinatorics, probability, geometry and elementary number theory. Not for credit in the Faculty of Science. Students who obtain credit at UBC for any other mathematics course cannot in the same or later years obtain credit for MATH 335. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-2]
+Intensive course with required tutorial. Combinatorics, probability, geometry and elementary number theory. Not for credit in the Faculty of Science. Students who obtain credit at UBC for any other mathematics course cannot in the same or later years obtain credit for MATH 335. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-2] 
 MATH_V 340 (3) Introduction to Linear Programming
 Linear programming problems, dual problems, the simplex algorithm, solution of primal and dual problems, sensitivity analysis. Additional topics chosen from: Karmarkar's algorithm, non-linear programming, game theory, applications. [3-0-0] Prerequisite: One of MATH 152, MATH 221, MATH 223.
 MATH_V 341 (3) Introduction to Discrete Mathematics
@@ -12927,7 +12927,7 @@ Approved and supervised technical work experience involving mathematics in indus
 MATH_V 400 (3) Applied Partial Differential Equations
 Separation of variables, first order equations, Sturm-Liouville theory, integral transform methods. [3-0-0] Prerequisite: One of MATH 300, MATH 305 and one of MATH 256, MATH 257, MATH 316, MATH 358, MECH 358, PHYS 312.
 MATH_V 401 (3) Green's Functions and Variational Methods
-Green's functions for partial differential equations. Calculus of variations. Eigenfunction expansions. Rayleigh-Ritz and finite element methods. See Faculty of Science credit exclusion list: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: Either (a) a score of 80% or higher in one of MATH 256, MATH 257, MATH 316, MATH 358, MECH 358, PHYS 312 or (b) MATH 400.
+Green's functions for partial differential equations. Calculus of variations. Eigenfunction expansions. Rayleigh-Ritz and finite element methods. See Faculty of Science credit exclusion list: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: Either (a) a score of 80% or higher in one of MATH 256, MATH 257, MATH 316, MATH 358, MECH 358, PHYS 312 or (b) MATH 400. 
 MATH_V 402 (3) Calculus of Variations
 Classical variational problems; necessary conditions of Euler, Weierstrass, Legendre, and Jacobi; Erdmann corner conditions, transversality, convex Lagrangians, fields of extremals, sufficient conditions for optimality, numerical methods; applications to classical mechanics, engineering and economics. Recommended pre-requisites: a score of 68% or higher in one of MATH 301, MATH 320, or, a score of 80% or higher in MATH 319. [3-0-0]
 MATH_V 403 (3) Stabilization and Optimal Control of Dynamical Systems
@@ -12935,9 +12935,9 @@ Dynamical systems; stability by Liapunov's direct method; controllability and ei
 MATH_V 404 (3) Harmonic Analysis I
 Harmonic analysis on Euclidean spaces, with applications to number theory, partial differential equations and geometric measure theory. [3-0-0] Prerequisite: MATH 300 and a score of 68% or higher in MATH 321. Corequisite: MATH 420.
 MATH_V 405 (3) Numerical Methods for Differential Equations
-Interpolation, numerical integration, numerical solution of ordinary and partial differential equations. Practical computational methods emphasized and basic theory developed through simple models. See Faculty of Science credit exclusion list: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: One of MATH 256, MATH 257, MATH 316, MATH 358, MECH 358, PHYS 312.
+Interpolation, numerical integration, numerical solution of ordinary and partial differential equations. Practical computational methods emphasized and basic theory developed through simple models. See Faculty of Science credit exclusion list: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: One of MATH 256, MATH 257, MATH 316, MATH 358, MECH 358, PHYS 312. 
 MATH_V 406 (3) Variational and Approximate Methods in Applied Mathematics
-Variational and Green's function methods for ordinary and partial differential equations, introduction to finite difference, finite element and boundary element methods. See Faculty of Science Credit exclusion list: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-0-0] Prerequisite: One of MATH 307, CPSC 302 and either (a) a score of 80% or higher in one of MATH 256, MATH 257, MATH 316, MATH 358, MECH 358, PHYS 312 or (b) MATH 400.
+Variational and Green's function methods for ordinary and partial differential equations, introduction to finite difference, finite element and boundary element methods. See Faculty of Science Credit exclusion list: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-0-0] Prerequisite: One of MATH 307, CPSC 302 and either (a) a score of 80% or higher in one of MATH 256, MATH 257, MATH 316, MATH 358, MECH 358, PHYS 312 or (b) MATH 400. 
 MATH_V 412 (3) Advanced Linear Algebra
 Topics include decompositions of linear operators, multilinear algebra, bilinear forms, metric spaces. [3-0-0] Prerequisite: A score of 68% or higher in MATH 322 and either (a) a score of 68% or higher in MATH 320 or (b) a score of 80% or higher in MATH 319.
 MATH_V 414 (3) Mathematical Demonstrations
@@ -12969,7 +12969,7 @@ The student should consult the Mathematics Department for the particular topics 
 MATH_V 432 (2-6) Special Topics in Algebra
 The student should consult the Mathematics Department for the particular topics offered in a given year. [3-0-0]. The credit value for this course will be determined in consultation with the student prior to the registration.
 MATH_V 437 (3) Number Theory
-Divisibility, congruences, Diophantine equations, arithmetic functions, quadratic reciprocity, advanced topics. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. [3-0-0] Corequisite: One of MATH 320 (waived for students with a score of 80% or higher in MATH 319), MATH 322.
+Divisibility, congruences, Diophantine equations, arithmetic functions, quadratic reciprocity, advanced topics. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. [3-0-0] Corequisite: One of MATH 320 (waived for students with a score of 80% or higher in MATH 319), MATH 322. 
 MATH_V 440 (3) Complex Analysis
 The residue theorem, the argument principle, conformal mapping, the maximum modulus principle, harmonic functions, representation of functions by integrals, series, and products. Other topics at the discretion of the instructor. [3-0-0] Prerequisite: MATH 300 and either (a) a score of 68% or higher in MATH 320 or (b) a score of 80% or higher in MATH 319 and permission of the Department Head in Mathematics.
 MATH_V 441 (3) Mathematical Modelling: Discrete Optimization Problems
@@ -13625,13 +13625,13 @@ This course is not eligible for Credit/D/Fail grading.
 MICB_V 549 (18) M.Sc. Thesis
 This course is not eligible for Credit/D/Fail grading.
 MICB_V 575 (3) Data Science Research in Microbiology and Immunology
-A team-based data science research experience in microbiology and immunology. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. This course is not eligible for Credit/D/Fail grading.
+A team-based data science research experience in microbiology and immunology. Please consult the Faculty of Science Credit Exclusion List: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. This course is not eligible for Credit/D/Fail grading.
 MICB_V 649 (0) Doctoral Dissertation
 This course is not eligible for Credit/D/Fail grading.
 MES_V 300 (3) The Middle East: Critical Questions and Debates
 Critical questions and debates in Middle East Studies that shape scholarly and public perception of the region.
 MES_V 301 (3-6) Topics in Middle East Studies
-Topics will vary from year to year. Consult the program website (https://mes.arts.ubc.ca/courses/) for further details.
+Topics will vary from year to year. Consult the program website (https://mes.arts.ubc.ca/courses/) for further details. 
 MES_V 360 (3) Political Economy of the Modern Middle East
 Roles of material and political forces, economic policies, and ideologies in the transformation of the Middle East. Topics include oil, colonial finance, trade, hydropower, industrialization, land reform, social reproduction, and geo-economic warfare. Restricted to students with second year standing or above.
 MES_V 450 (3-6) Directed Studies Project
@@ -14363,7 +14363,7 @@ Forest classification and the application of silvics in forest management, inclu
 NRES_V 225 (3) Communications Strategies
 Strategies for thinking critically and writing effectively about topics that engage practitioners in Forestry. Planning, drafting and editing of professional-quality documents for specialists and other stakeholders. Developing oral presentation skills. Credit will be granted for only one of NRES 225 or WOOD 225. [3-0-0] Prerequisite: Three credits of first-year English. Equivalency: WOOD 225 This course is not eligible for Credit/D/Fail grading.
 NRES_V 231 (3) Introduction to Biometrics
-Basic theories of probability and statistics. Sampling distribution, methods of estimation and hypothesis testing; goodness of fit and tests for independence; analysis of variance, regression and correlation. Consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…. Credit will be granted for only one of NRES 231 or FRST 231. [3-2-0] Corequisite: One of MATH 100, MATH 180, MATH 184, MATH 190. Equivalency: FRST 231
+Basic theories of probability and statistics. Sampling distribution, methods of estimation and hypothesis testing; goodness of fit and tests for independence; analysis of variance, regression and correlation. Consult the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists. Credit will be granted for only one of NRES 231 or FRST 231. [3-2-0] Corequisite: One of MATH 100, MATH 180, MATH 184, MATH 190. Equivalency: FRST 231 
 NRES_V 232 (3) Computer Applications in Natural Resources
 Techniques involved in solving forestry problems with microcomputers using word processing, spreadsheet, procedural language, and database management tools. Credit will be granted for only one of NRES 232 or FRST 232. [3-2] Equivalency: FRST 232
 NRES_V 241 (3) Introduction to Geomatics for Natural Resource Management
@@ -14539,11 +14539,11 @@ Sessions conducted by a neuropathologist, Department of Pathology. Attended week
 NEUR_V 734 (0) Operative Neurosurgery
 Technique of neurosurgical procedures. Anatomy, surgical judgement, pre- and post-operative care. From a general selection of neurosurgical procedures, approximately 950 major neurosurgical procedures per year are carried out under supervision. This course is not eligible for Credit/D/Fail grading.
 NORD_V 332 (3-6) Nordic Studies in Focus
-Topics that respond to current events and emerging research in Nordic cultural studies. Find out which special topic will be explored in the current or coming year at https://cenes.ubc.ca/courses. A maximum of 6 credits will be granted for SCAN 332 or NORD 332.
+Topics that respond to current events and emerging research in Nordic cultural studies. Find out which special topic will be explored in the current or coming year at https://cenes.ubc.ca/courses. A maximum of 6 credits will be granted for SCAN 332 or NORD 332. 
 NORD_V 333 (3) Nordic Literary Cultures
 Contemporary and historical Nordic literatures that reflect the major societal, political and cultural aspects of the circumpolar North. Credit will be granted for only one of SCAN 333 or NORD 333. Equivalency: SCAN 333.
 NORD_V 334 (3) Nordic Contemporary Fiction
-Explore Nordic societies through recent literature translated from Danish, Swedish, Norwegian, Finnish, Sámi languages, Icelandic, and other Nordic languages. Credit will be granted for only one of SCAN 334 or NORD 334. Equivalency: SCAN 334.
+Explore Nordic societies through recent literature translated from Danish, Swedish, Norwegian, Finnish, S�mi languages, Icelandic, and other Nordic languages. Credit will be granted for only one of SCAN 334 or NORD 334. Equivalency: SCAN 334.
 NORD_V 336 (3) Nordic Crime Fiction, Film and Television
 Explore Nordic crime stories as a mirror and critique of their societies. Credit will be granted for only one of SCAN 336 or NORD 336. Equivalency: SCAN 336.
 NORD_V 337 (3) Nordic Cinema
@@ -14552,8 +14552,8 @@ NORD_V 338 (3) The Viking World
 Wars, migrations and settlements of the Viking Age (800-1100) as seen through the Icelandic sagas, and the afterlife of the Viking world in modern culture.
 NORD_V 339 (3) Norse Mythology
 The pagan mythology of pre-Christian Scandinavia and its later appropriations and recycling.
-NORD_V 340 (3) Sámi Histories and Cultures
-Cultural history of the Sámi peoples, the Indigenous peoples of northern Norway, Sweden, Finland and Russias Kola Peninsula. Focus on traditional culture, colonization, and decolonization.
+NORD_V 340 (3) S�mi Histories and Cultures
+Cultural history of the S�mi peoples, the Indigenous peoples of northern Norway, Sweden, Finland and Russias Kola Peninsula. Focus on traditional culture, colonization, and decolonization.
 NORD_V 341 (3) Indigenous Activism
 Examination of contemporary political and social conflicts in the circumpolar north, focusing on ways Indigenous people have used art, performance and activism as a tool for resistance and decolonization. This course is not eligible for Credit/D/Fail grading.
 NORD_V 411 (3) Nordic Drama and Film
@@ -15391,7 +15391,7 @@ Aristotle; selections from Hellenistic and Late Antique Philosophy. Recommended 
 PHIL_V 220 (3) Symbolic Logic
 Sentential and predicate logic. Translation from natural language; truth tables and interpretations; systems of natural deduction up to relational predicate logic with identity; alternative proof methods. Some sections may use computer-based materials and tests. Credit will be granted for only one of PHIL 220 and PHIL 222. Equivalency: PHIL 222
 PHIL_V 222 (3) Enriched Symbolic Logic
-Naïve set theory, relations and functions, recursion and induction; Propositional and predicate logic; Symbolizations, semantics, and formal proof theory; Metatheory for propositional logic. Recommended for students interested in pursuing upper-level courses in logic or formal philosophy. Credit will be granted for only one of PHIL 220 and PHIL 222.
+Na�ve set theory, relations and functions, recursion and induction; Propositional and predicate logic; Symbolizations, semantics, and formal proof theory; Metatheory for propositional logic. Recommended for students interested in pursuing upper-level courses in logic or formal philosophy. Credit will be granted for only one of PHIL 220 and PHIL 222.
 PHIL_V 230 (3) Introduction to Ethics
 Theories of obligation and value; moral reasoning; normative ethics, descriptive ethics and meta-ethics. Readings in classic and contemporary texts.
 PHIL_V 235 (3) Contemporary Moral Issues
@@ -15497,7 +15497,7 @@ Formal semantics, proof theory, incompleteness and decidability, axiomatic set t
 PHIL_V 426 (3) Topics in Philosophy of Language
 Advanced topics in the philosophy of language. Recommended pre-requisite: PHIL 326 and 6 credits of PHIL/LING at the 200-level or above.
 PHIL_V 427 (3) Philosophy of Mathematics
-Logicism, formalism and constructivism, implications of metatheorems such as those of Gödel and Church, mathematical truth, mathematics and mental construction, mathematics and the physical world. Prerequisite: Philosophy or mathematics courses totaling 9 credits at the 200-level or above.
+Logicism, formalism and constructivism, implications of metatheorems such as those of G�del and Church, mathematical truth, mathematics and mental construction, mathematics and the physical world. Prerequisite: Philosophy or mathematics courses totaling 9 credits at the 200-level or above.
 PHIL_V 431 (3) Topics in Social and Political Philosophy
 Central concepts and problems in political life and thought including obligation, citizenship, representation, justice; equality; civil rights and liberty; disobedience. Prerequisite: 9 credits of PHIL/POLI at the 200-level or above.
 PHIL_V 432 (3) Topics in Ethical Theory
@@ -15525,7 +15525,7 @@ Methodological, historical, philosophical and social science questions about bio
 PHIL_V 469 (3) Topics in Philosophy of Science
 Topics such as probability and induction; foundations of measurement; theory construction. Recommended pre-requisite: PHIL 369.
 PHIL_V 470 (3) Comparative Conceptions of the Self
-Ways in which the 'self' has been portrayed in eastern and western religious traditions. Thinkers to be considered include Aristotle, Mencius, Freud, Xunzi (Hsün-tzu), Nietzche, and Zhuangzi (Chuang-tzu). Credit will be granted for only one of PHIL 470 or ASIA 470. Equivalency: ASIA 470
+Ways in which the 'self' has been portrayed in eastern and western religious traditions. Thinkers to be considered include Aristotle, Mencius, Freud, Xunzi (Hs�n-tzu), Nietzche, and Zhuangzi (Chuang-tzu). Credit will be granted for only one of PHIL 470 or ASIA 470. Equivalency: ASIA 470
 PHIL_V 485 (3) Directed Reading
 Same as PHIL 486-9.
 PHIL_V 486 (3) Directed Reading
@@ -15901,13 +15901,13 @@ This course is not eligible for Credit/D/Fail grading.
 PLNT_V 649 (0) Doctoral Dissertation
 This course is not eligible for Credit/D/Fail grading.
 POLS_V 101 (3) Learning Polish: Foundations I
-Introduction to the language for beginners. Ability to identify unique features and communicate in everyday situations. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of POLS 101 or POLS 200.
+Introduction to the language for beginners. Ability to identify unique features and communicate in everyday situations. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of POLS 101 or POLS 200. 
 POLS_V 102 (3) Learning Polish: Foundations II
-Continuation of POLS 101. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of POLS 102 or POLS 200.
+Continuation of POLS 101. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of POLS 102 or POLS 200. 
 POLS_V 201 (3) Learning Polish: Intermediate I
-Continuation of POLS 102. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of POLS 201 or POLS 300.
+Continuation of POLS 102. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of POLS 201 or POLS 300. 
 POLS_V 202 (3) Learning Polish: Intermediate II
-Continuation of POLS 201. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of POLS 202 or POLS 300.
+Continuation of POLS 201. Find out more at https://cenes.ubc.ca/courses/. Credit will be granted for only one of POLS 202 or POLS 300. 
 POLS_V 345 (3-6) Introduction to Twentieth-Century Polish Literature
 Readings and discussion of selected works of representative writers.
 POLS_V 424 (3) Polish Literature and Film in Translation
@@ -15941,7 +15941,7 @@ Local and regional political institutions and public policies in Canada, with pa
 POLI_V 307 (3) Quebec Government and Politics
 The nature of politics and the conduct of government in contemporary Quebec. The course is open to students from fields other than political science. Prerequisite: All of POLI 100, POLI 101, POLI 110, POLI 240. Or third-year standing or higher.
 POLI_V 308 (3-6) Topics in Canadian Politics
-An important topic in Canadian politics and public policies. Possible topics include elections, media, and gender and identity. Topics vary year to year; see www.politics.ubc.ca/courses. Prerequisite: Two of POLI 100, POLI 101, POLI 110, POLI 240. Or third-year standing or higher.
+An important topic in Canadian politics and public policies. Possible topics include elections, media, and gender and identity. Topics vary year to year; see http://www.politics.ubc.ca/courses. Prerequisite: Two of POLI 100, POLI 101, POLI 110, POLI 240. Or third-year standing or higher. 
 POLI_V 309 (3) Canadian Perspectives on Human Rights
 Key issues in the theory and practice of human rights in Canada. Topics will vary from year to year. Prerequisite: All of POLI 100, POLI 101, POLI 110, POLI 240. Or third-year standing or higher.
 POLI_V 310 (3) The Strategy of Politics
@@ -16027,11 +16027,11 @@ An analysis of governmental policies and international political bargaining in r
 POLI_V 367 (3-6) International Relations Theory and the International System
 The evolution of the international system and empirical and normative theories of international relations such as realism, liberalism, and Marxism. Prerequisite: All of POLI 100, POLI 101, POLI 240. Or third-year standing or higher.
 POLI_V 368 (3) Topics in International Relations
-Topics will vary from year to year. Consult the program website (https://politics.ubc.ca/courses/) for more information. Prerequisite: All of POLI 100, POLI 101, POLI 240. Or third-year standing or higher.
+Topics will vary from year to year. Consult the program website (https://politics.ubc.ca/courses/) for more information. Prerequisite: All of POLI 100, POLI 101, POLI 240. Or third-year standing or higher. 
 POLI_V 369 (3-6) Topics in International Security
-Possible topics include armed conflict, terrorism, environmental change, or international crime. Topics vary year to year, see www.politics.ubc.ca/courses. Pre-requisite: Two of POLI 100, POLI 101, POLI 110, POLI 240. Or third-year standing or above.
+Possible topics include armed conflict, terrorism, environmental change, or international crime. Topics vary year to year, see http://www.politics.ubc.ca/courses. Pre-requisite: Two of POLI 100, POLI 101, POLI 110, POLI 240. Or third-year standing or above. 
 POLI_V 370 (3-6) Topics in International Conflict Management
-Problems of managing conflict in the international system. Possible topics include intervention, mediation, or sanctions. Topics vary year to year; see www.politics.ubc.ca/courses. Pre-requisite: Two of POLI 100, POLI 101, POLI 110, POLI 240. Or third-year standing or above.
+Problems of managing conflict in the international system. Possible topics include intervention, mediation, or sanctions. Topics vary year to year; see http://www.politics.ubc.ca/courses. Pre-requisite: Two of POLI 100, POLI 101, POLI 110, POLI 240. Or third-year standing or above. 
 POLI_V 371 (3) Humanitarian Engineering: Politics and Practice
 An interdisciplinary study of best practice, politics, and ethics associated with technical solutions to humanitarian assistance within Canada and abroad; examines policies used in aid and development contexts with emphasis on the application of engineering. Restricted to students with a Major, Combined Major, Honours, Honours with, or Minor specialization in Political Science or International Relations, or at least third-year standing in any BASc program. Credit will be granted for only one of POLI 371 or APSC 367. Equivalency: APSC 367
 POLI_V 372 (3-6) Multinational Corporations and Globalization
@@ -16069,7 +16069,7 @@ A seminar devoted to the analysis of the interplay of economic and social factor
 POLI_V 404 (3-6) Public Policy and Its Administration
 Political and administrative aspects of public policy, particularly in Canada. Restricted to students in fourth-year standing or higher.
 POLI_V 405 (3-6) Advanced Topics in Canadian Politics
-Important topics in Canadian politics and public policies. Possible topics include elections, gender and identity, or media. Topics vary year to year; see www.politics.ubc.ca/courses. Restricted to students in fourth-year standing or above.
+Important topics in Canadian politics and public policies. Possible topics include elections, gender and identity, or media. Topics vary year to year; see http://www.politics.ubc.ca/courses. Restricted to students in fourth-year standing or above. 
 POLI_V 406 (3) Aboriginal Peoples and Canadian Politics
 Seminar in political structures, activities, and demands of aboriginal peoples; policies of federal, provincial, and territorial governments; relations between these governments and aboriginal peoples; role of the courts and the Constitution. Restricted to students in fourth-year standing or higher.
 POLI_V 420 (3-6) Advanced Topics in Comparative Politics
@@ -16085,7 +16085,7 @@ Ethics in politics, including citizenship and public service, and practices dema
 POLI_V 426 (3-6) Seminar on Comparative Parties and Party Systems
 Restricted to students in fourth-year standing or higher.
 POLI_V 427 (3) Advanced Topics in Chinese Politics and Development
-Topics in Chinese politics and public policies. Possible topics include environmental politics, local government, or state-society relations from a comparative perspective. Topics vary year to year; see www.politics.ubc.ca/courses. Restricted to students in fourth-year standing or above.
+Topics in Chinese politics and public policies. Possible topics include environmental politics, local government, or state-society relations from a comparative perspective. Topics vary year to year; see http://www.politics.ubc.ca/courses. Restricted to students in fourth-year standing or above. 
 POLI_V 428 (3-6) Comparative Public Management
 Major changes in the structures and processes of government in advanced democracies, including the welfare state, citizenship, ethics, accountability, and institutional reform. Restricted to students in fourth-year standing or higher. This course is not eligible for Credit/D/Fail grading.
 POLI_V 429 (3) Seminar in Issues in Gender and Politics
@@ -16117,9 +16117,9 @@ A seminar on a selected topic concerning the causes of war and strategies for th
 POLI_V 462 (3) International Relations Theory
 This seminar examines some of the major theoretical approaches to the study of international relations. For specific content in a given year, consult the departmental website. Restricted to students in fourth-year standing or higher.
 POLI_V 463 (3) International Interdependence
-Topics and public policies relating to international economic relations. Topics vary year to year; see www.politics.ubc.ca/courses. Restricted to students in fourth-year standing or above.
+Topics and public policies relating to international economic relations. Topics vary year to year; see http://www.politics.ubc.ca/courses. Restricted to students in fourth-year standing or above. 
 POLI_V 464 (3-6) Advanced Topics in International Relations
-Topics and public policies related to interactions between states and non-state actors, such as armed conflict management or international institutions. Topics vary year to year; see www.politics.ubc.ca/courses. One section (3 credits) reserved for fourth-year International Relations Majors. Restricted to students in fourth-year standing or above.
+Topics and public policies related to interactions between states and non-state actors, such as armed conflict management or international institutions. Topics vary year to year; see http://www.politics.ubc.ca/courses. One section (3 credits) reserved for fourth-year International Relations Majors. Restricted to students in fourth-year standing or above. 
 POLI_V 466 (3) The Politics of International Law
 Seminar on the origins and politics of international law, and its impact on international affairs; the laws of war, human rights, environment, law of the sea, and international criminal law. Restricted to students in fourth-year standing or higher.
 POLI_V 482 (3) Data and Models Capstone
@@ -16911,7 +16911,7 @@ Advanced intermediate oral practice, syntax and composition. Credit will be gran
 RUSS_V 302 (3) Third -Year Russian II
 Advanced intermediate oral practice, syntax and composition. Credit will be granted for only one of RUSS 302 or RUSS 300. Recommended pre-requisite: RUSS 301.
 RUSS_V 303 (3-6) Topics in Russian Culture (in English)
-Features of Russian culture with an emphasis on historical and social contexts. Specific course content will vary. Consult CENES for this year's offerings at https://cenes.ubc.ca/undergraduate/slavic-studies/russian-minor/
+Features of Russian culture with an emphasis on historical and social contexts. Specific course content will vary. Consult CENES for this year's offerings at https://cenes.ubc.ca/undergraduate/slavic-studies/russian-minor/ 
 RUSS_V 305 (3) Readings in Russian Literary Texts
 Texts are selected from 19th-, 20th-, and 21st-century sources. Recommended pre-requisites: one of RUSS 200, RUSS 202.
 RUSS_V 306 (3-6) Russian Literature in Translation
@@ -17227,7 +17227,7 @@ An introductory survey to Occupational Medicine practice. This course is not eli
 SPPH_V 718 (0) Fundamentals of Clinical Epidemiology
 Seminar series covering critical appraisal of the medical literature and basic research methods for residents in any post-graduate training program. This course is not eligible for Credit/D/Fail grading.
 SCIE_V 001 (28) Science One
-An innovative first-year multi-disciplinary course incorporating biology, chemistry, mathematics, and physics with a strong focus on the connections between these traditional disciplines. See the Science One website (www.scienceone.ubc.ca) for further information and the application process for admission to SCIE 001. [12-6-4;12-6-4] Prerequisite: All of: CALC 12, ENGL 12, and Pre-calculus 12; two of: CHEM 12, PHYS 12, High School Biology (either BIOL 11 or BIOL 12). This course is not eligible for Credit/D/Fail grading.
+An innovative first-year multi-disciplinary course incorporating biology, chemistry, mathematics, and physics with a strong focus on the connections between these traditional disciplines. See the Science One website (http://www.scienceone.ubc.ca) for further information and the application process for admission to SCIE 001. [12-6-4;12-6-4] Prerequisite: All of: CALC 12, ENGL 12, and Pre-calculus 12; two of: CHEM 12, PHYS 12, High School Biology (either BIOL 11 or BIOL 12). This course is not eligible for Credit/D/Fail grading.
 SCIE_V 010 (0) Science One A
 Block registration marker for the biology, chemistry, mathematics and physics components of the Science One program. Restricted to students in the Science One program. [12-6-4] Prerequisite: Either (a) BIOL 11 or (b) BIOL 12; and all of CHEM 12, CALC 12, PHYS 12, ENGL 12. and Principles of Mathematics 12 or Pre-calculus 12.
 SCIE_V 100 (1) First-Year Focus Seminar
@@ -17475,7 +17475,7 @@ An examination of diversity within and between families and of diverse family fo
 SOCI_V 324 (3) Sociology of the Life Course
 Individuals and families through the life course. Prerequisite: One of SOCI 100, SOCI 101, SOCI 102, SOCI 200.
 SOCI_V 328 (3) Social Statistics I
-The testing of sociological theories using quantitative data analysis techniques on numerical data from social surveys, experiments and official statistics. SOCI 328 excludes credit for a number of other statistics courses in various departments. Please consult the Science Credit Exclusion List (https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…) before registering. Prerequisite: One of SOCI 100, SOCI 101, SOCI 102.
+The testing of sociological theories using quantitative data analysis techniques on numerical data from social surveys, experiments and official statistics. SOCI 328 excludes credit for a number of other statistics courses in various departments. Please consult the Science Credit Exclusion List (https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists) before registering. Prerequisite: One of SOCI 100, SOCI 101, SOCI 102. 
 SOCI_V 342 (3) Consumers and Consumption
 The structure and culture of consuming and consumption. Prerequisite: One of SOCI 100, SOCI 101, SOCI 102.
 SOCI_V 344 (3) Sociology of Aging
@@ -17775,7 +17775,7 @@ Credit will only be granted for only one of SPAN 592 or FREN 592. Prerequisite: 
 SPAN_V 649 (0) Doctoral Dissertation
 This course is not eligible for Credit/D/Fail grading.
 STAT_V 200 (3) Elementary Statistics for Applications
-Classical, nonparametric, and robust inferences about means, variances, and analysis of variance, using computers. Emphasis on problem formulation, assumptions, and interpretation. See the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult… [3-1-0] Prerequisite: One of any course on the MATH 100 credit exclusion list [https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult…], MATH 190, SCIE 001.
+Classical, nonparametric, and robust inferences about means, variances, and analysis of variance, using computers. Emphasis on problem formulation, assumptions, and interpretation. See the Faculty of Science Credit Exclusion Lists: https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists [3-1-0] Prerequisite: One of any course on the MATH 100 credit exclusion list [<a href="https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/credit-exclusion-lists">https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/facult�
 STAT_V 201 (3) Statistical Inference for Data Science
 Classical and simulation-based techniques for estimation and hypothesis testing, including inference for means and proportions. Emphasis on case studies and real data sets, as well as reproducible and transparent workflows when writing computer scripts for analysis and reports. [3-0-1] Prerequisite: DSCI 100.
 STAT_V 203 (3) Statistical Methods
@@ -18591,9 +18591,9 @@ In-depth study of selected topics in Writing Studies. Topics vary year-by-year. 
 WRDS_V 499 (3-6) Directed Studies in Writing Studies
 Individual project on a topic of interest in Writing Studies, completed under the guidance and supervision of a UBC faculty member with relevant expertise. Restricted to students with third-year standing or higher and approval from the WRDS Chair. Prerequisite: 3 credits from one of WRDS 150, WRDS 350, ENGL 100, SCIE 113, SCIE 300, CHEM 300, APSC 176, LFS 150, FRST 150, COMM 196, Arts One, ASTU 100, ASTU 101, CAP 100, CAP 101.
 YDSH_V 101 (3) Learning Yiddish: Foundations I
-Introduction to Yiddish language and culture. Find out more at https://cenes.ubc.ca/courses/
+Introduction to Yiddish language and culture. Find out more at https://cenes.ubc.ca/courses/ 
 YDSH_V 102 (3) Learning Yiddish: Foundations II
-Continuation of YDSH 101. Yiddish language and culture. Find out more at https://cenes.ubc.ca/courses/
+Continuation of YDSH 101. Yiddish language and culture. Find out more at https://cenes.ubc.ca/courses/ 
 ZOOL_V 500 (1-6) Directed Studies in Zoology
 The credit value for this course will be determined in consultation with the student prior to the registration. This course is not eligible for Credit/D/Fail grading.
 ZOOL_V 502 (6) Ecology Seminar

@@ -15,7 +15,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.io.File;
 
-import org.datacollection.WebScraper.*;
 import org.datacollection.WebScraper.CourseRecord;
 
 import com.google.gson.Gson;
@@ -57,12 +56,12 @@ public class DataFormatter {
          */
         System.out.print("\033[H\033[2J");  
         System.out.flush();
-        // createJsonFromCache("courses", "grades");
-        createJsonAndCache("courses", "grades");
+        createJsonFromCache("courses", "grades");
+        // createJsonAndCache("courses", "grades");
 
     }
 
-    record FullCourse(
+    private record FullCourse(
         String code,
         String name,
         double[] credits,
@@ -169,10 +168,6 @@ public class DataFormatter {
         String description = desc.replaceAll("\\[[^\\[\\]]*]", ""); // Remove hours
         description = description.replaceAll("This course is (not )?eligible for Credit/D/Fail grading\\.",
                 ""); // Remove cdf
-        description = description.replaceAll(
-                "(?i)(?:Consult|See|Please) [A-Za-z\\s]+ [^�]*�[^ ]*", "");
-        description = description.replaceAll(
-                " {3}", " ");
         return description;
     }
 
@@ -294,9 +289,9 @@ public class DataFormatter {
      */
     public static void createJsonAndCache(String courseFileName, String gradeFileName) {
         List<CourseRecord> courseList = WebScraper.getAllCourses();
-        Map<String, Double> gradeMap = WebScraper.getAllGrades();
-
         cacheCourses(courseFileName, courseList);
+
+        Map<String, Double> gradeMap = WebScraper.getAllGrades();
         cacheGrades(gradeFileName, gradeMap);
 
         createJson(courseList, gradeMap);
@@ -320,7 +315,7 @@ public class DataFormatter {
      * The List should contain <code>Course</code> Records. Courses will be stored
      * with Course titles and corresponding descriptions on alternating lines
      * All caches will be written to the relative path: 
-     * <code>app/src/main/java/org/DataCollection/DataCache</code>
+     * <code>src/main/java/org/DataCollection/DataCache</code>
      *
      * @param outputFileName the name of the output file
      * @param gradeMap the map of grades to be cached
@@ -340,7 +335,7 @@ public class DataFormatter {
             writer.close();
             fwrite.close();
         } catch (IOException e) {
-            throw new RuntimeException("There was an error writing to the file");
+            throw new RuntimeException("There was an error writing to the Course Cache");
         }
     }
 
@@ -348,7 +343,7 @@ public class DataFormatter {
      * Writes a given Map of grades to a csv file in the DataCache directory.
      * The map should contain the course code as the key and the average grade
      * as the value. All caches will be written to the relative path:
-     * <code>app/src/main/java/org/DataCollection/DataCache</code>
+     * <code>src/main/java/org/DataCollection/DataCache</code>
      *
      * @param outputFileName the name of the output file
      * @param gradeMap the map of grades to be cached
