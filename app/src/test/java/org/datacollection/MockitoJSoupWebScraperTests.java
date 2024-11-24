@@ -43,9 +43,9 @@ public class MockitoJSoupWebScraperTests {
 
     }
 
-//    @Test
-//    void mockInvalidJson() {
-//
-//    }
+    @Test
+    void mockInvalidJson() {
+
+    }
 
 }
