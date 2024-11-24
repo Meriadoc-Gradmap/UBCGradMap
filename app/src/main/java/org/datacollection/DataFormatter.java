@@ -23,6 +23,10 @@ import com.google.gson.Gson;
 import me.tongfei.progressbar.ProgressBar;
 import me.tongfei.progressbar.ProgressBarBuilder;
 import me.tongfei.progressbar.ProgressBarStyle;
+import org.graph.Hours;
+import org.graph.Others;
+import org.util.JacocoGeneratedExclude;
+
 
 
 /**
@@ -46,6 +50,7 @@ public class DataFormatter {
 
     private static final int LENGTH_THRESHOLD = 6;
 
+    @JacocoGeneratedExclude // added custom jacoco exclusion tag
     public static void main(String[] args) { 
         /* This main method is what runs when someone passes a flag to scrape data from the docker
          * container. So we just create the json with no cache. Do not assume there is a cache.
@@ -65,26 +70,8 @@ public class DataFormatter {
         String[] prerequisites,
         String[] corequisites,
         boolean cdf,
-        Schedule schedule,
+        Hours schedule,
         Others others
-    ) {
-    }
-
-    record Schedule(
-        int lectures,
-        boolean alternating1,
-        int labs,
-        boolean alternating2,
-        int tutorials,
-        boolean alternating3
-    ) {
-    }
-
-    /**
-     * Others is declared as its own record in case we choose to add other info
-     */
-    record Others(
-        double grade
     ) {
     }
 
@@ -153,7 +140,7 @@ public class DataFormatter {
                 cdf = false;
             } 
 
-            Schedule schedule = createSchedule(desc);
+            Hours schedule = createSchedule(desc);
 
             if (gradeMap.containsKey(code)) {
                 grade = gradeMap.get(code);
@@ -200,7 +187,7 @@ public class DataFormatter {
      * @param desc the course description to parse
      * @return a Schedule object
      */
-    private static Schedule createSchedule(String desc) {
+    private static Hours createSchedule(String desc) {
         Pattern schedulePattern = Pattern.compile("\\[(\\d)?(\\*?)-?(\\d)?(\\*?)-?(\\d)?(\\*?)\\]");
         Matcher scheduleMatcher = schedulePattern.matcher(desc);
         int lectures = -1;
@@ -225,7 +212,7 @@ public class DataFormatter {
             alternating3 = scheduleMatcher.group(INDEX_VAL6) != null && scheduleMatcher.group(INDEX_VAL6).contains("*");
         }
 
-        return new Schedule(lectures, alternating1, labs, alternating2, tutorials, alternating3);
+        return new Hours(lectures, alternating1, labs, alternating2, tutorials, alternating3);
     }
 
     /**

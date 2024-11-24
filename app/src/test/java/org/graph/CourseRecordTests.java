@@ -7,6 +7,10 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Test for course record alone
+ * @author William Banquier
+ */
 public class CourseRecordTests {
 
     @Test

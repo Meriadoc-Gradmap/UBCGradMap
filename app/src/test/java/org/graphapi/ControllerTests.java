@@ -11,7 +11,10 @@ import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
+/**
+ * Tests for the Spring Boot Controller
+ * @author William Banquier
+ */
 @SpringBootTest(classes = Controller.class)
 public class ControllerTests {
 

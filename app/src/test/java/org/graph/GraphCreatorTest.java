@@ -8,6 +8,10 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Tests for Graph Creator
+ * @author William Banquier
+ */
 public class GraphCreatorTest {
 
 

@@ -10,6 +10,10 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+/**
+ * Tests for the course record with graph context
+ * @author William Banquier
+ */
 public class CourseRecordGraphTests {
 
     double[] acred;
