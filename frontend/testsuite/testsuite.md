@@ -21,11 +21,11 @@ CPEN 212 should be a redder color as it has a lower average. CPEN 491 should hav
 
 It should look just like the original screen when you click back. We note it makes the 221 Selected and 331 Not-Selected
 
-5<b> Searching Autofill</b>
+5. <b> Searching Autofill</b>
 ![autofill.png](imgs%2Fautofill.png)
 When searching there should be an autofill. For example searching "APSC 1" should provide APSC 100, APSC 101, APSC 107, APSC 110, APSC 122
 
-6<b> Pressing Enter on an Invalid Course </b>
+6. <b> Pressing Enter on an Invalid Course </b>
 ![Invalid Course Enter.png](imgs%2FInvalid%20Course%20Enter.png)
 
 ![invalid course post enter.png](imgs%2Finvalid%20course%20post%20enter.png)
