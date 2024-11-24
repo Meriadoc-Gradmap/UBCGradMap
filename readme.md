@@ -15,10 +15,13 @@ Many students like to plan their courses several years in advance and without a 
 
 
 ## **🧠Credits** 
-  
 - Ben Newington: Project Manager  
 - Tian Chen: Designer
-- Iain Griesdale: Designer 
+- Iain Griesdale: Designer
+  -  Develoepd API to interface from the frontend to the backend
+  -  Setup Dockerfile and compose for easy deployment
+  -  Minor frontend styling development to improve UI
+  -  Worked with all group members to integrate components together
 - Finn Bainbridge: Developer   
 - William Banquier: Developer   
 
@@ -47,10 +50,11 @@ git clone https://github.com/CPEN-221-2024/project-meriadoc-gradmap
 
 ### Build the Docker image
 This command goes into your powershell (on Windows) or terminal opened at the root directory of the cloned repository.
+> If you need more details for this step, open the folder that you installed with git, you should see a bunch of folders and files including a Dockerfile file. Then you can right-click in this directory and find the open terminal button. That's where you should be able to put the command below.
 ```shell
 docker-compose up
 ```
-This step can take a while, possibly 15 min or longer on slow internet or machines.
+This step can take a while, possibly 10 min or longer on slow internet or machines so get your cup of tea ☕.
 
 ### Access the local site
 Go to http://localhost:5173 to see GradMap!
@@ -67,3 +71,12 @@ docker exec project-meriadoc-gradmap-gradmap-1 scraper
 docker exec 74b3a910feab scraper
 ```
 The scraper will run for a couple minutes and then the backend should automatically restart and you'll be able to see courses again.
+
+
+### Debugging Docker
+To rebuild the Docker container, you can run the command
+```shell
+docker-compose up --build
+```
+For example, if you were to pull new changes from the GitHub repository, you would have to rebuild the container. If you come across any issues open a GitHub issue and we will apply a fix that you can pull and rebuild from.
+
