@@ -25,10 +25,14 @@ const POSTREQ_COLOUR = "#ccc";
 const COREQ_COLOUR = "#ccc";
 
 /**
-  * Goals:
-  * For the most part, be deterministic
-  * Except, never move a node
-  */
+ * Convert the path to cytoscape nodes
+ *
+ * @param The CourseTreeProps, specifically the coursepath and the coursecache
+ * @param oldCoursePos The positions of the nodes in the last redraw.
+ *        It will be returned at the end of the function
+ * 
+ * @returns [Cytoscape json that defines the graph, the positions of all the elements this redraw]
+ */
 function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position>) {
 
   if (props.coursePath.length < 1) {
@@ -42,9 +46,11 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
 
   let coursePos: Map<string, { x: number, y: number }> = new Map<string, { x: number, y: number }>();
 
+  // The last element of the coursePath is the current course
   let currentCourse = props.coursePath[props.coursePath.length - 1];
   let cx = 0, cy = 0;
 
+  // If there is an existing position for currentCourse sue that
   if (oldCoursePos.has(currentCourse.code)) {
     // Center it around the current position then
     cx = (oldCoursePos.get(currentCourse.code) ?? { x: 0, y: 0 }).x;
@@ -54,6 +60,13 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
     oldCoursePos.set(currentCourse.code, { x: cx, y: cy });
   }
 
+  /**
+   * Detects if the element is in the same place as any 
+   * elements with permenant positions (ones on the path)
+   *
+   * @param pos A position
+   * @returns true if there is already a node there
+   */
   let isCollision = (pos: Position) => {
     for (let course of props.coursePath) {
       if (oldCoursePos.has(course.code)) {
@@ -67,11 +80,21 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
     return false;
   }
 
+  /**
+   * If the course already has a permanent position, return that.
+   * Otherwise, return what was put in
+   * 
+   * @param sampleCourse The name of the course
+   * @param samplePos The position we where we're considering placing it
+   * @returns An object. Changed is true if the object's position does not equal samplePos
+   *          realPos: The actual position
+   */
   let getPosition = (sampleCourse: string, samplePos: Position) => {
     if (sampleCourse == currentCourse.code) {
       return { changed: false, realPos: { x: cx, y: cx } };
     }
 
+    // Check to see if it's a course in the coursePath
     for (let course of props.coursePath) {
       if (course.code != sampleCourse) {
         continue;
@@ -86,11 +109,31 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
     return { changed: false, realPos: samplePos };
   }
 
-  let addCourse = (course: string | undefined, parent: string | undefined, pos: { x: number, y: number }, edge_type: EDGE_TYPE, color: string = NODE_COLOUR) => {
+  /**
+   * Adds a course to the cytoscape json. If the course already exists but
+   * the parent is different, it will just add an edge.
+   * It also sets the colour of the course based on the grade
+   * if it has an entry in the courseCache.
+   *
+   * @param course The course to add. If undefined the function does nothing
+   * @param parent If not undefined, an edge specified by edge_type will be made 
+   *               between this node and the parent.
+   * @param pos Where to put the node
+   * @param edge_type What kind of edge to add. Prereq adds an arrow from parent to course.
+   *                  Postreq adds an arrow from this node to parent.
+   *                  Coreq adds an arrow going both ways.
+   * @param color The node colour. If this doesn't equal NODE_COLOUR it will override
+   *              the colour from the grade.
+   */
+  let addCourse = (course: string | undefined, parent: string | undefined,
+    pos: { x: number, y: number }, edge_type: EDGE_TYPE, 
+    color: string = NODE_COLOUR) => {
+
     if (course == null) {
       return;
     }
 
+    // Add the node if it's not there already
     if (!coursePos.has(course)) {
       let real_color = color;
       if (color !== DELECTED_COLOUR) {
@@ -104,6 +147,9 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
       }
 
       // Add the element
+      // This always raises a warning because we're using the style property
+      // But we have to to get dynamic colours
+      // Womp womp
       elements.push({
         data: { id: course, label: course.replace('-', ' ') },
         position: pos,
@@ -132,16 +178,19 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
           style: { "line-color": col, "target-arrow-color": col }
         });
       }
-      // if (edge_type == EDGE_TYPE.PATH) {
-      //   elements.push({ data: { source: parent, target: course, label: "" }, style: { "line-color": "red", "target-arrow-color": "red" },
-      //     style: {"line-color": col, "target-arrow-color": col}
-      //   });
-      // }
     }
   };
 
 
-
+  /**
+   * Adds an array of courses in a row. 
+   * Will not put a node where there is already a node.
+   * All nodes will be connected to currentNode with an edge of edge_type.
+   *
+   * @param courses the courses to add
+   * @param y the y value of the row
+   * @param edge_type What type of edge to draw
+   */
   let addRow = (courses: string[], y: number, edge_type: EDGE_TYPE) => {
     let startPos = cx - COREQ_SPACING * (Math.ceil(courses.length / 2))
 
@@ -173,6 +222,8 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
   for (let course of props.coursePath) {
     if (oldCoursePos.has(course.code)) {
       let oldPos = oldCoursePos.get(course.code) ?? { x: 0, y: 0 };
+
+      // Make sure it shows the same edgeType it used to show
       let edgeType = EDGE_TYPE.NONE;
       if (lastElement == undefined) {
         edgeType = EDGE_TYPE.NONE
@@ -233,16 +284,20 @@ export default function CourseTree2(props: CourseTreeProps) {
     props.onClick(node.id());
   };
 
+  // When props are changed re-build the cytoscape
   useEffect(() => {
     if (containerRef.current !== null) {
       let newOldCoursePos = new Map<string, Position>();
       if (props.coursePath.length > 1) {
         newOldCoursePos = oldCoursePos;
       }
+
+      // Re-build the elements
       let { elements, oldCoursePos: _oldCoursePos } = makeElements(props, newOldCoursePos);
       setOldCoursePos(_oldCoursePos);
 
       if (cyRef.current == null) {
+        // Setup the cytoscape
         cyRef.current = cytoscape({
           container: containerRef.current,
           elements: elements,
@@ -274,6 +329,7 @@ export default function CourseTree2(props: CourseTreeProps) {
         cyRef.current.on("tap", "node", nodeClicked);
       }
       else {
+        // Add all the elements
         for (let el of elements) {
           cyRef.current.add(el);
         }
@@ -284,6 +340,7 @@ export default function CourseTree2(props: CourseTreeProps) {
       }
 
       return () => {
+        // To rebuild, remove all the elements
         for (let el of elements) {
           if (cyRef.current !== null) {
             if ((el.data as { id: string, label: string }).id !== undefined) {

@@ -11,6 +11,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import java.util.stream.Collectors;
 import org.jsoup.select.Elements;
+import org.jsoup.nodes.Element;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -23,7 +24,7 @@ import org.util.JacocoGeneratedExclude;
 
 public class WebScraper {
 
-    private WebScraper() {};
+    private WebScraper() { };
 
     private static final double ROUND_VALUE = 100.0;
     private static final int COLOR_VALUE = 33;
@@ -80,7 +81,8 @@ public class WebScraper {
      * 
      * @return A list of all courses, with their corresponding descriptions
      */
-    @JacocoGeneratedExclude // same with getAllCourses, there is no point in testing fetching everything if it works for some courses
+    @JacocoGeneratedExclude 
+    // same with getAllCourses, there is no point in testing fetching everything if it works for some courses
     public static Map<String, Double> getAllGrades() {
         System.out.print("\033[H\033[2J");  
         System.out.flush();  
@@ -153,7 +155,7 @@ public class WebScraper {
     public static List<CourseRecord> getCoursesByDepartment(String url) {
         Document doc; 
         Elements departmentElements;
-        List<CourseRecord> courseList;
+        List<CourseRecord> courseList = new ArrayList<>();
 
         if (!url.contains("https://vancouver.calendar.ubc.ca/course-descriptions/subject/")) {
             return Collections.emptyList();
@@ -165,15 +167,33 @@ public class WebScraper {
             throw new RuntimeException("There was an issue connecting to the UBC Calendar Website."); 
         }
 
-        
-
         departmentElements = doc.getElementsByTag("li");
-        courseList = departmentElements.stream().
+        departmentElements.stream().
             filter(e -> e.select("h3").first() != null).
             filter(e -> e.select("p").first() != null).
-            map(e -> new CourseRecord(e.select("h3").first().text(), e.select("p").first().text())).
-            collect(Collectors.toList());
-        
+            forEach(e -> {
+
+                String title = e.select("h3").first().text();
+                String desc = "";
+
+                if (e.select("p").first().select("a").first() != null) {
+                    Element e1 = e.select("p").first();
+                    String pre = e1.html().split("<a")[0];
+                    String link = e1.select("a").attr("href");
+                    String post = e1.html().split("</a>")[1];
+
+                    post = post.replaceAll("<em>", "");
+                    post = post.replaceAll("</em>", "");
+
+                    desc = pre + link + post;
+
+                } else {
+                    desc = e.select("p").first().text();
+                }
+
+                courseList.add(new CourseRecord(title, desc)); 
+            });
+
         return courseList;
     }
 

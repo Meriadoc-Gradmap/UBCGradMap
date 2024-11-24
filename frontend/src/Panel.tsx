@@ -1,5 +1,10 @@
 import { Course, GRADE_TO_COLOUR } from "./Course";
 
+/**
+ * A basic floating panel that shows course information
+ *
+ * @param props.currentCourse If undefined the panel dissapers, otherwise it shows the course info.
+ */
 export default function Panel(props: { currentCourse: Course | undefined }) {
 
   if (props.currentCourse == undefined) {
