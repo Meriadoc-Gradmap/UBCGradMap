@@ -26,6 +26,17 @@ Many students like to plan their courses several years in advance and without a 
 - William Banquier: Developer   
 
 ## **✨Features**
+- Visual graph of every UBCV course.
+- Search for individual course codes.
+- Display course data including:
+    - Name
+    - Credits
+    - Schedule for course hours
+    - Past year course average
+    - Description
+- Visual representation of course averages with colour.
+- Directed graph to represent prerequisites, corequisites, and dependants.
+- Navigate the graph by clicking on course nodes.
 
 ## **📄Links/Sources**
 - We use the API provided by https://ubcgrades.com to get previous years course average for each course. 
