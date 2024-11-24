@@ -38,6 +38,9 @@ public class VertexTest {
         assertEquals(v1.hashCode(), v1.hashCode());
         assertEquals(v2.hashCode(), v2.hashCode());
         assertNotEquals(v1.hashCode(), v2.hashCode());
+
+        Object o1 = new Object();
+        assertNotEquals(v1, o1);
     }
 
 }

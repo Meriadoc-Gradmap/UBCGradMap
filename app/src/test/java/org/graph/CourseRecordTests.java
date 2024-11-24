@@ -49,6 +49,11 @@ public class CourseRecordTests {
         assertEquals(new Others(12), c.getOthers());
 
         assertEquals(12, c.getAverage());
+
+        // id starts @ 0
+        assertEquals(0, c.id());
+        c.initId(); // this should not change anything :-)
+        assertEquals(0, c.id());
     }
 
     @Test
@@ -143,5 +148,4 @@ public class CourseRecordTests {
         assertEquals(alsoO, o);
         assertEquals(alsoO, a.getOthers());
     }
-
 }
