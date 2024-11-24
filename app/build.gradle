@@ -65,7 +65,7 @@ jacocoTestReport {
     afterEvaluate {
         classDirectories.setFrom(files(classDirectories.files.collect {
             fileTree(dir: it, exclude: [
-                    "**/core/**"
+                    "**/graphapi/G**"
             ])
         }))
     }
@@ -85,7 +85,7 @@ jacocoTestCoverageVerification{
     afterEvaluate {
         classDirectories.setFrom(files(classDirectories.files.collect {
             fileTree(dir: it, exclude: [
-//                    "**/core/**" // atm we don't need to exclude anything I don't think
+                    "**/GraphApi.java"
             ])
         }))
     }
