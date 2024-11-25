@@ -84,6 +84,8 @@ Go to http://localhost:5173 to see GradMap!
 
 You can also visit the site on your phone if you are connected to the same wifi at http://\<enter your ip here\>:5173
 
+To close the site, open the powershell/terminal and click ctrl c.
+
 ### Optional: Run the data scraper
 If you want to run the data scraper to recollect course data including grades and ubc calendar information, you can first run 
 ```shell
