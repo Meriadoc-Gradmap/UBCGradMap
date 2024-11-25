@@ -14,7 +14,11 @@ Many students like to plan their courses several years in advance and without a 
 
 
 ## **🧠Credits** 
-- Ben Newington: Project Manager  
+- Ben Newington: Project Manager
+  -  Developed the course graph
+  -  Minor improvements to data collection
+  -  Product demo
+  -  Worked with all group members to integrate components together
 - Tian Chen: Designer
 - Iain Griesdale: Designer
   -  Develoepd API to interface from the frontend to the backend
@@ -38,7 +42,8 @@ Many students like to plan their courses several years in advance and without a 
 - Navigate the graph by clicking on course nodes.
 
 ## **📄Links/Sources**
-- We use the API provided by https://ubcgrades.com to get previous years course average for each course. 
+- We use the API provided by https://ubcgrades.com to get previous years course average for each course.
+- We gathered course information from https://vancouver.calendar.ubc.ca/.
 
 ## **🐳Running the Dockerfile**
 
@@ -63,16 +68,21 @@ This command goes into your powershell (on Windows) or terminal opened at the ro
 > If you need more details for this step, open the folder that you installed with git, you should see a bunch of folders and files including a Dockerfile file. Then you can right-click in this directory and find the open terminal button. That's where you should be able to put the command below.
 >
 > <p align="center"> <img src="https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/open_in_terminal.png" alt="drawing" width="600"/> </p>
+
+Type this command:
 ```shell
 docker-compose up
 ```
 <p align="center"> <img src="https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/Terminal.png" alt="drawing" width="600"/> </p>
-This step can take a while, possibly 10 min or longer on slow internet or machines so get your cup of tea ☕.
+This step can take a while, possibly 5-10 min on slow internet or machines so get your cup of tea ☕.
 
 ### Access the local site
-Once you see this, the local site is up.
+Once you see that the GraphApi has started, the local site is up.
 <p align="center"> <img src="https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/website_up.png" alt="drawing" width="600"/> </p>
+
 Go to http://localhost:5173 to see GradMap!
+
+You can also visit the site on your phone if you are connected to the same wifi at http://\<enter your ip here\>:5173
 
 ### Optional: Run the data scraper
 If you want to run the data scraper to recollect course data including grades and ubc calendar information, you can first run 
