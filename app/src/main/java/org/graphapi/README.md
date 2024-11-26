@@ -1,6 +1,6 @@
 # main.java.org.graphapi
 
-This package contains everything the API and its methods for interfacing with the graph object. The Controller file is where api calls are actually handled. All files here are authored by Iain Griesdale.
+This package contains everything the API and its methods for interfacing with the graph object. The Controller file is where api calls are actually handled. All files here are authored by Iain Griesdale. The SpringBoot API automatically handles parallel requests, and since the graph is fully immutable everything is thread safe.
 
 ## `GraphAPI`
 The `GraphAPI` class runs the `Controller` class, initializing the SpringBoot API application.
