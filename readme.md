@@ -1,6 +1,8 @@
-<p align="center"> [<img src="https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/full_logo.svg" alt="drawing" width="900"/>](https://ubcgradmap.com) </p>
+<p align="center"><img src="https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/full_logo.svg" alt="drawing" width="900"/></p>
 
 # **🎓Team Name: [GradMap](https://ubcgradmap.com)**
+
+## **🌎See the website at [ubcgradmap.com](https://ubcgradmap.com)!**
 
 ## **🗺️Mission Statement**
 
