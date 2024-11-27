@@ -8,6 +8,15 @@ import java.util.*;
  * @author Ben Newington
  */
 public class CourseGraph {
+    /*
+     * Rep Invariant:
+     * 1. courseSet contains unique Courses with IDs in [0, courseSet.size() - 1].
+     * 2. codeToId maps each course's code to its ID, consistent with courseSet:
+     *    - codeToId.get(course.getCourseCode()) == course.id()
+     * 3. courseCodes[i] == course.getCourseCode() for course with ID i.
+     * 4. gradesMatrix[i][j] >= 0 represents directed edges between courses:
+     *    - gradesMatrix[i][j] > 0 implies the length, 101 - course.getAverage().
+     */
     private final Set<Course> courseSet;
     private final double[][] gradesMatrix;
     private final String[] courseCodes;

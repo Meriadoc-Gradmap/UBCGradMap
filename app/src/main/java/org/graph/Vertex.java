@@ -6,6 +6,9 @@ package org.graph;
  * @author Ben Newington.
  */
 public class Vertex {
+    /*
+    Rep invariant: id > 0
+    */
     private int id;
 
     /**
