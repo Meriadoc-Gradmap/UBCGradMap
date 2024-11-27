@@ -25,6 +25,11 @@ Many students like to plan their courses several years in advance and without a 
   -  Product demo
   -  Worked with all group members to integrate components together
 - Tian Chen: Designer
+  -  Developed data colleciton and formatting components in backend
+     - Implemented web scraper and data fetchers to ineract data sources
+     - Developed parser to parse schedules, prerequisites, and corequisites from course descriptions
+     - Formatter to format all data to JSON.
+  - Worked with all group members to integrate components together
 - Iain Griesdale: Designer
   -  Developed API to interface from the frontend to the backend
   -  Setup Dockerfile and compose for easy deployment
