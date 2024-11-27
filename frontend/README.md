@@ -13,7 +13,7 @@ npm install
 ```
 
 # Running
-To run the frontent, use
+To run the frontend, use
 ```sh
 npm run dev
 ```
@@ -21,3 +21,4 @@ However, this only runs the html frontend, not the api. To also run the api, go 
 ```sh
 ./gradlew run
 ```
+Then, navigate to http://localhost:5173. This should be a fully functional gradmap instance.

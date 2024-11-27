@@ -26,11 +26,17 @@ Many students like to plan their courses several years in advance and without a 
   -  Worked with all group members to integrate components together
 - Tian Chen: Designer
 - Iain Griesdale: Designer
-  -  Develoepd API to interface from the frontend to the backend
+  -  Developed API to interface from the frontend to the backend
   -  Setup Dockerfile and compose for easy deployment
   -  Minor frontend styling development to improve UI
   -  Worked with all group members to integrate components together
 - Finn Bainbridge: Developer   
+  - Created the frontend website user interact with, which includes:
+    - The dynamic graph with GPA average coloured nodes
+    - The autocomplete-ing search bar
+    - The informative panel
+  - Setup nginx in the dockerfile to tie the api and the frontend together
+  - Helped setup the AWS server and setup SSL
 - William Banquier: Developer   
 
 ## **✨Features**
