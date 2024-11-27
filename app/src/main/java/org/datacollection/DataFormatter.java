@@ -132,7 +132,9 @@ public class DataFormatter {
                 credits[0] = creditsLOW;
             }
 
-            String[] prerequisiteArray = createCourseList(preReqPattern, desc);
+            String prereqDesc = desc.split("Co-?requisites?")[0];
+
+            String[] prerequisiteArray = createCourseList(preReqPattern, prereqDesc);
             String[] corequisiteArray = createCourseList(coReqPattern, desc);
 
             if (desc.contains("This course is not eligible for Credit/D/Fail grading.")) {
