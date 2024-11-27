@@ -4,6 +4,9 @@
 
 ## **🌎See the website at [ubcgradmap.com](https://ubcgradmap.com)!**
 
+https://github.com/user-attachments/assets/61f067ad-76f2-4333-a7b0-6595a0012e7c
+
+
 ## **🗺️Mission Statement**
 
 Helping students map their future!
