@@ -31,8 +31,8 @@ Many students like to plan their courses several years in advance and without a 
   -  Minor frontend styling development to improve UI
   -  Worked with all group members to integrate components together
 - Finn Bainbridge: Developer   
-  - Created the frontend website user interact with, which includes:
-    - The dynamic graph with GPA average coloured nodes
+  - Created the frontend website the user interacts with, which includes:
+    - The dynamic graph widget with GPA average coloured nodes
     - The autocomplete-ing search bar
     - The informative panel
   - Setup nginx in the dockerfile to tie the api and the frontend together
