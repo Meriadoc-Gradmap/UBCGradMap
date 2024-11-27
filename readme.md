@@ -1,6 +1,6 @@
-<p align="center"> <img src="https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/full_logo.svg" alt="drawing" width="900"/> </p>
+<p align="center"> [<img src="https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/full_logo.svg" alt="drawing" width="900"/>](https://ubcgradmap.com) </p>
 
-# **🎓Team Name: GradMap**
+# **🎓Team Name: [GradMap](https://ubcgradmap.com)**
 
 ## **🗺️Mission Statement**
 
@@ -53,7 +53,7 @@ If you don't already have docker installed, you can follow one of these guides.
 - https://docs.docker.com/engine/install/ Docker engine for linux
 
 ### Ensure Docker is installed
-Type this into your powershell or command line and you should get a list of containers. For a fresh install this will be empty.
+Type this into your powershell or command line **while** Docker Desktop is running and you should get a list of containers. For a fresh install this will be empty.
 ```shell
 docker ps
 ```
@@ -64,7 +64,7 @@ git clone https://github.com/CPEN-221-2024/project-meriadoc-gradmap
 ```
 
 ### Build the Docker image
-This command goes into your powershell (on Windows) or terminal opened at the root directory of the cloned repository.
+This command goes into your powershell (on Windows) or terminal opened at the root directory of the cloned repository. Make sure Docker Desktop is running.
 > If you need more details for this step, open the folder that you installed with git, you should see a bunch of folders and files including a Dockerfile file. Then you can right-click in this directory and find the open terminal button. That's where you should be able to put the command below.
 >
 > <p align="center"> <img src="https://github.com/CPEN-221-2024/project-meriadoc-gradmap/blob/main/images/open_in_terminal.png" alt="drawing" width="600"/> </p>
@@ -85,6 +85,8 @@ Go to http://localhost:5173 to see GradMap!
 You can also visit the site on your phone if you are connected to the same wifi at http://\<enter your ip here\>:5173
 
 To close the site, open the powershell/terminal and click ctrl c.
+
+> Alternatively, you can visit the version of the site that we host at https://ubcgradmap.com !
 
 ### Optional: Run the data scraper
 If you want to run the data scraper to recollect course data including grades and ubc calendar information, you can first run 
@@ -115,4 +117,12 @@ To see a report of the Jacoco testing, you can simply navigate to root of the di
 ./gradlew build
 ```
 Then in the terminal you should see the printed test results. To see more in-depth results after running test or build, you can nagivate to `build/jacocoHtml/index.html`.
+
+## 💡Future Developments
+We think we have developed a tool that has the potential to be greatly expanded and filled with many more features. We hope to continue working on this project in some form over the next few months, so we have devised a list of potential features we may consider adding!
+- Caching a graph that a user has made using cookies
+- Selecting multiple courses and displaying the full tree
+- Better parsing to differentiate types of requirements (e.g. one of x or y AND z)
+- Ability to select a specific degree (CPEN for example) and display all graduation requirements
+- Show the path(s) between two nodes 
 
