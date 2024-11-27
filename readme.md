@@ -20,9 +20,11 @@ Many students like to plan their courses several years in advance and without a 
 
 ## **🧠Credits** 
 - Ben Newington: Project Manager
-  -  Developed the course graph
+  -  Developed the graph component including:
+       - A vertex and its subclass which contains course information
+       - A directed course graph to determine dependencies
+       - A graph creator which uses a json file to create a course graph instance
   -  Minor improvements to data collection
-  -  Product demo
   -  Worked with all group members to integrate components together
 - Tian Chen: Designer
   -  Developed data colleciton and formatting components in backend
