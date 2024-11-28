@@ -37,7 +37,6 @@ import org.util.JacocoGeneratedExclude;
  */
 public class DataFormatter {
 
-    public static final int INDEX_VAL0 = 0;
     public static final int INDEX_VAL1 = 1;
     public static final int INDEX_VAL2 = 2;
     public static final int INDEX_VAL3 = 3;
@@ -87,8 +86,8 @@ public class DataFormatter {
      */
     public static void createJson(List<CourseRecord> courseList, Map<String, Double> gradeMap) {
         Pattern titlePattern = Pattern.compile("([A-Za-z]+).+(\\d\\d\\d).+\\((\\d+\\.*\\d*)-?(\\d+\\.*\\d*)?\\)(.+)");
-        Pattern preReqPattern = Pattern.compile("(?:Pre-?requisites?:(.*?(?=[A-Z]{2}))?([A-Z]+? \\d++[^.]*))");
-        Pattern coReqPattern = Pattern.compile("(?:Co-?requisites?:(.*?(?=[A-Z]{2}))?([A-Z]+? \\d++[^.]*))");
+        Pattern preReqPattern = Pattern.compile("Pre-?requisites?:(.*?(?=[A-Z]{2}))?([A-Z]+? \\d++[^.]*)");
+        Pattern coReqPattern = Pattern.compile("Co-?requisites?:(.*?(?=[A-Z]{2}))?([A-Z]+? \\d++[^.]*)");
         List<FullCourse> masterList = new ArrayList<>();
         ProgressBarBuilder pbb = ProgressBar.builder().
                         setStyle(ProgressBarStyle.builder().
@@ -132,7 +131,10 @@ public class DataFormatter {
                 credits[0] = creditsLOW;
             }
 
-            String[] prerequisiteArray = createCourseList(preReqPattern, desc);
+            String prereqDesc = desc.split("Co-?requisites?")[0];
+            prereqDesc = prereqDesc.replaceAll("Not open[^.]*\\.", "");
+
+            String[] prerequisiteArray = createCourseList(preReqPattern, prereqDesc);
             String[] corequisiteArray = createCourseList(coReqPattern, desc);
 
             if (desc.contains("This course is not eligible for Credit/D/Fail grading.")) {
@@ -183,7 +185,7 @@ public class DataFormatter {
      * @return a Schedule object
      */
     private static Hours createSchedule(String desc) {
-        Pattern schedulePattern = Pattern.compile("\\[(\\d)?(\\*?)-?(\\d)?(\\*?)-?(\\d)?(\\*?)\\]");
+        Pattern schedulePattern = Pattern.compile("\\[(\\d)?(\\*?)-?(\\d)?(\\*?)-?(\\d)?(\\*?)]");
         Matcher scheduleMatcher = schedulePattern.matcher(desc);
         int lectures = -1;
         boolean alternating1 = false;
@@ -215,8 +217,8 @@ public class DataFormatter {
      * The courses are formatted as "CPEN-221" and the array is filtered to only include courses that
      * have a length above a certain threshold to avoid false positives. This threshold is based on
      * the minimum length of UBC course codes, which is 6. Users should take note that due to UBC
-     * Calendar's non standard course descriptions, this method cannot guarantee 100% success and false
-     * positves may be present in outputs (For example, a string such as "NUMBER-001" could be falsely
+     * Calendar's non-standard course descriptions, this method cannot guarantee 100% success and false
+     * positives may be present in outputs (For example, a string such as "NUMBER-001" could be falsely
      * interpreted as a course code). Users should take note to check all outputs. If there are no courses
      * in the provided description or the provided pattern is incorrect, the method returns an empty
      * String Array.
@@ -227,7 +229,7 @@ public class DataFormatter {
      */
     private static String[] createCourseList(Pattern coursePattern, String desc) {
         Matcher matcher = coursePattern.matcher(desc);
-        String courses = null;
+        String courses;
         String[] courseArray; 
 
         if (matcher.find() && matcher.group(1) != null) {
@@ -322,7 +324,7 @@ public class DataFormatter {
      * <code>src/main/java/org/DataCollection/DataCache</code>
      *
      * @param outputFileName the name of the output file
-     * @param gradeMap the map of grades to be cached
+     * @param courseList the list of courses to be cached
      * @throws RuntimeException if there is an error writing to the file
      */
     @JacocoGeneratedExclude
@@ -394,9 +396,8 @@ public class DataFormatter {
             String line;
 
             while ((line = reader.readLine()) != null) {
-                String title = line;
                 String desc = reader.readLine();
-                courseList.add(new CourseRecord(title, desc));
+                courseList.add(new CourseRecord(line, desc));
             }
             reader.close();
 

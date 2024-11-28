@@ -33,3 +33,11 @@ When searching there should be an autofill. For example searching "APSC 1" shoul
 On enter of APSC 199 it should automatically swap and load APSC 179.
 
 APSC 179 has not pre and post requisites so it should look like a black dot.
+
+7. <b> Burpsuite View of Get Requests </b>
+
+- On load of the website it should get all course names and get the course titles and load CPEN 221 by default
+![burpsuiteonload.png](imgs%2Fburpsuiteonload.png)
+
+- On view of get requests it should show the courses being loaded. 
+![burpsuitegetrequestss.png](imgs%2Fburpsuitegetrequestss.png)

@@ -20,11 +20,18 @@ Many students like to plan their courses several years in advance and without a 
 
 ## **🧠Credits** 
 - Ben Newington: Project Manager
-  -  Developed the course graph
+  -  Developed the graph component including:
+       - A vertex and its subclass which contains course information
+       - A directed course graph to determine dependencies
+       - A graph creator which uses a json file to create a course graph instance
   -  Minor improvements to data collection
-  -  Product demo
   -  Worked with all group members to integrate components together
 - Tian Chen: Designer
+  -  Developed data colleciton and formatting components in backend
+     - Implemented web scraper and data fetchers to ineract data sources
+     - Developed parser to parse schedules, prerequisites, and corequisites from course descriptions
+     - Formatter to format all data to JSON.
+  - Worked with all group members to integrate components together
 - Iain Griesdale: Designer
   -  Developed API to interface from the frontend to the backend
   -  Setup Dockerfile and compose for easy deployment
@@ -37,7 +44,18 @@ Many students like to plan their courses several years in advance and without a 
     - The informative panel
   - Setup nginx in the dockerfile to tie the api and the frontend together
   - Helped setup the AWS server and setup SSL
-- William Banquier: Developer   
+- William Banquier: Developer
+  - Devloped Comprehensive Automatic Test Suites for All Methods
+    - 100% Code Coverage for Graph API Package
+      - This involved testing with springboot and managing high memory and os dependent errors  
+    - 100% Code Coverage for Course Graph Package
+    - 96% Code Coverage for Data Collection Package
+    - Manual Verification Documention was made for Front End
+    - Created custom Github Actions to link with Springboot and Gradle
+    - Found vulnerabilities and created a test bench to confirm their removal
+    - Created test cases to mimic incorrect dependincies
+    - Reviewed and created manual confirmation suite for http requests using burp suite
+  - Minor Patches to other methods. 
 
 ## **✨Features**
 - Visual graph of every UBCV course.
@@ -55,6 +73,8 @@ Many students like to plan their courses several years in advance and without a 
 ## **📄Links/Sources**
 - We use the API provided by https://ubcgrades.com to get previous years course average for each course.
 - We gathered course information from https://vancouver.calendar.ubc.ca/.
+> Note that UBCGradMap and UBCgrades are a third-party websites not affiliated with UBC. Information on
+> this site may not be the same as those found from official UBC Sources.
 
 ## **🐳Running the Dockerfile**
 

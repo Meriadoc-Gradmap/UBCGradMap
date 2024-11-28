@@ -24,4 +24,4 @@ Creates a graph from a given JSON file.
 
 # A Note on Concurrency
 
-The graph is completely is completely immutable so accessing it in parallel is completely safe. The SpringBoot API handles parallelizing requests to this graph.
+The graph is completely immutable so accessing it in parallel is completely safe. The SpringBoot API handles parallelizing requests to this graph.
