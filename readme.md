@@ -62,6 +62,8 @@ Many students like to plan their courses several years in advance and without a 
 ## **📄Links/Sources**
 - We use the API provided by https://ubcgrades.com to get previous years course average for each course.
 - We gathered course information from https://vancouver.calendar.ubc.ca/.
+> Note that UBCGradMap and UBCgrades are a third-party websites not affiliated with UBC. Information on
+> this site may not be the same as those found from official UBC Sources.
 
 ## **🐳Running the Dockerfile**
 
