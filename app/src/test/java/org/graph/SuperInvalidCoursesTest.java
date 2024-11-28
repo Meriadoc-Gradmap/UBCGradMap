@@ -130,7 +130,10 @@ public class SuperInvalidCoursesTest {
         assertEquals(-12, a.id());
         Set<Course> onlyA = new HashSet<>();
         onlyA.add(a);
+        Set<Course> onlyB = new HashSet<>();
+        onlyB.add(b);
         assertThrows(IllegalArgumentException.class, () -> new CourseGraph(onlyA));
+        assertThrows(IllegalArgumentException.class, () -> new CourseGraph(onlyB));
         assertEquals(208, b.id());
         assertEquals(0, c.id());
         assertThrows(IllegalArgumentException.class, () -> cg = new CourseGraph(courseSet));

@@ -44,7 +44,17 @@ Many students like to plan their courses several years in advance and without a 
     - The informative panel
   - Setup nginx in the dockerfile to tie the api and the frontend together
   - Helped setup the AWS server and setup SSL
-- William Banquier: Developer   
+- William Banquier: Developer
+  - Devloped Comprehensive Automatic Test Suites for All Methods
+    - 100% Code Coverage for Graph API Package
+      - This involved testing with springboot and managing high memory and os dependent errors  
+    - 100% Code Coverage for Course Graph Package
+    - 96% Code Coverage for Data Collection Package
+    - Manual Verification Documention was made for Front End
+    - Created custom Github Actions to link with Springboot and Gradle
+    - Found vulnerabilities and created a test bench to confirm their removal
+    - Created test cases to mimic incorrect dependincies
+  - Minor Patches to other methods. 
 
 ## **✨Features**
 - Visual graph of every UBCV course.
@@ -62,6 +72,8 @@ Many students like to plan their courses several years in advance and without a 
 ## **📄Links/Sources**
 - We use the API provided by https://ubcgrades.com to get previous years course average for each course.
 - We gathered course information from https://vancouver.calendar.ubc.ca/.
+> Note that UBCGradMap and UBCgrades are a third-party websites not affiliated with UBC. Information on
+> this site may not be the same as those found from official UBC Sources.
 
 ## **🐳Running the Dockerfile**
 
