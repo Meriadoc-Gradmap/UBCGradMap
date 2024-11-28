@@ -44,7 +44,16 @@ Many students like to plan their courses several years in advance and without a 
     - The informative panel
   - Setup nginx in the dockerfile to tie the api and the frontend together
   - Helped setup the AWS server and setup SSL
-- William Banquier: Developer   
+- William Banquier: Developer
+  - Devloped Comprehensive Automatic Test Suites for All Methods
+    - 100% Code Coverage for Graph API Package
+    - 100% Code Coverage for Course Graph Package
+    - 96% Code Coverage for Data Collection Package
+    - Manual Verification Documention was made for Front End
+    - Created a test suite linked with Github
+    - Found vulnerabilities and created a test bench to confirm their removal
+    - Created test cases to mimic incorrect dependincies
+  - Minor Patches to other methods. 
 
 ## **✨Features**
 - Visual graph of every UBCV course.
