@@ -121,6 +121,7 @@ function App() {
 
     if (course !== null) {
       setCoursePath([course]);
+      setReset(true);
     }
 
   }
@@ -138,6 +139,7 @@ function App() {
     let courseObj = await superFetchCourse(course);
 
     if (courseObj !== null && courseObj !== undefined) {
+      setReset(false);
       setCoursePath((cp) => {
         // If it's a course we've already clicked on, revert the path to that point
         let loc = courseIndexOf(cp, courseObj);
@@ -149,13 +151,18 @@ function App() {
     }
   }
 
+  let [reset, setReset] = useState(true);
+
   return (
     <>
       <div className="w-screen h-screen">
-        <CourseTree2 courseCache={courseCache} coursePath={coursePath} onClick={graphNodeClicked}></CourseTree2>
+        <CourseTree2 courseCache={courseCache} coursePath={coursePath} onClick={graphNodeClicked}
+        reset={reset}></CourseTree2>
       </div>
       <Panel currentCourse={coursePath.length > 0 ? coursePath[coursePath.length - 1] : undefined} />
-      <Search entered={(course) => { loadCourse(course) }} />
+      <Search entered={(course) => { 
+        loadCourse(course);
+      }} />
       <Logo />
     </>
   )

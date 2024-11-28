@@ -6,7 +6,8 @@ export interface CourseTreeProps {
   // Oh boy here we go
   coursePath: Course[];
   onClick: (course: string) => void,
-  courseCache: Map<string, Course>
+  courseCache: Map<string, Course>,
+  reset: boolean
 }
 
 const COREQ_SPACING = 100;
@@ -334,7 +335,8 @@ export default function CourseTree2(props: CourseTreeProps) {
           cyRef.current.add(el);
         }
 
-        if (props.coursePath.length <= 1) {
+        // if (props.coursePath.length <= 1) {
+        if (props.reset) {
           cyRef.current.fit();
         }
       }
