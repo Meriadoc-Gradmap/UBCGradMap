@@ -126,7 +126,7 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
    *              the colour from the grade.
    */
   let addCourse = (course: string | undefined, parent: string | undefined,
-    pos: { x: number, y: number }, edge_type: EDGE_TYPE, 
+    pos: { x: number, y: number }, edge_type: EDGE_TYPE,
     color: string = NODE_COLOUR) => {
 
     if (course == null) {
@@ -284,6 +284,13 @@ export default function CourseTree2(props: CourseTreeProps) {
     props.onClick(node.id());
   };
 
+  let hoverEnter = (event: any) => {
+    let node = event.target;
+    console.log(node.id());
+    let courseInfo = props.courseCache.get(node.id());
+    console.log(courseInfo?.name);
+  }
+
   // When props are changed re-build the cytoscape
   useEffect(() => {
     if (containerRef.current !== null) {
@@ -337,6 +344,7 @@ export default function CourseTree2(props: CourseTreeProps) {
         if (props.coursePath.length <= 1) {
           cyRef.current.fit();
         }
+        cyRef.current.on("mouseover", "node", hoverEnter);
       }
 
       return () => {
