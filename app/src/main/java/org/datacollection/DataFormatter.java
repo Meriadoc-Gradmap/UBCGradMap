@@ -132,6 +132,7 @@ public class DataFormatter {
             }
 
             String prereqDesc = desc.split("Co-?requisites?")[0];
+            prereqDesc = prereqDesc.replaceAll("Not open[^.]*\\.", "");
 
             String[] prerequisiteArray = createCourseList(preReqPattern, prereqDesc);
             String[] corequisiteArray = createCourseList(coReqPattern, desc);
