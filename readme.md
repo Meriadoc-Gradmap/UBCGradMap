@@ -47,10 +47,11 @@ Many students like to plan their courses several years in advance and without a 
 - William Banquier: Developer
   - Devloped Comprehensive Automatic Test Suites for All Methods
     - 100% Code Coverage for Graph API Package
+      - This involved testing with springboot and managing high memory and os dependent errors  
     - 100% Code Coverage for Course Graph Package
     - 96% Code Coverage for Data Collection Package
     - Manual Verification Documention was made for Front End
-    - Created a test suite linked with Github
+    - Created custom Github Actions to link with Springboot and Gradle
     - Found vulnerabilities and created a test bench to confirm their removal
     - Created test cases to mimic incorrect dependincies
   - Minor Patches to other methods. 
