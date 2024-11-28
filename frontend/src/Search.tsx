@@ -44,7 +44,7 @@ export default function Search(props: { entered: (a: string) => void }) {
 
   // Always bock when text changes
   useEffect(() => {
-    if (fuseRef.current !== null) {
+    if (fuseRef.current !== null && text.length < 10) {
       // Search again
       let results = fuseRef.current.search(text);
       setSearchResults(results.map((res) => {

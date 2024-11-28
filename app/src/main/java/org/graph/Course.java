@@ -9,7 +9,10 @@ import java.util.HashSet;
  * @author Ben Newington
  */
 public class Course extends Vertex {
-    /*Rep invariant: id > 0*/
+    /*
+    Rep invariant:
+    id > 0
+    */
 
     private final String code;
     private final String name;

@@ -7,7 +7,8 @@ package org.graph;
  */
 public class Vertex {
     /*
-    Rep invariant: id > 0
+    Rep invariant:
+    id > 0 and v1 = v2 if v1.id() == v2.id()
     */
     private int id;
 

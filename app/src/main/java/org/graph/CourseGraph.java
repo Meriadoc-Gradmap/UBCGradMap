@@ -17,6 +17,7 @@ public class CourseGraph {
      * 4. gradesMatrix[i][j] >= 0 represents directed edges between courses:
      *    - gradesMatrix[i][j] > 0 implies the length, 101 - course.getAverage().
      */
+
     private final Set<Course> courseSet;
     private final double[][] gradesMatrix;
     private final String[] courseCodes;

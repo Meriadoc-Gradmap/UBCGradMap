@@ -21,7 +21,7 @@ public class GraphCreator {
      * Private constructor as this is
      * a utility class
      */
-    private GraphCreator() {};
+    private GraphCreator() {}
 
     /**
      * Creates a graph with a given json file.
