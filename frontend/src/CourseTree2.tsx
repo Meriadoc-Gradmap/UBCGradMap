@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 import { useEffect, useRef, useState } from 'react';
 import { Course, GRADE_TO_COLOUR, Position } from './Course';
 import cytoscape from "cytoscape";
@@ -46,6 +47,7 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
   }[] = [];
 
   let coursePos: Map<string, { x: number, y: number }> = new Map<string, { x: number, y: number }>();
+
 
   // The last element of the coursePath is the current course
   let currentCourse = props.coursePath[props.coursePath.length - 1];
@@ -127,7 +129,7 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
    *              the colour from the grade.
    */
   let addCourse = (course: string | undefined, parent: string | undefined,
-    pos: { x: number, y: number }, edge_type: EDGE_TYPE, 
+    pos: { x: number, y: number }, edge_type: EDGE_TYPE,
     color: string = NODE_COLOUR) => {
 
     if (course == null) {
@@ -278,11 +280,30 @@ export default function CourseTree2(props: CourseTreeProps) {
   const cyRef = useRef<null | cytoscape.Core>(null);
 
   let [oldCoursePos, setOldCoursePos] = useState(new Map<string, Position>());
+  const [hoverElement, setHoverElement] = useState<{ visible: boolean, x: number, y: number, title: string }>({ visible: false, x: 0, y: 0, title: '' });
 
   let nodeClicked = (event: any) => {
     let node = event.target;
 
     props.onClick(node.id());
+  };
+
+  let hoverEnter = (event: any) => {
+    let node = event.target;
+    console.log(node.id());
+    let courseInfo = props.courseCache.get(node.id());
+    if (courseInfo == null) {
+      // We don't know anything about it, so do nothing
+      return;
+    }
+
+    console.log(courseInfo.name);
+    let pos = node.renderedPosition();
+    setHoverElement({ visible: true, x: pos.x, y: pos.y, title: courseInfo?.name ?? '' });
+  };
+
+  let hoverExit = (_event: any) => {
+    setHoverElement({ visible: false, x: 0, y: 0, title: '' });
   };
 
   // When props are changed re-build the cytoscape
@@ -339,10 +360,19 @@ export default function CourseTree2(props: CourseTreeProps) {
         if (props.reset) {
           cyRef.current.fit();
         }
+        cyRef.current.on("mouseover", "node", hoverEnter);
+        cyRef.current.on("mouseout", "node", hoverExit);
+        cyRef.current.on("taphold", "node", hoverExit);
       }
 
       return () => {
         // To rebuild, remove all the elements
+        if (cyRef.current !== null) {
+          cyRef.current.off("mouseover", "node", hoverEnter);
+          cyRef.current.off("mouseout", "node", hoverExit);
+          cyRef.current.off("taphold", "node", hoverExit);
+        }
+
         for (let el of elements) {
           if (cyRef.current !== null) {
             if ((el.data as { id: string, label: string }).id !== undefined) {
@@ -355,5 +385,26 @@ export default function CourseTree2(props: CourseTreeProps) {
     }
   }, [props]);
 
-  return <div className="w-full h-screen" ref={containerRef} />
+  return (
+    <div className="w-full h-screen" ref={containerRef}>
+      {(hoverElement.visible && hoverElement.title !== undefined) && (
+        <div className="rounded-box-gradient"
+          style={{
+            position: 'absolute',
+            left: hoverElement.x,
+            top: hoverElement.y + 20,
+            transform: 'translateX(-50%)',
+            backgroundColor: 'white',
+            padding: '5px 10px 5px 10px',
+            pointerEvents: 'none',
+            zIndex: "10000"
+          }}
+        >
+          {hoverElement.title}
+        </div>
+      )}
+    </div>
+  );
+
+  // return <div className="w-full h-screen" ref={containerRef} />
 }
