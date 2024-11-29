@@ -360,6 +360,7 @@ export default function CourseTree2(props: CourseTreeProps) {
         }
         cyRef.current.on("mouseover", "node", hoverEnter);
         cyRef.current.on("mouseout", "node", hoverExit);
+        // cyRef.current.on("taphold", "node", hoverExit);
       }
 
       return () => {
@@ -367,6 +368,7 @@ export default function CourseTree2(props: CourseTreeProps) {
         if (cyRef.current !== null) {
           cyRef.current.off("mouseover", "node", hoverEnter);
           cyRef.current.off("mouseout", "node", hoverExit);
+          // cyRef.current.on("taphold", "node", hoverExit);
         }
 
         for (let el of elements) {
@@ -384,7 +386,7 @@ export default function CourseTree2(props: CourseTreeProps) {
   return (
     <div className="w-full h-screen" ref={containerRef}>
       {(hoverElement.visible && hoverElement.title !== undefined) && (
-        <div className = "rounded-box-gradient"
+        <div className="rounded-box-gradient"
           style={{
             position: 'absolute',
             left: hoverElement.x,
