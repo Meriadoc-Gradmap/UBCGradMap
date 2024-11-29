@@ -291,12 +291,17 @@ export default function CourseTree2(props: CourseTreeProps) {
     let node = event.target;
     console.log(node.id());
     let courseInfo = props.courseCache.get(node.id());
-    console.log(courseInfo?.name);
+    if (courseInfo == null) {
+      // We don't know anything about it, so do nothing
+      return;
+    }
+
+    console.log(courseInfo.name);
     let pos = node.renderedPosition();
     setHoverElement({ visible: true, x: pos.x, y: pos.y, title: courseInfo?.name ?? '' });
   };
 
-  let hoverExit = (event: any) => {
+  let hoverExit = (_event: any) => {
     setHoverElement({ visible: false, x: 0, y: 0, title: '' });
   };
 
@@ -359,6 +364,11 @@ export default function CourseTree2(props: CourseTreeProps) {
 
       return () => {
         // To rebuild, remove all the elements
+        if (cyRef.current !== null) {
+          cyRef.current.off("mouseover", "node", hoverEnter);
+          cyRef.current.off("mouseout", "node", hoverExit);
+        }
+
         for (let el of elements) {
           if (cyRef.current !== null) {
             if ((el.data as { id: string, label: string }).id !== undefined) {
@@ -373,7 +383,7 @@ export default function CourseTree2(props: CourseTreeProps) {
 
   return (
     <div className="w-full h-screen" ref={containerRef}>
-      {hoverElement.visible && (
+      {(hoverElement.visible && hoverElement.title !== undefined) && (
         <div className = "rounded-box-gradient"
           style={{
             position: 'absolute',
@@ -382,7 +392,8 @@ export default function CourseTree2(props: CourseTreeProps) {
             transform: 'translateX(-50%)',
             backgroundColor: 'white',
             padding: '5px 10px 5px 10px',
-            pointerEvents: 'none'
+            pointerEvents: 'none',
+            zIndex: "10000"
           }}
         >
           {hoverElement.title}
@@ -391,5 +402,5 @@ export default function CourseTree2(props: CourseTreeProps) {
     </div>
   );
 
-  return <div className="w-full h-screen" ref={containerRef} />
+  // return <div className="w-full h-screen" ref={containerRef} />
 }
