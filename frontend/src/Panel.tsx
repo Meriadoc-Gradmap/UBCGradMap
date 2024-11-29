@@ -1,5 +1,5 @@
 import { Course, GRADE_TO_COLOUR } from "./Course";
-import Linkify from 'react-linkify';
+import Linkify from 'linkify-react';
 
 /**
  * A basic floating panel that shows course information
@@ -10,6 +10,10 @@ export default function Panel(props: { currentCourse: Course | undefined }) {
 
   if (props.currentCourse == undefined) {
     return <></>;
+  }
+
+  let makeLink = ({attributes, content}: any) => {
+    return (content.startsWith("http") ? <a target="_blank" href={attributes.href}>{content}</a> : <span>{content}</span>);
   }
 
   return (
@@ -26,7 +30,9 @@ export default function Panel(props: { currentCourse: Course | undefined }) {
         {props.currentCourse.others.grade != -1 ? <><br />Average: <span style={{"color": GRADE_TO_COLOUR(props.currentCourse.others.grade)}}>{props.currentCourse.others.grade}%</span></> : ""}
         {props.currentCourse.cdf ? "" : (<><br /> <span className="italic">This course is ineligible for Credit/D/Fail</span></>)}
       </p>
-      <p className="prose"><Linkify>{props.currentCourse.description}</Linkify></p>
+      <p className="prose">
+        <Linkify options={{render: makeLink}}>{props.currentCourse.description}</Linkify>
+      </p>
     </div>
   )
 }
