@@ -35,8 +35,9 @@ Many students like to plan their courses several years in advance and without a 
 - Iain Griesdale: Designer
   -  Developed API to interface from the frontend to the backend
   -  Setup Dockerfile and compose for easy deployment
-  -  Minor frontend styling development to improve UI
-  -  Worked with all group members to integrate components together
+    - AWS Server hosting for easy public access to the website over the internet
+  -  Minor frontend styling development for UI/UX
+  -  Coordinated final deployment and integration logistics 
 - Finn Bainbridge: Developer   
   - Created the frontend website the user interacts with, which includes:
     - The dynamic graph widget with GPA average coloured nodes
