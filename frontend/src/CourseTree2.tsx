@@ -360,7 +360,7 @@ export default function CourseTree2(props: CourseTreeProps) {
         }
         cyRef.current.on("mouseover", "node", hoverEnter);
         cyRef.current.on("mouseout", "node", hoverExit);
-        // cyRef.current.on("taphold", "node", hoverExit);
+        cyRef.current.on("taphold", "node", hoverExit);
       }
 
       return () => {
@@ -368,7 +368,7 @@ export default function CourseTree2(props: CourseTreeProps) {
         if (cyRef.current !== null) {
           cyRef.current.off("mouseover", "node", hoverEnter);
           cyRef.current.off("mouseout", "node", hoverExit);
-          // cyRef.current.on("taphold", "node", hoverExit);
+          cyRef.current.off("taphold", "node", hoverExit);
         }
 
         for (let el of elements) {
