@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 import { useEffect, useRef, useState } from 'react';
 import { Course, GRADE_TO_COLOUR, Position } from './Course';
 import cytoscape from "cytoscape";
@@ -45,6 +46,7 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
   }[] = [];
 
   let coursePos: Map<string, { x: number, y: number }> = new Map<string, { x: number, y: number }>();
+
 
   // The last element of the coursePath is the current course
   let currentCourse = props.coursePath[props.coursePath.length - 1];
@@ -277,6 +279,7 @@ export default function CourseTree2(props: CourseTreeProps) {
   const cyRef = useRef<null | cytoscape.Core>(null);
 
   let [oldCoursePos, setOldCoursePos] = useState(new Map<string, Position>());
+  const [hoverElement, setHoverElement] = useState<{ visible: boolean, x: number, y: number, title: string }>({ visible: false, x: 0, y: 0, title: '' });
 
   let nodeClicked = (event: any) => {
     let node = event.target;
@@ -289,7 +292,13 @@ export default function CourseTree2(props: CourseTreeProps) {
     console.log(node.id());
     let courseInfo = props.courseCache.get(node.id());
     console.log(courseInfo?.name);
-  }
+    let pos = node.renderedPosition();
+    setHoverElement({ visible: true, x: pos.x, y: pos.y, title: courseInfo?.name ?? '' });
+  };
+
+  let hoverExit = (event: any) => {
+    setHoverElement({ visible: false, x: 0, y: 0, title: '' });
+  };
 
   // When props are changed re-build the cytoscape
   useEffect(() => {
@@ -345,6 +354,7 @@ export default function CourseTree2(props: CourseTreeProps) {
           cyRef.current.fit();
         }
         cyRef.current.on("mouseover", "node", hoverEnter);
+        cyRef.current.on("mouseout", "node", hoverExit);
       }
 
       return () => {
@@ -360,6 +370,26 @@ export default function CourseTree2(props: CourseTreeProps) {
       }
     }
   }, [props]);
+
+  return (
+    <div className="w-full h-screen" ref={containerRef}>
+      {hoverElement.visible && (
+        <div className = "rounded-box-gradient"
+          style={{
+            position: 'absolute',
+            left: hoverElement.x,
+            top: hoverElement.y + 20,
+            transform: 'translateX(-50%)',
+            backgroundColor: 'white',
+            padding: '5px 10px 5px 10px',
+            pointerEvents: 'none'
+          }}
+        >
+          {hoverElement.title}
+        </div>
+      )}
+    </div>
+  );
 
   return <div className="w-full h-screen" ref={containerRef} />
 }
