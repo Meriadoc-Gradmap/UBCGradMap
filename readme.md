@@ -52,7 +52,7 @@ Many students like to plan their courses several years in advance and without a 
     - 100% Code Coverage for Course Graph Package
     - 96% Code Coverage for Data Collection Package
     - Manual Verification Documention was made for Front End
-    - Created custom Github Actions to link with Springboot and Gradle
+    - Created custom Github CI Taks that link with Springboot and Gradle and run on Push and Pull Requests
     - Found vulnerabilities and created a test bench to confirm their removal
     - Created test cases to mimic incorrect dependincies
     - Reviewed and created manual confirmation suite for http requests using burp suite
