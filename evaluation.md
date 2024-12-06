@@ -26,7 +26,7 @@ Furthermore we tested developer friendly inputs to check to see if they had file
 - This causes other screens to be filled with text and is a massive amount of spam   
 8. **Multiple groups can be spammed creating as many groups as possible – DDoS attack**  
 - Pressing *create group* does not give a timeout as such you can add as many groups as possible, using an autoclicker you can add as many as possible, as there is no size limit on these   
-- Since there a possibility of 100,000,000 groups, if there are multiple simultaneous attacks, the app could run out of group ids in around 2 days  
+- Since there is a possibility of 100,000,000 groups, if there are multiple simultaneous attacks, the app could run out of group ids in around 2 days  
 9. **API key is exposed**  
 - this might just be a problem with their github implementation   
 10. **APP crashes on leaderboard load and creates Session.**  
