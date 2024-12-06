@@ -29,7 +29,7 @@ We found and patched many bugs before the release on Friday the 29th.
 
 ## Bugs after release
 
-These are the bugs that were found after the release. All of the bugs that were found are minor bugs and have not been patched yet. 
+These are the bugs/suggestions that were found after the release. All of the bugs that were found are minor bugs and have not been patched yet. 
 
 ### Prioritized list
 
