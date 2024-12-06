@@ -1,6 +1,6 @@
 # Feedback from group *indis-studbud*
 
-We did not get any feedback, however we made our own list of bugs from testing.
+We got some suggestions and bugs from group indis-studbud which we will list along with some bugs that we found.
 
 ## Bugs before release
 
@@ -29,16 +29,26 @@ We found and patched many bugs before the release on Friday the 29th.
 
 ## Bugs after release
 
-These are the bugs that we found after the release. All of the bugs that we found are very minor bugs and have not been patched yet.
+These are the bugs that were found after the release. All of the bugs that were found are minor bugs and have not been patched yet. 
 
 ### Prioritized list
 
 1. Figure out a plan for recommended prerequisites  
     - There are a few courses with “recommended prerequisites” and we believe that these should be listed in the graph so we need to update our database. This is our top priority because it affects more courses than the other bugs.  
 2. APSC 367 \- Double Coreq Link  
-    - APSC 367 lists a corequisite twice, so there are 2 corequisite arrows.  
-3. No drop shadow  
+    - APSC 367 lists a corequisite twice, so there are 2 corequisite arrows.
+3. Sort child nodes
+    - Child nodes are currently unsorted and it can be difficult to find a certain one. This is prioritized because it could add some more clairity.
+4. No drop shadow  
     - There should be a shadow with the hover names. This bug does not affect usability in any way and it is easy to fix.  
-4. Removal of mouse cursor makes hover never go away  
-    - This bug is prioritized last because it is very specific and is unlikely to happen to any users.  
+5. Course colour clarity
+    - This is not a bug. It is currently not possible to tell if a course isn't offered with our current implementation of API calls.
+6. Error message precision
+    - This is a minor clairity issue which isn't our top priority.
+7. Allow opening of a child node without closing parent
+    - This is not a bug and is on our list of possible features to implement.
+8. All of vs. some of. vs one of
+    - We would like to add this, however it would be implemented in a major update and not a patch.
+9. Removal of mouse cursor makes hover never go away  
+    - This bug is prioritized last because it is very specific and is unlikely to happen to any user.
   
