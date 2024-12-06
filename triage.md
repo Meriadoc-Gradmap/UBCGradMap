@@ -42,7 +42,7 @@ These are the bugs that were found after the release. All of the bugs that were 
 4. No drop shadow  
     - There should be a shadow with the hover names. This bug does not affect usability in any way and it is easy to fix.  
 5. Course colour clarity
-    - This is not a bug. It is currently not possible to tell if a course isn't offered with our current implementation of API calls.
+    - This is not a bug. It is currently not possible to tell if a course isn't offered until clicked on with our current implementation of API calls.
 6. Error message precision
     - This is a minor clairity issue which isn't our top priority.
 7. Allow opening of a child node without closing parent
