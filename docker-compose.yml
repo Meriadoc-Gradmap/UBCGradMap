@@ -1,7 +1,20 @@
-version: '3.8'
 services:
-  gradmap:
+  backend:
     build: ./
+    restart: always
+    networks:
+      - app-network
+  
+  frontend:
+    build: ./frontend
+    restart: always
     ports:
-      - 5173:80
+      - "80:80"
+    networks:
+      - app-network
+    depends_on:
+      - backend
 
+networks:
+  app-network:
+    driver: bridge

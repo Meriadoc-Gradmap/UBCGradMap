@@ -32,7 +32,7 @@ export interface Position {
 }
 
 // The production build script changes this to dev_no
-export const DEVELOPMENT = "dev_yes";
+export const DEVELOPMENT = "dev_no";
 //export let API_ENDPOINT = import.meta.env.BASE_URL;
 export let API_ENDPOINT = "";
 
