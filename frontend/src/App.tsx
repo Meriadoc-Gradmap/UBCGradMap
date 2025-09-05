@@ -164,8 +164,8 @@ function App() {
       <Search entered={(course) => {
         loadCourse(course);
       }} />
-      <Logo />
       <DarkSwitch />
+      <Logo />
     </>
   )
 }

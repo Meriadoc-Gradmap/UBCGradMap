@@ -19,3 +19,11 @@
   color: #053569;
   font-weight: 600;
 }
+
+body {
+  background-color: white;
+}
+
+.dark-mode {
+  background-color: #121212;
+}
