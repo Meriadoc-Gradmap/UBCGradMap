@@ -5,6 +5,7 @@ import { API_ENDPOINT, Course } from './Course'
 import Search from './Search'
 import Panel from './Panel'
 import Logo from './Logo'
+import DarkSwitch from './DarkSwitch'
 
 /**
   * Javascript's indexOf can't only search one attribute so here we are
@@ -157,13 +158,14 @@ function App() {
     <>
       <div className="w-screen h-screen">
         <CourseTree2 courseCache={courseCache} coursePath={coursePath} onClick={graphNodeClicked}
-        reset={reset}></CourseTree2>
+          reset={reset}></CourseTree2>
       </div>
       <Panel currentCourse={coursePath.length > 0 ? coursePath[coursePath.length - 1] : undefined} />
-      <Search entered={(course) => { 
+      <Search entered={(course) => {
         loadCourse(course);
       }} />
       <Logo />
+      <DarkSwitch />
     </>
   )
 }
