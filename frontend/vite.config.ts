@@ -10,8 +10,8 @@ export default defineConfig({
     proxy: {
       '/api': 'http://localhost:8080',
     },
-    preview: {
-      port: 5173,
-    }
+  },
+  preview: {
+    port: 5173,
   }
 })

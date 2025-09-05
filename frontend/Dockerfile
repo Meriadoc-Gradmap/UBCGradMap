@@ -5,10 +5,9 @@ WORKDIR /usr/app
 
 COPY . /usr/app
 
-RUN npm i
+RUN ["npm", "i"]
 
-
-RUN npm run build
+RUN ["npm", "run", "build"]
 
 FROM nginx:alpine3.18-slim
 
