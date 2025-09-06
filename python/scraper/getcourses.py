@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from typing import List, Tuple
 import re
+import time
 
 def get_courses_by_department(url: str) -> List[Tuple[str, str]]:
     """
@@ -29,7 +30,14 @@ def get_courses_by_department(url: str) -> List[Tuple[str, str]]:
         response.raise_for_status()  # Raise HTTPError for bad responses
         doc = BeautifulSoup(response.content, 'html.parser')
     except requests.exceptions.RequestException as e:
-        raise RuntimeError(f"There was an issue connecting to the UBC Calendar Website: {e}")
+        print(f"Error connecting to {url}: {e}. Sleeping for 10 seconds...")
+        time.sleep(10)
+        try:
+            response = requests.get(url)
+            response.raise_for_status()  # Raise HTTPError for bad responses
+            doc = BeautifulSoup(response.content, 'html.parser')
+        except requests.exceptions.RequestException as e:
+            raise RuntimeError(f"Failed to connect after retry: {e}")
 
     department_elements = doc.find_all("li")
     course_list: List[Tuple[str, str]] = []
@@ -72,6 +80,7 @@ if __name__ == '__main__':
 
     try:
         courses = get_courses_by_department(example_url)
+        print(courses)
 
 
     except RuntimeError as e:

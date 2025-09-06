@@ -4,13 +4,13 @@ Your task is to extract the following information from the provided course descr
 
 **Instructions:**
 
-1.  **Course Information:** Extract the course code, name, credits, description, prerequisites, corequisites, CDF status, and schedule details.
+1.  **Course Information:** Extract the course code and remove the _V, name, credits, description, prerequisites, corequisites, CDF status, and schedule details.
 
 2.  **Credits:** Credits are in brackets next to the name. Store multiple credit levels in an array.
 
-3.  **CDF:** `cdf` means credit-d-fail. If it is not explicitly mentioned, the default value is `false`.
+3.  **CDF:** `cdf` means credit-d-fail. If it is not explicitly mentioned, the default value is `false`. Remove all mentions of cdf in the description.
 
-4.  **Schedule:** Schedule information (lectures, labs, tutorials) is sometimes given in brackets like this: `[1-2-3*]`. This notation means 1 hour of lectures, 2 hours of labs, and 3 hours of alternating tutorials. If schedule information is not provided, default all schedule values to 0 and alternating booleans to false.
+4.  **Schedule:** Schedule information (lectures, labs, tutorials) is sometimes given in brackets like this: `[1-2-3*]`. This notation means 1 hour of lectures, 2 hours of labs, and 3 hours of alternating tutorials. If schedule information is not provided, default all schedule values to -1 and alternating booleans to false.
 
 5.  **Prerequisites and Corequisites:**
     * The "prerequisites" and "corequisites" fields should be a list of objects.
@@ -19,12 +19,14 @@ Your task is to extract the following information from the provided course descr
         * `type`: (Optional).  A Literal that can have two values, "all" or "one_of". The default value is "all", indicating that all the courses specified in the courses field are prerequisites or corequisites. Set to "one_of" if only one of the courses is a prerequisite or corequisite.
         * `expression`: (Optional).  A Literal that can have two values, "and", or "or". The default value is "and". Set to "or" on two groups if you can choose group A or B of prereqs.
 
+6. Description: remove the sentences that are related to "This course is not eligible for Credit/D/Fail grading." and remove the schedule in the description. It is ok if it is blank after removal. make sure to keep the rest of the discription including the prerequisites and corequisites.
+
 
 **JSON Format:**
 
 ```json
 {
-    "code": "COURSE_CODE",
+    "code": "COURSE_CODE" (do NOT include _V),
     "name": "COURSE_NAME",
     "credits": [CREDIT_VALUE(S)],
     "description": "COURSE_DESCRIPTION",
@@ -54,11 +56,11 @@ Your task is to extract the following information from the provided course descr
     ],
     "cdf": BOOLEAN_VALUE,
     "schedule": {
-        "lectures": NUMBER_OF_LECTURE_HOURS,
+        "lectures": NUMBER_OF_LECTURE_HOURS (-1 if not stated),
         "alternating1": BOOLEAN_VALUE_FOR_LECTURES,
-        "labs": NUMBER_OF_LAB_HOURS,
+        "labs": NUMBER_OF_LAB_HOURS (-1 if not stated),
         "alternating2": BOOLEAN_VALUE_FOR_LABS,
-        "tutorials": NUMBER_OF_TUTORIAL_HOURS,
+        "tutorials": NUMBER_OF_TUTORIAL_HOURS (-1 if not stated),
         "alternating3": BOOLEAN_VALUE_FOR_TUTORIALS
     }
 }
