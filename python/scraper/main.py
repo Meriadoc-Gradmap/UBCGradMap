@@ -128,7 +128,7 @@ def main():
     courses: List[Tuple[str, str]] = []
     course_file = "python/courses.json"
     batch_size = 15
-    max_parallel_batches = 25
+    max_parallel_batches = 100
 
     try:
         with open(course_file, "r") as f:
@@ -184,7 +184,7 @@ def main():
             except Exception as exc:
                 print(f'Batch starting at index {original_start_index} generated an exception: {exc}')
     
-    parsed_courses = parse_course_info(failed_courses)
+    parsed_courses = parse_course_info([f"Title: {title}\nDescription: {description}" for title, description in failed_courses])
     for course_in_batch_idx, course in enumerate(parsed_courses):
         if course:
             all_courses_data.append(course.model_dump()) 

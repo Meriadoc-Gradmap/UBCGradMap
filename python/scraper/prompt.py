@@ -15,9 +15,9 @@ Your task is to extract the following information from the provided course descr
 5.  **Prerequisites and Corequisites:**
     * The "prerequisites" and "corequisites" fields should be a list of objects.
     * Each object should conform to the 'Prerequisite' structure:
-        *  `courses`: (Required). A list of courses associated with the requirement. If there is only one course it should be added to the list.
+        *  `courses`: (Required). A list of courses associated with the requirement. If there is only one course it should be added to the list. (do NOT include _V)
         * `type`: (Optional).  A Literal that can have two values, "all" or "one_of". The default value is "all", indicating that all the courses specified in the courses field are prerequisites or corequisites. Set to "one_of" if only one of the courses is a prerequisite or corequisite.
-        * `expression`: (Optional).  A Literal that can have two values, "and", or "or". The default value is "and". Set to "or" on two groups if you can choose group A or B of prereqs.
+        * `expression`: (Optional).  A Literal that can have two values, "and", or "or". The default value is "and". Set to "or" on two groups if you can choose group A or B of prereqs. When you use "or", 2 groups must be set to "or", there cannot be an "or" with "and".
 
 6. Description: remove the sentences that are related to "This course is not eligible for Credit/D/Fail grading." and remove the schedule in the description. It is ok if it is blank after removal. you MUST keep the rest of the discription including the prerequisite and corequisite lists.
 
@@ -36,24 +36,24 @@ Return a *list* of JSON objects.  Each object in the list should represent the p
     "description": "COURSE_DESCRIPTION",
     "prerequisites": [
         {
-            "courses": ["COURSE_CODE_1", "COURSE_CODE_2"],
+            "courses": ["COURSE_CODE_1", "COURSE_CODE_2"] (do NOT include _V),
             "type": "all",
             "expression": "or"
         },
         {
-            "courses": ["COURSE_CODE_3", "COURSE_CODE_4"],
+            "courses": ["COURSE_CODE_3", "COURSE_CODE_4"] (do NOT include _V),
             "type": "one_of",
             "expression": "or"
         }
     ],
     "corequisites": [
         {
-            "courses": ["COURSE_CODE_5"],
+            "courses": ["COURSE_CODE_5"] (do NOT include _V),
             "type": "all",
             "expression": "and"
         },
         {
-            "courses": ["COURSE_CODE_6", "COURSE_CODE_7"],
+            "courses": ["COURSE_CODE_6", "COURSE_CODE_7"] (do NOT include _V),
             "type": "one_of",
             "expression": "and"
         }
