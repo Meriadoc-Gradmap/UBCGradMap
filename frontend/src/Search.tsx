@@ -113,7 +113,7 @@ export default function Search(props: { entered: (a: string) => void }) {
       }}>
       <div className="w-full flex flex-col" >
         <div className="w-full flex flex-row">
-          <input className="appearance-none bg-transparent border-gray-60 border-b-2 flex flex-grow text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+          <input className="appearance-none bg-transparent border-gray-60 border-b-2 flex flex-grow mr-3 py-1 px-2 leading-tight focus:outline-none search-input"
             onChange={(e) => {
               setText(e.target.value);
               setFocus(true);
@@ -128,7 +128,7 @@ export default function Search(props: { entered: (a: string) => void }) {
         {focus ? <div className="flex w-full flex-col">
           {
             searchResults.map((res) =>
-              <button key={res.code} className={`p-3 border-b-2 border-b-gray-50 ${selected == res.code ? "bg-gray-100" : ""}`}
+              <button key={res.code} className={`p-3 border-b-2 border-b-gray-50 ${selected == res.code ? "search-hover" : ""}`}
                 onPointerDown={() => {
                   setText(res.name);
                   setFocus(false);
