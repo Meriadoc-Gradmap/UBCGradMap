@@ -48,3 +48,9 @@ app/bin/
 
 # Ignore keys lmao
 *.pem
+
+#Python!!!
+venv312
+venv
+.env
+__pycache__
