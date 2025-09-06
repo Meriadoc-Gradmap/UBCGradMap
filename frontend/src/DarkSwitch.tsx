@@ -1,12 +1,7 @@
+import * as React from 'react';
 import Switch from "@mui/material/Switch";
 
 import { styled } from '@mui/material/styles';
-
-// const handleSwitch = (event: React.ChangeEvent<HTMLInputElement>) => {
-const handleSwitch = () => {
-  const element = document.body;
-  element.classList.toggle("dark-mode");
-}
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -65,11 +60,26 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 }));
 
 function DarkSwitch() {
+  const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedDarkTheme = localStorage.getItem('savedDarkTheme');
+  const [isDarkMode, setIsDarkMode] = React.useState(savedDarkTheme ? savedDarkTheme === 'true' : prefersDarkMode);
+
+  const handleSwitch = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.checked) {
+      localStorage.setItem('savedDarkTheme', 'true');
+      setIsDarkMode(true);
+    } else {
+      localStorage.setItem('savedDarkTheme', 'false');
+      setIsDarkMode(false);
+    }
+  }
+
   return (
     <div className="fixed top-0 lg:top-10 sm:left-auto right-0 lg:h-auto m-5">
       <MaterialUISwitch
         sx={{ m: 1 }}
         onChange={handleSwitch}
+        checked={isDarkMode}
       />
     </div>
   )

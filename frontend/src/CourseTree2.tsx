@@ -290,14 +290,12 @@ export default function CourseTree2(props: CourseTreeProps) {
 
   let hoverEnter = (event: any) => {
     let node = event.target;
-    console.log(node.id());
     let courseInfo = props.courseCache.get(node.id());
     if (courseInfo == null) {
       // We don't know anything about it, so do nothing
       return;
     }
 
-    console.log(courseInfo.name);
     let pos = node.renderedPosition();
     setHoverElement({ visible: true, x: pos.x, y: pos.y, title: courseInfo?.name ?? '' });
   };
