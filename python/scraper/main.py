@@ -10,12 +10,14 @@ from pydantic import BaseModel, Field, ValidationError
 
 from getdepartments import get_departments
 from getcourses import get_courses_by_department
-from prompt import COURSE_PARSE_PROMPT  
+from prompt import COURSE_PARSE_PROMPT, LEGACY_STRUCTURE
+from grades import get_single_grade_by_course
 
 load_dotenv()
 
 llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-lite")
 
+OUTPUT_FORMAT = "LEGACY"
 
 class Schedule(BaseModel):
     lectures: float = Field(default=-1, description="Number of lecture hours -1 if not stated")
@@ -42,6 +44,15 @@ class Course(BaseModel):
     cdf: bool = Field(default=False, description="Whether the course is Credit/D/Fail")
     schedule: Schedule = Field(..., description="Course schedule details")
 
+class L_Course(BaseModel):
+    code: str = Field(..., description="Course code (e.g., CPEN-432)")
+    name: str = Field(..., description="Course name (e.g., Real-time System Design)")
+    credits: List[float] = Field(..., description="List of credit values")
+    description: str = Field(..., description="Course description")
+    prerequisites: List[str] = Field(default=[], description="List of prerequisite course codes")
+    corequisites: List[str] = Field(default=[], description="List of corequisite course codes")
+    cdf: bool = Field(default=False, description="Whether the course is Credit/D/Fail")
+    schedule: Schedule = Field(..., description="Course schedule details")
 
 def parse_course_info(course_strings: List[str]) -> List[Optional[Course]]:
     """
@@ -54,10 +65,16 @@ def parse_course_info(course_strings: List[str]) -> List[Optional[Course]]:
         A list of Course objects if parsing and validation are successful, otherwise None.
         Returns a list the same size as the input with None if failed.
     """
-    messages = [
-        SystemMessage(content=COURSE_PARSE_PROMPT),
-        HumanMessage(content="\n\n".join(course_strings)) 
-    ]
+    if OUTPUT_FORMAT == "LEGACY":
+        messages = [
+            SystemMessage(content=LEGACY_STRUCTURE),
+            HumanMessage(content="\n\n".join(course_strings)) 
+        ]
+    else:
+        messages = [
+            SystemMessage(content=COURSE_PARSE_PROMPT),
+            HumanMessage(content="\n\n".join(course_strings)) 
+        ]
 
     try:
         response = llm.invoke(messages)
@@ -73,7 +90,10 @@ def parse_course_info(course_strings: List[str]) -> List[Optional[Course]]:
             for item in data:
                 try:
                     if isinstance(item, dict):
-                        course = Course(**item)
+                        if OUTPUT_FORMAT == "LEGACY":
+                            course = L_Course(**item)
+                        else:
+                            course = Course(**item)
                         parsed_courses.append(course)
                     else:
                         print(f"LLM output item is not a dictionary, skipping: {item}")
@@ -125,6 +145,7 @@ def fetch_and_save_courses(departments: List[str], course_file: str) -> List[Tup
 
 def main():
     departments = get_departments()
+    print("Retrived Departments")
     courses: List[Tuple[str, str]] = []
     course_file = "python/courses.json"
     batch_size = 15
@@ -191,7 +212,13 @@ def main():
         else:
             print("Failed again on a course")     
     print(f"\nSuccessfully parsed {len(all_courses_data)} courses out of {len(courses)} total courses.")
-    with open("python/all_courses.json", "w") as f:
+
+    for course in all_courses_data:
+        grade = get_single_grade_by_course(course_code=course.get("code").replace(" ", "-"))
+        course["others"] = {"grade":grade}
+        print(grade)
+
+    with open(f"python/all_courses_{OUTPUT_FORMAT}.json", "w") as f:
         json.dump(all_courses_data, f, indent=4)
 
 
