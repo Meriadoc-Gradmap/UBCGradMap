@@ -104,7 +104,7 @@ Your task is to extract the following information from the provided course descr
 
 5. Description: remove the sentences that are related to "This course is not eligible for Credit/D/Fail grading." and remove the schedule in the description. It is ok if it is blank after removal. you MUST keep the rest of the discription including the prerequisite and corequisite lists.
 
-6. COURSE_CODE must be 4-letters with 3 numbers and a space between ex. XXXX ###
+6. COURSE_CODE must be 4-letters or 2-letters with 3 numbers and a space between ex. XXXX ### or XX ### 
 
 **Input:**  A list of course descriptions, separated by two newlines ("\n\n").  Each description will be formatted as:  "Title: [Course Title]\nDescription: [Course Description]"
 
