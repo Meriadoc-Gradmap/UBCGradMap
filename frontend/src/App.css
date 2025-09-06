@@ -22,6 +22,8 @@
   --border-color: #5FB4D5;
   --gradient-from: #7ed5f7;
   --gradient-to: #5FB4D5;
+
+  --hover-bg: #f3f4f6;
 }
 
 /* dark theme override */
@@ -37,6 +39,8 @@ body[data-theme="dark"] {
   --border-color: #4b5563;
   --gradient-from: #374151;
   --gradient-to: #4b5563;
+
+  --hover-bg: #3f4551;
 }
 
 body {
@@ -57,3 +61,5 @@ body {
 .course-stats { color: var(--course-stats); }
 .course-description { color: var(--course-desc); }
 .course-node { color: "#fff"; }
+.search-hover { background-color: var(--hover-bg); }
+.search-input { color: var(--fg); }

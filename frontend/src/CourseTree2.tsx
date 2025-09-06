@@ -8,7 +8,14 @@ export interface CourseTreeProps {
   coursePath: Course[];
   onClick: (course: string) => void,
   courseCache: Map<string, Course>,
-  reset: boolean
+  reset: boolean,
+  theme: Theme,
+}
+
+export interface Theme {
+  nodeText: string,
+  arrowColor: string,
+  selectedNodeColor: string,
 }
 
 const COREQ_SPACING = 100;
@@ -20,11 +27,6 @@ enum EDGE_TYPE {
 
 // const NODE_COLOUR = "#5FB4D5";
 const NODE_COLOUR = "#aaaaaa";
-const DELECTED_COLOUR = "#002145";
-
-const PREREQ_COLOUR = "#ccc";
-const POSTREQ_COLOUR = "#ccc";
-const COREQ_COLOUR = "#ccc";
 
 /**
  * Convert the path to cytoscape nodes
@@ -45,7 +47,7 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
   let elements: {
     data: { id: string, label: string } | { source: string, target: string, label: string },
     position?: { x: number, y: number },
-    style?: { 'line-color': string, 'target-arrow-color': string } | { 'background-color': string, 'font-family': string }
+    style?: { 'line-color': string, 'target-arrow-color': string } | { 'background-color': string, 'font-family': string, 'color': string}
   }[] = [];
 
   let coursePos: Map<string, { x: number, y: number }> = new Map<string, { x: number, y: number }>();
@@ -141,7 +143,7 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
     // Add the node if it's not there already
     if (!coursePos.has(course)) {
       let real_color = color;
-      if (color !== DELECTED_COLOUR) {
+      if (color !== props.theme.selectedNodeColor) {
         // Get the colour based on grade
         let courseInfo = props.courseCache.get(course);
         if (courseInfo !== undefined) {
@@ -161,6 +163,7 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
         style: {
           'background-color': real_color,
           'font-family': "'Roboto', 'Arial', 'sans-serif'",
+          'color': props.theme.nodeText,
         },
       })
 
@@ -170,14 +173,14 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
     // Add the edge
     if (parent != undefined) {
       if (edge_type == EDGE_TYPE.PREREQ || edge_type == EDGE_TYPE.COREQ) {
-        let col = edge_type == EDGE_TYPE.COREQ ? COREQ_COLOUR : PREREQ_COLOUR;
+        let col = edge_type == EDGE_TYPE.COREQ ? props.theme.arrowColor : props.theme.arrowColor;
         elements.push({
           data: { source: course, target: parent, label: "" },
           style: { "line-color": col, "target-arrow-color": col }
         });
       }
       if (edge_type == EDGE_TYPE.POSTREQ || edge_type == EDGE_TYPE.COREQ) {
-        let col = edge_type == EDGE_TYPE.COREQ ? COREQ_COLOUR : POSTREQ_COLOUR;
+        let col = edge_type == EDGE_TYPE.COREQ ? props.theme.arrowColor : props.theme.arrowColor;
         elements.push({
           data: { source: parent, target: course, label: "" },
           style: { "line-color": col, "target-arrow-color": col }
@@ -258,7 +261,7 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
           }
         }
       }
-      addCourse(course.code, x, oldPos, edgeType, DELECTED_COLOUR);
+      addCourse(course.code, x, oldPos, edgeType, props.theme.selectedNodeColor);
 
       lastElement = course;
     }
@@ -334,8 +337,8 @@ export default function CourseTree2(props: CourseTreeProps) {
               selector: 'edge',
               style: {
                 'width': 3,
-                'line-color': '#ccc',
-                'target-arrow-color': '#ccc',
+                'line-color': props.theme.arrowColor,
+                'target-arrow-color': props.theme.arrowColor,
                 'target-arrow-shape': 'triangle',
                 'curve-style': 'bezier'
               }

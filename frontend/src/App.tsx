@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import CourseTree2 from './CourseTree2'
+import CourseTree2, { Theme } from './CourseTree2'
 import { API_ENDPOINT, Course } from './Course'
 import Search from './Search'
 import Panel from './Panel'
@@ -30,7 +30,38 @@ function courseIndexOf(courses: Course[], course: Course): number {
 
 function App() {
 
-  let [courseCache, setCourseCache] = useState(new Map<string, Course>());
+  const [courseCache, setCourseCache] = useState(new Map<string, Course>());
+  const [courseTreeTheme, setCourseTreeTheme] = useState<Theme>({
+    nodeText: "#eceef1ff",
+    arrowColor: "#e5e7ebcc",
+    selectedNodeColor: "#002145",
+  });
+
+  const handleSetTheme = (dark: boolean) => {
+    setCourseTreeTheme({
+      nodeText: dark ? "#eceef1" : "#000000",
+      arrowColor: dark ? "#767980" : "#cccccc",
+      selectedNodeColor: dark ? "#4e80cf" : "#002145",
+    });
+  }
+
+  // add: lift dark-mode state into App and sync body/localStorage + theme
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
+    const saved = localStorage.getItem('savedDarkTheme');
+    if (saved != null) return saved === 'true';
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  });
+
+  useEffect(() => {
+    if (isDarkMode) document.body.classList.add('dark-mode');
+    else document.body.classList.remove('dark-mode');
+
+    // update the course tree theme
+    handleSetTheme(isDarkMode);
+
+    // persist user choice
+    localStorage.setItem('savedDarkTheme', isDarkMode ? 'true' : 'false');
+  }, [isDarkMode]);
 
   /**
    * Loads a course from the server or from cache
@@ -157,14 +188,19 @@ function App() {
   return (
     <>
       <div className="w-screen h-screen">
-        <CourseTree2 courseCache={courseCache} coursePath={coursePath} onClick={graphNodeClicked}
-          reset={reset}></CourseTree2>
+        <CourseTree2 
+          courseCache={courseCache} 
+          coursePath={coursePath} 
+          onClick={graphNodeClicked}
+          reset={reset} 
+          theme={courseTreeTheme}
+        />
       </div>
       <Panel currentCourse={coursePath.length > 0 ? coursePath[coursePath.length - 1] : undefined} />
       <Search entered={(course) => {
         loadCourse(course);
       }} />
-      <DarkSwitch />
+      <DarkSwitch checked={isDarkMode} onChange={setIsDarkMode} />
       <Logo />
     </>
   )

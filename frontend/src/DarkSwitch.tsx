@@ -14,6 +14,13 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     '&.Mui-checked': {
       color: '#fff',
       transform: 'translateX(22px)',
+      '& .MuiSwitch-thumb': {
+        // thumb color when checked (on/right)
+        backgroundColor: '#005AD8',
+        ...theme.applyStyles('dark', {
+          backgroundColor: '#003892',
+        }),
+      },
       '& .MuiSwitch-thumb:before': {
         backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 20 20"><path fill="${encodeURIComponent(
           '#fff',
@@ -29,7 +36,8 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     },
   },
   '& .MuiSwitch-thumb': {
-    backgroundColor: '#001e3c',
+    // thumb color when unchecked (off/left)
+    backgroundColor: '#FFAD32',
     width: 32,
     height: 32,
     '&::before': {
@@ -59,25 +67,10 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-function DarkSwitch() {
-  const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const savedDarkTheme = localStorage.getItem('savedDarkTheme');
-  const initialDark = savedDarkTheme ? savedDarkTheme === 'true' : prefersDarkMode;
-  const [isDarkMode, setIsDarkMode] = React.useState(initialDark);
-
-  React.useEffect(() => {
-
-    if (isDarkMode) {
-      document.body.classList.add('dark-mode');
-    } else {
-      document.body.classList.remove('dark-mode');
-    }
-  }, [isDarkMode]);
-
+function DarkSwitch({ checked, onChange }: { checked: boolean, onChange: (v: boolean) => void }) {
+  // Controlled component: the parent (App) owns the dark-mode state
   const handleSwitch = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const checked = event.target.checked;
-    localStorage.setItem('savedDarkTheme', checked ? 'true' : 'false');
-    setIsDarkMode(checked);
+    onChange(event.target.checked);
   }
 
   return (
@@ -85,7 +78,7 @@ function DarkSwitch() {
       <MaterialUISwitch
         sx={{ m: 1 }}
         onChange={handleSwitch}
-        checked={isDarkMode}
+        checked={checked}
       />
     </div>
   )
