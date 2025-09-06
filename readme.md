@@ -17,47 +17,6 @@ Recently, a problem faced by UBC students was caused by the transition from the 
 
 Many students like to plan their courses several years in advance and without a proper tool, long-term academic planning becomes difficult and error prone.
 
-
-## **🧠Credits** 
-- Ben Newington: Project Manager
-  -  Developed the graph component including:
-       - A vertex and its subclass which contains course information
-       - A directed course graph to determine dependencies
-       - A graph creator which uses a json file to create a course graph instance
-  -  Minor improvements to data collection
-  -  Worked with all group members to integrate components together
-- Tian Chen: Designer
-  -  Developed data colleciton and formatting components in backend
-     - Implemented web scraper and data fetchers to ineract data sources
-     - Developed parser to parse schedules, prerequisites, and corequisites from course descriptions
-     - Formatter to format all data to JSON.
-  - Worked with all group members to integrate components together
-- Iain Griesdale: Designer
-  -  Developed API to interface from the frontend to the backend
-  -  Setup Dockerfile and compose for easy deployment
-    - AWS Server hosting for easy public access to the website over the internet
-  -  Minor frontend styling development for UI/UX
-  -  Coordinated final deployment and integration logistics 
-- Finn Bainbridge: Developer   
-  - Created the frontend website the user interacts with, which includes:
-    - The dynamic graph widget with GPA average coloured nodes
-    - The autocomplete-ing search bar
-    - The informative panel
-  - Setup nginx in the dockerfile to tie the api and the frontend together
-  - Helped setup the AWS server and setup SSL
-- William Banquier: Developer
-  - Devloped Comprehensive Automatic Test Suites for All Methods
-    - 100% Code Coverage for Graph API Package
-      - This involved testing with springboot and managing high memory and os dependent errors  
-    - 100% Code Coverage for Course Graph Package
-    - 96% Code Coverage for Data Collection Package
-    - Manual Verification Documention was made for Front End
-    - Created custom Github CI Taks that link with Springboot and Gradle and run on Push and Pull Requests
-    - Found vulnerabilities and created a test bench to confirm their removal
-    - Created test cases to mimic incorrect dependincies
-    - Reviewed and created manual confirmation suite for http requests using burp suite
-  - Minor Patches to other methods. 
-
 ## **✨Features**
 - Visual graph of every UBCV course.
 - Search for individual course codes.
