@@ -62,16 +62,22 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 function DarkSwitch() {
   const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const savedDarkTheme = localStorage.getItem('savedDarkTheme');
-  const [isDarkMode, setIsDarkMode] = React.useState(savedDarkTheme ? savedDarkTheme === 'true' : prefersDarkMode);
+  const initialDark = savedDarkTheme ? savedDarkTheme === 'true' : prefersDarkMode;
+  const [isDarkMode, setIsDarkMode] = React.useState(initialDark);
+
+  React.useEffect(() => {
+
+    if (isDarkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [isDarkMode]);
 
   const handleSwitch = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.checked) {
-      localStorage.setItem('savedDarkTheme', 'true');
-      setIsDarkMode(true);
-    } else {
-      localStorage.setItem('savedDarkTheme', 'false');
-      setIsDarkMode(false);
-    }
+    const checked = event.target.checked;
+    localStorage.setItem('savedDarkTheme', checked ? 'true' : 'false');
+    setIsDarkMode(checked);
   }
 
   return (

@@ -43,7 +43,9 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
   }
 
   let elements: {
-    data: { id: string, label: string } | { source: string, target: string, label: string }, position?: { x: number, y: number }, style?: { 'line-color': string, 'target-arrow-color': string } | { 'background-color': string, 'font-family': string }
+    data: { id: string, label: string } | { source: string, target: string, label: string },
+    position?: { x: number, y: number },
+    style?: { 'line-color': string, 'target-arrow-color': string } | { 'background-color': string, 'font-family': string }
   }[] = [];
 
   let coursePos: Map<string, { x: number, y: number }> = new Map<string, { x: number, y: number }>();
@@ -158,8 +160,8 @@ function makeElements(props: CourseTreeProps, oldCoursePos: Map<string, Position
         position: pos,
         style: {
           'background-color': real_color,
-          'font-family': "'Roboto', 'Arial', 'sans-serif'"
-        }
+          'font-family': "'Roboto', 'Arial', 'sans-serif'",
+        },
       })
 
       coursePos.set(course, pos);
