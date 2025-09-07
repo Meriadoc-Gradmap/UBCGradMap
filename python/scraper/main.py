@@ -11,7 +11,7 @@ from pydantic import BaseModel, Field, ValidationError
 from getdepartments import get_departments
 from getcourses import get_courses_by_department
 from prompt import COURSE_PARSE_PROMPT, LEGACY_STRUCTURE
-from grades import get_single_grade_by_course
+from grades import get_single_grade_by_course, get_all_course_grades
 
 load_dotenv()
 
@@ -162,8 +162,8 @@ def main():
     print("Retrived Departments")
     courses: List[Tuple[str, str]] = []
     course_file = "python/courses.json"
-    batch_size = 15
-    max_parallel_batches = 100 # For LLM parsing
+    batch_size = 10
+    max_parallel_batches = 120 # For LLM parsing
     max_parallel_grade_fetches = 75 # For grade fetching
 
     try:
@@ -223,6 +223,7 @@ def main():
     # Attempt to re-parse failed courses
     if failed_courses:
         print(f"\nAttempting to re-parse {len(failed_courses)} failed courses...")
+        print(failed_courses)
         reparsed_courses = parse_course_info([f"Title: {title}\nDescription: {description}" for title, description in failed_courses])
         for course in reparsed_courses:
             if course:
@@ -232,32 +233,18 @@ def main():
     
     print(f"\nSuccessfully parsed {len(all_courses_data)} courses out of {len(courses)} total courses.")
 
-    # --- Parallelize grade fetching ---
-    print(f"Starting to fetch grades for {len(all_courses_data)} courses in parallel (max {max_parallel_grade_fetches} workers).")
-    final_courses_with_grades = []
-    with ThreadPoolExecutor(max_workers=max_parallel_grade_fetches) as executor:
-        grade_futures = {executor.submit(process_course_grade, course): course for course in all_courses_data}
-        
-        processed_grades_count = 0
-        for future in as_completed(grade_futures):
-            processed_grades_count += 1
-            original_course_data = grade_futures[future] # This is the course dict before grade was added
-            try:
-                course_with_grade = future.result()
-                final_courses_with_grades.append(course_with_grade)
-                if processed_grades_count % 50 == 0 or processed_grades_count == len(all_courses_data):
-                    print(f"Processed grades for {processed_grades_count}/{len(all_courses_data)} courses.")
-            except Exception as exc:
-                print(f'Fetching grade for course {original_course_data.get("code")} generated an exception: {exc}')
-                # Append original course data with a placeholder grade if an exception occurred
-                original_course_data["others"] = {"grade": "Error"}
-                final_courses_with_grades.append(original_course_data)
+    print("Getting grades")
+    grades = get_all_course_grades()
+    print("Done")
+    for course in all_courses_data:
+        if grades.get(course["code"]):
+            course["others"] = {"grade": grades[course["code"]]}
+        else:
+            course["others"] = {"grade": -1}
     
-    print(f"Finished fetching grades for {len(final_courses_with_grades)} courses.")
 
-
-    with open(f"python/all_courses_{OUTPUT_FORMAT}.json", "w") as f:
-        json.dump(final_courses_with_grades, f, indent=4)
+    with open(f"data/COURSE_INFO.json", "w") as f:
+        json.dump(all_courses_data, f, indent=4)
 
 
 if __name__ == '__main__':

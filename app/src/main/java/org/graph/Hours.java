@@ -9,6 +9,6 @@ package org.graph;
  * @param tutorials hours of tutorials
  * @param alternating3 true if tutorials are alternating
  */
-public record Hours(int lectures, boolean alternating1, int labs, boolean alternating2, int tutorials,
+public record Hours(float lectures, boolean alternating1, float labs, boolean alternating2, float tutorials,
         boolean alternating3) {
 }

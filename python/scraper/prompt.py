@@ -102,9 +102,9 @@ Your task is to extract the following information from the provided course descr
 
 4.  **Schedule:** Schedule information (lectures, labs, tutorials) is sometimes given in brackets like this: `[1-2-3*]`. This notation means 1 hour of lectures, 2 hours of labs, and 3 hours of alternating tutorials. If schedule information is not provided, default all schedule values to -1 and alternating booleans to false.
 
-5. Description: remove the sentences that are related to "This course is not eligible for Credit/D/Fail grading." and remove the schedule in the description. It is ok if it is blank after removal. you MUST keep the rest of the discription including the prerequisite and corequisite lists.
+5. Description: remove the sentences that are related to "This course is not eligible for Credit/D/Fail grading." and remove the `[#-#-#]` in the description. It is ok if it is blank after removal. you MUST include the rest of the discription including the Prerequisite and Corequisite lists.
 
-6. COURSE_CODE must be 4-letters or 2-letters with 3 numbers and a space between ex. XXXX ### or XX ### 
+6. code, prerequisites, and corequisites must be 2 to 4 letters with a dash between 3 numbers ex. XXXX-###, XXX-###, or XX-#### and remove the '_V'.
 
 **Input:**  A list of course descriptions, separated by two newlines ("\n\n").  Each description will be formatted as:  "Title: [Course Title]\nDescription: [Course Description]"
 
@@ -115,12 +115,12 @@ Return a *list* of JSON objects.  Each object in the list should represent the p
 ```json
 [
   {
-    "code": "COURSE_CODE" (do NOT include _V),
+    "code": "XXXX-##",
     "name": "COURSE_NAME",
     "credits": [CREDIT_VALUE],
     "description": "COURSE_DESCRIPTION",
-    "prerequisites": ["COURSE_CODE_1", "COURSE_CODE_2"] (do NOT include _V),
-    "corequisites": ["COURSE_CODE_5"] (do NOT include _V),
+    "prerequisites": ["XXXX-###", "XXXX-###"] (do not include duplicates),
+    "corequisites": ["XXXX-###"] (do not include duplicates),
     "cdf": BOOLEAN_VALUE,
     "schedule": {
         "lectures": NUMBER_OF_LECTURE_HOURS (-1 if not stated),
@@ -132,11 +132,11 @@ Return a *list* of JSON objects.  Each object in the list should represent the p
     }
   },
   {
-    "code": "COURSE_CODE",
+    "code": "CPEN-221",
     "name": "COURSE_NAME",
     "credits": [CREDIT_MIN, CREDIT_MAX],
     "description": "COURSE_DESCRIPTION",
-    "prerequisites": [],
+    "prerequisites": [APSC-160],
     "corequisites": [],
     "cdf": false,
     "schedule": {
