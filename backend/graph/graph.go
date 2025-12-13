@@ -1,46 +1,70 @@
 package graph
 
-// CourseGraph represents the graph of courses and their relationships
-type CourseGraph struct {
-	courses map[string]*Course
-	// TODO: Add adjacency matrix or adjacency list for prerequisites
-}
+import (
+	"gonum.org/v1/gonum/graph/simple"
+)
 
-// NewCourseGraph creates a new empty course graph
-func NewCourseGraph() *CourseGraph {
-	return &CourseGraph{
-		courses: make(map[string]*Course),
+const (
+	defaultGrade = 75.0 // default grade for courses with missing data
+	defaultHours = 5.0  // default weekly hours for courses with missing schedule data
+)
+
+// CreateWeightedCourseGraph constructs a weighted directed graph where
+// each course is a node and edges point from prerequisite -> course
+// with a weight determined by `edgeWeight`.
+func CreateCourseGraph(courses []Course) *simple.WeightedDirectedGraph {
+	g := simple.NewWeightedDirectedGraph(0, 0)
+
+	// assign incremental IDs to courses and add nodes
+	codeToID := make(map[string]int64, len(courses))
+	for _, c := range courses {
+		n := g.NewNode()
+		g.AddNode(n)
+		codeToID[c.Code] = n.ID()
 	}
+
+	// add edges from prerequisite -> course
+	for _, c := range courses {
+		toID := codeToID[c.Code]
+		for _, pre := range c.Prerequisites {
+			if fromID, ok := codeToID[pre]; ok {
+				// Skip self-edges (course listed as its own prerequisite)
+				if fromID == toID {
+					continue
+				}
+				fromNode := g.Node(fromID)
+				toNode := g.Node(toID)
+				if fromNode == nil || toNode == nil {
+					continue
+				}
+				g.SetWeightedEdge(g.NewWeightedEdge(fromNode, toNode, edgeWeight(c)))
+			}
+		}
+	}
+
+	return g
 }
 
-// LoadFromFile loads courses from a JSON file
-func LoadFromFile(filename string) (*CourseGraph, error) {
-	// TODO: Read JSON file
-	// TODO: Parse courses
-	// TODO: Build graph structure
-	return nil, nil
-}
+// edgeWeight calculates the weight for an edge to course `c`.
+// Combines difficulty (inverse of grade) with workload (hours per week).
+// Formula: base_difficulty + workload_factor
+//   - base: 101 - avg_grade (higher grade = lower difficulty)
+//   - workload: total hours/week from lectures, labs, tutorials
+//   - fallback: uses defaults defined as constants at top of file
+func edgeWeight(c Course) float64 {
+	grade := c.Others.Grade
+	if grade <= 0 {
+		grade = defaultGrade
+	}
 
-// GetCourse retrieves a course by code
-func (cg *CourseGraph) GetCourse(code string) (*Course, error) {
-	// TODO: Look up course in map
-	return nil, nil
-}
+	baseDifficulty := 101.0 - grade
 
-// GetAllCodes returns all course codes
-func (cg *CourseGraph) GetAllCodes() []string {
-	// TODO: Return list of all course codes
-	return nil
-}
+	totalHours := float64(c.Schedule.Lectures + c.Schedule.Labs + c.Schedule.Tutorials)
+	if totalHours <= 0 {
+		totalHours = defaultHours
+	}
 
-// GetPrerequisites returns immediate prerequisites for a course
-func (cg *CourseGraph) GetPrerequisites(code string) []string {
-	// TODO: Return prerequisites
-	return nil
-}
+	workloadFactor := 0.5 * totalHours
 
-// GetPostrequisites returns courses that require this course
-func (cg *CourseGraph) GetPostrequisites(code string) []string {
-	// TODO: Return postrequisites
-	return nil
+	return baseDifficulty + workloadFactor
 }

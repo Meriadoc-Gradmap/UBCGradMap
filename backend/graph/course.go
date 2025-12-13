@@ -1,5 +1,10 @@
 package graph
 
+import (
+	"encoding/json"
+	"os"
+)
+
 // Course represents a university course
 type Course struct {
 	Code          string    `json:"code"`
@@ -27,4 +32,19 @@ type Hours struct {
 type Others struct {
 	Grade     float64 `json:"grade"`
 	Professor string  `json:"professor,omitempty"`
+}
+
+// LoadCourses reads a JSON file and returns a slice of Course.
+// Example usage: courses, err := LoadCourses("data/COURSE_INFO.json")
+func LoadCourses(fileName string) ([]Course, error) {
+	data, err := os.ReadFile(fileName)
+	if err != nil {
+		return nil, err
+	}
+
+	var courses []Course
+	if err := json.Unmarshal(data, &courses); err != nil {
+		return nil, err
+	}
+	return courses, nil
 }
